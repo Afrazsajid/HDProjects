@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "H&D Lead Capture",
+  "version": "1.0.0",
+  "description": "Professional WhatsApp lead capture tool for H&D Recruitment.",
+  "permissions": ["storage", "activeTab", "scripting", "tabs"],
+  "host_permissions": [
+    "https://web.whatsapp.com/*",
+    "https://hd-whatsapp-backend.vercel.app/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://web.whatsapp.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "H&D Lead Capture",
+    "default_popup": "popup.html"
+  }
+}

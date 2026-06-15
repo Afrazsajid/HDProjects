@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=380, initial-scale=1.0" />
+    <title>H&D Lead Capture</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <main class="app">
+      <header class="header">
+        <div class="logo">H&D</div>
+
+        <div>
+          <h1>Lead Capture</h1>
+          <p>WhatsApp lead assistant</p>
+        </div>
+      </header>
+
+      <section class="card status-card">
+        <div class="status-top">
+          <div>
+            <span class="small-label">Status</span>
+            <h2 id="status">Ready</h2>
+          </div>
+
+          <span id="statusPill" class="pill neutral">Idle</span>
+        </div>
+
+        <div class="mini-stats">
+          <div>
+            <span>Captured</span>
+            <strong id="capturedCount">0</strong>
+          </div>
+
+          <div>
+            <span>Last Sync</span>
+            <strong id="lastSync">Never</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="section-title">
+          <h3>Automatic Capture</h3>
+          <p>Capture WhatsApp leads in the background.</p>
+        </div>
+
+        <label class="toggle-box">
+          <div>
+            <strong>Lead Capture</strong>
+            <span id="captureHint">Paused</span>
+          </div>
+
+          <input id="captureEnabled" type="checkbox" />
+        </label>
+
+        <div class="simple-actions">
+          <button id="saveSettings" class="btn primary">Save</button>
+          <button id="testSend" class="btn secondary">Test</button>
+        </div>
+      </section>
+
+      <section id="chatClosedCard" class="card empty-chat">
+        <div class="empty-icon">💬</div>
+        <h3>No chat selected</h3>
+        <p>Open a WhatsApp chat to view tags, status, and latest note.</p>
+      </section>
+
+      <section id="chatOpenCard" class="card chat-card hidden">
+        <div class="section-title">
+          <h3>Current Chat</h3>
+          <p id="currentChatName">Detecting chat...</p>
+        </div>
+
+        <div class="lead-context-box">
+          <div>
+            <span>Status</span>
+            <strong id="contextStatus">-</strong>
+          </div>
+
+          <div>
+            <span>Tags</span>
+            <strong id="contextTags">-</strong>
+          </div>
+        </div>
+
+        <div class="latest-note-box">
+          <span>Latest Note</span>
+          <p id="latestNoteText">No previous note</p>
+        </div>
+
+        <div class="quick-tags">
+          <button class="tag-btn" data-tag="candidate">Candidate</button>
+          <button class="tag-btn" data-tag="security_candidate">Security</button>
+          <button class="tag-btn" data-tag="warehouse_candidate">Warehouse</button>
+          <button class="tag-btn" data-tag="hospitality_candidate">Hospitality</button>
+          <button class="tag-btn" data-tag="client_lead">Client</button>
+          <button class="tag-btn" data-tag="priority">Priority</button>
+        </div>
+
+        <label class="field">
+          <span>Status</span>
+          <select id="manualStatus">
+            <option value="Review">Review</option>
+            <option value="Qualified">Qualified</option>
+            <option value="Follow-up">Follow-up</option>
+            <option value="Registered">Registered</option>
+            <option value="Placed">Placed</option>
+            <option value="Rejected">Rejected</option>
+            <option value="No Response">No Response</option>
+          </select>
+        </label>
+
+        <label class="field">
+          <span>Add New Note</span>
+          <textarea
+            id="manualNotes"
+            placeholder="Add a new note. Previous notes will stay in history."
+          ></textarea>
+        </label>
+
+        <button id="tagCurrentChat" class="btn primary full">
+          Save Update
+        </button>
+      </section>
+
+      <section id="settingsPanel" class="secret-panel hidden">
+        <label class="field">
+          <span>Private Extension Key</span>
+          <input
+            id="extensionSecret"
+            type="password"
+            placeholder="Enter secret key"
+            autocomplete="off"
+          />
+        </label>
+      </section>
+
+      <footer class="footer">
+        <button id="toggleSettings" class="footer-btn">Settings</button>
+        <button id="resetStats" class="footer-btn">Reset</button>
+      </footer>
+
+      <div id="toast" class="toast hidden">Saved</div>
+    </main>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
