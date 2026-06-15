@@ -1,75 +1,255 @@
-2026-05-26 15:15:17,118 | INFO | Processing row 16, share code W3L 3F3 7LD
-2026-05-26 15:15:58,286 | ERROR | Failed row 16
+2026-06-15 18:01:33,714 | INFO | Processing row 33, share code W7L J9G 7BY
+2026-06-15 18:02:13,693 | ERROR | Failed row 33
 Traceback (most recent call last):
-  File "C:\Users\Afraz\New Projet\Sharecodesystem\rtw_automation_day_month_year.py", line 487, in process_single_record
+  File "c:\Users\Afraz\HDProjects\Sharecodesystem\rtw_automation_day_month_year.py", line 487, in process_single_record
     fill_company_name(driver, wait, COMPANY_NAME)
     ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Afraz\New Projet\Sharecodesystem\rtw_automation_day_month_year.py", line 436, in fill_company_name
+  File "c:\Users\Afraz\HDProjects\Sharecodesystem\rtw_automation_day_month_year.py", line 436, in fill_company_name
     wait.until(EC.visibility_of_element_located((By.ID, "checkerName")))
     ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "C:\Users\Afraz\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\support\wait.py", line 121, in until
     raise TimeoutException(message, screen, stacktrace)
 selenium.common.exceptions.TimeoutException: Message: 
 Stacktrace:
-	chromedriver!GetHandleVerifier [0x7ff64ea77de5+14895]
-	chromedriver!GetHandleVerifier [0x7ff64ea77e50+14900]
-	chromedriver!(No symbol) [0x7ff64e7dd5ad]
-	chromedriver!(No symbol) [0x7ff64e837822]
-	chromedriver!(No symbol) [0x7ff64e837b2c]
-	chromedriver!(No symbol) [0x7ff64e887d17]
-	chromedriver!(No symbol) [0x7ff64e88486f]
-	chromedriver!(No symbol) [0x7ff64e829df8]
-	chromedriver!(No symbol) [0x7ff64e82ace3]
-	chromedriver!GetHandleVerifier [0x7ff64ed8cc49+3296f9]
-	chromedriver!GetHandleVerifier [0x7ff64ed87375+323e25]
-	chromedriver!GetHandleVerifier [0x7ff64edabc82+348732]
-	chromedriver!GetHandleVerifier [0x7ff64ea96045+32af5]
-	chromedriver!GetHandleVerifier [0x7ff64ea9ecec+3b79c]
-	chromedriver!GetHandleVerifier [0x7ff64ea81bc4+1e674]
-	chromedriver!GetHandleVerifier [0x7ff64ea81d54+1e804]
-	chromedriver!GetHandleVerifier [0x7ff64ea660e7+2b97]
-	KERNEL32!BaseThreadInitThunk [0x7fff6ba37374+14]
-	ntdll!RtlUserThreadStart [0x7fff6c59cc91+21]
+	chromedriver!GetHandleVerifier [0x7ff724ce7de5+14895]
+	chromedriver!GetHandleVerifier [0x7ff724ce7e50+14900]
+	chromedriver!(No symbol) [0x7ff724a4d5ad]
+	chromedriver!(No symbol) [0x7ff724aa7822]
+	chromedriver!(No symbol) [0x7ff724aa7b2c]
+	chromedriver!(No symbol) [0x7ff724af7d17]
+	chromedriver!(No symbol) [0x7ff724af486f]
+	chromedriver!(No symbol) [0x7ff724a99df8]
+	chromedriver!(No symbol) [0x7ff724a9ace3]
+	chromedriver!GetHandleVerifier [0x7ff724ffcc49+3296f9]
+	chromedriver!GetHandleVerifier [0x7ff724ff7375+323e25]
+	chromedriver!GetHandleVerifier [0x7ff72501bc82+348732]
+	chromedriver!GetHandleVerifier [0x7ff724d06045+32af5]
+	chromedriver!GetHandleVerifier [0x7ff724d0ecec+3b79c]
+	chromedriver!GetHandleVerifier [0x7ff724cf1bc4+1e674]
+	chromedriver!GetHandleVerifier [0x7ff724cf1d54+1e804]
+	chromedriver!GetHandleVerifier [0x7ff724cd60e7+2b97]
+	KERNEL32!BaseThreadInitThunk [0x7ffe2c267374+14]
+	ntdll!RtlUserThreadStart [0x7ffe2db9cc91+21]
 
-2026-05-26 15:15:58,426 | INFO | Screenshot saved: C:\Users\Afraz\New Projet\Sharecodesystem\rtw_screenshots\error_row_16_20260526_151558.png
-2026-05-26 15:16:11,652 | INFO | Processing row 17, share code W4Z 96H 7JW
-2026-05-26 15:16:33,007 | INFO | Row 17 completed. PDF: C:\Users\Afraz\New Projet\Sharecodesystem\rtw_downloads\RTW_Check_Row17_W4Z96H7JW_20260526_151629.pdf
-2026-05-26 15:16:33,007 | INFO | Sheet update response: {'success': True, 'row': 17, 'status': 'Done', 'message': 'Row marked as Done'}
-2026-05-26 15:18:58,589 | INFO | Processing row 16, share code W3L 3F3 7LD
-2026-05-26 15:19:38,136 | ERROR | Failed row 16
+2026-06-15 18:02:13,832 | INFO | Screenshot saved: C:\Users\Afraz\HDProjects\Sharecodesystem\rtw_screenshots\error_row_33_20260615_180213.png
+2026-06-15 18:02:53,464 | INFO | Processing row 33, share code W7L J9G 7BY
+2026-06-15 18:05:25,995 | INFO | Processing row 33, share code W7L J9G 7BY
+2026-06-15 18:05:43,335 | ERROR | Failed row 33
 Traceback (most recent call last):
-  File "C:\Users\Afraz\New Projet\Sharecodesystem\rtw_automation_day_month_year.py", line 487, in process_single_record
+  File "c:\Users\Afraz\HDProjects\Sharecodesystem\rtw_automation_day_month_year.py", line 494, in process_single_record
+    record["person_name"]
+    ~~~~~~^^^^^^^^^^^^^^^
+KeyError: 'person_name'
+2026-06-15 18:05:43,450 | INFO | Screenshot saved: C:\Users\Afraz\HDProjects\Sharecodesystem\rtw_screenshots\error_row_33_20260615_180543.png
+2026-06-15 18:12:24,414 | INFO | Processing row 33, share code W7L J9G 7BY
+2026-06-15 18:12:37,900 | INFO | Extracted person name: VIVEK REDDY TURPU
+2026-06-15 18:12:43,952 | INFO | Row 33 completed.
+2026-06-15 18:12:43,952 | INFO | Person name: VIVEK REDDY TURPU
+2026-06-15 18:12:43,952 | INFO | PDF: C:\Users\Afraz\HDProjects\Sharecodesystem\rtw_downloads\Vivek_Reddy_Turpu-W7LJ9G7BY.pdf
+2026-06-15 18:12:43,952 | INFO | Sheet update response: {'success': True, 'row': 33, 'status': 'Done', 'message': 'Row marked as Done'}
+2026-06-15 18:13:23,686 | INFO | Processing row 34, share code W7L J9G 7BY
+2026-06-15 18:14:03,906 | ERROR | Failed row 34
+Traceback (most recent call last):
+  File "c:\Users\Afraz\HDProjects\Sharecodesystem\rtw_automation_day_month_year.py", line 579, in process_single_record
     fill_company_name(driver, wait, COMPANY_NAME)
     ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Afraz\New Projet\Sharecodesystem\rtw_automation_day_month_year.py", line 436, in fill_company_name
+  File "c:\Users\Afraz\HDProjects\Sharecodesystem\rtw_automation_day_month_year.py", line 528, in fill_company_name
     wait.until(EC.visibility_of_element_located((By.ID, "checkerName")))
     ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "C:\Users\Afraz\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\support\wait.py", line 121, in until
     raise TimeoutException(message, screen, stacktrace)
 selenium.common.exceptions.TimeoutException: Message: 
 Stacktrace:
-	chromedriver!GetHandleVerifier [0x7ff64ea77de5+14895]
-	chromedriver!GetHandleVerifier [0x7ff64ea77e50+14900]
-	chromedriver!(No symbol) [0x7ff64e7dd5ad]
-	chromedriver!(No symbol) [0x7ff64e837822]
-	chromedriver!(No symbol) [0x7ff64e837b2c]
-	chromedriver!(No symbol) [0x7ff64e887d17]
-	chromedriver!(No symbol) [0x7ff64e88486f]
-	chromedriver!(No symbol) [0x7ff64e829df8]
-	chromedriver!(No symbol) [0x7ff64e82ace3]
-	chromedriver!GetHandleVerifier [0x7ff64ed8cc49+3296f9]
-	chromedriver!GetHandleVerifier [0x7ff64ed87375+323e25]
-	chromedriver!GetHandleVerifier [0x7ff64edabc82+348732]
-	chromedriver!GetHandleVerifier [0x7ff64ea96045+32af5]
-	chromedriver!GetHandleVerifier [0x7ff64ea9ecec+3b79c]
-	chromedriver!GetHandleVerifier [0x7ff64ea81bc4+1e674]
-	chromedriver!GetHandleVerifier [0x7ff64ea81d54+1e804]
-	chromedriver!GetHandleVerifier [0x7ff64ea660e7+2b97]
-	KERNEL32!BaseThreadInitThunk [0x7fff6ba37374+14]
-	ntdll!RtlUserThreadStart [0x7fff6c59cc91+21]
+	chromedriver!GetHandleVerifier [0x7ff724ce7de5+14895]
+	chromedriver!GetHandleVerifier [0x7ff724ce7e50+14900]
+	chromedriver!(No symbol) [0x7ff724a4d5ad]
+	chromedriver!(No symbol) [0x7ff724aa7822]
+	chromedriver!(No symbol) [0x7ff724aa7b2c]
+	chromedriver!(No symbol) [0x7ff724af7d17]
+	chromedriver!(No symbol) [0x7ff724af486f]
+	chromedriver!(No symbol) [0x7ff724a99df8]
+	chromedriver!(No symbol) [0x7ff724a9ace3]
+	chromedriver!GetHandleVerifier [0x7ff724ffcc49+3296f9]
+	chromedriver!GetHandleVerifier [0x7ff724ff7375+323e25]
+	chromedriver!GetHandleVerifier [0x7ff72501bc82+348732]
+	chromedriver!GetHandleVerifier [0x7ff724d06045+32af5]
+	chromedriver!GetHandleVerifier [0x7ff724d0ecec+3b79c]
+	chromedriver!GetHandleVerifier [0x7ff724cf1bc4+1e674]
+	chromedriver!GetHandleVerifier [0x7ff724cf1d54+1e804]
+	chromedriver!GetHandleVerifier [0x7ff724cd60e7+2b97]
+	KERNEL32!BaseThreadInitThunk [0x7ffe2c267374+14]
+	ntdll!RtlUserThreadStart [0x7ffe2db9cc91+21]
 
-2026-05-26 15:19:38,277 | INFO | Screenshot saved: C:\Users\Afraz\New Projet\Sharecodesystem\rtw_screenshots\error_row_16_20260526_151938.png
-2026-05-26 15:23:25,116 | INFO | Processing row 17, share code W4Z 96H 7JW
-2026-05-26 15:23:47,469 | INFO | Row 17 completed. PDF: C:\Users\Afraz\New Projet\Sharecodesystem\rtw_downloads\RTW_Check_Row17_W4Z96H7JW_20260526_152343.pdf
-2026-05-26 15:23:47,469 | INFO | Sheet update response: {'success': True, 'row': 17, 'status': 'Done', 'message': 'Row marked as Done'}
-2026-05-26 15:23:57,773 | INFO | Processing row 16, share code W3L 3F3 7LD
+2026-06-15 18:14:04,046 | INFO | Screenshot saved: C:\Users\Afraz\HDProjects\Sharecodesystem\rtw_screenshots\error_row_34_20260615_181403.png
+2026-06-15 18:20:31,872 | INFO | Processing row 34, share code W7L J9G 7BY
+2026-06-15 18:20:47,777 | ERROR | Failed row 34
+Traceback (most recent call last):
+  File "c:\Users\Afraz\HDProjects\Sharecodesystem\rtw_automation_day_month_year.py", line 599, in process_single_record
+    fill_company_name(driver, wait, COMPANY_NAME)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Afraz\HDProjects\Sharecodesystem\rtw_automation_day_month_year.py", line 548, in fill_company_name
+    wait.until(EC.visibility_of_element_located((By.ID, "checkerName")))
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Afraz\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\support\wait.py", line 112, in until
+    value = method(self._driver)
+  File "C:\Users\Afraz\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 184, in _predicate
+    return _element_if_visible(driver.find_element(*locator))
+                               ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\Afraz\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 868, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Afraz\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 468, in execute
+    self.error_handler.check_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\Afraz\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSessionIdException: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=148.0.7778.179); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff724ce7de5+14895]
+	chromedriver!GetHandleVerifier [0x7ff724ce7e50+14900]
+	chromedriver!(No symbol) [0x7ff724a4d5ad]
+	chromedriver!(No symbol) [0x7ff724a38a92]
+	chromedriver!(No symbol) [0x7ff724a5ee6c]
+	chromedriver!(No symbol) [0x7ff724ad71b0]
+	chromedriver!(No symbol) [0x7ff724af4172]
+	chromedriver!(No symbol) [0x7ff724a99df8]
+	chromedriver!(No symbol) [0x7ff724a9ace3]
+	chromedriver!GetHandleVerifier [0x7ff724ffcc49+3296f9]
+	chromedriver!GetHandleVerifier [0x7ff724ff7375+323e25]
+	chromedriver!GetHandleVerifier [0x7ff72501bc82+348732]
+	chromedriver!GetHandleVerifier [0x7ff724d06045+32af5]
+	chromedriver!GetHandleVerifier [0x7ff724d0ecec+3b79c]
+	chromedriver!GetHandleVerifier [0x7ff724cf1bc4+1e674]
+	chromedriver!GetHandleVerifier [0x7ff724cf1d54+1e804]
+	chromedriver!GetHandleVerifier [0x7ff724cd60e7+2b97]
+	KERNEL32!BaseThreadInitThunk [0x7ffe2c267374+14]
+	ntdll!RtlUserThreadStart [0x7ffe2db9cc91+21]
+
+2026-06-15 18:21:09,591 | INFO | Processing row 34, share code W7L J9G 7BY
+2026-06-15 18:21:15,661 | ERROR | Failed row 34
+Traceback (most recent call last):
+  File "c:\Users\Afraz\HDProjects\Sharecodesystem\rtw_automation_day_month_year.py", line 599, in process_single_record
+    fill_company_name(driver, wait, COMPANY_NAME)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Afraz\HDProjects\Sharecodesystem\rtw_automation_day_month_year.py", line 548, in fill_company_name
+    wait.until(EC.visibility_of_element_located((By.ID, "checkerName")))
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Afraz\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\support\wait.py", line 112, in until
+    value = method(self._driver)
+  File "C:\Users\Afraz\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 184, in _predicate
+    return _element_if_visible(driver.find_element(*locator))
+                               ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\Afraz\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 868, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Afraz\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 468, in execute
+    self.error_handler.check_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\Afraz\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSessionIdException: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=148.0.7778.179); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff724ce7de5+14895]
+	chromedriver!GetHandleVerifier [0x7ff724ce7e50+14900]
+	chromedriver!(No symbol) [0x7ff724a4d5ad]
+	chromedriver!(No symbol) [0x7ff724a38a92]
+	chromedriver!(No symbol) [0x7ff724a5ee6c]
+	chromedriver!(No symbol) [0x7ff724ad71b0]
+	chromedriver!(No symbol) [0x7ff724af4172]
+	chromedriver!(No symbol) [0x7ff724a99df8]
+	chromedriver!(No symbol) [0x7ff724a9ace3]
+	chromedriver!GetHandleVerifier [0x7ff724ffcc49+3296f9]
+	chromedriver!GetHandleVerifier [0x7ff724ff7375+323e25]
+	chromedriver!GetHandleVerifier [0x7ff72501bc82+348732]
+	chromedriver!GetHandleVerifier [0x7ff724d06045+32af5]
+	chromedriver!GetHandleVerifier [0x7ff724d0ecec+3b79c]
+	chromedriver!GetHandleVerifier [0x7ff724cf1bc4+1e674]
+	chromedriver!GetHandleVerifier [0x7ff724cf1d54+1e804]
+	chromedriver!GetHandleVerifier [0x7ff724cd60e7+2b97]
+	KERNEL32!BaseThreadInitThunk [0x7ffe2c267374+14]
+	ntdll!RtlUserThreadStart [0x7ffe2db9cc91+21]
+
+2026-06-15 18:25:28,540 | INFO | Processing row 34, share code W7L J9G 7BY
+2026-06-15 18:26:08,711 | ERROR | Failed row 34
+Traceback (most recent call last):
+  File "c:\Users\Afraz\HDProjects\Sharecodesystem\rtw_automation_day_month_year.py", line 598, in process_single_record
+    fill_company_name(driver, wait, COMPANY_NAME)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Afraz\HDProjects\Sharecodesystem\rtw_automation_day_month_year.py", line 547, in fill_company_name
+    wait.until(EC.visibility_of_element_located((By.ID, "checkerName")))
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Afraz\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\support\wait.py", line 121, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff724ce7de5+14895]
+	chromedriver!GetHandleVerifier [0x7ff724ce7e50+14900]
+	chromedriver!(No symbol) [0x7ff724a4d5ad]
+	chromedriver!(No symbol) [0x7ff724aa7822]
+	chromedriver!(No symbol) [0x7ff724aa7b2c]
+	chromedriver!(No symbol) [0x7ff724af7d17]
+	chromedriver!(No symbol) [0x7ff724af486f]
+	chromedriver!(No symbol) [0x7ff724a99df8]
+	chromedriver!(No symbol) [0x7ff724a9ace3]
+	chromedriver!GetHandleVerifier [0x7ff724ffcc49+3296f9]
+	chromedriver!GetHandleVerifier [0x7ff724ff7375+323e25]
+	chromedriver!GetHandleVerifier [0x7ff72501bc82+348732]
+	chromedriver!GetHandleVerifier [0x7ff724d06045+32af5]
+	chromedriver!GetHandleVerifier [0x7ff724d0ecec+3b79c]
+	chromedriver!GetHandleVerifier [0x7ff724cf1bc4+1e674]
+	chromedriver!GetHandleVerifier [0x7ff724cf1d54+1e804]
+	chromedriver!GetHandleVerifier [0x7ff724cd60e7+2b97]
+	KERNEL32!BaseThreadInitThunk [0x7ffe2c267374+14]
+	ntdll!RtlUserThreadStart [0x7ffe2db9cc91+21]
+
+2026-06-15 18:26:08,850 | INFO | Screenshot saved: C:\Users\Afraz\HDProjects\Sharecodesystem\rtw_screenshots\error_row_34_20260615_182608.png
+2026-06-15 18:27:00,336 | INFO | Processing row 34, share code W7L J9G 7BY
+2026-06-15 18:27:18,177 | ERROR | Failed row 34
+Traceback (most recent call last):
+  File "c:\Users\Afraz\HDProjects\Sharecodesystem\rtw_automation_day_month_year.py", line 598, in process_single_record
+    fill_company_name(driver, wait, COMPANY_NAME)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Afraz\HDProjects\Sharecodesystem\rtw_automation_day_month_year.py", line 547, in fill_company_name
+    wait.until(EC.visibility_of_element_located((By.ID, "checkerName")))
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Afraz\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\support\wait.py", line 112, in until
+    value = method(self._driver)
+  File "C:\Users\Afraz\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 184, in _predicate
+    return _element_if_visible(driver.find_element(*locator))
+                               ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\Afraz\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 868, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Afraz\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 468, in execute
+    self.error_handler.check_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\Afraz\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSessionIdException: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=148.0.7778.179); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff724ce7de5+14895]
+	chromedriver!GetHandleVerifier [0x7ff724ce7e50+14900]
+	chromedriver!(No symbol) [0x7ff724a4d5ad]
+	chromedriver!(No symbol) [0x7ff724a38a92]
+	chromedriver!(No symbol) [0x7ff724a5ee6c]
+	chromedriver!(No symbol) [0x7ff724ad71b0]
+	chromedriver!(No symbol) [0x7ff724af4172]
+	chromedriver!(No symbol) [0x7ff724a99df8]
+	chromedriver!(No symbol) [0x7ff724a9ace3]
+	chromedriver!GetHandleVerifier [0x7ff724ffcc49+3296f9]
+	chromedriver!GetHandleVerifier [0x7ff724ff7375+323e25]
+	chromedriver!GetHandleVerifier [0x7ff72501bc82+348732]
+	chromedriver!GetHandleVerifier [0x7ff724d06045+32af5]
+	chromedriver!GetHandleVerifier [0x7ff724d0ecec+3b79c]
+	chromedriver!GetHandleVerifier [0x7ff724cf1bc4+1e674]
+	chromedriver!GetHandleVerifier [0x7ff724cf1d54+1e804]
+	chromedriver!GetHandleVerifier [0x7ff724cd60e7+2b97]
+	KERNEL32!BaseThreadInitThunk [0x7ffe2c267374+14]
+	ntdll!RtlUserThreadStart [0x7ffe2db9cc91+21]
+

@@ -69,9 +69,7 @@ def get_next_share_code():
       success: true,
       row: 2,
       sharecode: "WXN JYE 7FX",
-      day: "25",
-      month: "11",
-      year: "2006"
+      dob_original: "25/11/2006"
     }
     """
 
@@ -140,23 +138,63 @@ def create_driver():
 # HELPER FUNCTIONS
 # ==================================================
 
-def safe_filename(value):
-    return (
-        str(value)
-        .replace(" ", "")
-        .replace("/", "")
-        .replace("\\", "")
-        .replace(":", "")
-        .replace("*", "")
-        .replace("?", "")
-        .replace('"', "")
-        .replace("<", "")
-        .replace(">", "")
-        .replace("|", "")
-        .strip()
-    )
+def safe_person_name_for_filename(value):
+    """
+    Converts person name into filename format.
+    Example:
+    VIVEK REDDY TURPU -> Vivek_Reddy_Turpu
+    Muhammad Ali -> Muhammad_Ali
+    """
+
+    if value is None:
+        raise ValueError("Person name is empty")
+
+    text = str(value).strip()
+
+    if not text:
+        raise ValueError("Person name is empty")
+
+    # Convert multiple spaces into single underscore
+    text = re.sub(r"\s+", "_", text)
+
+    # Remove characters that cannot be used safely in filenames
+    text = re.sub(r"[^A-Za-z0-9_\-]", "", text)
+
+    # Clean repeated underscores
+    text = re.sub(r"_+", "_", text)
+
+    # Remove unwanted characters from start and end
+    text = text.strip("._-")
+
+    if not text:
+        raise ValueError("Person name became empty after cleaning")
+
+    # Make GOV.UK uppercase name look cleaner
+    return text.title()
 
 
+def safe_share_code_for_filename(value):
+    """
+    Converts share code into filename format.
+    Example:
+    WXN JYE 7FX -> WXNJYE7FX
+    """
+
+    if value is None:
+        raise ValueError("Share code is empty")
+
+    text = str(value).strip().upper()
+
+    if not text:
+        raise ValueError("Share code is empty")
+
+    # Keep only letters and numbers
+    text = re.sub(r"[^A-Z0-9]", "", text)
+
+    if not text:
+        raise ValueError("Share code became empty after cleaning")
+
+    return text
 
 
 def normalise_year(year_value):
@@ -166,6 +204,7 @@ def normalise_year(year_value):
     99 -> 1999
     04 -> 2004
     """
+
     year_text = str(year_value).strip()
     year = int(year_text)
 
@@ -179,6 +218,7 @@ def is_valid_date(day, month, year):
     """
     Checks that the day, month, and year make a real calendar date.
     """
+
     try:
         datetime(int(year), int(month), int(day))
         return True
@@ -188,8 +228,12 @@ def is_valid_date(day, month, year):
 
 def format_dob_parts(day, month, year):
     """
-    Returns date parts in the format needed by the GOV.UK form.
+    Returns date parts in clean DD/MM/YYYY format.
+    Example:
+    30-Aug-2002 -> 30/08/2002
+    2-May-2002 -> 02/05/2002
     """
+
     day = int(day)
     month = int(month)
     year = int(year)
@@ -197,7 +241,7 @@ def format_dob_parts(day, month, year):
     if not is_valid_date(day, month, year):
         raise ValueError(f"Invalid date of birth: {day}/{month}/{year}")
 
-    return str(day), str(month), str(year)
+    return f"{day:02d}", f"{month:02d}", str(year)
 
 
 def parse_date_of_birth(value):
@@ -205,6 +249,8 @@ def parse_date_of_birth(value):
     Parses DOB using DD/MM/YYYY as the main format.
 
     Supported examples:
+    30-Aug-2002
+    2-May-2002
     09/10/2004
     09-10-2004
     09.10.2004
@@ -213,12 +259,8 @@ def parse_date_of_birth(value):
     08 December 2026
     Dec 8 2026
     2026-12-08
-
-    Important:
-    - DD/MM/YYYY is the default.
-    - If DD/MM/YYYY is impossible, for example 11/25/2006,
-      it automatically falls back to MM/DD/YYYY.
     """
+
     if value is None:
         raise ValueError("Date of birth is empty")
 
@@ -227,8 +269,29 @@ def parse_date_of_birth(value):
     if not raw:
         raise ValueError("Date of birth is empty")
 
-    text = re.sub(r",", " ", raw)
+    text = raw.strip()
+
+    # Clean common date text
+    text = re.sub(r",", " ", text)
     text = re.sub(r"\b(\d{1,2})(st|nd|rd|th)\b", r"\1", text, flags=re.IGNORECASE)
+
+    # IMPORTANT FIX:
+    # Converts 2-May-2002 / 30-Aug-2002 into 2 May 2002 / 30 Aug 2002
+    text = re.sub(
+        r"^(\d{1,2})[-/.]([A-Za-z]+)[-/.](\d{2,4})$",
+        r"\1 \2 \3",
+        text,
+        flags=re.IGNORECASE
+    )
+
+    # Converts May-2-2002 / Aug-30-2002 into May 2 2002 / Aug 30 2002
+    text = re.sub(
+        r"^([A-Za-z]+)[-/.](\d{1,2})[-/.](\d{2,4})$",
+        r"\1 \2 \3",
+        text,
+        flags=re.IGNORECASE
+    )
+
     text = re.sub(r"\s+", " ", text).strip()
 
     months = {
@@ -246,7 +309,7 @@ def parse_date_of_birth(value):
         "dec": 12, "december": 12,
     }
 
-    # Format: 8 Dec 2026 / 8th Dec 2026 / 08 December 2026
+    # Format: 2 May 2002 / 30 Aug 2002 / 8 Dec 2026
     match = re.match(r"^(\d{1,2})\s+([A-Za-z]+)\s+(\d{2,4})$", text)
     if match:
         day = int(match.group(1))
@@ -258,7 +321,7 @@ def parse_date_of_birth(value):
 
         return format_dob_parts(day, months[month_name], year)
 
-    # Format: Dec 8 2026 / December 8 2026
+    # Format: May 2 2002 / Aug 30 2002 / December 8 2026
     match = re.match(r"^([A-Za-z]+)\s+(\d{1,2})\s+(\d{2,4})$", text)
     if match:
         month_name = match.group(1).lower()
@@ -290,15 +353,13 @@ def parse_date_of_birth(value):
         if is_valid_date(first, second, year):
             return format_dob_parts(first, second, year)
 
-        # Fallback for old sheet values like 11/25/2006
+        # Fallback for US-style dates like 11/25/2006
         if is_valid_date(second, first, year):
             return format_dob_parts(second, first, year)
 
         raise ValueError(f"Invalid date of birth: {raw}")
 
     raise ValueError(f"Unsupported date of birth format: {raw}")
-
-
 def get_dob_parts_from_record(record):
     """
     Gets DOB from the API record and parses it inside Python.
@@ -308,6 +369,7 @@ def get_dob_parts_from_record(record):
     2. dob / date_of_birth / dateOfBirth, if available in future
     3. Existing day, month, year fields as fallback
     """
+
     date_candidates = [
         record.get("dob_original"),
         record.get("dob"),
@@ -382,12 +444,61 @@ def wait_for_new_pdf(existing_pdfs, timeout=90):
     raise TimeoutError("PDF download did not complete within the timeout.")
 
 
-def rename_downloaded_pdf(pdf_path, share_code, row):
-    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    clean_code = safe_filename(share_code)
+def extract_person_name_from_profile(driver, wait):
+    """
+    Extracts the person name from the GOV.UK Right to Work profile page.
 
-    new_name = f"RTW_Check_Row{row}_{clean_code}_{timestamp}.pdf"
+    In the uploaded HTML, the name appears like this:
+    <h2 class="govuk-heading-l">VIVEK REDDY TURPU</h2>
+    """
+
+    wait.until(EC.url_contains("/rtw-view/profile"))
+
+    selectors = [
+        ".rtwr-banner__content .govuk-grid-column-two-thirds h2.govuk-heading-l",
+        ".rtwr-banner__content h2.govuk-heading-l",
+        "h2.govuk-heading-l"
+    ]
+
+    last_error = None
+
+    for selector in selectors:
+        try:
+            element = wait.until(
+                EC.visibility_of_element_located((By.CSS_SELECTOR, selector))
+            )
+
+            person_name = element.text.strip()
+
+            if person_name:
+                logging.info(f"Extracted person name: {person_name}")
+                return person_name
+
+        except Exception as error:
+            last_error = error
+
+    raise ValueError(f"Could not extract person name from profile page: {last_error}")
+
+
+def rename_downloaded_pdf(pdf_path, share_code, person_name):
+    """
+    Saves PDF as:
+    Person_Name-sharecode.pdf
+
+    Example:
+    Muhammad_Ali-WXNJYE7FX.pdf
+    """
+
+    clean_name = safe_person_name_for_filename(person_name)
+    clean_code = safe_share_code_for_filename(share_code)
+
+    new_name = f"{clean_name}-{clean_code}.pdf"
     new_path = pdf_path.parent / new_name
+
+    # Keeps the exact required filename format.
+    # If the file already exists, it replaces the old one.
+    if new_path.exists():
+        new_path.unlink()
 
     shutil.move(str(pdf_path), str(new_path))
     return new_path
@@ -467,7 +578,7 @@ def process_single_record(record):
     row = record["row"]
     share_code = record["sharecode"]
 
-    # DOB is now parsed inside Python.
+    # DOB is parsed inside Python.
     # Main format is DD/MM/YYYY.
     # It also supports text dates like "8th Dec 2026".
     day, month, year = get_dob_parts_from_record(record)
@@ -486,12 +597,15 @@ def process_single_record(record):
 
         fill_company_name(driver, wait, COMPANY_NAME)
 
+        # Extract name from the GOV.UK result page before downloading PDF
+        person_name = extract_person_name_from_profile(driver, wait)
+
         downloaded_pdf = download_pdf(driver, wait)
 
         renamed_pdf = rename_downloaded_pdf(
             downloaded_pdf,
             share_code,
-            row
+            person_name
         )
 
         update_response = update_sheet_status(
@@ -500,10 +614,14 @@ def process_single_record(record):
             message=f"Downloaded: {renamed_pdf.name}"
         )
 
-        logging.info(f"Row {row} completed. PDF: {renamed_pdf}")
+        logging.info(f"Row {row} completed.")
+        logging.info(f"Person name: {person_name}")
+        logging.info(f"PDF: {renamed_pdf}")
         logging.info(f"Sheet update response: {update_response}")
 
-        print(f"Done row {row}: {renamed_pdf.name}")
+        print(f"Done row {row}")
+        print(f"Person Name: {person_name}")
+        print(f"PDF: {renamed_pdf.name}")
 
         return True
 
@@ -544,6 +662,7 @@ def main():
         print("Pending record found:")
         print(f"Row: {record['row']}")
         print(f"Share Code: {record['sharecode']}")
+
         day, month, year = get_dob_parts_from_record(record)
         print(f"DOB: {day}/{month}/{year}")
 
