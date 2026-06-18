@@ -1,0 +1,2007 @@
+2026-06-17 17:47:04,541 | INFO | Fetching pending rows from Google Sheet
+2026-06-17 17:47:08,395 | INFO | Loaded 0 pending row(s) from Google Sheet
+2026-06-17 17:47:08,400 | INFO | No pending rows found. All rows are already marked in 'Parim Completed'.
+2026-06-17 17:47:19,769 | INFO | Fetching pending rows from Google Sheet
+2026-06-17 17:47:44,096 | INFO | Loaded 1 pending row(s) from Google Sheet
+2026-06-17 17:47:46,086 | INFO | Opening login page
+2026-06-17 17:47:51,623 | INFO | Login successful. Current URL: https://hd.parim.co/dashboard
+2026-06-17 17:47:51,624 | INFO | Creating pending row 1/1 | Sheet row 2 | handdrecruitment@gmail.com
+2026-06-17 17:47:51,624 | INFO | Opening create user URL
+2026-06-17 17:47:51,624 | INFO | Trying create URL: https://hd.parim.co/admin/user/create
+2026-06-17 17:47:52,085 | INFO | Waiting 7 seconds for create form to appear
+2026-06-17 17:47:59,142 | INFO | After opening URL page summary: current_url=https://hd.parim.co/admin/user/create | title='Admin portal - Parim' | frames=2 | body_start='Dashboard\nSchedule\nTime Clock\nLocations\nAbsences\nPeople\nPay & Charge\nReports\nDocuments\n99+\nHH'
+2026-06-17 17:47:59,190 | INFO | Found #UserDetails_first_name in context: top > frame[0]
+2026-06-17 17:47:59,200 | INFO | Create user form found at: https://hd.parim.co/admin/user/create
+2026-06-17 17:47:59,200 | INFO | Waiting for field: First Name
+2026-06-17 17:47:59,247 | INFO | Found #UserDetails_first_name in context: top > frame[0]
+2026-06-17 17:47:59,252 | INFO | Waiting for field: Last Name
+2026-06-17 17:47:59,315 | INFO | Found #UserDetails_last_name in context: top > frame[0]
+2026-06-17 17:47:59,319 | INFO | Waiting for field: Email
+2026-06-17 17:47:59,397 | INFO | Found #User_email in context: top > frame[0]
+2026-06-17 17:47:59,404 | INFO | Waiting for field: Employment Type
+2026-06-17 17:47:59,447 | INFO | Found #UserContract_contract_type_id in context: top > frame[0]
+2026-06-17 17:47:59,452 | INFO | Create user form is ready. Starting fill.
+2026-06-17 17:47:59,452 | INFO | Filling Person's Details
+2026-06-17 17:47:59,453 | INFO | Waiting for field: UserDetails_first_name
+2026-06-17 17:47:59,501 | INFO | Found #UserDetails_first_name in context: top > frame[0]
+2026-06-17 17:47:59,592 | INFO | Filled UserDetails_first_name = Recruitment
+2026-06-17 17:47:59,594 | INFO | Waiting for field: UserDetails_last_name
+2026-06-17 17:47:59,636 | INFO | Found #UserDetails_last_name in context: top > frame[0]
+2026-06-17 17:47:59,728 | INFO | Filled UserDetails_last_name = Test 2
+2026-06-17 17:47:59,728 | INFO | Waiting for field: User_email
+2026-06-17 17:47:59,771 | INFO | Found #User_email in context: top > frame[0]
+2026-06-17 17:47:59,908 | INFO | Filled User_email = handdrecruitment@gmail.com
+2026-06-17 17:47:59,908 | INFO | Waiting for field: UserContract_contract_type_id
+2026-06-17 17:47:59,947 | INFO | Found #UserContract_contract_type_id in context: top > frame[0]
+2026-06-17 17:48:00,058 | INFO | Selected UserContract_contract_type_id = Full-time Employee
+2026-06-17 17:48:00,058 | INFO | Skipped empty field: UserContract_contract_no
+2026-06-17 17:48:00,059 | INFO | Skipped empty field: user_edit_start_date
+2026-06-17 17:48:00,060 | INFO | Skipped empty field: user_edit_end_date
+2026-06-17 17:48:00,067 | INFO | Staff Portal access set to: False
+2026-06-17 17:48:00,068 | INFO | Waiting for field: user-create-form
+2026-06-17 17:48:00,122 | INFO | Found #user-create-form in context: top > frame[0]
+2026-06-17 17:48:00,140 | INFO | Clicked submit: Save & Next
+2026-06-17 17:48:00,140 | INFO | Waiting 5 seconds for Contacts form to appear
+2026-06-17 17:48:05,141 | INFO | Waiting for next step: Contacts form
+2026-06-17 17:48:05,216 | INFO | Found #UserDetails_phone in context: top > frame[0]
+2026-06-17 17:48:05,221 | INFO | Contacts form field is present and Selenium is in the correct frame
+2026-06-17 17:48:05,221 | INFO | Waiting for field: Contacts form
+2026-06-17 17:48:05,267 | INFO | Found #user-contacts-form in context: top > frame[0]
+2026-06-17 17:48:05,271 | INFO | Waiting for field: Mobile
+2026-06-17 17:48:05,305 | INFO | Found #UserDetails_phone in context: top > frame[0]
+2026-06-17 17:48:05,311 | INFO | Contacts form is ready and active
+2026-06-17 17:48:05,311 | INFO | Filling Contacts
+2026-06-17 17:48:05,311 | INFO | Waiting for field: Contacts form
+2026-06-17 17:48:05,347 | INFO | Found #user-contacts-form in context: top > frame[0]
+2026-06-17 17:48:05,351 | INFO | Waiting for field: Mobile
+2026-06-17 17:48:05,387 | INFO | Found #UserDetails_phone in context: top > frame[0]
+2026-06-17 17:48:05,392 | INFO | Waiting for field: UserDetails_phone
+2026-06-17 17:48:05,427 | INFO | Found #UserDetails_phone in context: top > frame[0]
+2026-06-17 17:48:05,460 | INFO | Filled UserDetails_phone = 07574161674
+2026-06-17 17:48:05,461 | INFO | Waiting for field: UserAddress_address_line
+2026-06-17 17:48:05,503 | INFO | Found #UserAddress_address_line in context: top > frame[0]
+2026-06-17 17:48:05,534 | INFO | Filled UserAddress_address_line = Bell Parade
+2026-06-17 17:48:05,534 | INFO | Skipped empty field: UserAddress_apartment_number
+2026-06-17 17:48:05,535 | INFO | Waiting for field: UserAddress_house_number
+2026-06-17 17:48:05,575 | INFO | Found #UserAddress_house_number in context: top > frame[0]
+2026-06-17 17:48:05,605 | INFO | Filled UserAddress_house_number = 4
+2026-06-17 17:48:05,605 | INFO | Waiting for field: UserAddress_postcode
+2026-06-17 17:48:05,646 | INFO | Found #UserAddress_postcode in context: top > frame[0]
+2026-06-17 17:48:05,679 | INFO | Filled UserAddress_postcode = tw3 3nu
+2026-06-17 17:48:05,680 | INFO | Skipped empty field: UserAddress_city
+2026-06-17 17:48:05,680 | INFO | Waiting for field: UserAddress_country_id
+2026-06-17 17:48:05,720 | INFO | Found #UserAddress_country_id in context: top > frame[0]
+2026-06-17 17:48:05,804 | INFO | Selected UserAddress_country_id = Pakistan
+2026-06-17 17:48:05,804 | INFO | Waiting for field: user-contacts-form
+2026-06-17 17:48:05,842 | INFO | Found #user-contacts-form in context: top > frame[0]
+2026-06-17 17:48:05,862 | INFO | Clicked submit: Save & Next
+2026-06-17 17:48:05,862 | INFO | Waiting for next step: Personal Details form
+2026-06-17 17:48:05,903 | INFO | Found #UserDetails_date_of_birth in context: top > frame[0]
+2026-06-17 17:48:05,907 | INFO | Personal Details form field is present and Selenium is in the correct frame
+2026-06-17 17:48:05,907 | INFO | Filling Personal Details in smart mode. Missing optional fields will be noted, not fatal.
+2026-06-17 17:48:05,907 | INFO | Waiting for field: Personal Details form
+2026-06-17 17:48:05,949 | INFO | Found #user-details-form in context: top > frame[0]
+2026-06-17 17:48:05,953 | INFO | Core values from sheet | Gender=Male | Nationality=Pakistan | NI=23421432143
+2026-06-17 17:48:05,961 | INFO | Selected Gender = Male via id=UserDetails_gender_0 value=0
+2026-06-17 17:48:05,968 | INFO | Filled Nationality via #UserDetails_nationality = Pakistani
+2026-06-17 17:48:05,968 | INFO | Waiting for field: UserDetails_birth_country_id
+2026-06-17 17:48:06,012 | INFO | Found #UserDetails_birth_country_id in context: top > frame[0]
+2026-06-17 17:48:06,088 | INFO | Selected UserDetails_birth_country_id = Pakistan
+2026-06-17 17:48:06,094 | INFO | Filled NI / Social Security number via #UserDetails_nin = 23421432143
+2026-06-17 17:48:06,095 | INFO | Waiting 3.0 seconds after core Personal Details fields. Gender=Male | Nationality=Pakistani | NI=23421432143
+2026-06-17 17:48:06,103 | INFO | Core field values before wait | genderChecked=True | nationality=Pakistani | NI=23421432143 | DOB=
+2026-06-17 17:48:09,118 | INFO | Verified Personal Details before submit: Gender, Nationality and NI Number
+2026-06-17 17:48:09,119 | INFO | Waiting for field: UserDetails_drivers_license
+2026-06-17 17:48:09,183 | INFO | Found #UserDetails_drivers_license in context: top > frame[0]
+2026-06-17 17:48:09,263 | INFO | Selected UserDetails_drivers_license = Yes
+2026-06-17 17:48:09,264 | INFO | Waiting for field: UserDetails_visa_needed
+2026-06-17 17:48:09,307 | INFO | Found #UserDetails_visa_needed in context: top > frame[0]
+2026-06-17 17:48:09,340 | INFO | Selected UserDetails_visa_needed = No
+2026-06-17 17:48:09,346 | INFO | Verified Personal Details before submit: Gender, Nationality and NI Number
+2026-06-17 17:48:09,346 | INFO | Waiting for field: Personal Details form
+2026-06-17 17:48:09,384 | INFO | Found #user-details-form in context: top > frame[0]
+2026-06-17 17:48:09,405 | INFO | Clicked real Personal Details button: Save & Next | blocked: none | visible buttons: Save & Next
+2026-06-17 17:48:11,539 | ERROR | Failed row: handdrecruitment@gmail.com
+Traceback (most recent call last):
+  File "c:\Users\Afraz\HDProjects\Parim Automate with Zoho\zoho_parim_external_sheet_package\zoho_parim_external_sheet_package\Parim Automation with Zoho\parim_zoho_workdrive_docs_package\parim_zoho_workdrive_docs_package\parim_user_creator_zoho_workdrive_docs.py", line 4736, in create_one_user
+    profile_url = self.fill_personal_details(row)
+  File "c:\Users\Afraz\HDProjects\Parim Automate with Zoho\zoho_parim_external_sheet_package\zoho_parim_external_sheet_package\Parim Automation with Zoho\parim_zoho_workdrive_docs_package\parim_zoho_workdrive_docs_package\parim_user_creator_zoho_workdrive_docs.py", line 2245, in fill_personal_details
+    self.click_real_personal_details_save()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "c:\Users\Afraz\HDProjects\Parim Automate with Zoho\zoho_parim_external_sheet_package\zoho_parim_external_sheet_package\Parim Automation with Zoho\parim_zoho_workdrive_docs_package\parim_zoho_workdrive_docs_package\parim_user_creator_zoho_workdrive_docs.py", line 2066, in click_real_personal_details_save
+    raise RuntimeError(f"Personal Details save failed after clicking Save / Save & Next: {errors}")
+RuntimeError: Personal Details save failed after clicking Save / Save & Next: Employee with this email already exists.
+2026-06-17 17:48:15,997 | INFO | Updated Google Sheet row 2 as Error
+2026-06-17 17:48:16,003 | INFO | Result for handdrecruitment@gmail.com: failed RuntimeError: Personal Details save failed after clicking Save / Save & Next: Employee with this email already exists. | screenshot: output\screenshots\failed_handdrecruitment_gmail.com_20260617_174811.png
+2026-06-17 17:48:16,006 | INFO | Finished. Created: 0 | Failed: 1 | Local Results: output\results.csv
+2026-06-17 17:50:23,967 | INFO | Fetching pending rows from Google Sheet
+2026-06-17 17:50:28,416 | INFO | Loaded 0 pending row(s) from Google Sheet
+2026-06-17 17:50:28,422 | INFO | No pending rows found. All rows are already marked in 'Parim Completed'.
+2026-06-17 17:51:02,188 | INFO | Fetching pending rows from Google Sheet
+2026-06-17 17:51:05,969 | INFO | Loaded 1 pending row(s) from Google Sheet
+2026-06-17 17:51:08,027 | INFO | Opening login page
+2026-06-17 17:51:13,337 | INFO | Login successful. Current URL: https://hd.parim.co/dashboard
+2026-06-17 17:51:13,337 | INFO | Creating pending row 1/1 | Sheet row 2 | handdrecruitment@gmail.com
+2026-06-17 17:51:13,338 | INFO | Opening create user URL
+2026-06-17 17:51:13,338 | INFO | Trying create URL: https://hd.parim.co/admin/user/create
+2026-06-17 17:51:13,778 | INFO | Waiting 7 seconds for create form to appear
+2026-06-17 17:51:20,828 | INFO | After opening URL page summary: current_url=https://hd.parim.co/admin/user/create | title='Admin portal - Parim' | frames=2 | body_start='Dashboard\nSchedule\nTime Clock\nLocations\nAbsences\nPeople\nPay & Charge\nReports\nDocuments\n99+\nHH'
+2026-06-17 17:51:20,873 | INFO | Found #UserDetails_first_name in context: top > frame[0]
+2026-06-17 17:51:20,881 | INFO | Create user form found at: https://hd.parim.co/admin/user/create
+2026-06-17 17:51:20,882 | INFO | Waiting for field: First Name
+2026-06-17 17:51:20,920 | INFO | Found #UserDetails_first_name in context: top > frame[0]
+2026-06-17 17:51:20,925 | INFO | Waiting for field: Last Name
+2026-06-17 17:51:20,964 | INFO | Found #UserDetails_last_name in context: top > frame[0]
+2026-06-17 17:51:20,968 | INFO | Waiting for field: Email
+2026-06-17 17:51:21,011 | INFO | Found #User_email in context: top > frame[0]
+2026-06-17 17:51:21,015 | INFO | Waiting for field: Employment Type
+2026-06-17 17:51:21,054 | INFO | Found #UserContract_contract_type_id in context: top > frame[0]
+2026-06-17 17:51:21,061 | INFO | Create user form is ready. Starting fill.
+2026-06-17 17:51:21,061 | INFO | Filling Person's Details
+2026-06-17 17:51:21,062 | INFO | Waiting for field: UserDetails_first_name
+2026-06-17 17:51:21,116 | INFO | Found #UserDetails_first_name in context: top > frame[0]
+2026-06-17 17:51:21,190 | INFO | Filled UserDetails_first_name = Recruitment
+2026-06-17 17:51:21,190 | INFO | Waiting for field: UserDetails_last_name
+2026-06-17 17:51:21,227 | INFO | Found #UserDetails_last_name in context: top > frame[0]
+2026-06-17 17:51:21,306 | INFO | Filled UserDetails_last_name = Test 2
+2026-06-17 17:51:21,306 | INFO | Waiting for field: User_email
+2026-06-17 17:51:21,341 | INFO | Found #User_email in context: top > frame[0]
+2026-06-17 17:51:21,471 | INFO | Filled User_email = handdrecruitment@gmail.com
+2026-06-17 17:51:21,471 | INFO | Waiting for field: UserContract_contract_type_id
+2026-06-17 17:51:21,509 | INFO | Found #UserContract_contract_type_id in context: top > frame[0]
+2026-06-17 17:51:21,613 | INFO | Selected UserContract_contract_type_id = Full-time Employee
+2026-06-17 17:51:21,613 | INFO | Skipped empty field: UserContract_contract_no
+2026-06-17 17:51:21,614 | INFO | Skipped empty field: user_edit_start_date
+2026-06-17 17:51:21,614 | INFO | Skipped empty field: user_edit_end_date
+2026-06-17 17:51:21,622 | INFO | Staff Portal access set to: False
+2026-06-17 17:51:21,622 | INFO | Waiting for field: user-create-form
+2026-06-17 17:51:21,676 | INFO | Found #user-create-form in context: top > frame[0]
+2026-06-17 17:51:21,696 | INFO | Clicked submit: Save & Next
+2026-06-17 17:51:21,696 | INFO | Waiting 5 seconds for Contacts form to appear
+2026-06-17 17:51:26,697 | INFO | Waiting for next step: Contacts form
+2026-06-17 17:51:26,742 | INFO | Found #UserDetails_phone in context: top > frame[0]
+2026-06-17 17:51:26,746 | INFO | Contacts form field is present and Selenium is in the correct frame
+2026-06-17 17:51:26,746 | INFO | Waiting for field: Contacts form
+2026-06-17 17:51:26,787 | INFO | Found #user-contacts-form in context: top > frame[0]
+2026-06-17 17:51:26,792 | INFO | Waiting for field: Mobile
+2026-06-17 17:51:26,827 | INFO | Found #UserDetails_phone in context: top > frame[0]
+2026-06-17 17:51:26,831 | INFO | Contacts form is ready and active
+2026-06-17 17:51:26,831 | INFO | Filling Contacts
+2026-06-17 17:51:26,832 | INFO | Waiting for field: Contacts form
+2026-06-17 17:51:26,871 | INFO | Found #user-contacts-form in context: top > frame[0]
+2026-06-17 17:51:26,876 | INFO | Waiting for field: Mobile
+2026-06-17 17:51:26,913 | INFO | Found #UserDetails_phone in context: top > frame[0]
+2026-06-17 17:51:26,917 | INFO | Waiting for field: UserDetails_phone
+2026-06-17 17:51:26,955 | INFO | Found #UserDetails_phone in context: top > frame[0]
+2026-06-17 17:51:26,991 | INFO | Filled UserDetails_phone = 07574161674
+2026-06-17 17:51:26,992 | INFO | Waiting for field: UserAddress_address_line
+2026-06-17 17:51:27,034 | INFO | Found #UserAddress_address_line in context: top > frame[0]
+2026-06-17 17:51:27,066 | INFO | Filled UserAddress_address_line = Bell Parade
+2026-06-17 17:51:27,067 | INFO | Skipped empty field: UserAddress_apartment_number
+2026-06-17 17:51:27,067 | INFO | Waiting for field: UserAddress_house_number
+2026-06-17 17:51:27,157 | INFO | Found #UserAddress_house_number in context: top > frame[0]
+2026-06-17 17:51:27,196 | INFO | Filled UserAddress_house_number = 4
+2026-06-17 17:51:27,197 | INFO | Waiting for field: UserAddress_postcode
+2026-06-17 17:51:27,236 | INFO | Found #UserAddress_postcode in context: top > frame[0]
+2026-06-17 17:51:27,264 | INFO | Filled UserAddress_postcode = tw3 3nu
+2026-06-17 17:51:27,265 | INFO | Skipped empty field: UserAddress_city
+2026-06-17 17:51:27,265 | INFO | Waiting for field: UserAddress_country_id
+2026-06-17 17:51:27,309 | INFO | Found #UserAddress_country_id in context: top > frame[0]
+2026-06-17 17:51:27,407 | INFO | Selected UserAddress_country_id = Pakistan
+2026-06-17 17:51:27,407 | INFO | Waiting for field: user-contacts-form
+2026-06-17 17:51:27,450 | INFO | Found #user-contacts-form in context: top > frame[0]
+2026-06-17 17:51:27,471 | INFO | Clicked submit: Save & Next
+2026-06-17 17:51:27,472 | INFO | Waiting for next step: Personal Details form
+2026-06-17 17:51:27,526 | INFO | Found #UserDetails_date_of_birth in context: top > frame[0]
+2026-06-17 17:51:27,530 | INFO | Personal Details form field is present and Selenium is in the correct frame
+2026-06-17 17:51:27,530 | INFO | Filling Personal Details in smart mode. Missing optional fields will be noted, not fatal.
+2026-06-17 17:51:27,531 | INFO | Waiting for field: Personal Details form
+2026-06-17 17:51:27,571 | INFO | Found #user-details-form in context: top > frame[0]
+2026-06-17 17:51:27,577 | INFO | Core values from sheet | Gender=Male | Nationality=Pakistan | NI=23421432143
+2026-06-17 17:51:27,584 | INFO | Selected Gender = Male via id=UserDetails_gender_0 value=0
+2026-06-17 17:51:27,590 | INFO | Filled Nationality via #UserDetails_nationality = Pakistani
+2026-06-17 17:51:27,591 | INFO | Waiting for field: UserDetails_birth_country_id
+2026-06-17 17:51:27,632 | INFO | Found #UserDetails_birth_country_id in context: top > frame[0]
+2026-06-17 17:51:27,707 | INFO | Selected UserDetails_birth_country_id = Pakistan
+2026-06-17 17:51:27,712 | INFO | Filled NI / Social Security number via #UserDetails_nin = 23421432143
+2026-06-17 17:51:27,713 | INFO | Waiting 3.0 seconds after core Personal Details fields. Gender=Male | Nationality=Pakistani | NI=23421432143
+2026-06-17 17:51:27,721 | INFO | Core field values before wait | genderChecked=True | nationality=Pakistani | NI=23421432143 | DOB=
+2026-06-17 17:51:30,737 | INFO | Verified Personal Details before submit: Gender, Nationality and NI Number
+2026-06-17 17:51:30,738 | INFO | Waiting for field: UserDetails_drivers_license
+2026-06-17 17:51:30,800 | INFO | Found #UserDetails_drivers_license in context: top > frame[0]
+2026-06-17 17:51:30,878 | INFO | Selected UserDetails_drivers_license = Yes
+2026-06-17 17:51:30,879 | INFO | Waiting for field: UserDetails_visa_needed
+2026-06-17 17:51:30,923 | INFO | Found #UserDetails_visa_needed in context: top > frame[0]
+2026-06-17 17:51:30,960 | INFO | Selected UserDetails_visa_needed = No
+2026-06-17 17:51:30,965 | INFO | Verified Personal Details before submit: Gender, Nationality and NI Number
+2026-06-17 17:51:30,965 | INFO | Waiting for field: Personal Details form
+2026-06-17 17:51:31,008 | INFO | Found #user-details-form in context: top > frame[0]
+2026-06-17 17:51:31,024 | INFO | Clicked real Personal Details button: Save & Next | blocked: none | visible buttons: Save & Next
+2026-06-17 17:51:33,118 | ERROR | Failed row: handdrecruitment@gmail.com
+Traceback (most recent call last):
+  File "c:\Users\Afraz\HDProjects\Parim Automate with Zoho\zoho_parim_external_sheet_package\zoho_parim_external_sheet_package\Parim Automation with Zoho\parim_zoho_workdrive_docs_package\parim_zoho_workdrive_docs_package\parim_user_creator_zoho_workdrive_docs.py", line 4736, in create_one_user
+    profile_url = self.fill_personal_details(row)
+  File "c:\Users\Afraz\HDProjects\Parim Automate with Zoho\zoho_parim_external_sheet_package\zoho_parim_external_sheet_package\Parim Automation with Zoho\parim_zoho_workdrive_docs_package\parim_zoho_workdrive_docs_package\parim_user_creator_zoho_workdrive_docs.py", line 2245, in fill_personal_details
+    self.click_real_personal_details_save()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "c:\Users\Afraz\HDProjects\Parim Automate with Zoho\zoho_parim_external_sheet_package\zoho_parim_external_sheet_package\Parim Automation with Zoho\parim_zoho_workdrive_docs_package\parim_zoho_workdrive_docs_package\parim_user_creator_zoho_workdrive_docs.py", line 2064, in click_real_personal_details_save
+    errors = self.get_visible_errors()
+  File "c:\Users\Afraz\HDProjects\Parim Automate with Zoho\zoho_parim_external_sheet_package\zoho_parim_external_sheet_package\Parim Automation with Zoho\parim_zoho_workdrive_docs_package\parim_zoho_workdrive_docs_package\parim_user_creator_zoho_workdrive_docs.py", line 1318, in get_visible_errors
+    self.driver.execute_script(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        """
+        ^^^
+    ...<10 lines>...
+        """
+        ^^^
+    )
+    ^
+  File "C:\Users\Afraz\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 578, in execute_script
+    return self.execute(command, {"script": script, "args": converted_args})["value"]
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Afraz\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 468, in execute
+    self.error_handler.check_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\Afraz\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSessionIdException: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=148.0.7778.179); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff70ca77de5+14895]
+	chromedriver!GetHandleVerifier [0x7ff70ca77e50+14900]
+	chromedriver!(No symbol) [0x7ff70c7dd5ad]
+	chromedriver!(No symbol) [0x7ff70c7c8a92]
+	chromedriver!(No symbol) [0x7ff70c7eee6c]
+	chromedriver!(No symbol) [0x7ff70c8671b0]
+	chromedriver!(No symbol) [0x7ff70c884172]
+	chromedriver!(No symbol) [0x7ff70c829df8]
+	chromedriver!(No symbol) [0x7ff70c82ace3]
+	chromedriver!GetHandleVerifier [0x7ff70cd8cc49+3296f9]
+	chromedriver!GetHandleVerifier [0x7ff70cd87375+323e25]
+	chromedriver!GetHandleVerifier [0x7ff70cdabc82+348732]
+	chromedriver!GetHandleVerifier [0x7ff70ca96045+32af5]
+	chromedriver!GetHandleVerifier [0x7ff70ca9ecec+3b79c]
+	chromedriver!GetHandleVerifier [0x7ff70ca81bc4+1e674]
+	chromedriver!GetHandleVerifier [0x7ff70ca81d54+1e804]
+	chromedriver!GetHandleVerifier [0x7ff70ca660e7+2b97]
+	KERNEL32!BaseThreadInitThunk [0x7ff95b767374+14]
+	ntdll!RtlUserThreadStart [0x7ff95b91cc91+21]
+
+2026-06-17 17:51:36,981 | INFO | Updated Google Sheet row 2 as Error
+2026-06-17 17:51:36,986 | INFO | Result for handdrecruitment@gmail.com: failed InvalidSessionIdException: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=148.0.7778.179); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff70ca77de5+14895]
+	chromedriver!GetHandleVerifier [0x7ff70ca77e50+14900]
+	chromedriver!(No symbol) [0x7ff70c7dd5ad]
+	chromedriver!(No symbol) [0x7ff70c7c8a92]
+	chromedriver!(No symbol) [0x7ff70c7eee6c]
+	chromedriver!(No symbol) [0x7ff70c8671b0]
+	chromedriver!(No symbol) [0x7ff70c884172]
+	chromedriver!(No symbol) [0x7ff70c829df8]
+	chromedriver!(No symbol) [0x7ff70c82ace3]
+	chromedriver!GetHandleVerifier [0x7ff70cd8cc49+3296f9]
+	chromedriver!GetHandleVerifier [0x7ff70cd87375+323e25]
+	chromedriver!GetHandleVerifier [0x7ff70cdabc82+348732]
+	chromedriver!GetHandleVerifier [0x7ff70ca96045+32af5]
+	chromedriver!GetHandleVerifier [0x7ff70ca9ecec+3b79c]
+	chromedriver!GetHandleVerifier [0x7ff70ca81bc4+1e674]
+	chromedriver!GetHandleVerifier [0x7ff70ca81d54+1e804]
+	chromedriver!GetHandleVerifier [0x7ff70ca660e7+2b97]
+	KERNEL32!BaseThreadInitThunk [0x7ff95b767374+14]
+	ntdll!RtlUserThreadStart [0x7ff95b91cc91+21]
+
+2026-06-17 17:51:36,989 | INFO | Finished. Created: 0 | Failed: 1 | Local Results: output\results.csv
+2026-06-17 17:52:01,036 | INFO | Fetching pending rows from Google Sheet
+2026-06-17 17:52:04,561 | INFO | Loaded 1 pending row(s) from Google Sheet
+2026-06-17 17:52:05,897 | INFO | Opening login page
+2026-06-17 17:52:12,263 | INFO | Login successful. Current URL: https://hd.parim.co/dashboard
+2026-06-17 17:52:12,265 | INFO | Creating pending row 1/1 | Sheet row 2 | testhanddrecruitment@gmail.com
+2026-06-17 17:52:12,266 | INFO | Opening create user URL
+2026-06-17 17:52:12,266 | INFO | Trying create URL: https://hd.parim.co/admin/user/create
+2026-06-17 17:52:14,097 | INFO | Waiting 7 seconds for create form to appear
+2026-06-17 17:52:21,127 | INFO | After opening URL page summary: current_url=https://hd.parim.co/admin/user/create | title='Admin portal - Parim' | frames=2 | body_start='Dashboard\nSchedule\nTime Clock\nLocations\nAbsences\nPeople\nPay & Charge\nReports\nDocuments\n99+\nHH'
+2026-06-17 17:52:21,174 | INFO | Found #UserDetails_first_name in context: top > frame[0]
+2026-06-17 17:52:21,184 | INFO | Create user form found at: https://hd.parim.co/admin/user/create
+2026-06-17 17:52:21,184 | INFO | Waiting for field: First Name
+2026-06-17 17:52:21,234 | INFO | Found #UserDetails_first_name in context: top > frame[0]
+2026-06-17 17:52:21,240 | INFO | Waiting for field: Last Name
+2026-06-17 17:52:21,309 | INFO | Found #UserDetails_last_name in context: top > frame[0]
+2026-06-17 17:52:21,314 | INFO | Waiting for field: Email
+2026-06-17 17:52:21,352 | INFO | Found #User_email in context: top > frame[0]
+2026-06-17 17:52:21,360 | INFO | Waiting for field: Employment Type
+2026-06-17 17:52:21,397 | INFO | Found #UserContract_contract_type_id in context: top > frame[0]
+2026-06-17 17:52:21,401 | INFO | Create user form is ready. Starting fill.
+2026-06-17 17:52:21,401 | INFO | Filling Person's Details
+2026-06-17 17:52:21,402 | INFO | Waiting for field: UserDetails_first_name
+2026-06-17 17:52:21,438 | INFO | Found #UserDetails_first_name in context: top > frame[0]
+2026-06-17 17:52:21,508 | INFO | Filled UserDetails_first_name = Recruitment
+2026-06-17 17:52:21,508 | INFO | Waiting for field: UserDetails_last_name
+2026-06-17 17:52:21,542 | INFO | Found #UserDetails_last_name in context: top > frame[0]
+2026-06-17 17:52:21,623 | INFO | Filled UserDetails_last_name = Test 2
+2026-06-17 17:52:21,624 | INFO | Waiting for field: User_email
+2026-06-17 17:52:21,661 | INFO | Found #User_email in context: top > frame[0]
+2026-06-17 17:52:21,781 | INFO | Filled User_email = testhanddrecruitment@gmail.com
+2026-06-17 17:52:21,781 | INFO | Waiting for field: UserContract_contract_type_id
+2026-06-17 17:52:21,817 | INFO | Found #UserContract_contract_type_id in context: top > frame[0]
+2026-06-17 17:52:21,918 | INFO | Selected UserContract_contract_type_id = Full-time Employee
+2026-06-17 17:52:21,919 | INFO | Skipped empty field: UserContract_contract_no
+2026-06-17 17:52:21,919 | INFO | Skipped empty field: user_edit_start_date
+2026-06-17 17:52:21,920 | INFO | Skipped empty field: user_edit_end_date
+2026-06-17 17:52:21,927 | INFO | Staff Portal access set to: False
+2026-06-17 17:52:21,927 | INFO | Waiting for field: user-create-form
+2026-06-17 17:52:22,052 | INFO | Found #user-create-form in context: top > frame[0]
+2026-06-17 17:52:22,070 | INFO | Clicked submit: Save & Next
+2026-06-17 17:52:22,070 | INFO | Waiting 5 seconds for Contacts form to appear
+2026-06-17 17:52:27,071 | INFO | Waiting for next step: Contacts form
+2026-06-17 17:52:27,121 | INFO | Found #UserDetails_phone in context: top > frame[0]
+2026-06-17 17:52:27,126 | INFO | Contacts form field is present and Selenium is in the correct frame
+2026-06-17 17:52:27,127 | INFO | Waiting for field: Contacts form
+2026-06-17 17:52:27,172 | INFO | Found #user-contacts-form in context: top > frame[0]
+2026-06-17 17:52:27,178 | INFO | Waiting for field: Mobile
+2026-06-17 17:52:27,214 | INFO | Found #UserDetails_phone in context: top > frame[0]
+2026-06-17 17:52:27,218 | INFO | Contacts form is ready and active
+2026-06-17 17:52:27,218 | INFO | Filling Contacts
+2026-06-17 17:52:27,218 | INFO | Waiting for field: Contacts form
+2026-06-17 17:52:27,252 | INFO | Found #user-contacts-form in context: top > frame[0]
+2026-06-17 17:52:27,257 | INFO | Waiting for field: Mobile
+2026-06-17 17:52:27,292 | INFO | Found #UserDetails_phone in context: top > frame[0]
+2026-06-17 17:52:27,296 | INFO | Waiting for field: UserDetails_phone
+2026-06-17 17:52:27,332 | INFO | Found #UserDetails_phone in context: top > frame[0]
+2026-06-17 17:52:27,436 | INFO | Filled UserDetails_phone = 07574161674
+2026-06-17 17:52:27,437 | INFO | Waiting for field: UserAddress_address_line
+2026-06-17 17:52:27,478 | INFO | Found #UserAddress_address_line in context: top > frame[0]
+2026-06-17 17:52:27,566 | INFO | Filled UserAddress_address_line = Bell Parade
+2026-06-17 17:52:27,567 | INFO | Skipped empty field: UserAddress_apartment_number
+2026-06-17 17:52:27,567 | INFO | Waiting for field: UserAddress_house_number
+2026-06-17 17:52:27,611 | INFO | Found #UserAddress_house_number in context: top > frame[0]
+2026-06-17 17:52:27,682 | INFO | Filled UserAddress_house_number = 4
+2026-06-17 17:52:27,683 | INFO | Waiting for field: UserAddress_postcode
+2026-06-17 17:52:27,723 | INFO | Found #UserAddress_postcode in context: top > frame[0]
+2026-06-17 17:52:27,804 | INFO | Filled UserAddress_postcode = tw3 3nu
+2026-06-17 17:52:27,804 | INFO | Skipped empty field: UserAddress_city
+2026-06-17 17:52:27,805 | INFO | Waiting for field: UserAddress_country_id
+2026-06-17 17:52:27,844 | INFO | Found #UserAddress_country_id in context: top > frame[0]
+2026-06-17 17:52:27,920 | INFO | Selected UserAddress_country_id = Pakistan
+2026-06-17 17:52:27,920 | INFO | Waiting for field: user-contacts-form
+2026-06-17 17:52:27,957 | INFO | Found #user-contacts-form in context: top > frame[0]
+2026-06-17 17:52:27,980 | INFO | Clicked submit: Save & Next
+2026-06-17 17:52:27,980 | INFO | Waiting for next step: Personal Details form
+2026-06-17 17:52:28,024 | INFO | Found #UserDetails_date_of_birth in context: top > frame[0]
+2026-06-17 17:52:28,028 | INFO | Personal Details form field is present and Selenium is in the correct frame
+2026-06-17 17:52:28,028 | INFO | Filling Personal Details in smart mode. Missing optional fields will be noted, not fatal.
+2026-06-17 17:52:28,029 | INFO | Waiting for field: Personal Details form
+2026-06-17 17:52:28,069 | INFO | Found #user-details-form in context: top > frame[0]
+2026-06-17 17:52:28,075 | INFO | Core values from sheet | Gender=Male | Nationality=Pakistan | NI=23421432143
+2026-06-17 17:52:28,082 | INFO | Selected Gender = Male via id=UserDetails_gender_0 value=0
+2026-06-17 17:52:28,088 | INFO | Filled Nationality via #UserDetails_nationality = Pakistani
+2026-06-17 17:52:28,089 | INFO | Waiting for field: UserDetails_birth_country_id
+2026-06-17 17:52:28,131 | INFO | Found #UserDetails_birth_country_id in context: top > frame[0]
+2026-06-17 17:52:28,215 | INFO | Selected UserDetails_birth_country_id = Pakistan
+2026-06-17 17:52:28,221 | INFO | Filled NI / Social Security number via #UserDetails_nin = 23421432143
+2026-06-17 17:52:28,222 | INFO | Waiting 3.0 seconds after core Personal Details fields. Gender=Male | Nationality=Pakistani | NI=23421432143
+2026-06-17 17:52:28,230 | INFO | Core field values before wait | genderChecked=True | nationality=Pakistani | NI=23421432143 | DOB=
+2026-06-17 17:52:31,239 | INFO | Verified Personal Details before submit: Gender, Nationality and NI Number
+2026-06-17 17:52:31,239 | INFO | Waiting for field: UserDetails_drivers_license
+2026-06-17 17:52:31,283 | INFO | Found #UserDetails_drivers_license in context: top > frame[0]
+2026-06-17 17:52:31,346 | INFO | Selected UserDetails_drivers_license = Yes
+2026-06-17 17:52:31,347 | INFO | Waiting for field: UserDetails_visa_needed
+2026-06-17 17:52:31,391 | INFO | Found #UserDetails_visa_needed in context: top > frame[0]
+2026-06-17 17:52:31,425 | INFO | Selected UserDetails_visa_needed = No
+2026-06-17 17:52:31,430 | INFO | Verified Personal Details before submit: Gender, Nationality and NI Number
+2026-06-17 17:52:31,431 | INFO | Waiting for field: Personal Details form
+2026-06-17 17:52:31,468 | INFO | Found #user-details-form in context: top > frame[0]
+2026-06-17 17:52:31,493 | INFO | Clicked real Personal Details button: Save & Finish | blocked: none | visible buttons: Save & Finish
+2026-06-17 17:52:33,507 | INFO | Waiting for final profile link
+2026-06-17 17:52:33,527 | INFO | Created successfully. Profile URL: https://hd.parim.co/admin/user/view?id=5851
+2026-06-17 17:52:33,528 | INFO | No UTR or Tax Code found in sheet row. Skipping Work Details update.
+2026-06-17 17:52:33,532 | INFO | No passport/ID-card data found in sheet row. Skipping passport step.
+2026-06-17 17:52:33,535 | INFO | Adding emergency contact for profile: https://hd.parim.co/admin/user/view?id=5851 | Jamal Danish
+2026-06-17 17:52:33,536 | INFO | Opening created profile for extra details: https://hd.parim.co/admin/user/view?id=5851
+2026-06-17 17:52:33,919 | INFO | Waiting 5 seconds for profile page to load
+2026-06-17 17:52:38,920 | INFO | Waiting for field: profile tabs
+2026-06-17 17:52:38,988 | INFO | Found #yw1 in context: top > frame[0]
+2026-06-17 17:52:38,994 | INFO | Waiting for field: Passport/ID-Card section
+2026-06-17 17:52:39,036 | INFO | Found #passport-details in context: top > frame[0]
+2026-06-17 17:52:39,045 | INFO | Profile Details tab is ready
+2026-06-17 17:52:39,045 | INFO | Clicking Emergency Contacts Add
+2026-06-17 17:52:39,068 | INFO | Waiting for Emergency Contact dialog
+2026-06-17 17:52:41,076 | INFO | Waiting for field: Emergency Contact dialog form
+2026-06-17 17:52:41,124 | INFO | Found #add-user-emergency-contact-dialog-form in context: top > frame[0]
+2026-06-17 17:52:41,128 | INFO | Waiting for field: Emergency First Name
+2026-06-17 17:52:41,168 | INFO | Found #UserEmergencyContact_first_name in context: top > frame[0]
+2026-06-17 17:52:41,174 | INFO | Waiting for field: Emergency Last Name
+2026-06-17 17:52:41,224 | INFO | Found #UserEmergencyContact_last_name in context: top > frame[0]
+2026-06-17 17:52:41,229 | INFO | Waiting for field: Emergency Phone
+2026-06-17 17:52:41,292 | INFO | Found #UserEmergencyContact_phone in context: top > frame[0]
+2026-06-17 17:52:41,299 | INFO | Waiting for field: Emergency Relation To User
+2026-06-17 17:52:41,340 | INFO | Found #UserEmergencyContact_relation_to_user in context: top > frame[0]
+2026-06-17 17:52:41,344 | INFO | Emergency Contact dialog is ready
+2026-06-17 17:52:41,345 | INFO | Waiting for field: UserEmergencyContact_first_name
+2026-06-17 17:52:41,391 | INFO | Found #UserEmergencyContact_first_name in context: top > frame[0]
+2026-06-17 17:52:41,468 | INFO | Filled UserEmergencyContact_first_name = Jamal
+2026-06-17 17:52:41,468 | INFO | Waiting for field: UserEmergencyContact_last_name
+2026-06-17 17:52:41,504 | INFO | Found #UserEmergencyContact_last_name in context: top > frame[0]
+2026-06-17 17:52:41,593 | INFO | Filled UserEmergencyContact_last_name = Danish
+2026-06-17 17:52:41,593 | INFO | Waiting for field: UserEmergencyContact_phone
+2026-06-17 17:52:41,630 | INFO | Found #UserEmergencyContact_phone in context: top > frame[0]
+2026-06-17 17:52:41,730 | INFO | Filled UserEmergencyContact_phone = 07398940882
+2026-06-17 17:52:41,731 | INFO | Waiting for field: UserEmergencyContact_relation_to_user
+2026-06-17 17:52:41,769 | INFO | Found #UserEmergencyContact_relation_to_user in context: top > frame[0]
+2026-06-17 17:52:41,879 | INFO | Filled UserEmergencyContact_relation_to_user = 123 Clayhall Avenue
+2026-06-17 17:52:42,893 | INFO | Verified Emergency Contact before Save
+2026-06-17 17:52:42,893 | INFO | Waiting for field: add-user-emergency-contact-dialog-form
+2026-06-17 17:52:42,954 | INFO | Found #add-user-emergency-contact-dialog-form in context: top > frame[0]
+2026-06-17 17:52:42,969 | INFO | Clicked submit: Save
+2026-06-17 17:52:42,970 | INFO | Waiting for emergency contact save confirmation
+2026-06-17 17:52:43,495 | INFO | Emergency contact saved successfully
+2026-06-17 17:52:43,497 | INFO | Adding bank details for profile: https://hd.parim.co/admin/user/view?id=5851
+2026-06-17 17:52:43,497 | INFO | Opening created profile for extra details: https://hd.parim.co/admin/user/view?id=5851
+2026-06-17 17:52:43,855 | INFO | Waiting 5 seconds for profile page to load
+2026-06-17 17:52:48,856 | INFO | Waiting for field: profile tabs
+2026-06-17 17:52:48,950 | INFO | Found #yw1 in context: top > frame[0]
+2026-06-17 17:52:48,954 | INFO | Waiting for field: Passport/ID-Card section
+2026-06-17 17:52:48,994 | INFO | Found #passport-details in context: top > frame[0]
+2026-06-17 17:52:48,998 | INFO | Profile Details tab is ready
+2026-06-17 17:52:48,998 | INFO | Clicking Bank Account Edit
+2026-06-17 17:52:48,998 | INFO | Waiting for field: Bank Account section
+2026-06-17 17:52:49,037 | INFO | Found #bank-details in context: top > frame[0]
+2026-06-17 17:52:49,069 | INFO | Waiting 3 seconds for bank details dialog
+2026-06-17 17:52:52,070 | INFO | Waiting for bank details dialog fields
+2026-06-17 17:52:52,094 | INFO | Bank details dialog is ready
+2026-06-17 17:52:52,118 | INFO | Selected Bank Country via #UserBankDetails_country_id = Pakistan
+2026-06-17 17:52:52,633 | INFO | Filled Account Number via #UserBankDetails_account_number = 3213213
+2026-06-17 17:52:52,647 | INFO | Filled Sort Code = 00-00-00 | hidden=000000
+2026-06-17 17:52:52,665 | INFO | Clicked Bank Account Confirm
+2026-06-17 17:52:52,665 | INFO | Waiting for bank details save confirmation
+2026-06-17 17:52:52,858 | WARNING | NOTE: Bank Details skipped/failed: RuntimeError: Name cannot be empty | Address cannot be empty | City cannot be empty | Postcode cannot be empty
+2026-06-17 17:52:52,877 | ERROR | Optional step failed: Bank Details
+Traceback (most recent call last):
+  File "c:\Users\Afraz\HDProjects\Parim Automate with Zoho\zoho_parim_external_sheet_package\zoho_parim_external_sheet_package\Parim Automation with Zoho\parim_zoho_workdrive_docs_package\parim_zoho_workdrive_docs_package\parim_user_creator_zoho_workdrive_docs.py", line 976, in run_optional_step
+    func(*args, **kwargs)
+    ~~~~^^^^^^^^^^^^^^^^^
+  File "c:\Users\Afraz\HDProjects\Parim Automate with Zoho\zoho_parim_external_sheet_package\zoho_parim_external_sheet_package\Parim Automation with Zoho\parim_zoho_workdrive_docs_package\parim_zoho_workdrive_docs_package\parim_user_creator_zoho_workdrive_docs.py", line 3297, in add_bank_details
+    self.wait_for_bank_saved(account_number)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "c:\Users\Afraz\HDProjects\Parim Automate with Zoho\zoho_parim_external_sheet_package\zoho_parim_external_sheet_package\Parim Automation with Zoho\parim_zoho_workdrive_docs_package\parim_zoho_workdrive_docs_package\parim_user_creator_zoho_workdrive_docs.py", line 3359, in wait_for_bank_saved
+    raise RuntimeError(result.replace("ERROR:", "", 1))
+RuntimeError: Name cannot be empty | Address cannot be empty | City cannot be empty | Postcode cannot be empty
+2026-06-17 17:52:52,886 | INFO | Adding SIA Badge qualification. Number=2143132 Expiry=17-06-2026
+2026-06-17 17:52:52,886 | INFO | Opening profile for SIA Badge qualification: https://hd.parim.co/admin/user/view?id=5851
+2026-06-17 17:52:53,271 | INFO | Waiting 5 seconds for profile page to load
+2026-06-17 17:52:58,273 | INFO | Waiting for field: profile tabs
+2026-06-17 17:52:58,342 | INFO | Found #yw1 in context: top > frame[0]
+2026-06-17 17:52:58,354 | INFO | Waiting for Qualification Add button
+2026-06-17 17:52:58,371 | INFO | Expertise tab is ready
+2026-06-17 17:52:58,372 | INFO | Clicking Qualifications Add
+2026-06-17 17:52:58,385 | INFO | Waiting 3 seconds for qualification dialog
+2026-06-17 17:53:01,385 | INFO | Waiting for Add Qualification dialog
+2026-06-17 17:53:01,409 | INFO | Add Qualification dialog is ready
+2026-06-17 17:53:01,410 | INFO | Waiting for field: UserToCertificates_certificate_id
+2026-06-17 17:53:01,472 | INFO | Found #UserToCertificates_certificate_id in context: top > frame[0]
+2026-06-17 17:53:01,556 | INFO | Selected UserToCertificates_certificate_id = SIA Badge
+2026-06-17 17:53:01,556 | INFO | Waiting for field: UserToCertificates_certificate_number
+2026-06-17 17:53:01,597 | INFO | Found #UserToCertificates_certificate_number in context: top > frame[0]
+2026-06-17 17:53:01,776 | INFO | Filled UserToCertificates_certificate_number = 2143132
+2026-06-17 17:53:01,808 | INFO | Filled SIA Expiry Date via #add_certificate_exadd_certificate_expiry_datepiry_date = 17-06-2026
+2026-06-17 17:53:01,808 | INFO | Waiting for field: add-user-certificate-dialog-form
+2026-06-17 17:53:01,860 | INFO | Found #add-user-certificate-dialog-form in context: top > frame[0]
+2026-06-17 17:53:01,880 | INFO | Clicked submit: Save
+2026-06-17 17:53:01,881 | INFO | Waiting for qualification save confirmation
+2026-06-17 17:55:01,587 | INFO | SIA Badge qualification saved successfully
+2026-06-17 17:55:01,590 | INFO | Adding qualification: Drivers license | Certificate Number=1.2123e+217 | Expiry=
+2026-06-17 17:55:01,590 | INFO | Opening profile for SIA Badge qualification: https://hd.parim.co/admin/user/view?id=5851
+2026-06-17 17:55:02,325 | INFO | Waiting 5 seconds for profile page to load
+2026-06-17 17:55:07,326 | INFO | Waiting for field: profile tabs
+2026-06-17 17:55:08,662 | INFO | Found #yw1 in context: top > frame[0]
+2026-06-17 17:55:08,842 | INFO | Waiting for Qualification Add button
+2026-06-17 17:55:09,012 | INFO | Expertise tab is ready
+2026-06-17 17:55:09,019 | INFO | Clicking Qualifications Add
+2026-06-17 17:55:09,111 | INFO | Waiting 3 seconds for qualification dialog
+2026-06-17 17:55:12,123 | INFO | Waiting for Add Qualification dialog
+2026-06-17 17:55:12,310 | INFO | Add Qualification dialog is ready
+2026-06-17 17:55:12,313 | INFO | Waiting for field: UserToCertificates_certificate_id
+2026-06-17 17:55:12,705 | INFO | Found #UserToCertificates_certificate_id in context: top > frame[0]
+2026-06-17 17:55:12,930 | INFO | Selected UserToCertificates_certificate_id = Drivers license
+2026-06-17 17:55:12,936 | INFO | Waiting for field: UserToCertificates_certificate_number
+2026-06-17 17:55:13,521 | INFO | Found #UserToCertificates_certificate_number in context: top > frame[0]
+2026-06-17 17:55:13,898 | INFO | Filled UserToCertificates_certificate_number = 1.2123e+217
+2026-06-17 17:55:13,901 | INFO | Waiting for field: add-user-certificate-dialog-form
+2026-06-17 17:55:13,939 | INFO | Found #add-user-certificate-dialog-form in context: top > frame[0]
+2026-06-17 17:55:13,962 | INFO | Clicked submit: Save
+2026-06-17 17:55:13,981 | INFO | Waiting for qualification save confirmation
+2026-06-17 17:55:14,744 | INFO | Drivers license qualification saved successfully
+2026-06-17 17:55:14,752 | WARNING | NOTE: Documents: downloading directly from Zoho WorkDrive using API.
+2026-06-17 17:55:14,756 | WARNING | NOTE: Documents: temporary downloaded/extracted files deleted from PC.
+2026-06-17 17:55:14,762 | WARNING | NOTE: Documents: browser download folder cleaned.
+2026-06-17 17:55:15,110 | WARNING | NOTE: Documents Upload skipped/failed: RuntimeError: Missing Zoho WorkDrive env value(s): ZOHO_CLIENT_ID, ZOHO_CLIENT_SECRET, ZOHO_REFRESH_TOKEN
+2026-06-17 17:55:15,111 | ERROR | Optional step failed: Documents Upload
+Traceback (most recent call last):
+  File "c:\Users\Afraz\HDProjects\Parim Automate with Zoho\zoho_parim_external_sheet_package\zoho_parim_external_sheet_package\Parim Automation with Zoho\parim_zoho_workdrive_docs_package\parim_zoho_workdrive_docs_package\parim_user_creator_zoho_workdrive_docs.py", line 976, in run_optional_step
+    func(*args, **kwargs)
+    ~~~~^^^^^^^^^^^^^^^^^
+  File "c:\Users\Afraz\HDProjects\Parim Automate with Zoho\zoho_parim_external_sheet_package\zoho_parim_external_sheet_package\Parim Automation with Zoho\parim_zoho_workdrive_docs_package\parim_zoho_workdrive_docs_package\parim_user_creator_zoho_workdrive_docs.py", line 4656, in upload_documents_from_onedrive_folder
+    files, workdrive_notes = download_zoho_workdrive_folder_documents(folder_link, temp_root)
+                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Afraz\HDProjects\Parim Automate with Zoho\zoho_parim_external_sheet_package\zoho_parim_external_sheet_package\Parim Automation with Zoho\parim_zoho_workdrive_docs_package\parim_zoho_workdrive_docs_package\parim_user_creator_zoho_workdrive_docs.py", line 813, in download_zoho_workdrive_folder_documents
+    access_token = get_zoho_workdrive_access_token()
+  File "c:\Users\Afraz\HDProjects\Parim Automate with Zoho\zoho_parim_external_sheet_package\zoho_parim_external_sheet_package\Parim Automation with Zoho\parim_zoho_workdrive_docs_package\parim_zoho_workdrive_docs_package\parim_user_creator_zoho_workdrive_docs.py", line 619, in get_zoho_workdrive_access_token
+    require_zoho_env()
+    ~~~~~~~~~~~~~~~~^^
+  File "c:\Users\Afraz\HDProjects\Parim Automate with Zoho\zoho_parim_external_sheet_package\zoho_parim_external_sheet_package\Parim Automation with Zoho\parim_zoho_workdrive_docs_package\parim_zoho_workdrive_docs_package\parim_user_creator_zoho_workdrive_docs.py", line 615, in require_zoho_env
+    raise RuntimeError("Missing Zoho WorkDrive env value(s): " + ", ".join(missing))
+RuntimeError: Missing Zoho WorkDrive env value(s): ZOHO_CLIENT_ID, ZOHO_CLIENT_SECRET, ZOHO_REFRESH_TOKEN
+2026-06-17 17:55:23,701 | INFO | Updated Google Sheet row 2 as Done
+2026-06-17 17:55:23,706 | INFO | Result for testhanddrecruitment@gmail.com: created Created successfully. Notes: Bank Details skipped/failed: RuntimeError: Name cannot be empty | Address cannot be empty | City cannot be empty | Postcode cannot be empty | Documents: downloading directly from Zoho WorkDrive using API. | Documents: temporary downloaded/extracted files deleted from PC. | Documents: browser download folder cleaned. | Documents Upload skipped/failed: RuntimeError: Missing Zoho WorkDrive env value(s): ZOHO_CLIENT_ID, ZOHO_CLIENT_SECRET, ZOHO_REFRESH_TOKEN
+2026-06-17 17:55:23,712 | INFO | Finished. Created: 1 | Failed: 0 | Local Results: output\results.csv
+2026-06-17 17:57:19,162 | INFO | Fetching pending rows from Google Sheet
+2026-06-17 17:57:22,319 | INFO | Loaded 1 pending row(s) from Google Sheet
+2026-06-17 17:57:23,847 | INFO | Opening login page
+2026-06-17 17:57:33,050 | INFO | Login successful. Current URL: https://hd.parim.co/dashboard
+2026-06-17 17:57:33,050 | INFO | Creating pending row 1/1 | Sheet row 2 | tes2thanddrecruitment@gmail.com
+2026-06-17 17:57:33,051 | INFO | Opening create user URL
+2026-06-17 17:57:33,051 | INFO | Trying create URL: https://hd.parim.co/admin/user/create
+2026-06-17 17:57:33,517 | INFO | Waiting 7 seconds for create form to appear
+2026-06-17 17:57:40,548 | INFO | After opening URL page summary: current_url=https://hd.parim.co/admin/user/create | title='Admin portal - Parim' | frames=2 | body_start='Dashboard\nSchedule\nTime Clock\nLocations\nAbsences\nPeople\nPay & Charge\nReports\nDocuments\n99+\nHH'
+2026-06-17 17:57:42,431 | INFO | Found #UserDetails_first_name in context: top > frame[0]
+2026-06-17 17:57:42,442 | INFO | Create user form found at: https://hd.parim.co/admin/user/create
+2026-06-17 17:57:42,442 | INFO | Waiting for field: First Name
+2026-06-17 17:57:42,498 | INFO | Found #UserDetails_first_name in context: top > frame[0]
+2026-06-17 17:57:42,506 | INFO | Waiting for field: Last Name
+2026-06-17 17:57:42,547 | INFO | Found #UserDetails_last_name in context: top > frame[0]
+2026-06-17 17:57:42,553 | INFO | Waiting for field: Email
+2026-06-17 17:57:42,595 | INFO | Found #User_email in context: top > frame[0]
+2026-06-17 17:57:42,599 | INFO | Waiting for field: Employment Type
+2026-06-17 17:57:42,640 | INFO | Found #UserContract_contract_type_id in context: top > frame[0]
+2026-06-17 17:57:42,644 | INFO | Create user form is ready. Starting fill.
+2026-06-17 17:57:42,645 | INFO | Filling Person's Details
+2026-06-17 17:57:42,645 | INFO | Waiting for field: UserDetails_first_name
+2026-06-17 17:57:42,683 | INFO | Found #UserDetails_first_name in context: top > frame[0]
+2026-06-17 17:57:42,761 | INFO | Filled UserDetails_first_name = Recruitment
+2026-06-17 17:57:42,762 | INFO | Waiting for field: UserDetails_last_name
+2026-06-17 17:57:42,799 | INFO | Found #UserDetails_last_name in context: top > frame[0]
+2026-06-17 17:57:42,882 | INFO | Filled UserDetails_last_name = Test 2
+2026-06-17 17:57:42,882 | INFO | Waiting for field: User_email
+2026-06-17 17:57:42,920 | INFO | Found #User_email in context: top > frame[0]
+2026-06-17 17:57:43,028 | INFO | Filled User_email = tes2thanddrecruitment@gmail.com
+2026-06-17 17:57:43,028 | INFO | Waiting for field: UserContract_contract_type_id
+2026-06-17 17:57:43,066 | INFO | Found #UserContract_contract_type_id in context: top > frame[0]
+2026-06-17 17:57:43,177 | INFO | Selected UserContract_contract_type_id = Full-time Employee
+2026-06-17 17:57:43,177 | INFO | Skipped empty field: UserContract_contract_no
+2026-06-17 17:57:43,178 | INFO | Skipped empty field: user_edit_start_date
+2026-06-17 17:57:43,178 | INFO | Skipped empty field: user_edit_end_date
+2026-06-17 17:57:43,189 | INFO | Staff Portal access set to: False
+2026-06-17 17:57:43,189 | INFO | Waiting for field: user-create-form
+2026-06-17 17:57:43,240 | INFO | Found #user-create-form in context: top > frame[0]
+2026-06-17 17:57:43,256 | INFO | Clicked submit: Save & Next
+2026-06-17 17:57:43,256 | INFO | Waiting 5 seconds for Contacts form to appear
+2026-06-17 17:57:48,258 | INFO | Waiting for next step: Contacts form
+2026-06-17 17:57:48,322 | INFO | Found #UserDetails_phone in context: top > frame[0]
+2026-06-17 17:57:48,327 | INFO | Contacts form field is present and Selenium is in the correct frame
+2026-06-17 17:57:48,327 | INFO | Waiting for field: Contacts form
+2026-06-17 17:57:48,372 | INFO | Found #user-contacts-form in context: top > frame[0]
+2026-06-17 17:57:48,377 | INFO | Waiting for field: Mobile
+2026-06-17 17:57:48,416 | INFO | Found #UserDetails_phone in context: top > frame[0]
+2026-06-17 17:57:48,421 | INFO | Contacts form is ready and active
+2026-06-17 17:57:48,422 | INFO | Filling Contacts
+2026-06-17 17:57:48,422 | INFO | Waiting for field: Contacts form
+2026-06-17 17:57:48,462 | INFO | Found #user-contacts-form in context: top > frame[0]
+2026-06-17 17:57:48,466 | INFO | Waiting for field: Mobile
+2026-06-17 17:57:48,508 | INFO | Found #UserDetails_phone in context: top > frame[0]
+2026-06-17 17:57:48,516 | INFO | Waiting for field: UserDetails_phone
+2026-06-17 17:57:48,557 | INFO | Found #UserDetails_phone in context: top > frame[0]
+2026-06-17 17:57:48,662 | INFO | Filled UserDetails_phone = 07574161674
+2026-06-17 17:57:48,662 | INFO | Waiting for field: UserAddress_address_line
+2026-06-17 17:57:48,704 | INFO | Found #UserAddress_address_line in context: top > frame[0]
+2026-06-17 17:57:48,795 | INFO | Filled UserAddress_address_line = Bell Parade
+2026-06-17 17:57:48,796 | INFO | Skipped empty field: UserAddress_apartment_number
+2026-06-17 17:57:48,796 | INFO | Waiting for field: UserAddress_house_number
+2026-06-17 17:57:48,844 | INFO | Found #UserAddress_house_number in context: top > frame[0]
+2026-06-17 17:57:48,925 | INFO | Filled UserAddress_house_number = 4
+2026-06-17 17:57:48,925 | INFO | Waiting for field: UserAddress_postcode
+2026-06-17 17:57:48,969 | INFO | Found #UserAddress_postcode in context: top > frame[0]
+2026-06-17 17:57:49,053 | INFO | Filled UserAddress_postcode = tw3 3nu
+2026-06-17 17:57:49,053 | INFO | Skipped empty field: UserAddress_city
+2026-06-17 17:57:49,054 | INFO | Waiting for field: UserAddress_country_id
+2026-06-17 17:57:49,097 | INFO | Found #UserAddress_country_id in context: top > frame[0]
+2026-06-17 17:57:49,183 | INFO | Selected UserAddress_country_id = Pakistan
+2026-06-17 17:57:49,183 | INFO | Waiting for field: user-contacts-form
+2026-06-17 17:57:49,229 | INFO | Found #user-contacts-form in context: top > frame[0]
+2026-06-17 17:57:49,257 | INFO | Clicked submit: Save & Next
+2026-06-17 17:57:49,258 | INFO | Waiting for next step: Personal Details form
+2026-06-17 17:57:49,306 | INFO | Found #UserDetails_date_of_birth in context: top > frame[0]
+2026-06-17 17:57:49,311 | INFO | Personal Details form field is present and Selenium is in the correct frame
+2026-06-17 17:57:49,311 | INFO | Filling Personal Details in smart mode. Missing optional fields will be noted, not fatal.
+2026-06-17 17:57:49,312 | INFO | Waiting for field: Personal Details form
+2026-06-17 17:57:49,361 | INFO | Found #user-details-form in context: top > frame[0]
+2026-06-17 17:57:49,366 | INFO | Core values from sheet | Gender=Male | Nationality=Pakistan | NI=23421432143
+2026-06-17 17:57:49,376 | INFO | Selected Gender = Male via id=UserDetails_gender_0 value=0
+2026-06-17 17:57:49,382 | INFO | Filled Nationality via #UserDetails_nationality = Pakistani
+2026-06-17 17:57:49,383 | INFO | Waiting for field: UserDetails_birth_country_id
+2026-06-17 17:57:49,431 | INFO | Found #UserDetails_birth_country_id in context: top > frame[0]
+2026-06-17 17:57:49,531 | INFO | Selected UserDetails_birth_country_id = Pakistan
+2026-06-17 17:57:49,538 | INFO | Filled NI / Social Security number via #UserDetails_nin = 23421432143
+2026-06-17 17:57:49,539 | INFO | Waiting 3.0 seconds after core Personal Details fields. Gender=Male | Nationality=Pakistani | NI=23421432143
+2026-06-17 17:57:49,548 | INFO | Core field values before wait | genderChecked=True | nationality=Pakistani | NI=23421432143 | DOB=
+2026-06-17 17:57:52,557 | INFO | Verified Personal Details before submit: Gender, Nationality and NI Number
+2026-06-17 17:57:52,558 | INFO | Waiting for field: UserDetails_drivers_license
+2026-06-17 17:57:52,605 | INFO | Found #UserDetails_drivers_license in context: top > frame[0]
+2026-06-17 17:57:52,666 | INFO | Selected UserDetails_drivers_license = Yes
+2026-06-17 17:57:52,667 | INFO | Waiting for field: UserDetails_visa_needed
+2026-06-17 17:57:52,716 | INFO | Found #UserDetails_visa_needed in context: top > frame[0]
+2026-06-17 17:57:52,754 | INFO | Selected UserDetails_visa_needed = No
+2026-06-17 17:57:52,829 | INFO | Verified Personal Details before submit: Gender, Nationality and NI Number
+2026-06-17 17:57:52,829 | INFO | Waiting for field: Personal Details form
+2026-06-17 17:57:52,886 | INFO | Found #user-details-form in context: top > frame[0]
+2026-06-17 17:57:52,908 | INFO | Clicked real Personal Details button: Save & Finish | blocked: none | visible buttons: Save & Finish
+2026-06-17 17:57:54,914 | INFO | Waiting for final profile link
+2026-06-17 17:57:54,925 | INFO | Created successfully. Profile URL: https://hd.parim.co/admin/user/view?id=5852
+2026-06-17 17:57:54,926 | INFO | No UTR or Tax Code found in sheet row. Skipping Work Details update.
+2026-06-17 17:57:54,928 | INFO | No passport/ID-card data found in sheet row. Skipping passport step.
+2026-06-17 17:57:54,930 | INFO | Adding emergency contact for profile: https://hd.parim.co/admin/user/view?id=5852 | Jamal Danish
+2026-06-17 17:57:54,930 | INFO | Opening created profile for extra details: https://hd.parim.co/admin/user/view?id=5852
+2026-06-17 17:57:55,293 | INFO | Waiting 5 seconds for profile page to load
+2026-06-17 17:58:00,294 | INFO | Waiting for field: profile tabs
+2026-06-17 17:58:04,295 | INFO | Found #yw1 in context: top > frame[0]
+2026-06-17 17:58:04,299 | INFO | Waiting for field: Passport/ID-Card section
+2026-06-17 17:58:04,345 | INFO | Found #passport-details in context: top > frame[0]
+2026-06-17 17:58:04,349 | INFO | Profile Details tab is ready
+2026-06-17 17:58:04,349 | INFO | Clicking Emergency Contacts Add
+2026-06-17 17:58:04,364 | INFO | Waiting for Emergency Contact dialog
+2026-06-17 17:58:06,366 | INFO | Waiting for field: Emergency Contact dialog form
+2026-06-17 17:58:06,421 | INFO | Found #add-user-emergency-contact-dialog-form in context: top > frame[0]
+2026-06-17 17:58:06,427 | INFO | Waiting for field: Emergency First Name
+2026-06-17 17:58:06,476 | INFO | Found #UserEmergencyContact_first_name in context: top > frame[0]
+2026-06-17 17:58:06,482 | INFO | Waiting for field: Emergency Last Name
+2026-06-17 17:58:06,540 | INFO | Found #UserEmergencyContact_last_name in context: top > frame[0]
+2026-06-17 17:58:06,545 | INFO | Waiting for field: Emergency Phone
+2026-06-17 17:58:06,594 | INFO | Found #UserEmergencyContact_phone in context: top > frame[0]
+2026-06-17 17:58:06,598 | INFO | Waiting for field: Emergency Relation To User
+2026-06-17 17:58:06,646 | INFO | Found #UserEmergencyContact_relation_to_user in context: top > frame[0]
+2026-06-17 17:58:06,650 | INFO | Emergency Contact dialog is ready
+2026-06-17 17:58:06,650 | INFO | Waiting for field: UserEmergencyContact_first_name
+2026-06-17 17:58:06,698 | INFO | Found #UserEmergencyContact_first_name in context: top > frame[0]
+2026-06-17 17:58:07,026 | INFO | Filled UserEmergencyContact_first_name = Jamal
+2026-06-17 17:58:07,026 | INFO | Waiting for field: UserEmergencyContact_last_name
+2026-06-17 17:58:07,065 | INFO | Found #UserEmergencyContact_last_name in context: top > frame[0]
+2026-06-17 17:58:07,172 | INFO | Filled UserEmergencyContact_last_name = Danish
+2026-06-17 17:58:07,172 | INFO | Waiting for field: UserEmergencyContact_phone
+2026-06-17 17:58:07,262 | INFO | Found #UserEmergencyContact_phone in context: top > frame[0]
+2026-06-17 17:58:07,358 | INFO | Filled UserEmergencyContact_phone = 07398940882
+2026-06-17 17:58:07,359 | INFO | Waiting for field: UserEmergencyContact_relation_to_user
+2026-06-17 17:58:07,396 | INFO | Found #UserEmergencyContact_relation_to_user in context: top > frame[0]
+2026-06-17 17:58:07,511 | INFO | Filled UserEmergencyContact_relation_to_user = 123 Clayhall Avenue
+2026-06-17 17:58:08,522 | INFO | Verified Emergency Contact before Save
+2026-06-17 17:58:08,523 | INFO | Waiting for field: add-user-emergency-contact-dialog-form
+2026-06-17 17:58:08,576 | INFO | Found #add-user-emergency-contact-dialog-form in context: top > frame[0]
+2026-06-17 17:58:08,591 | INFO | Clicked submit: Save
+2026-06-17 17:58:08,592 | INFO | Waiting for emergency contact save confirmation
+2026-06-17 17:58:09,112 | INFO | Emergency contact saved successfully
+2026-06-17 17:58:09,113 | INFO | Adding bank details for profile: https://hd.parim.co/admin/user/view?id=5852
+2026-06-17 17:58:09,113 | INFO | Opening created profile for extra details: https://hd.parim.co/admin/user/view?id=5852
+2026-06-17 17:58:09,455 | INFO | Waiting 5 seconds for profile page to load
+2026-06-17 17:58:14,456 | INFO | Waiting for field: profile tabs
+2026-06-17 17:58:14,528 | INFO | Found #yw1 in context: top > frame[0]
+2026-06-17 17:58:14,533 | INFO | Waiting for field: Passport/ID-Card section
+2026-06-17 17:58:14,579 | INFO | Found #passport-details in context: top > frame[0]
+2026-06-17 17:58:14,584 | INFO | Profile Details tab is ready
+2026-06-17 17:58:14,585 | INFO | Clicking Bank Account Edit
+2026-06-17 17:58:14,585 | INFO | Waiting for field: Bank Account section
+2026-06-17 17:58:14,632 | INFO | Found #bank-details in context: top > frame[0]
+2026-06-17 17:58:14,663 | INFO | Waiting 3 seconds for bank details dialog
+2026-06-17 17:58:17,664 | INFO | Waiting for bank details dialog fields
+2026-06-17 17:58:17,695 | INFO | Bank details dialog is ready
+2026-06-17 17:58:17,715 | INFO | Selected Bank Country via #UserBankDetails_country_id = Pakistan
+2026-06-17 17:58:18,248 | INFO | Filled Account Number via #UserBankDetails_account_number = 3213213
+2026-06-17 17:58:18,263 | INFO | Filled Sort Code = 00-00-00 | hidden=000000
+2026-06-17 17:58:18,280 | INFO | Clicked Bank Account Confirm
+2026-06-17 17:58:18,280 | INFO | Waiting for bank details save confirmation
+2026-06-17 17:58:18,499 | WARNING | NOTE: Bank Details skipped/failed: RuntimeError: Name cannot be empty | Address cannot be empty | City cannot be empty | Postcode cannot be empty
+2026-06-17 17:58:18,503 | ERROR | Optional step failed: Bank Details
+Traceback (most recent call last):
+  File "c:\Users\Afraz\HDProjects\Parim Automate with Zoho\zoho_parim_external_sheet_package\zoho_parim_external_sheet_package\Parim Automation with Zoho\parim_zoho_workdrive_docs_package\parim_zoho_workdrive_docs_package\parim_user_creator_zoho_workdrive_docs.py", line 976, in run_optional_step
+    func(*args, **kwargs)
+    ~~~~^^^^^^^^^^^^^^^^^
+  File "c:\Users\Afraz\HDProjects\Parim Automate with Zoho\zoho_parim_external_sheet_package\zoho_parim_external_sheet_package\Parim Automation with Zoho\parim_zoho_workdrive_docs_package\parim_zoho_workdrive_docs_package\parim_user_creator_zoho_workdrive_docs.py", line 3297, in add_bank_details
+    self.wait_for_bank_saved(account_number)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "c:\Users\Afraz\HDProjects\Parim Automate with Zoho\zoho_parim_external_sheet_package\zoho_parim_external_sheet_package\Parim Automation with Zoho\parim_zoho_workdrive_docs_package\parim_zoho_workdrive_docs_package\parim_user_creator_zoho_workdrive_docs.py", line 3359, in wait_for_bank_saved
+    raise RuntimeError(result.replace("ERROR:", "", 1))
+RuntimeError: Name cannot be empty | Address cannot be empty | City cannot be empty | Postcode cannot be empty
+2026-06-17 17:58:18,511 | INFO | Adding SIA Badge qualification. Number=2143132 Expiry=17-06-2026
+2026-06-17 17:58:18,525 | INFO | Opening profile for SIA Badge qualification: https://hd.parim.co/admin/user/view?id=5852
+2026-06-17 17:58:18,875 | INFO | Waiting 5 seconds for profile page to load
+2026-06-17 17:58:23,875 | INFO | Waiting for field: profile tabs
+2026-06-17 17:58:23,949 | INFO | Found #yw1 in context: top > frame[0]
+2026-06-17 17:58:23,963 | INFO | Waiting for Qualification Add button
+2026-06-17 17:58:23,992 | INFO | Expertise tab is ready
+2026-06-17 17:58:23,992 | INFO | Clicking Qualifications Add
+2026-06-17 17:58:24,009 | INFO | Waiting 3 seconds for qualification dialog
+2026-06-17 17:58:27,009 | INFO | Waiting for Add Qualification dialog
+2026-06-17 17:58:27,022 | INFO | Add Qualification dialog is ready
+2026-06-17 17:58:27,022 | INFO | Waiting for field: UserToCertificates_certificate_id
+2026-06-17 17:58:27,072 | INFO | Found #UserToCertificates_certificate_id in context: top > frame[0]
+2026-06-17 17:58:27,165 | INFO | Selected UserToCertificates_certificate_id = SIA Badge
+2026-06-17 17:58:27,166 | INFO | Waiting for field: UserToCertificates_certificate_number
+2026-06-17 17:58:27,215 | INFO | Found #UserToCertificates_certificate_number in context: top > frame[0]
+2026-06-17 17:58:27,403 | INFO | Filled UserToCertificates_certificate_number = 2143132
+2026-06-17 17:58:27,438 | INFO | Filled SIA Expiry Date via #add_certificate_exadd_certificate_expiry_datepiry_date = 17-06-2026
+2026-06-17 17:58:27,438 | INFO | Waiting for field: add-user-certificate-dialog-form
+2026-06-17 17:58:27,505 | INFO | Found #add-user-certificate-dialog-form in context: top > frame[0]
+2026-06-17 17:58:27,533 | INFO | Clicked submit: Save
+2026-06-17 17:58:27,534 | INFO | Waiting for qualification save confirmation
+2026-06-17 17:58:32,196 | INFO | SIA Badge qualification saved successfully
+2026-06-17 17:58:32,197 | INFO | Adding qualification: Drivers license | Certificate Number=1.2123e+217 | Expiry=
+2026-06-17 17:58:32,197 | INFO | Opening profile for SIA Badge qualification: https://hd.parim.co/admin/user/view?id=5852
+2026-06-17 17:58:32,544 | INFO | Waiting 5 seconds for profile page to load
+2026-06-17 17:58:37,545 | INFO | Waiting for field: profile tabs
+2026-06-17 17:58:37,589 | INFO | Found #yw1 in context: top > frame[0]
+2026-06-17 17:58:37,600 | INFO | Waiting for Qualification Add button
+2026-06-17 17:58:37,614 | INFO | Expertise tab is ready
+2026-06-17 17:58:37,614 | INFO | Clicking Qualifications Add
+2026-06-17 17:58:37,627 | INFO | Waiting 3 seconds for qualification dialog
+2026-06-17 17:58:40,627 | INFO | Waiting for Add Qualification dialog
+2026-06-17 17:58:40,647 | INFO | Add Qualification dialog is ready
+2026-06-17 17:58:40,648 | INFO | Waiting for field: UserToCertificates_certificate_id
+2026-06-17 17:58:40,712 | INFO | Found #UserToCertificates_certificate_id in context: top > frame[0]
+2026-06-17 17:58:40,810 | INFO | Selected UserToCertificates_certificate_id = Drivers license
+2026-06-17 17:58:40,810 | INFO | Waiting for field: UserToCertificates_certificate_number
+2026-06-17 17:58:40,870 | INFO | Found #UserToCertificates_certificate_number in context: top > frame[0]
+2026-06-17 17:58:41,015 | INFO | Filled UserToCertificates_certificate_number = 1.2123e+217
+2026-06-17 17:58:41,015 | INFO | Waiting for field: add-user-certificate-dialog-form
+2026-06-17 17:58:41,049 | INFO | Found #add-user-certificate-dialog-form in context: top > frame[0]
+2026-06-17 17:58:41,061 | INFO | Clicked submit: Save
+2026-06-17 17:58:41,061 | INFO | Waiting for qualification save confirmation
+2026-06-17 17:58:42,108 | INFO | Drivers license qualification saved successfully
+2026-06-17 17:58:42,111 | WARNING | NOTE: Documents: downloading directly from Zoho WorkDrive using API.
+2026-06-17 17:58:57,841 | WARNING | NOTE: Documents: Zoho WorkDrive: found 4 item(s) in folder 3e4ia766e7db47dd54488bba7a0bd0e798198
+2026-06-17 17:58:57,842 | WARNING | NOTE: Documents: Zoho WorkDrive: failed to download Registration Form - Test 2 Recruitment.pdf: RuntimeError: Could not download Zoho WorkDrive file Registration Form - Test 2 Recruitment.pdf (3e4ia2e459f8245f045838b38f31892136a58): 400: {"errors":[{"id":"F6016","title":"URL Rule is not configured"}]}
+2026-06-17 17:58:57,842 | WARNING | NOTE: Documents: Zoho WorkDrive: failed to download NILetter-Test_2-Recruitment.jpg: RuntimeError: Could not download Zoho WorkDrive file NILetter-Test_2-Recruitment.jpg (3e4iaf191503a92684f5cad5f377238cccbef): 400: {"errors":[{"id":"F6016","title":"URL Rule is not configured"}]}
+2026-06-17 17:58:57,842 | WARNING | NOTE: Documents: Zoho WorkDrive: failed to download Picture-Test_2-Recruitment.jpg: RuntimeError: Could not download Zoho WorkDrive file Picture-Test_2-Recruitment.jpg (3e4ia2dae307460154bf0a3b03f5435f94911): 400: {"errors":[{"id":"F6016","title":"URL Rule is not configured"}]}
+2026-06-17 17:58:57,842 | WARNING | NOTE: Documents: Zoho WorkDrive: failed to download Resume-Test_2-Recruitment.png: RuntimeError: Could not download Zoho WorkDrive file Resume-Test_2-Recruitment.png (3e4ia3ba69009c49a490dac4ea549452e2e79): 400: {"errors":[{"id":"F6016","title":"URL Rule is not configured"}]}
+2026-06-17 17:58:57,842 | WARNING | NOTE: Documents: Zoho WorkDrive: downloaded 0 file(s), valid for PARiM upload 0
+2026-06-17 17:58:57,843 | WARNING | NOTE: Documents: no valid files found to upload after Zoho WorkDrive download.
+2026-06-17 17:58:57,843 | WARNING | NOTE: Documents: temporary downloaded/extracted files deleted from PC.
+2026-06-17 17:58:57,844 | WARNING | NOTE: Documents: browser download folder cleaned.
+2026-06-17 17:59:01,646 | INFO | Updated Google Sheet row 2 as Done
+2026-06-17 17:59:01,652 | INFO | Result for tes2thanddrecruitment@gmail.com: created Created successfully. Notes: Bank Details skipped/failed: RuntimeError: Name cannot be empty | Address cannot be empty | City cannot be empty | Postcode cannot be empty | Documents: downloading directly from Zoho WorkDrive using API. | Documents: Zoho WorkDrive: found 4 item(s) in folder 3e4ia766e7db47dd54488bba7a0bd0e798198 | Documents: Zoho WorkDrive: failed to download Registration Form - Test 2 Recruitment.pdf: RuntimeError: Could not download Zoho WorkDrive file Registration Form - Test 2 Recruitment.pdf (3e4ia2e459f8245f045838b38f31892136a58): 400: {"errors":[{"id":"F6016","title":"URL Rule is not configured"}]} | Documents: Zoho WorkDrive: failed to download NILetter-Test_2-Recruitment.jpg: RuntimeError: Could not download Zoho WorkDrive file NILetter-Test_2-Recruitment.jpg (3e4iaf191503a92684f5cad5f377238cccbef): 400: {"errors":[{"id":"F6016","title":"URL Rule is not configured"}]} | Documents: Zoho WorkDrive: failed to download Picture-Test_2-Recruitment.jpg: RuntimeError: Could not download Zoho WorkDrive file Picture-Test_2-Recruitment.jpg (3e4ia2dae307460154bf0a3b03f5435f94911): 400: {"errors":[{"id":"F6016","title":"URL Rule is not configured"}]} | Documents: Zoho WorkDrive: failed to download Resume-Test_2-Recruitment.png: RuntimeError: Could not download Zoho WorkDrive file Resume-Test_2-Recruitment.png (3e4ia3ba69009c49a490dac4ea549452e2e79): 400: {"errors":[{"id":"F6016","title":"URL Rule is not configured"}]} | Documents: Zoho WorkDrive: downloaded 0 file(s), valid for PARiM upload 0 | Documents: no valid files found to upload after Zoho WorkDrive download. | Documents: temporary downloaded/extracted files deleted from PC. | Documents: browser download folder cleaned.
+2026-06-17 17:59:01,655 | INFO | Finished. Created: 1 | Failed: 0 | Local Results: output\results.csv
+2026-06-17 18:06:54,172 | INFO | Fetching pending rows from Google Sheet
+2026-06-17 18:07:04,652 | INFO | Loaded 0 pending row(s) from Google Sheet
+2026-06-17 18:07:04,658 | INFO | No pending rows found. All rows are already marked in 'Parim Completed'.
+2026-06-17 18:07:22,481 | INFO | Fetching pending rows from Google Sheet
+2026-06-17 18:07:25,785 | INFO | Loaded 1 pending row(s) from Google Sheet
+2026-06-17 18:07:28,339 | INFO | Opening login page
+2026-06-17 18:07:33,983 | INFO | Login successful. Current URL: https://hd.parim.co/dashboard
+2026-06-17 18:07:33,984 | INFO | Creating pending row 1/1 | Sheet row 2 | tes3thanddrecruitment@gmail.com
+2026-06-17 18:07:33,984 | INFO | Opening create user URL
+2026-06-17 18:07:33,985 | INFO | Trying create URL: https://hd.parim.co/admin/user/create
+2026-06-17 18:07:34,440 | INFO | Waiting 7 seconds for create form to appear
+2026-06-17 18:07:41,495 | INFO | After opening URL page summary: current_url=https://hd.parim.co/admin/user/create | title='Admin portal - Parim' | frames=2 | body_start='Dashboard\nSchedule\nTime Clock\nLocations\nAbsences\nPeople\nPay & Charge\nReports\nDocuments\n99+\nHH'
+2026-06-17 18:07:41,553 | INFO | Found #UserDetails_first_name in context: top > frame[0]
+2026-06-17 18:07:41,566 | INFO | Create user form found at: https://hd.parim.co/admin/user/create
+2026-06-17 18:07:41,566 | INFO | Waiting for field: First Name
+2026-06-17 18:07:41,608 | INFO | Found #UserDetails_first_name in context: top > frame[0]
+2026-06-17 18:07:41,613 | INFO | Waiting for field: Last Name
+2026-06-17 18:07:41,654 | INFO | Found #UserDetails_last_name in context: top > frame[0]
+2026-06-17 18:07:41,658 | INFO | Waiting for field: Email
+2026-06-17 18:07:41,698 | INFO | Found #User_email in context: top > frame[0]
+2026-06-17 18:07:41,702 | INFO | Waiting for field: Employment Type
+2026-06-17 18:07:41,741 | INFO | Found #UserContract_contract_type_id in context: top > frame[0]
+2026-06-17 18:07:41,746 | INFO | Create user form is ready. Starting fill.
+2026-06-17 18:07:41,746 | INFO | Filling Person's Details
+2026-06-17 18:07:41,747 | INFO | Waiting for field: UserDetails_first_name
+2026-06-17 18:07:41,785 | INFO | Found #UserDetails_first_name in context: top > frame[0]
+2026-06-17 18:07:41,863 | INFO | Filled UserDetails_first_name = Recruitment
+2026-06-17 18:07:41,864 | INFO | Waiting for field: UserDetails_last_name
+2026-06-17 18:07:41,900 | INFO | Found #UserDetails_last_name in context: top > frame[0]
+2026-06-17 18:07:41,984 | INFO | Filled UserDetails_last_name = Test 2
+2026-06-17 18:07:41,985 | INFO | Waiting for field: User_email
+2026-06-17 18:07:42,021 | INFO | Found #User_email in context: top > frame[0]
+2026-06-17 18:07:42,127 | INFO | Filled User_email = tes3thanddrecruitment@gmail.com
+2026-06-17 18:07:42,127 | INFO | Waiting for field: UserContract_contract_type_id
+2026-06-17 18:07:42,162 | INFO | Found #UserContract_contract_type_id in context: top > frame[0]
+2026-06-17 18:07:42,270 | INFO | Selected UserContract_contract_type_id = Full-time Employee
+2026-06-17 18:07:42,271 | INFO | Skipped empty field: UserContract_contract_no
+2026-06-17 18:07:42,271 | INFO | Skipped empty field: user_edit_start_date
+2026-06-17 18:07:42,272 | INFO | Skipped empty field: user_edit_end_date
+2026-06-17 18:07:42,282 | INFO | Staff Portal access set to: False
+2026-06-17 18:07:42,282 | INFO | Waiting for field: user-create-form
+2026-06-17 18:07:42,332 | INFO | Found #user-create-form in context: top > frame[0]
+2026-06-17 18:07:42,349 | INFO | Clicked submit: Save & Next
+2026-06-17 18:07:42,349 | INFO | Waiting 5 seconds for Contacts form to appear
+2026-06-17 18:07:47,350 | INFO | Waiting for next step: Contacts form
+2026-06-17 18:07:47,440 | INFO | Found #UserDetails_phone in context: top > frame[0]
+2026-06-17 18:07:47,451 | INFO | Contacts form field is present and Selenium is in the correct frame
+2026-06-17 18:07:47,451 | INFO | Waiting for field: Contacts form
+2026-06-17 18:07:47,506 | INFO | Found #user-contacts-form in context: top > frame[0]
+2026-06-17 18:07:47,511 | INFO | Waiting for field: Mobile
+2026-06-17 18:07:47,544 | INFO | Found #UserDetails_phone in context: top > frame[0]
+2026-06-17 18:07:47,549 | INFO | Contacts form is ready and active
+2026-06-17 18:07:47,549 | INFO | Filling Contacts
+2026-06-17 18:07:47,550 | INFO | Waiting for field: Contacts form
+2026-06-17 18:07:47,585 | INFO | Found #user-contacts-form in context: top > frame[0]
+2026-06-17 18:07:47,590 | INFO | Waiting for field: Mobile
+2026-06-17 18:07:47,625 | INFO | Found #UserDetails_phone in context: top > frame[0]
+2026-06-17 18:07:47,630 | INFO | Waiting for field: UserDetails_phone
+2026-06-17 18:07:47,664 | INFO | Found #UserDetails_phone in context: top > frame[0]
+2026-06-17 18:07:47,764 | INFO | Filled UserDetails_phone = 07574161674
+2026-06-17 18:07:47,765 | INFO | Waiting for field: UserAddress_address_line
+2026-06-17 18:07:47,805 | INFO | Found #UserAddress_address_line in context: top > frame[0]
+2026-06-17 18:07:47,893 | INFO | Filled UserAddress_address_line = Bell Parade
+2026-06-17 18:07:47,893 | INFO | Skipped empty field: UserAddress_apartment_number
+2026-06-17 18:07:47,894 | INFO | Waiting for field: UserAddress_house_number
+2026-06-17 18:07:47,939 | INFO | Found #UserAddress_house_number in context: top > frame[0]
+2026-06-17 18:07:48,011 | INFO | Filled UserAddress_house_number = 4
+2026-06-17 18:07:48,012 | INFO | Waiting for field: UserAddress_postcode
+2026-06-17 18:07:48,054 | INFO | Found #UserAddress_postcode in context: top > frame[0]
+2026-06-17 18:07:48,133 | INFO | Filled UserAddress_postcode = tw3 3nu
+2026-06-17 18:07:48,134 | INFO | Skipped empty field: UserAddress_city
+2026-06-17 18:07:48,134 | INFO | Waiting for field: UserAddress_country_id
+2026-06-17 18:07:48,174 | INFO | Found #UserAddress_country_id in context: top > frame[0]
+2026-06-17 18:07:48,251 | INFO | Selected UserAddress_country_id = Pakistan
+2026-06-17 18:07:48,251 | INFO | Waiting for field: user-contacts-form
+2026-06-17 18:07:48,286 | INFO | Found #user-contacts-form in context: top > frame[0]
+2026-06-17 18:07:48,305 | INFO | Clicked submit: Save & Next
+2026-06-17 18:07:48,305 | INFO | Waiting for next step: Personal Details form
+2026-06-17 18:07:48,347 | INFO | Found #UserDetails_date_of_birth in context: top > frame[0]
+2026-06-17 18:07:48,351 | INFO | Personal Details form field is present and Selenium is in the correct frame
+2026-06-17 18:07:48,351 | INFO | Filling Personal Details in smart mode. Missing optional fields will be noted, not fatal.
+2026-06-17 18:07:48,351 | INFO | Waiting for field: Personal Details form
+2026-06-17 18:07:48,391 | INFO | Found #user-details-form in context: top > frame[0]
+2026-06-17 18:07:48,397 | INFO | Core values from sheet | Gender=Male | Nationality=Pakistan | NI=23421432143
+2026-06-17 18:07:48,404 | INFO | Selected Gender = Male via id=UserDetails_gender_0 value=0
+2026-06-17 18:07:48,410 | INFO | Filled Nationality via #UserDetails_nationality = Pakistani
+2026-06-17 18:07:48,411 | INFO | Waiting for field: UserDetails_birth_country_id
+2026-06-17 18:07:48,452 | INFO | Found #UserDetails_birth_country_id in context: top > frame[0]
+2026-06-17 18:07:48,535 | INFO | Selected UserDetails_birth_country_id = Pakistan
+2026-06-17 18:07:48,540 | INFO | Filled NI / Social Security number via #UserDetails_nin = 23421432143
+2026-06-17 18:07:48,541 | INFO | Waiting 3.0 seconds after core Personal Details fields. Gender=Male | Nationality=Pakistani | NI=23421432143
+2026-06-17 18:07:48,550 | INFO | Core field values before wait | genderChecked=True | nationality=Pakistani | NI=23421432143 | DOB=
+2026-06-17 18:07:51,566 | INFO | Verified Personal Details before submit: Gender, Nationality and NI Number
+2026-06-17 18:07:51,568 | INFO | Waiting for field: UserDetails_drivers_license
+2026-06-17 18:07:51,629 | INFO | Found #UserDetails_drivers_license in context: top > frame[0]
+2026-06-17 18:07:51,687 | INFO | Selected UserDetails_drivers_license = Yes
+2026-06-17 18:07:51,688 | INFO | Waiting for field: UserDetails_visa_needed
+2026-06-17 18:07:51,731 | INFO | Found #UserDetails_visa_needed in context: top > frame[0]
+2026-06-17 18:07:51,764 | INFO | Selected UserDetails_visa_needed = No
+2026-06-17 18:07:51,770 | INFO | Verified Personal Details before submit: Gender, Nationality and NI Number
+2026-06-17 18:07:51,770 | INFO | Waiting for field: Personal Details form
+2026-06-17 18:07:51,807 | INFO | Found #user-details-form in context: top > frame[0]
+2026-06-17 18:07:51,832 | INFO | Clicked real Personal Details button: Save & Finish | blocked: none | visible buttons: Save & Finish
+2026-06-17 18:07:53,845 | INFO | Waiting for final profile link
+2026-06-17 18:07:53,864 | INFO | Created successfully. Profile URL: https://hd.parim.co/admin/user/view?id=5853
+2026-06-17 18:07:53,866 | INFO | No UTR or Tax Code found in sheet row. Skipping Work Details update.
+2026-06-17 18:07:53,869 | INFO | No passport/ID-card data found in sheet row. Skipping passport step.
+2026-06-17 18:07:53,873 | INFO | Adding emergency contact for profile: https://hd.parim.co/admin/user/view?id=5853 | Jamal Danish
+2026-06-17 18:07:53,873 | INFO | Opening created profile for extra details: https://hd.parim.co/admin/user/view?id=5853
+2026-06-17 18:07:54,244 | INFO | Waiting 5 seconds for profile page to load
+2026-06-17 18:07:59,245 | INFO | Waiting for field: profile tabs
+2026-06-17 18:07:59,296 | INFO | Found #yw1 in context: top > frame[0]
+2026-06-17 18:07:59,300 | INFO | Waiting for field: Passport/ID-Card section
+2026-06-17 18:07:59,357 | INFO | Found #passport-details in context: top > frame[0]
+2026-06-17 18:07:59,362 | INFO | Profile Details tab is ready
+2026-06-17 18:07:59,363 | INFO | Clicking Emergency Contacts Add
+2026-06-17 18:07:59,378 | INFO | Waiting for Emergency Contact dialog
+2026-06-17 18:08:01,380 | INFO | Waiting for field: Emergency Contact dialog form
+2026-06-17 18:08:01,445 | INFO | Found #add-user-emergency-contact-dialog-form in context: top > frame[0]
+2026-06-17 18:08:01,450 | INFO | Waiting for field: Emergency First Name
+2026-06-17 18:08:01,490 | INFO | Found #UserEmergencyContact_first_name in context: top > frame[0]
+2026-06-17 18:08:01,496 | INFO | Waiting for field: Emergency Last Name
+2026-06-17 18:08:01,541 | INFO | Found #UserEmergencyContact_last_name in context: top > frame[0]
+2026-06-17 18:08:01,546 | INFO | Waiting for field: Emergency Phone
+2026-06-17 18:08:01,592 | INFO | Found #UserEmergencyContact_phone in context: top > frame[0]
+2026-06-17 18:08:01,598 | INFO | Waiting for field: Emergency Relation To User
+2026-06-17 18:08:01,641 | INFO | Found #UserEmergencyContact_relation_to_user in context: top > frame[0]
+2026-06-17 18:08:01,646 | INFO | Emergency Contact dialog is ready
+2026-06-17 18:08:01,646 | INFO | Waiting for field: UserEmergencyContact_first_name
+2026-06-17 18:08:01,688 | INFO | Found #UserEmergencyContact_first_name in context: top > frame[0]
+2026-06-17 18:08:01,770 | INFO | Filled UserEmergencyContact_first_name = Jamal
+2026-06-17 18:08:01,770 | INFO | Waiting for field: UserEmergencyContact_last_name
+2026-06-17 18:08:01,807 | INFO | Found #UserEmergencyContact_last_name in context: top > frame[0]
+2026-06-17 18:08:01,900 | INFO | Filled UserEmergencyContact_last_name = Danish
+2026-06-17 18:08:01,900 | INFO | Waiting for field: UserEmergencyContact_phone
+2026-06-17 18:08:01,935 | INFO | Found #UserEmergencyContact_phone in context: top > frame[0]
+2026-06-17 18:08:02,032 | INFO | Filled UserEmergencyContact_phone = 07398940882
+2026-06-17 18:08:02,032 | INFO | Waiting for field: UserEmergencyContact_relation_to_user
+2026-06-17 18:08:02,067 | INFO | Found #UserEmergencyContact_relation_to_user in context: top > frame[0]
+2026-06-17 18:08:02,179 | INFO | Filled UserEmergencyContact_relation_to_user = 123 Clayhall Avenue
+2026-06-17 18:08:03,186 | INFO | Verified Emergency Contact before Save
+2026-06-17 18:08:03,187 | INFO | Waiting for field: add-user-emergency-contact-dialog-form
+2026-06-17 18:08:03,354 | INFO | Found #add-user-emergency-contact-dialog-form in context: top > frame[0]
+2026-06-17 18:08:03,372 | INFO | Clicked submit: Save
+2026-06-17 18:08:03,373 | INFO | Waiting for emergency contact save confirmation
+2026-06-17 18:08:03,904 | INFO | Emergency contact saved successfully
+2026-06-17 18:08:03,907 | INFO | Adding bank details for profile: https://hd.parim.co/admin/user/view?id=5853
+2026-06-17 18:08:03,908 | INFO | Opening created profile for extra details: https://hd.parim.co/admin/user/view?id=5853
+2026-06-17 18:08:04,263 | INFO | Waiting 5 seconds for profile page to load
+2026-06-17 18:08:09,264 | INFO | Waiting for field: profile tabs
+2026-06-17 18:08:09,325 | INFO | Found #yw1 in context: top > frame[0]
+2026-06-17 18:08:09,330 | INFO | Waiting for field: Passport/ID-Card section
+2026-06-17 18:08:09,372 | INFO | Found #passport-details in context: top > frame[0]
+2026-06-17 18:08:09,404 | INFO | Profile Details tab is ready
+2026-06-17 18:08:09,405 | INFO | Clicking Bank Account Edit
+2026-06-17 18:08:09,405 | INFO | Waiting for field: Bank Account section
+2026-06-17 18:08:09,444 | INFO | Found #bank-details in context: top > frame[0]
+2026-06-17 18:08:09,474 | INFO | Waiting 3 seconds for bank details dialog
+2026-06-17 18:08:12,475 | INFO | Waiting for bank details dialog fields
+2026-06-17 18:08:12,486 | INFO | Bank details dialog is ready
+2026-06-17 18:08:12,502 | INFO | Selected Bank Country via #UserBankDetails_country_id = Pakistan
+2026-06-17 18:08:13,054 | INFO | Filled Account Number via #UserBankDetails_account_number = 3213213
+2026-06-17 18:08:13,138 | INFO | Filled Sort Code = 00-00-00 | hidden=000000
+2026-06-17 18:08:13,152 | INFO | Clicked Bank Account Confirm
+2026-06-17 18:08:13,153 | INFO | Waiting for bank details save confirmation
+2026-06-17 18:08:13,321 | WARNING | NOTE: Bank Details skipped/failed: RuntimeError: Name cannot be empty | Address cannot be empty | City cannot be empty | Postcode cannot be empty
+2026-06-17 18:08:13,321 | ERROR | Optional step failed: Bank Details
+Traceback (most recent call last):
+  File "c:\Users\Afraz\HDProjects\Parim Automate with Zoho\zoho_parim_external_sheet_package\zoho_parim_external_sheet_package\Parim Automation with Zoho\parim_zoho_workdrive_docs_package\parim_zoho_workdrive_docs_package\parim_user_creator_zoho_workdrive_docs.py", line 994, in run_optional_step
+    func(*args, **kwargs)
+    ~~~~^^^^^^^^^^^^^^^^^
+  File "c:\Users\Afraz\HDProjects\Parim Automate with Zoho\zoho_parim_external_sheet_package\zoho_parim_external_sheet_package\Parim Automation with Zoho\parim_zoho_workdrive_docs_package\parim_zoho_workdrive_docs_package\parim_user_creator_zoho_workdrive_docs.py", line 3315, in add_bank_details
+    self.wait_for_bank_saved(account_number)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "c:\Users\Afraz\HDProjects\Parim Automate with Zoho\zoho_parim_external_sheet_package\zoho_parim_external_sheet_package\Parim Automation with Zoho\parim_zoho_workdrive_docs_package\parim_zoho_workdrive_docs_package\parim_user_creator_zoho_workdrive_docs.py", line 3377, in wait_for_bank_saved
+    raise RuntimeError(result.replace("ERROR:", "", 1))
+RuntimeError: Name cannot be empty | Address cannot be empty | City cannot be empty | Postcode cannot be empty
+2026-06-17 18:08:13,328 | INFO | Adding SIA Badge qualification. Number=2143132 Expiry=17-06-2026
+2026-06-17 18:08:13,329 | INFO | Opening profile for SIA Badge qualification: https://hd.parim.co/admin/user/view?id=5853
+2026-06-17 18:08:13,693 | INFO | Waiting 5 seconds for profile page to load
+2026-06-17 18:08:18,696 | INFO | Waiting for field: profile tabs
+2026-06-17 18:08:18,757 | INFO | Found #yw1 in context: top > frame[0]
+2026-06-17 18:08:18,773 | INFO | Waiting for Qualification Add button
+2026-06-17 18:08:18,803 | INFO | Expertise tab is ready
+2026-06-17 18:08:18,804 | INFO | Clicking Qualifications Add
+2026-06-17 18:08:18,821 | INFO | Waiting 3 seconds for qualification dialog
+2026-06-17 18:08:21,823 | INFO | Waiting for Add Qualification dialog
+2026-06-17 18:08:21,833 | INFO | Add Qualification dialog is ready
+2026-06-17 18:08:21,834 | INFO | Waiting for field: UserToCertificates_certificate_id
+2026-06-17 18:08:21,888 | INFO | Found #UserToCertificates_certificate_id in context: top > frame[0]
+2026-06-17 18:08:21,968 | INFO | Selected UserToCertificates_certificate_id = SIA Badge
+2026-06-17 18:08:21,969 | INFO | Waiting for field: UserToCertificates_certificate_number
+2026-06-17 18:08:22,011 | INFO | Found #UserToCertificates_certificate_number in context: top > frame[0]
+2026-06-17 18:08:22,096 | INFO | Filled UserToCertificates_certificate_number = 2143132
+2026-06-17 18:08:22,132 | INFO | Filled SIA Expiry Date via #add_certificate_exadd_certificate_expiry_datepiry_date = 17-06-2026
+2026-06-17 18:08:22,132 | INFO | Waiting for field: add-user-certificate-dialog-form
+2026-06-17 18:08:22,181 | INFO | Found #add-user-certificate-dialog-form in context: top > frame[0]
+2026-06-17 18:08:22,202 | INFO | Clicked submit: Save
+2026-06-17 18:08:22,203 | INFO | Waiting for qualification save confirmation
+2026-06-17 18:08:25,839 | INFO | SIA Badge qualification saved successfully
+2026-06-17 18:08:25,841 | INFO | Adding qualification: Drivers license | Certificate Number=1.2123e+217 | Expiry=
+2026-06-17 18:08:25,841 | INFO | Opening profile for SIA Badge qualification: https://hd.parim.co/admin/user/view?id=5853
+2026-06-17 18:08:26,202 | INFO | Waiting 5 seconds for profile page to load
+2026-06-17 18:08:31,203 | INFO | Waiting for field: profile tabs
+2026-06-17 18:08:31,250 | INFO | Found #yw1 in context: top > frame[0]
+2026-06-17 18:08:31,267 | INFO | Waiting for Qualification Add button
+2026-06-17 18:08:31,276 | INFO | Expertise tab is ready
+2026-06-17 18:08:31,277 | INFO | Clicking Qualifications Add
+2026-06-17 18:08:31,290 | INFO | Waiting 3 seconds for qualification dialog
+2026-06-17 18:08:34,290 | INFO | Waiting for Add Qualification dialog
+2026-06-17 18:08:34,308 | INFO | Add Qualification dialog is ready
+2026-06-17 18:08:34,308 | INFO | Waiting for field: UserToCertificates_certificate_id
+2026-06-17 18:08:34,373 | INFO | Found #UserToCertificates_certificate_id in context: top > frame[0]
+2026-06-17 18:08:34,450 | INFO | Selected UserToCertificates_certificate_id = Drivers license
+2026-06-17 18:08:34,450 | INFO | Waiting for field: UserToCertificates_certificate_number
+2026-06-17 18:08:34,487 | INFO | Found #UserToCertificates_certificate_number in context: top > frame[0]
+2026-06-17 18:08:34,652 | INFO | Filled UserToCertificates_certificate_number = 1.2123e+217
+2026-06-17 18:08:34,652 | INFO | Waiting for field: add-user-certificate-dialog-form
+2026-06-17 18:08:35,007 | INFO | Found #add-user-certificate-dialog-form in context: top > frame[0]
+2026-06-17 18:08:35,033 | INFO | Clicked submit: Save
+2026-06-17 18:08:35,034 | INFO | Waiting for qualification save confirmation
+2026-06-17 18:08:35,558 | INFO | Drivers license qualification saved successfully
+2026-06-17 18:08:35,561 | WARNING | NOTE: Documents: downloading directly from Zoho WorkDrive using API.
+2026-06-17 18:08:45,932 | WARNING | NOTE: Documents: Zoho WorkDrive: found 4 item(s) in folder 3e4ia766e7db47dd54488bba7a0bd0e798198
+2026-06-17 18:08:45,933 | WARNING | NOTE: Documents: Zoho WorkDrive: downloaded 4 file(s), valid for PARiM upload 4
+2026-06-17 18:08:45,933 | INFO | Prepared 4 document(s) for Parim upload: NILetter-Test_2-Recruitment.jpg, Picture-Test_2-Recruitment.jpg, Registration Form - Test 2 Recruitment.pdf, Resume-Test_2-Recruitment.png
+2026-06-17 18:08:45,934 | WARNING | NOTE: Documents: prepared 4 file(s) for upload with original names: NILetter-Test_2-Recruitment.jpg, Picture-Test_2-Recruitment.jpg, Registration Form - Test 2 Recruitment.pdf, Resume-Test_2-Recruitment.png
+2026-06-17 18:08:45,936 | INFO | Uploading profile photo from: Picture-Test_2-Recruitment.jpg
+2026-06-17 18:08:45,936 | INFO | Opening profile for profile photo upload: https://hd.parim.co/admin/user/view?id=5853
+2026-06-17 18:08:46,342 | INFO | Waiting 5 seconds for profile page to load
+2026-06-17 18:08:51,343 | INFO | Waiting for field: profile tabs
+2026-06-17 18:08:51,416 | INFO | Found #yw1 in context: top > frame[0]
+2026-06-17 18:08:51,449 | INFO | Waiting for profile photo dialog
+2026-06-17 18:08:53,451 | INFO | Waiting for field: Profile photo dialog
+2026-06-17 18:08:53,522 | INFO | Found #parimDialog0 in context: top > frame[0]
+2026-06-17 18:08:53,528 | INFO | Profile photo dialog is open
+2026-06-17 18:08:54,554 | INFO | Waiting for field: Profile photo file input
+2026-06-17 18:08:54,614 | INFO | Found #file_input_before_1_1781701733533 in context: top > frame[0]
+2026-06-17 18:08:54,643 | INFO | Waiting for profile photo upload processing: Picture-Test_2-Recruitment.jpg
+2026-06-17 18:08:54,743 | INFO | Clicked profile photo Done: Done
+2026-06-17 18:08:57,257 | INFO | Profile photo upload flow completed: Picture-Test_2-Recruitment.jpg
+2026-06-17 18:08:57,257 | WARNING | NOTE: Profile photo uploaded from: Picture-Test_2-Recruitment.jpg
+2026-06-17 18:08:57,258 | INFO | Opening profile Docs tab: https://hd.parim.co/admin/user/view?id=5853
+2026-06-17 18:08:57,593 | INFO | Waiting 5 seconds for profile page to load
+2026-06-17 18:09:02,594 | INFO | Waiting for field: profile tabs
+2026-06-17 18:09:02,662 | INFO | Found #yw1 in context: top > frame[0]
+2026-06-17 18:09:02,675 | INFO | Waiting for field: Document upload header
+2026-06-17 18:09:02,735 | INFO | Found #document-upload-header in context: top > frame[0]
+2026-06-17 18:09:02,740 | INFO | Waiting for field: Documents list
+2026-06-17 18:09:02,783 | INFO | Found #documents-list in context: top > frame[0]
+2026-06-17 18:09:02,787 | INFO | Docs tab is ready
+2026-06-17 18:09:02,788 | INFO | Uploading document: NILetter-Test_2-Recruitment.jpg
+2026-06-17 18:09:02,802 | INFO | Waiting for field: Document file input
+2026-06-17 18:09:02,845 | INFO | Found #parim_document_upload_input_runtime in context: top > frame[0]
+2026-06-17 18:09:02,869 | INFO | Waiting for document to be queued: NILetter-Test_2-Recruitment.jpg
+2026-06-17 18:09:02,918 | INFO | Clicked Start upload for: NILetter-Test_2-Recruitment.jpg
+2026-06-17 18:09:02,925 | INFO | Document upload completed or queued finished: NILetter-Test_2-Recruitment.jpg | state=queue_finished
+2026-06-17 18:09:02,925 | WARNING | NOTE: Document NILetter-Test_2-Recruitment.jpg upload queue finished. Parim grid may refresh later.
+2026-06-17 18:09:03,526 | WARNING | NOTE: Document uploaded/attempted: NILetter-Test_2-Recruitment.jpg (queue_finished)
+2026-06-17 18:09:03,929 | INFO | Uploading document: Picture-Test_2-Recruitment.jpg
+2026-06-17 18:09:03,964 | INFO | Waiting for field: Document file input
+2026-06-17 18:09:04,015 | INFO | Found #parim_document_upload_input_runtime in context: top > frame[0]
+2026-06-17 18:09:04,042 | INFO | Waiting for document to be queued: Picture-Test_2-Recruitment.jpg
+2026-06-17 18:09:05,605 | INFO | Clicked Start upload for: Picture-Test_2-Recruitment.jpg
+2026-06-17 18:09:05,615 | INFO | Document upload completed or queued finished: Picture-Test_2-Recruitment.jpg | state=queue_finished
+2026-06-17 18:09:05,615 | WARNING | NOTE: Document Picture-Test_2-Recruitment.jpg upload queue finished. Parim grid may refresh later.
+2026-06-17 18:09:06,216 | WARNING | NOTE: Document uploaded/attempted: Picture-Test_2-Recruitment.jpg (queue_finished)
+2026-06-17 18:09:06,617 | INFO | Uploading document: Registration Form - Test 2 Recruitment.pdf
+2026-06-17 18:09:06,649 | INFO | Waiting for field: Document file input
+2026-06-17 18:09:06,701 | INFO | Found #parim_document_upload_input_runtime in context: top > frame[0]
+2026-06-17 18:09:06,742 | INFO | Waiting for document to be queued: Registration Form - Test 2 Recruitment.pdf
+2026-06-17 18:09:06,760 | INFO | Clicked Start upload for: Registration Form - Test 2 Recruitment.pdf
+2026-06-17 18:09:06,768 | INFO | Document upload completed or queued finished: Registration Form - Test 2 Recruitment.pdf | state=list_changed
+2026-06-17 18:09:07,369 | WARNING | NOTE: Document uploaded/attempted: Registration Form - Test 2 Recruitment.pdf (list_changed)
+2026-06-17 18:09:07,770 | INFO | Uploading document: Resume-Test_2-Recruitment.png
+2026-06-17 18:09:07,791 | INFO | Waiting for field: Document file input
+2026-06-17 18:09:07,840 | INFO | Found #parim_document_upload_input_runtime in context: top > frame[0]
+2026-06-17 18:09:07,870 | INFO | Waiting for document to be queued: Resume-Test_2-Recruitment.png
+2026-06-17 18:09:07,967 | INFO | Clicked Start upload for: Resume-Test_2-Recruitment.png
+2026-06-17 18:09:07,974 | INFO | Document upload completed or queued finished: Resume-Test_2-Recruitment.png | state=list_changed
+2026-06-17 18:09:08,574 | WARNING | NOTE: Document uploaded/attempted: Resume-Test_2-Recruitment.png (list_changed)
+2026-06-17 18:09:08,975 | WARNING | NOTE: Documents upload summary: attempted 4, uploaded/attempted 4, failed 0, total valid 4
+2026-06-17 18:09:08,982 | WARNING | NOTE: Documents: temporary downloaded/extracted files deleted from PC.
+2026-06-17 18:09:08,984 | WARNING | NOTE: Documents: browser download folder cleaned.
+2026-06-17 18:09:12,898 | INFO | Updated Google Sheet row 2 as Done
+2026-06-17 18:09:12,903 | INFO | Result for tes3thanddrecruitment@gmail.com: created Created successfully. Notes: Bank Details skipped/failed: RuntimeError: Name cannot be empty | Address cannot be empty | City cannot be empty | Postcode cannot be empty | Documents: downloading directly from Zoho WorkDrive using API. | Documents: Zoho WorkDrive: found 4 item(s) in folder 3e4ia766e7db47dd54488bba7a0bd0e798198 | Documents: Zoho WorkDrive: downloaded 4 file(s), valid for PARiM upload 4 | Documents: prepared 4 file(s) for upload with original names: NILetter-Test_2-Recruitment.jpg, Picture-Test_2-Recruitment.jpg, Registration Form - Test 2 Recruitment.pdf, Resume-Test_2-Recruitment.png | Profile photo uploaded from: Picture-Test_2-Recruitment.jpg | Document NILetter-Test_2-Recruitment.jpg upload queue finished. Parim grid may refresh later. | Document uploaded/attempted: NILetter-Test_2-Recruitment.jpg (queue_finished) | Document Picture-Test_2-Recruitment.jpg upload queue finished. Parim grid may refresh later. | Document uploaded/attempted: Picture-Test_2-Recruitment.jpg (queue_finished) | Document uploaded/attempted: Registration Form - Test 2 Recruitment.pdf (list_changed) | Document uploaded/attempted: Resume-Test_2-Recruitment.png (list_changed) | Documents upload summary: attempted 4, uploaded/attempted 4, failed 0, total valid 4 | Documents: temporary downloaded/extracted files deleted from PC. | Documents: browser download folder cleaned.
+2026-06-17 18:09:12,906 | INFO | Finished. Created: 1 | Failed: 0 | Local Results: output\results.csv
+2026-06-17 18:10:41,662 | INFO | Fetching pending rows from Google Sheet
+2026-06-17 18:10:45,185 | INFO | Loaded 1 pending row(s) from Google Sheet
+2026-06-17 18:10:46,991 | INFO | Opening login page
+2026-06-17 18:10:52,650 | INFO | Login successful. Current URL: https://hd.parim.co/dashboard
+2026-06-17 18:10:52,650 | INFO | Creating pending row 1/1 | Sheet row 3 | tes4thanddrecruitment@gmail.com
+2026-06-17 18:10:52,651 | INFO | Opening create user URL
+2026-06-17 18:10:52,651 | INFO | Trying create URL: https://hd.parim.co/admin/user/create
+2026-06-17 18:10:53,019 | INFO | Waiting 7 seconds for create form to appear
+2026-06-17 18:11:00,056 | INFO | After opening URL page summary: current_url=https://hd.parim.co/admin/user/create | title='Admin portal - Parim' | frames=2 | body_start='Dashboard\nSchedule\nTime Clock\nLocations\nAbsences\nPeople\nPay & Charge\nReports\nDocuments\n99+\nHH'
+2026-06-17 18:11:00,101 | INFO | Found #UserDetails_first_name in context: top > frame[0]
+2026-06-17 18:11:00,110 | INFO | Create user form found at: https://hd.parim.co/admin/user/create
+2026-06-17 18:11:00,110 | INFO | Waiting for field: First Name
+2026-06-17 18:11:00,147 | INFO | Found #UserDetails_first_name in context: top > frame[0]
+2026-06-17 18:11:00,151 | INFO | Waiting for field: Last Name
+2026-06-17 18:11:00,219 | INFO | Found #UserDetails_last_name in context: top > frame[0]
+2026-06-17 18:11:00,223 | INFO | Waiting for field: Email
+2026-06-17 18:11:00,261 | INFO | Found #User_email in context: top > frame[0]
+2026-06-17 18:11:00,266 | INFO | Waiting for field: Employment Type
+2026-06-17 18:11:00,305 | INFO | Found #UserContract_contract_type_id in context: top > frame[0]
+2026-06-17 18:11:00,310 | INFO | Create user form is ready. Starting fill.
+2026-06-17 18:11:00,310 | INFO | Filling Person's Details
+2026-06-17 18:11:00,311 | INFO | Waiting for field: UserDetails_first_name
+2026-06-17 18:11:00,353 | INFO | Found #UserDetails_first_name in context: top > frame[0]
+2026-06-17 18:11:00,431 | INFO | Filled UserDetails_first_name = Recruitment
+2026-06-17 18:11:00,432 | INFO | Waiting for field: UserDetails_last_name
+2026-06-17 18:11:00,474 | INFO | Found #UserDetails_last_name in context: top > frame[0]
+2026-06-17 18:11:00,561 | INFO | Filled UserDetails_last_name = Test 3
+2026-06-17 18:11:00,561 | INFO | Waiting for field: User_email
+2026-06-17 18:11:00,597 | INFO | Found #User_email in context: top > frame[0]
+2026-06-17 18:11:00,711 | INFO | Filled User_email = tes4thanddrecruitment@gmail.com
+2026-06-17 18:11:00,711 | INFO | Waiting for field: UserContract_contract_type_id
+2026-06-17 18:11:00,746 | INFO | Found #UserContract_contract_type_id in context: top > frame[0]
+2026-06-17 18:11:01,284 | INFO | Selected UserContract_contract_type_id = Full-time Employee
+2026-06-17 18:11:01,285 | INFO | Skipped empty field: UserContract_contract_no
+2026-06-17 18:11:01,286 | INFO | Skipped empty field: user_edit_start_date
+2026-06-17 18:11:01,286 | INFO | Skipped empty field: user_edit_end_date
+2026-06-17 18:11:01,298 | INFO | Staff Portal access set to: False
+2026-06-17 18:11:01,298 | INFO | Waiting for field: user-create-form
+2026-06-17 18:11:01,353 | INFO | Found #user-create-form in context: top > frame[0]
+2026-06-17 18:11:01,387 | INFO | Clicked submit: Save & Next
+2026-06-17 18:11:01,387 | INFO | Waiting 5 seconds for Contacts form to appear
+2026-06-17 18:11:06,388 | INFO | Waiting for next step: Contacts form
+2026-06-17 18:11:06,450 | INFO | Found #UserDetails_phone in context: top > frame[0]
+2026-06-17 18:11:06,455 | INFO | Contacts form field is present and Selenium is in the correct frame
+2026-06-17 18:11:06,455 | INFO | Waiting for field: Contacts form
+2026-06-17 18:11:06,500 | INFO | Found #user-contacts-form in context: top > frame[0]
+2026-06-17 18:11:06,504 | INFO | Waiting for field: Mobile
+2026-06-17 18:11:06,538 | INFO | Found #UserDetails_phone in context: top > frame[0]
+2026-06-17 18:11:06,543 | INFO | Contacts form is ready and active
+2026-06-17 18:11:06,543 | INFO | Filling Contacts
+2026-06-17 18:11:06,544 | INFO | Waiting for field: Contacts form
+2026-06-17 18:11:06,578 | INFO | Found #user-contacts-form in context: top > frame[0]
+2026-06-17 18:11:06,582 | INFO | Waiting for field: Mobile
+2026-06-17 18:11:06,616 | INFO | Found #UserDetails_phone in context: top > frame[0]
+2026-06-17 18:11:06,621 | INFO | Waiting for field: UserDetails_phone
+2026-06-17 18:11:06,657 | INFO | Found #UserDetails_phone in context: top > frame[0]
+2026-06-17 18:11:06,747 | INFO | Filled UserDetails_phone = 07574161675
+2026-06-17 18:11:06,747 | INFO | Waiting for field: UserAddress_address_line
+2026-06-17 18:11:06,786 | INFO | Found #UserAddress_address_line in context: top > frame[0]
+2026-06-17 18:11:06,877 | INFO | Filled UserAddress_address_line = Bell Parade
+2026-06-17 18:11:06,878 | INFO | Skipped empty field: UserAddress_apartment_number
+2026-06-17 18:11:06,878 | INFO | Waiting for field: UserAddress_house_number
+2026-06-17 18:11:06,919 | INFO | Found #UserAddress_house_number in context: top > frame[0]
+2026-06-17 18:11:06,995 | INFO | Filled UserAddress_house_number = 5
+2026-06-17 18:11:06,996 | INFO | Waiting for field: UserAddress_postcode
+2026-06-17 18:11:07,036 | INFO | Found #UserAddress_postcode in context: top > frame[0]
+2026-06-17 18:11:07,119 | INFO | Filled UserAddress_postcode = tw3 3nu
+2026-06-17 18:11:07,120 | INFO | Skipped empty field: UserAddress_city
+2026-06-17 18:11:07,120 | INFO | Waiting for field: UserAddress_country_id
+2026-06-17 18:11:07,160 | INFO | Found #UserAddress_country_id in context: top > frame[0]
+2026-06-17 18:11:07,237 | INFO | Selected UserAddress_country_id = Pakistan
+2026-06-17 18:11:07,237 | INFO | Waiting for field: user-contacts-form
+2026-06-17 18:11:07,271 | INFO | Found #user-contacts-form in context: top > frame[0]
+2026-06-17 18:11:07,289 | INFO | Clicked submit: Save & Next
+2026-06-17 18:11:07,290 | INFO | Waiting for next step: Personal Details form
+2026-06-17 18:11:07,330 | INFO | Found #UserDetails_date_of_birth in context: top > frame[0]
+2026-06-17 18:11:07,334 | INFO | Personal Details form field is present and Selenium is in the correct frame
+2026-06-17 18:11:07,334 | INFO | Filling Personal Details in smart mode. Missing optional fields will be noted, not fatal.
+2026-06-17 18:11:07,335 | INFO | Waiting for field: Personal Details form
+2026-06-17 18:11:07,375 | INFO | Found #user-details-form in context: top > frame[0]
+2026-06-17 18:11:07,380 | INFO | Core values from sheet | Gender=Male | Nationality=Pakistan | NI=23421432144
+2026-06-17 18:11:07,387 | INFO | Selected Gender = Male via id=UserDetails_gender_0 value=0
+2026-06-17 18:11:07,394 | INFO | Filled Nationality via #UserDetails_nationality = Pakistani
+2026-06-17 18:11:07,394 | INFO | Waiting for field: UserDetails_birth_country_id
+2026-06-17 18:11:07,436 | INFO | Found #UserDetails_birth_country_id in context: top > frame[0]
+2026-06-17 18:11:07,513 | INFO | Selected UserDetails_birth_country_id = Pakistan
+2026-06-17 18:11:07,518 | INFO | Filled NI / Social Security number via #UserDetails_nin = 23421432144
+2026-06-17 18:11:07,519 | INFO | Waiting 3.0 seconds after core Personal Details fields. Gender=Male | Nationality=Pakistani | NI=23421432144
+2026-06-17 18:11:07,529 | INFO | Core field values before wait | genderChecked=True | nationality=Pakistani | NI=23421432144 | DOB=
+2026-06-17 18:11:10,544 | INFO | Verified Personal Details before submit: Gender, Nationality and NI Number
+2026-06-17 18:11:10,545 | INFO | Waiting for field: UserDetails_drivers_license
+2026-06-17 18:11:10,616 | INFO | Found #UserDetails_drivers_license in context: top > frame[0]
+2026-06-17 18:11:10,693 | INFO | Selected UserDetails_drivers_license = Yes
+2026-06-17 18:11:10,695 | INFO | Waiting for field: UserDetails_visa_needed
+2026-06-17 18:11:10,740 | INFO | Found #UserDetails_visa_needed in context: top > frame[0]
+2026-06-17 18:11:10,773 | INFO | Selected UserDetails_visa_needed = No
+2026-06-17 18:11:10,779 | INFO | Verified Personal Details before submit: Gender, Nationality and NI Number
+2026-06-17 18:11:10,779 | INFO | Waiting for field: Personal Details form
+2026-06-17 18:11:10,814 | INFO | Found #user-details-form in context: top > frame[0]
+2026-06-17 18:11:10,836 | INFO | Clicked real Personal Details button: Save & Finish | blocked: none | visible buttons: Save & Finish
+2026-06-17 18:11:12,849 | INFO | Waiting for final profile link
+2026-06-17 18:11:12,867 | INFO | Created successfully. Profile URL: https://hd.parim.co/admin/user/view?id=5854
+2026-06-17 18:11:12,869 | INFO | No UTR or Tax Code found in sheet row. Skipping Work Details update.
+2026-06-17 18:11:12,874 | INFO | No passport/ID-card data found in sheet row. Skipping passport step.
+2026-06-17 18:11:12,880 | INFO | Adding emergency contact for profile: https://hd.parim.co/admin/user/view?id=5854 | Jamal Danish
+2026-06-17 18:11:12,881 | INFO | Opening created profile for extra details: https://hd.parim.co/admin/user/view?id=5854
+2026-06-17 18:11:13,249 | INFO | Waiting 5 seconds for profile page to load
+2026-06-17 18:11:18,250 | INFO | Waiting for field: profile tabs
+2026-06-17 18:11:18,301 | INFO | Found #yw1 in context: top > frame[0]
+2026-06-17 18:11:18,311 | INFO | Waiting for field: Passport/ID-Card section
+2026-06-17 18:11:18,363 | INFO | Found #passport-details in context: top > frame[0]
+2026-06-17 18:11:18,367 | INFO | Profile Details tab is ready
+2026-06-17 18:11:18,368 | INFO | Clicking Emergency Contacts Add
+2026-06-17 18:11:18,382 | INFO | Waiting for Emergency Contact dialog
+2026-06-17 18:11:20,383 | INFO | Waiting for field: Emergency Contact dialog form
+2026-06-17 18:11:20,429 | INFO | Found #add-user-emergency-contact-dialog-form in context: top > frame[0]
+2026-06-17 18:11:20,433 | INFO | Waiting for field: Emergency First Name
+2026-06-17 18:11:20,473 | INFO | Found #UserEmergencyContact_first_name in context: top > frame[0]
+2026-06-17 18:11:20,479 | INFO | Waiting for field: Emergency Last Name
+2026-06-17 18:11:20,526 | INFO | Found #UserEmergencyContact_last_name in context: top > frame[0]
+2026-06-17 18:11:20,531 | INFO | Waiting for field: Emergency Phone
+2026-06-17 18:11:20,574 | INFO | Found #UserEmergencyContact_phone in context: top > frame[0]
+2026-06-17 18:11:20,580 | INFO | Waiting for field: Emergency Relation To User
+2026-06-17 18:11:20,624 | INFO | Found #UserEmergencyContact_relation_to_user in context: top > frame[0]
+2026-06-17 18:11:20,629 | INFO | Emergency Contact dialog is ready
+2026-06-17 18:11:20,629 | INFO | Waiting for field: UserEmergencyContact_first_name
+2026-06-17 18:11:20,669 | INFO | Found #UserEmergencyContact_first_name in context: top > frame[0]
+2026-06-17 18:11:20,750 | INFO | Filled UserEmergencyContact_first_name = Jamal
+2026-06-17 18:11:20,751 | INFO | Waiting for field: UserEmergencyContact_last_name
+2026-06-17 18:11:20,786 | INFO | Found #UserEmergencyContact_last_name in context: top > frame[0]
+2026-06-17 18:11:20,876 | INFO | Filled UserEmergencyContact_last_name = Danish
+2026-06-17 18:11:20,877 | INFO | Waiting for field: UserEmergencyContact_phone
+2026-06-17 18:11:20,912 | INFO | Found #UserEmergencyContact_phone in context: top > frame[0]
+2026-06-17 18:11:21,013 | INFO | Filled UserEmergencyContact_phone = 07398940883
+2026-06-17 18:11:21,013 | INFO | Waiting for field: UserEmergencyContact_relation_to_user
+2026-06-17 18:11:21,049 | INFO | Found #UserEmergencyContact_relation_to_user in context: top > frame[0]
+2026-06-17 18:11:21,163 | INFO | Filled UserEmergencyContact_relation_to_user = 124 Clayhall Avenue
+2026-06-17 18:11:22,177 | INFO | Verified Emergency Contact before Save
+2026-06-17 18:11:22,178 | INFO | Waiting for field: add-user-emergency-contact-dialog-form
+2026-06-17 18:11:22,254 | INFO | Found #add-user-emergency-contact-dialog-form in context: top > frame[0]
+2026-06-17 18:11:22,275 | INFO | Clicked submit: Save
+2026-06-17 18:11:22,276 | INFO | Waiting for emergency contact save confirmation
+2026-06-17 18:11:22,807 | INFO | Emergency contact saved successfully
+2026-06-17 18:11:22,811 | INFO | Adding bank details for profile: https://hd.parim.co/admin/user/view?id=5854
+2026-06-17 18:11:22,811 | INFO | Opening created profile for extra details: https://hd.parim.co/admin/user/view?id=5854
+2026-06-17 18:11:23,160 | INFO | Waiting 5 seconds for profile page to load
+2026-06-17 18:11:28,161 | INFO | Waiting for field: profile tabs
+2026-06-17 18:11:28,227 | INFO | Found #yw1 in context: top > frame[0]
+2026-06-17 18:11:28,232 | INFO | Waiting for field: Passport/ID-Card section
+2026-06-17 18:11:28,280 | INFO | Found #passport-details in context: top > frame[0]
+2026-06-17 18:11:28,285 | INFO | Profile Details tab is ready
+2026-06-17 18:11:28,285 | INFO | Clicking Bank Account Edit
+2026-06-17 18:11:28,285 | INFO | Waiting for field: Bank Account section
+2026-06-17 18:11:28,338 | INFO | Found #bank-details in context: top > frame[0]
+2026-06-17 18:11:28,370 | INFO | Waiting 3 seconds for bank details dialog
+2026-06-17 18:11:31,371 | INFO | Waiting for bank details dialog fields
+2026-06-17 18:11:31,388 | INFO | Bank details dialog is ready
+2026-06-17 18:11:31,403 | INFO | Selected Bank Country via #UserBankDetails_country_id = Pakistan
+2026-06-17 18:11:31,935 | INFO | Filled Account Number via #UserBankDetails_account_number = 3213214
+2026-06-17 18:11:31,956 | INFO | Filled Sort Code = 00-00-01 | hidden=000001
+2026-06-17 18:11:31,970 | INFO | Clicked Bank Account Confirm
+2026-06-17 18:11:31,970 | INFO | Waiting for bank details save confirmation
+2026-06-17 18:11:32,136 | WARNING | NOTE: Bank Details skipped/failed: RuntimeError: Name cannot be empty | Address cannot be empty | City cannot be empty | Postcode cannot be empty
+2026-06-17 18:11:32,136 | ERROR | Optional step failed: Bank Details
+Traceback (most recent call last):
+  File "c:\Users\Afraz\HDProjects\Parim Automate with Zoho\zoho_parim_external_sheet_package\zoho_parim_external_sheet_package\Parim Automation with Zoho\parim_zoho_workdrive_docs_package\parim_zoho_workdrive_docs_package\parim_user_creator_zoho_workdrive_docs.py", line 994, in run_optional_step
+    func(*args, **kwargs)
+    ~~~~^^^^^^^^^^^^^^^^^
+  File "c:\Users\Afraz\HDProjects\Parim Automate with Zoho\zoho_parim_external_sheet_package\zoho_parim_external_sheet_package\Parim Automation with Zoho\parim_zoho_workdrive_docs_package\parim_zoho_workdrive_docs_package\parim_user_creator_zoho_workdrive_docs.py", line 3315, in add_bank_details
+    self.wait_for_bank_saved(account_number)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "c:\Users\Afraz\HDProjects\Parim Automate with Zoho\zoho_parim_external_sheet_package\zoho_parim_external_sheet_package\Parim Automation with Zoho\parim_zoho_workdrive_docs_package\parim_zoho_workdrive_docs_package\parim_user_creator_zoho_workdrive_docs.py", line 3377, in wait_for_bank_saved
+    raise RuntimeError(result.replace("ERROR:", "", 1))
+RuntimeError: Name cannot be empty | Address cannot be empty | City cannot be empty | Postcode cannot be empty
+2026-06-17 18:11:32,144 | INFO | Adding SIA Badge qualification. Number=2143133 Expiry=17-06-2027
+2026-06-17 18:11:32,144 | INFO | Opening profile for SIA Badge qualification: https://hd.parim.co/admin/user/view?id=5854
+2026-06-17 18:11:32,520 | INFO | Waiting 5 seconds for profile page to load
+2026-06-17 18:11:37,520 | INFO | Waiting for field: profile tabs
+2026-06-17 18:11:37,582 | INFO | Found #yw1 in context: top > frame[0]
+2026-06-17 18:11:37,600 | INFO | Waiting for Qualification Add button
+2026-06-17 18:11:37,613 | INFO | Expertise tab is ready
+2026-06-17 18:11:37,613 | INFO | Clicking Qualifications Add
+2026-06-17 18:11:37,625 | INFO | Waiting 3 seconds for qualification dialog
+2026-06-17 18:11:40,629 | INFO | Waiting for Add Qualification dialog
+2026-06-17 18:11:40,656 | INFO | Add Qualification dialog is ready
+2026-06-17 18:11:40,657 | INFO | Waiting for field: UserToCertificates_certificate_id
+2026-06-17 18:11:40,703 | INFO | Found #UserToCertificates_certificate_id in context: top > frame[0]
+2026-06-17 18:11:40,783 | INFO | Selected UserToCertificates_certificate_id = SIA Badge
+2026-06-17 18:11:40,783 | INFO | Waiting for field: UserToCertificates_certificate_number
+2026-06-17 18:11:40,824 | INFO | Found #UserToCertificates_certificate_number in context: top > frame[0]
+2026-06-17 18:11:40,971 | INFO | Filled UserToCertificates_certificate_number = 2143133
+2026-06-17 18:11:41,006 | INFO | Filled SIA Expiry Date via #add_certificate_exadd_certificate_expiry_datepiry_date = 17-06-2027
+2026-06-17 18:11:41,007 | INFO | Waiting for field: add-user-certificate-dialog-form
+2026-06-17 18:11:41,063 | INFO | Found #add-user-certificate-dialog-form in context: top > frame[0]
+2026-06-17 18:11:41,079 | INFO | Clicked submit: Save
+2026-06-17 18:11:41,079 | INFO | Waiting for qualification save confirmation
+2026-06-17 18:11:43,672 | INFO | SIA Badge qualification saved successfully
+2026-06-17 18:11:43,673 | INFO | Adding qualification: Drivers license | Certificate Number=1.2123e+218 | Expiry=
+2026-06-17 18:11:43,674 | INFO | Opening profile for SIA Badge qualification: https://hd.parim.co/admin/user/view?id=5854
+2026-06-17 18:11:44,017 | INFO | Waiting 5 seconds for profile page to load
+2026-06-17 18:14:42,686 | INFO | Fetching pending rows from Google Sheet
+2026-06-17 18:14:46,824 | INFO | Loaded 1 pending row(s) from Google Sheet
+2026-06-17 18:14:48,711 | INFO | Opening login page
+2026-06-17 18:14:54,534 | INFO | Login successful. Current URL: https://hd.parim.co/dashboard
+2026-06-17 18:14:54,535 | INFO | Creating pending row 1/1 | Sheet row 4 | testshavan315@gmail.com
+2026-06-17 18:14:54,535 | INFO | Opening create user URL
+2026-06-17 18:14:54,535 | INFO | Trying create URL: https://hd.parim.co/admin/user/create
+2026-06-17 18:14:55,014 | INFO | Waiting 7 seconds for create form to appear
+2026-06-17 18:15:02,042 | INFO | After opening URL page summary: current_url=https://hd.parim.co/admin/user/create | title='Admin portal - Parim' | frames=2 | body_start='1\n99+\nSA'
+2026-06-17 18:15:02,089 | INFO | Found #UserDetails_first_name in context: top > frame[0]
+2026-06-17 18:15:02,099 | INFO | Create user form found at: https://hd.parim.co/admin/user/create
+2026-06-17 18:15:02,099 | INFO | Waiting for field: First Name
+2026-06-17 18:15:02,141 | INFO | Found #UserDetails_first_name in context: top > frame[0]
+2026-06-17 18:15:02,145 | INFO | Waiting for field: Last Name
+2026-06-17 18:15:02,185 | INFO | Found #UserDetails_last_name in context: top > frame[0]
+2026-06-17 18:15:02,191 | INFO | Waiting for field: Email
+2026-06-17 18:15:02,236 | INFO | Found #User_email in context: top > frame[0]
+2026-06-17 18:15:02,241 | INFO | Waiting for field: Employment Type
+2026-06-17 18:15:02,280 | INFO | Found #UserContract_contract_type_id in context: top > frame[0]
+2026-06-17 18:15:02,284 | INFO | Create user form is ready. Starting fill.
+2026-06-17 18:15:02,284 | INFO | Filling Person's Details
+2026-06-17 18:15:02,285 | INFO | Waiting for field: UserDetails_first_name
+2026-06-17 18:15:02,321 | INFO | Found #UserDetails_first_name in context: top > frame[0]
+2026-06-17 18:15:02,393 | INFO | Filled UserDetails_first_name = shavandeep
+2026-06-17 18:15:02,393 | INFO | Waiting for field: UserDetails_last_name
+2026-06-17 18:15:02,425 | INFO | Found #UserDetails_last_name in context: top > frame[0]
+2026-06-17 18:15:02,520 | INFO | Filled UserDetails_last_name = singh
+2026-06-17 18:15:02,521 | INFO | Waiting for field: User_email
+2026-06-17 18:15:02,555 | INFO | Found #User_email in context: top > frame[0]
+2026-06-17 18:15:02,671 | INFO | Filled User_email = testshavan315@gmail.com
+2026-06-17 18:15:02,672 | INFO | Waiting for field: UserContract_contract_type_id
+2026-06-17 18:15:02,705 | INFO | Found #UserContract_contract_type_id in context: top > frame[0]
+2026-06-17 18:15:02,770 | INFO | Selected UserContract_contract_type_id = Standard
+2026-06-17 18:15:02,770 | INFO | Skipped empty field: UserContract_contract_no
+2026-06-17 18:15:02,771 | INFO | Skipped empty field: user_edit_start_date
+2026-06-17 18:15:02,771 | INFO | Skipped empty field: user_edit_end_date
+2026-06-17 18:15:02,777 | INFO | Selected department: Completed Event Stewards (No PIN)
+2026-06-17 18:15:02,784 | INFO | Staff Portal access set to: False
+2026-06-17 18:15:02,784 | INFO | Waiting for field: user-create-form
+2026-06-17 18:15:02,830 | INFO | Found #user-create-form in context: top > frame[0]
+2026-06-17 18:15:02,848 | INFO | Clicked submit: Save & Next
+2026-06-17 18:15:02,850 | INFO | Waiting 5 seconds for Contacts form to appear
+2026-06-17 18:15:07,850 | INFO | Waiting for next step: Contacts form
+2026-06-17 18:15:07,917 | INFO | Found #UserDetails_phone in context: top > frame[0]
+2026-06-17 18:15:07,923 | INFO | Contacts form field is present and Selenium is in the correct frame
+2026-06-17 18:15:07,924 | INFO | Waiting for field: Contacts form
+2026-06-17 18:15:07,969 | INFO | Found #user-contacts-form in context: top > frame[0]
+2026-06-17 18:15:07,974 | INFO | Waiting for field: Mobile
+2026-06-17 18:15:08,011 | INFO | Found #UserDetails_phone in context: top > frame[0]
+2026-06-17 18:15:08,016 | INFO | Contacts form is ready and active
+2026-06-17 18:15:08,016 | INFO | Filling Contacts
+2026-06-17 18:15:08,016 | INFO | Waiting for field: Contacts form
+2026-06-17 18:15:08,055 | INFO | Found #user-contacts-form in context: top > frame[0]
+2026-06-17 18:15:08,061 | INFO | Waiting for field: Mobile
+2026-06-17 18:15:08,098 | INFO | Found #UserDetails_phone in context: top > frame[0]
+2026-06-17 18:15:08,103 | INFO | Waiting for field: UserDetails_phone
+2026-06-17 18:15:08,138 | INFO | Found #UserDetails_phone in context: top > frame[0]
+2026-06-17 18:15:08,240 | INFO | Filled UserDetails_phone = 07466079892
+2026-06-17 18:15:08,241 | INFO | Waiting for field: UserAddress_address_line
+2026-06-17 18:15:08,283 | INFO | Found #UserAddress_address_line in context: top > frame[0]
+2026-06-17 18:15:08,375 | INFO | Filled UserAddress_address_line = 18 lampton avenue
+2026-06-17 18:15:08,376 | INFO | Skipped empty field: UserAddress_apartment_number
+2026-06-17 18:15:08,376 | INFO | Skipped empty field: UserAddress_house_number
+2026-06-17 18:15:08,377 | INFO | Waiting for field: UserAddress_postcode
+2026-06-17 18:15:08,420 | INFO | Found #UserAddress_postcode in context: top > frame[0]
+2026-06-17 18:15:08,502 | INFO | Filled UserAddress_postcode = tw34en
+2026-06-17 18:15:08,503 | INFO | Waiting for field: UserAddress_city
+2026-06-17 18:15:08,545 | INFO | Found #UserAddress_city in context: top > frame[0]
+2026-06-17 18:15:08,625 | INFO | Filled UserAddress_city = hounslow
+2026-06-17 18:15:08,626 | INFO | Waiting for field: UserAddress_country_id
+2026-06-17 18:15:08,665 | INFO | Found #UserAddress_country_id in context: top > frame[0]
+2026-06-17 18:15:08,716 | INFO | Selected UserAddress_country_id = United Kingdom
+2026-06-17 18:15:08,716 | INFO | Waiting for field: user-contacts-form
+2026-06-17 18:15:08,752 | INFO | Found #user-contacts-form in context: top > frame[0]
+2026-06-17 18:15:08,796 | INFO | Clicked submit: Save & Next
+2026-06-17 18:15:08,796 | INFO | Waiting for next step: Personal Details form
+2026-06-17 18:15:08,847 | INFO | Found #UserDetails_date_of_birth in context: top > frame[0]
+2026-06-17 18:15:08,852 | INFO | Personal Details form field is present and Selenium is in the correct frame
+2026-06-17 18:15:08,853 | INFO | Filling Personal Details in smart mode. Missing optional fields will be noted, not fatal.
+2026-06-17 18:15:08,853 | INFO | Waiting for field: Personal Details form
+2026-06-17 18:15:08,903 | INFO | Found #user-details-form in context: top > frame[0]
+2026-06-17 18:15:08,911 | INFO | Core values from sheet | Gender=Male | Nationality=Indian | NI=RZ834655D
+2026-06-17 18:15:08,918 | INFO | Selected Gender = Male via id=UserDetails_gender_0 value=0
+2026-06-17 18:15:08,923 | INFO | Waiting for field: UserDetails_date_of_birth
+2026-06-17 18:15:08,968 | INFO | Found #UserDetails_date_of_birth in context: top > frame[0]
+2026-06-17 18:15:09,004 | INFO | Filled UserDetails_date_of_birth = 23/05/2005
+2026-06-17 18:15:09,011 | INFO | Filled Nationality via #UserDetails_nationality = Indian
+2026-06-17 18:15:09,012 | INFO | Waiting for field: UserDetails_birth_country_id
+2026-06-17 18:15:09,051 | INFO | Found #UserDetails_birth_country_id in context: top > frame[0]
+2026-06-17 18:15:09,101 | INFO | Selected UserDetails_birth_country_id = United Kingdom
+2026-06-17 18:15:09,107 | INFO | Filled NI / Social Security number via #UserDetails_nin = RZ834655D
+2026-06-17 18:15:09,108 | INFO | Waiting 3.0 seconds after core Personal Details fields. Gender=Male | Nationality=Indian | NI=RZ834655D
+2026-06-17 18:15:09,116 | INFO | Core field values before wait | genderChecked=True | nationality=Indian | NI=RZ834655D | DOB=23/05/2005
+2026-06-17 18:15:12,131 | INFO | Verified Personal Details before submit: Gender, Nationality and NI Number
+2026-06-17 18:15:12,134 | INFO | Waiting for field: UserDetails_visa_needed
+2026-06-17 18:15:12,192 | INFO | Found #UserDetails_visa_needed in context: top > frame[0]
+2026-06-17 18:15:12,233 | INFO | Selected UserDetails_visa_needed = No
+2026-06-17 18:15:12,240 | INFO | Verified Personal Details before submit: Gender, Nationality and NI Number
+2026-06-17 18:15:12,240 | INFO | Waiting for field: Personal Details form
+2026-06-17 18:15:12,275 | INFO | Found #user-details-form in context: top > frame[0]
+2026-06-17 18:15:12,295 | INFO | Clicked real Personal Details button: Save & Finish | blocked: none | visible buttons: Save & Finish
+2026-06-17 18:15:14,310 | INFO | Waiting for final profile link
+2026-06-17 18:15:14,330 | INFO | Created successfully. Profile URL: https://hd.parim.co/admin/user/view?id=5855
+2026-06-17 18:15:14,332 | INFO | No UTR or Tax Code found in sheet row. Skipping Work Details update.
+2026-06-17 18:15:14,337 | INFO | Adding passport details for profile: https://hd.parim.co/admin/user/view?id=5855
+2026-06-17 18:15:14,337 | INFO | Opening created profile for extra details: https://hd.parim.co/admin/user/view?id=5855
+2026-06-17 18:15:14,701 | INFO | Waiting 5 seconds for profile page to load
+2026-06-17 18:15:19,702 | INFO | Waiting for field: profile tabs
+2026-06-17 18:15:21,591 | INFO | Found #yw1 in context: top > frame[0]
+2026-06-17 18:15:21,596 | INFO | Waiting for field: Passport/ID-Card section
+2026-06-17 18:15:21,691 | INFO | Found #passport-details in context: top > frame[0]
+2026-06-17 18:15:21,712 | INFO | Profile Details tab is ready
+2026-06-17 18:15:21,713 | INFO | Clicking Passport/ID-Card Edit
+2026-06-17 18:15:21,713 | INFO | Waiting for field: Passport/ID-Card section
+2026-06-17 18:15:21,752 | INFO | Found #passport-details in context: top > frame[0]
+2026-06-17 18:15:21,775 | INFO | Waiting 3 seconds for passport dialog
+2026-06-17 18:15:24,776 | INFO | Waiting for field: Passport dialog form
+2026-06-17 18:15:24,949 | INFO | Found #update-user-passport-dialog-form in context: top > frame[0]
+2026-06-17 18:15:24,954 | INFO | Waiting for field: Passport Document No
+2026-06-17 18:15:24,996 | INFO | Found #UserPassport_document_no in context: top > frame[0]
+2026-06-17 18:15:25,001 | INFO | Passport dialog is ready
+2026-06-17 18:15:25,001 | INFO | Waiting for field: UserPassport_document_no
+2026-06-17 18:15:25,042 | INFO | Found #UserPassport_document_no in context: top > frame[0]
+2026-06-17 18:15:25,144 | INFO | Filled UserPassport_document_no = V4191345
+2026-06-17 18:15:25,145 | INFO | Waiting for field: UserPassport_country_of_issue_id
+2026-06-17 18:15:25,183 | INFO | Found #UserPassport_country_of_issue_id in context: top > frame[0]
+2026-06-17 18:15:25,273 | INFO | Selected UserPassport_country_of_issue_id = India
+2026-06-17 18:15:25,274 | INFO | Waiting for field: date_of_issue
+2026-06-17 18:15:25,313 | INFO | Found #date_of_issue in context: top > frame[0]
+2026-06-17 18:15:25,463 | INFO | Filled date_of_issue = 16/02/2022
+2026-06-17 18:15:25,464 | INFO | Waiting for field: date_of_expiry
+2026-06-17 18:15:25,523 | INFO | Found #date_of_expiry in context: top > frame[0]
+2026-06-17 18:15:25,681 | INFO | Filled date_of_expiry = 15/02/2032
+2026-06-17 18:15:25,681 | INFO | Waiting for field: update-user-passport-dialog-form
+2026-06-17 18:15:25,724 | INFO | Found #update-user-passport-dialog-form in context: top > frame[0]
+2026-06-17 18:15:25,737 | INFO | Clicked submit: Create
+2026-06-17 18:15:25,737 | INFO | Waiting for passport save confirmation
+2026-06-17 18:15:26,480 | INFO | Passport/ID-Card details saved successfully
+2026-06-17 18:15:26,482 | INFO | Adding emergency contact for profile: https://hd.parim.co/admin/user/view?id=5855 | annu annu
+2026-06-17 18:15:26,482 | INFO | Opening created profile for extra details: https://hd.parim.co/admin/user/view?id=5855
+2026-06-17 18:15:26,806 | INFO | Waiting 5 seconds for profile page to load
+2026-06-17 18:15:31,807 | INFO | Waiting for field: profile tabs
+2026-06-17 18:15:31,869 | INFO | Found #yw1 in context: top > frame[0]
+2026-06-17 18:15:31,875 | INFO | Waiting for field: Passport/ID-Card section
+2026-06-17 18:15:31,913 | INFO | Found #passport-details in context: top > frame[0]
+2026-06-17 18:15:31,918 | INFO | Profile Details tab is ready
+2026-06-17 18:15:31,918 | INFO | Clicking Emergency Contacts Add
+2026-06-17 18:15:31,929 | INFO | Waiting for Emergency Contact dialog
+2026-06-17 18:15:33,929 | INFO | Waiting for field: Emergency Contact dialog form
+2026-06-17 18:15:33,997 | INFO | Found #add-user-emergency-contact-dialog-form in context: top > frame[0]
+2026-06-17 18:15:34,004 | INFO | Waiting for field: Emergency First Name
+2026-06-17 18:15:34,049 | INFO | Found #UserEmergencyContact_first_name in context: top > frame[0]
+2026-06-17 18:15:34,053 | INFO | Waiting for field: Emergency Last Name
+2026-06-17 18:15:34,097 | INFO | Found #UserEmergencyContact_last_name in context: top > frame[0]
+2026-06-17 18:15:34,101 | INFO | Waiting for field: Emergency Phone
+2026-06-17 18:15:34,144 | INFO | Found #UserEmergencyContact_phone in context: top > frame[0]
+2026-06-17 18:15:34,148 | INFO | Waiting for field: Emergency Relation To User
+2026-06-17 18:15:34,192 | INFO | Found #UserEmergencyContact_relation_to_user in context: top > frame[0]
+2026-06-17 18:15:34,197 | INFO | Emergency Contact dialog is ready
+2026-06-17 18:15:34,197 | INFO | Waiting for field: UserEmergencyContact_first_name
+2026-06-17 18:15:34,238 | INFO | Found #UserEmergencyContact_first_name in context: top > frame[0]
+2026-06-17 18:15:34,313 | INFO | Filled UserEmergencyContact_first_name = annu
+2026-06-17 18:15:34,313 | INFO | Waiting for field: UserEmergencyContact_last_name
+2026-06-17 18:15:34,350 | INFO | Found #UserEmergencyContact_last_name in context: top > frame[0]
+2026-06-17 18:15:34,434 | INFO | Filled UserEmergencyContact_last_name = annu
+2026-06-17 18:15:34,434 | INFO | Waiting for field: UserEmergencyContact_phone
+2026-06-17 18:15:34,468 | INFO | Found #UserEmergencyContact_phone in context: top > frame[0]
+2026-06-17 18:15:34,564 | INFO | Filled UserEmergencyContact_phone = 07733872516
+2026-06-17 18:15:34,564 | INFO | Waiting for field: UserEmergencyContact_relation_to_user
+2026-06-17 18:15:34,600 | INFO | Found #UserEmergencyContact_relation_to_user in context: top > frame[0]
+2026-06-17 18:15:34,685 | INFO | Filled UserEmergencyContact_relation_to_user = friend
+2026-06-17 18:15:35,693 | INFO | Verified Emergency Contact before Save
+2026-06-17 18:15:35,693 | INFO | Waiting for field: add-user-emergency-contact-dialog-form
+2026-06-17 18:15:35,755 | INFO | Found #add-user-emergency-contact-dialog-form in context: top > frame[0]
+2026-06-17 18:15:35,778 | INFO | Clicked submit: Save
+2026-06-17 18:15:35,779 | INFO | Waiting for emergency contact save confirmation
+2026-06-17 18:15:36,314 | INFO | Emergency contact saved successfully
+2026-06-17 18:15:36,315 | INFO | Adding bank details for profile: https://hd.parim.co/admin/user/view?id=5855
+2026-06-17 18:15:36,315 | INFO | Opening created profile for extra details: https://hd.parim.co/admin/user/view?id=5855
+2026-06-17 18:15:36,670 | INFO | Waiting 5 seconds for profile page to load
+2026-06-17 18:15:41,671 | INFO | Waiting for field: profile tabs
+2026-06-17 18:15:41,755 | INFO | Found #yw1 in context: top > frame[0]
+2026-06-17 18:15:41,765 | INFO | Waiting for field: Passport/ID-Card section
+2026-06-17 18:15:41,821 | INFO | Found #passport-details in context: top > frame[0]
+2026-06-17 18:15:41,827 | INFO | Profile Details tab is ready
+2026-06-17 18:15:41,827 | INFO | Clicking Bank Account Edit
+2026-06-17 18:15:41,827 | INFO | Waiting for field: Bank Account section
+2026-06-17 18:15:41,871 | INFO | Found #bank-details in context: top > frame[0]
+2026-06-17 18:15:41,900 | INFO | Waiting 3 seconds for bank details dialog
+2026-06-17 18:15:44,900 | INFO | Waiting for bank details dialog fields
+2026-06-17 18:15:44,926 | INFO | Bank details dialog is ready
+2026-06-17 18:15:44,951 | INFO | Selected Bank Country via #UserBankDetails_country_id = United Kingdom
+2026-06-17 18:15:45,480 | INFO | Filled Account Number via #UserBankDetails_account_number = 61568132
+2026-06-17 18:15:45,500 | INFO | Filled Sort Code = 40-16-64 | hidden=401664
+2026-06-17 18:15:45,515 | INFO | Clicked Bank Account Confirm
+2026-06-17 18:15:45,516 | INFO | Waiting for bank details save confirmation
+2026-06-17 18:15:46,047 | INFO | Bank details saved successfully
+2026-06-17 18:15:46,049 | INFO | SIA Badge is not marked Yes or has no badge data. Skipping qualification step.
+2026-06-17 18:15:46,050 | INFO | Drivers Licence is empty or negative. Skipping Drivers license qualification step.
+2026-06-17 18:15:46,053 | WARNING | NOTE: Documents: downloading directly from Zoho WorkDrive using API.
+2026-06-17 18:15:53,900 | WARNING | NOTE: Documents: Zoho WorkDrive: found 4 item(s) in folder 3e4ia766e7db47dd54488bba7a0bd0e798198
+2026-06-17 18:15:53,925 | WARNING | NOTE: Documents: Zoho WorkDrive: downloaded 4 file(s), valid for PARiM upload 4
+2026-06-17 18:15:53,925 | INFO | Prepared 4 document(s) for Parim upload: NILetter-Test_2-Recruitment.jpg, Picture-Test_2-Recruitment.jpg, Registration Form - Test 2 Recruitment.pdf, Resume-Test_2-Recruitment.png
+2026-06-17 18:15:53,926 | WARNING | NOTE: Documents: prepared 4 file(s) for upload with original names: NILetter-Test_2-Recruitment.jpg, Picture-Test_2-Recruitment.jpg, Registration Form - Test 2 Recruitment.pdf, Resume-Test_2-Recruitment.png
+2026-06-17 18:15:53,928 | INFO | Uploading profile photo from: Picture-Test_2-Recruitment.jpg
+2026-06-17 18:15:53,928 | INFO | Opening profile for profile photo upload: https://hd.parim.co/admin/user/view?id=5855
+2026-06-17 18:15:54,333 | INFO | Waiting 5 seconds for profile page to load
+2026-06-17 18:15:59,334 | INFO | Waiting for field: profile tabs
+2026-06-17 18:15:59,381 | INFO | Found #yw1 in context: top > frame[0]
+2026-06-17 18:15:59,405 | INFO | Waiting for profile photo dialog
+2026-06-17 18:16:01,406 | INFO | Waiting for field: Profile photo dialog
+2026-06-17 18:16:01,463 | INFO | Found #parimDialog0 in context: top > frame[0]
+2026-06-17 18:16:01,468 | INFO | Profile photo dialog is open
+2026-06-17 18:16:02,497 | INFO | Waiting for field: Profile photo file input
+2026-06-17 18:16:02,556 | INFO | Found #file_input_before_1_1781702161474 in context: top > frame[0]
+2026-06-17 18:16:02,588 | INFO | Waiting for profile photo upload processing: Picture-Test_2-Recruitment.jpg
+2026-06-17 18:16:02,674 | INFO | Clicked profile photo Done: Done
+2026-06-17 18:16:05,229 | INFO | Profile photo upload flow completed: Picture-Test_2-Recruitment.jpg
+2026-06-17 18:16:05,230 | WARNING | NOTE: Profile photo uploaded from: Picture-Test_2-Recruitment.jpg
+2026-06-17 18:16:05,230 | INFO | Opening profile Docs tab: https://hd.parim.co/admin/user/view?id=5855
+2026-06-17 18:16:05,600 | INFO | Waiting 5 seconds for profile page to load
+2026-06-17 18:16:10,601 | INFO | Waiting for field: profile tabs
+2026-06-17 18:16:10,671 | INFO | Found #yw1 in context: top > frame[0]
+2026-06-17 18:16:10,687 | INFO | Waiting for field: Document upload header
+2026-06-17 18:16:10,745 | INFO | Found #document-upload-header in context: top > frame[0]
+2026-06-17 18:16:10,750 | INFO | Waiting for field: Documents list
+2026-06-17 18:16:10,790 | INFO | Found #documents-list in context: top > frame[0]
+2026-06-17 18:16:10,794 | INFO | Docs tab is ready
+2026-06-17 18:16:10,795 | INFO | Uploading document: NILetter-Test_2-Recruitment.jpg
+2026-06-17 18:16:10,810 | INFO | Waiting for field: Document file input
+2026-06-17 18:16:10,852 | INFO | Found #parim_document_upload_input_runtime in context: top > frame[0]
+2026-06-17 18:16:10,876 | INFO | Waiting for document to be queued: NILetter-Test_2-Recruitment.jpg
+2026-06-17 18:16:10,910 | INFO | Clicked Start upload for: NILetter-Test_2-Recruitment.jpg
+2026-06-17 18:16:10,917 | INFO | Document upload completed or queued finished: NILetter-Test_2-Recruitment.jpg | state=queue_finished
+2026-06-17 18:16:10,917 | WARNING | NOTE: Document NILetter-Test_2-Recruitment.jpg upload queue finished. Parim grid may refresh later.
+2026-06-17 18:16:11,518 | WARNING | NOTE: Document uploaded/attempted: NILetter-Test_2-Recruitment.jpg (queue_finished)
+2026-06-17 18:16:11,920 | INFO | Uploading document: Picture-Test_2-Recruitment.jpg
+2026-06-17 18:16:11,949 | INFO | Waiting for field: Document file input
+2026-06-17 18:16:12,005 | INFO | Found #parim_document_upload_input_runtime in context: top > frame[0]
+2026-06-17 18:16:12,029 | INFO | Waiting for document to be queued: Picture-Test_2-Recruitment.jpg
+2026-06-17 18:16:12,058 | INFO | Clicked Start upload for: Picture-Test_2-Recruitment.jpg
+2026-06-17 18:16:12,066 | INFO | Document upload completed or queued finished: Picture-Test_2-Recruitment.jpg | state=queue_finished
+2026-06-17 18:16:12,066 | WARNING | NOTE: Document Picture-Test_2-Recruitment.jpg upload queue finished. Parim grid may refresh later.
+2026-06-17 18:16:12,668 | WARNING | NOTE: Document uploaded/attempted: Picture-Test_2-Recruitment.jpg (queue_finished)
+2026-06-17 18:16:13,070 | INFO | Uploading document: Registration Form - Test 2 Recruitment.pdf
+2026-06-17 18:16:13,174 | INFO | Waiting for field: Document file input
+2026-06-17 18:16:13,214 | INFO | Found #parim_document_upload_input_runtime in context: top > frame[0]
+2026-06-17 18:16:13,236 | INFO | Waiting for document to be queued: Registration Form - Test 2 Recruitment.pdf
+2026-06-17 18:16:13,264 | INFO | Clicked Start upload for: Registration Form - Test 2 Recruitment.pdf
+2026-06-17 18:16:13,270 | INFO | Document upload completed or queued finished: Registration Form - Test 2 Recruitment.pdf | state=list_changed
+2026-06-17 18:16:13,870 | WARNING | NOTE: Document uploaded/attempted: Registration Form - Test 2 Recruitment.pdf (list_changed)
+2026-06-17 18:16:14,273 | INFO | Uploading document: Resume-Test_2-Recruitment.png
+2026-06-17 18:16:14,294 | INFO | Waiting for field: Document file input
+2026-06-17 18:16:14,344 | INFO | Found #parim_document_upload_input_runtime in context: top > frame[0]
+2026-06-17 18:16:14,380 | INFO | Waiting for document to be queued: Resume-Test_2-Recruitment.png
+2026-06-17 18:16:14,465 | INFO | Clicked Start upload for: Resume-Test_2-Recruitment.png
+2026-06-17 18:16:14,470 | INFO | Document upload completed or queued finished: Resume-Test_2-Recruitment.png | state=list_changed
+2026-06-17 18:16:15,070 | WARNING | NOTE: Document uploaded/attempted: Resume-Test_2-Recruitment.png (list_changed)
+2026-06-17 18:16:15,472 | WARNING | NOTE: Documents upload summary: attempted 4, uploaded/attempted 4, failed 0, total valid 4
+2026-06-17 18:16:15,477 | WARNING | NOTE: Documents: temporary downloaded/extracted files deleted from PC.
+2026-06-17 18:16:15,478 | WARNING | NOTE: Documents: browser download folder cleaned.
+2026-06-17 18:16:20,368 | INFO | Updated Google Sheet row 4 as Done
+2026-06-17 18:16:20,375 | INFO | Result for testshavan315@gmail.com: created Created successfully. Notes: Documents: downloading directly from Zoho WorkDrive using API. | Documents: Zoho WorkDrive: found 4 item(s) in folder 3e4ia766e7db47dd54488bba7a0bd0e798198 | Documents: Zoho WorkDrive: downloaded 4 file(s), valid for PARiM upload 4 | Documents: prepared 4 file(s) for upload with original names: NILetter-Test_2-Recruitment.jpg, Picture-Test_2-Recruitment.jpg, Registration Form - Test 2 Recruitment.pdf, Resume-Test_2-Recruitment.png | Profile photo uploaded from: Picture-Test_2-Recruitment.jpg | Document NILetter-Test_2-Recruitment.jpg upload queue finished. Parim grid may refresh later. | Document uploaded/attempted: NILetter-Test_2-Recruitment.jpg (queue_finished) | Document Picture-Test_2-Recruitment.jpg upload queue finished. Parim grid may refresh later. | Document uploaded/attempted: Picture-Test_2-Recruitment.jpg (queue_finished) | Document uploaded/attempted: Registration Form - Test 2 Recruitment.pdf (list_changed) | Document uploaded/attempted: Resume-Test_2-Recruitment.png (list_changed) | Documents upload summary: attempted 4, uploaded/attempted 4, failed 0, total valid 4 | Documents: temporary downloaded/extracted files deleted from PC. | Documents: browser download folder cleaned.
+2026-06-17 18:16:20,377 | INFO | Finished. Created: 1 | Failed: 0 | Local Results: output\results.csv
+2026-06-17 18:25:34,881 | INFO | Fetching pending rows from Google Sheet
+2026-06-17 18:25:37,799 | INFO | Loaded 1 pending row(s) from Google Sheet
+2026-06-17 18:25:38,615 | INFO | Opening login page
+2026-06-17 18:25:44,227 | INFO | Login successful. Current URL: https://hd.parim.co/dashboard
+2026-06-17 18:25:44,227 | INFO | Creating pending row 1/1 | Sheet row 5 | testshavan415@gmail.com
+2026-06-17 18:25:44,228 | INFO | Opening create user URL
+2026-06-17 18:25:44,228 | INFO | Trying create URL: https://hd.parim.co/admin/user/create
+2026-06-17 18:25:44,676 | INFO | Waiting 7 seconds for create form to appear
+2026-06-17 18:25:51,734 | INFO | After opening URL page summary: current_url=https://hd.parim.co/admin/user/create | title='Admin portal - Parim' | frames=2 | body_start='Dashboard\nSchedule\nTime Clock\nLocations\nAbsences\nPeople\nPay & Charge\nReports\nDocuments\n1\n99+\nSA'
+2026-06-17 18:25:51,778 | INFO | Found #UserDetails_first_name in context: top > frame[0]
+2026-06-17 18:25:51,787 | INFO | Create user form found at: https://hd.parim.co/admin/user/create
+2026-06-17 18:25:51,787 | INFO | Waiting for field: First Name
+2026-06-17 18:25:51,825 | INFO | Found #UserDetails_first_name in context: top > frame[0]
+2026-06-17 18:25:51,830 | INFO | Waiting for field: Last Name
+2026-06-17 18:25:51,879 | INFO | Found #UserDetails_last_name in context: top > frame[0]
+2026-06-17 18:25:51,884 | INFO | Waiting for field: Email
+2026-06-17 18:25:51,924 | INFO | Found #User_email in context: top > frame[0]
+2026-06-17 18:25:51,928 | INFO | Waiting for field: Employment Type
+2026-06-17 18:25:51,972 | INFO | Found #UserContract_contract_type_id in context: top > frame[0]
+2026-06-17 18:25:51,976 | INFO | Create user form is ready. Starting fill.
+2026-06-17 18:25:51,976 | INFO | Filling Person's Details
+2026-06-17 18:25:51,977 | INFO | Waiting for field: UserDetails_first_name
+2026-06-17 18:25:52,416 | INFO | Found #UserDetails_first_name in context: top > frame[0]
+2026-06-17 18:25:52,510 | INFO | Filled UserDetails_first_name = shavandeep
+2026-06-17 18:25:52,510 | INFO | Waiting for field: UserDetails_last_name
+2026-06-17 18:25:52,550 | INFO | Found #UserDetails_last_name in context: top > frame[0]
+2026-06-17 18:25:52,655 | INFO | Filled UserDetails_last_name = singh
+2026-06-17 18:25:52,656 | INFO | Waiting for field: User_email
+2026-06-17 18:25:52,696 | INFO | Found #User_email in context: top > frame[0]
+2026-06-17 18:25:52,795 | INFO | Filled User_email = testshavan415@gmail.com
+2026-06-17 18:25:52,796 | INFO | Waiting for field: UserContract_contract_type_id
+2026-06-17 18:25:52,829 | INFO | Found #UserContract_contract_type_id in context: top > frame[0]
+2026-06-17 18:25:52,894 | INFO | Selected UserContract_contract_type_id = Standard
+2026-06-17 18:25:52,895 | INFO | Skipped empty field: UserContract_contract_no
+2026-06-17 18:25:52,895 | INFO | Skipped empty field: user_edit_start_date
+2026-06-17 18:25:52,895 | INFO | Skipped empty field: user_edit_end_date
+2026-06-17 18:25:52,902 | INFO | Selected department: Completed Event Stewards (No PIN)
+2026-06-17 18:25:52,909 | INFO | Staff Portal access set to: False
+2026-06-17 18:25:52,910 | INFO | Waiting for field: user-create-form
+2026-06-17 18:25:52,962 | INFO | Found #user-create-form in context: top > frame[0]
+2026-06-17 18:25:52,986 | INFO | Clicked submit: Save & Next
+2026-06-17 18:25:52,986 | INFO | Waiting 5 seconds for Contacts form to appear
+2026-06-17 18:25:57,987 | INFO | Waiting for next step: Contacts form
+2026-06-17 18:25:58,050 | INFO | Found #UserDetails_phone in context: top > frame[0]
+2026-06-17 18:25:58,055 | INFO | Contacts form field is present and Selenium is in the correct frame
+2026-06-17 18:25:58,056 | INFO | Waiting for field: Contacts form
+2026-06-17 18:25:58,101 | INFO | Found #user-contacts-form in context: top > frame[0]
+2026-06-17 18:25:58,105 | INFO | Waiting for field: Mobile
+2026-06-17 18:25:58,140 | INFO | Found #UserDetails_phone in context: top > frame[0]
+2026-06-17 18:25:58,145 | INFO | Contacts form is ready and active
+2026-06-17 18:25:58,145 | INFO | Filling Contacts
+2026-06-17 18:25:58,145 | INFO | Waiting for field: Contacts form
+2026-06-17 18:25:58,183 | INFO | Found #user-contacts-form in context: top > frame[0]
+2026-06-17 18:25:58,187 | INFO | Waiting for field: Mobile
+2026-06-17 18:25:58,223 | INFO | Found #UserDetails_phone in context: top > frame[0]
+2026-06-17 18:25:58,227 | INFO | Waiting for field: UserDetails_phone
+2026-06-17 18:25:58,262 | INFO | Found #UserDetails_phone in context: top > frame[0]
+2026-06-17 18:25:58,351 | INFO | Filled UserDetails_phone = 07466079893
+2026-06-17 18:25:58,352 | INFO | Waiting for field: UserAddress_address_line
+2026-06-17 18:25:58,392 | INFO | Found #UserAddress_address_line in context: top > frame[0]
+2026-06-17 18:25:58,486 | INFO | Filled UserAddress_address_line = 19 lampton avenue
+2026-06-17 18:25:58,487 | INFO | Skipped empty field: UserAddress_apartment_number
+2026-06-17 18:25:58,487 | INFO | Skipped empty field: UserAddress_house_number
+2026-06-17 18:25:58,487 | INFO | Waiting for field: UserAddress_postcode
+2026-06-17 18:25:58,526 | INFO | Found #UserAddress_postcode in context: top > frame[0]
+2026-06-17 18:25:58,605 | INFO | Filled UserAddress_postcode = tw34en
+2026-06-17 18:25:58,605 | INFO | Waiting for field: UserAddress_city
+2026-06-17 18:25:58,645 | INFO | Found #UserAddress_city in context: top > frame[0]
+2026-06-17 18:25:58,726 | INFO | Filled UserAddress_city = hounslow
+2026-06-17 18:25:58,726 | INFO | Waiting for field: UserAddress_country_id
+2026-06-17 18:25:58,765 | INFO | Found #UserAddress_country_id in context: top > frame[0]
+2026-06-17 18:25:58,816 | INFO | Selected UserAddress_country_id = United Kingdom
+2026-06-17 18:25:58,816 | INFO | Waiting for field: user-contacts-form
+2026-06-17 18:25:58,902 | INFO | Found #user-contacts-form in context: top > frame[0]
+2026-06-17 18:25:58,944 | INFO | Clicked submit: Save & Next
+2026-06-17 18:25:58,945 | INFO | Waiting for next step: Personal Details form
+2026-06-17 18:25:58,996 | INFO | Found #UserDetails_date_of_birth in context: top > frame[0]
+2026-06-17 18:25:59,003 | INFO | Personal Details form field is present and Selenium is in the correct frame
+2026-06-17 18:25:59,004 | INFO | Filling Personal Details in smart mode. Missing optional fields will be noted, not fatal.
+2026-06-17 18:25:59,004 | INFO | Waiting for field: Personal Details form
+2026-06-17 18:25:59,051 | INFO | Found #user-details-form in context: top > frame[0]
+2026-06-17 18:25:59,056 | INFO | Core values from sheet | Gender=Male | Nationality=Indian | NI=RZ834655D
+2026-06-17 18:25:59,063 | INFO | Selected Gender = Male via id=UserDetails_gender_0 value=0
+2026-06-17 18:25:59,068 | INFO | Waiting for field: UserDetails_date_of_birth
+2026-06-17 18:25:59,107 | INFO | Found #UserDetails_date_of_birth in context: top > frame[0]
+2026-06-17 18:25:59,146 | INFO | Filled UserDetails_date_of_birth = 23/05/2006
+2026-06-17 18:25:59,153 | INFO | Filled Nationality via #UserDetails_nationality = Indian
+2026-06-17 18:25:59,154 | INFO | Waiting for field: UserDetails_birth_country_id
+2026-06-17 18:25:59,193 | INFO | Found #UserDetails_birth_country_id in context: top > frame[0]
+2026-06-17 18:25:59,243 | INFO | Selected UserDetails_birth_country_id = United Kingdom
+2026-06-17 18:25:59,250 | INFO | Filled NI / Social Security number via #UserDetails_nin = RZ834655D
+2026-06-17 18:25:59,251 | INFO | Waiting 3.0 seconds after core Personal Details fields. Gender=Male | Nationality=Indian | NI=RZ834655D
+2026-06-17 18:25:59,259 | INFO | Core field values before wait | genderChecked=True | nationality=Indian | NI=RZ834655D | DOB=23/05/2006
+2026-06-17 18:26:02,276 | INFO | Verified Personal Details before submit: Gender, Nationality and NI Number
+2026-06-17 18:26:02,278 | INFO | Waiting for field: UserDetails_visa_needed
+2026-06-17 18:26:02,335 | INFO | Found #UserDetails_visa_needed in context: top > frame[0]
+2026-06-17 18:26:02,377 | INFO | Selected UserDetails_visa_needed = No
+2026-06-17 18:26:02,384 | INFO | Verified Personal Details before submit: Gender, Nationality and NI Number
+2026-06-17 18:26:02,384 | INFO | Waiting for field: Personal Details form
+2026-06-17 18:26:02,422 | INFO | Found #user-details-form in context: top > frame[0]
+2026-06-17 18:26:02,443 | INFO | Clicked real Personal Details button: Save & Finish | blocked: none | visible buttons: Save & Finish
+2026-06-17 18:26:04,455 | INFO | Waiting for final profile link
+2026-06-17 18:26:04,475 | INFO | Created successfully. Profile URL: https://hd.parim.co/admin/user/view?id=5856
+2026-06-17 18:26:04,476 | INFO | No UTR or Tax Code found in sheet row. Skipping Work Details update.
+2026-06-17 18:26:04,481 | INFO | Adding passport details for profile: https://hd.parim.co/admin/user/view?id=5856
+2026-06-17 18:26:04,481 | INFO | Opening created profile for extra details: https://hd.parim.co/admin/user/view?id=5856
+2026-06-17 18:26:04,842 | INFO | Waiting 5 seconds for profile page to load
+2026-06-17 18:26:09,843 | INFO | Waiting for field: profile tabs
+2026-06-17 18:26:09,916 | INFO | Found #yw1 in context: top > frame[0]
+2026-06-17 18:26:09,920 | INFO | Waiting for field: Passport/ID-Card section
+2026-06-17 18:26:09,961 | INFO | Found #passport-details in context: top > frame[0]
+2026-06-17 18:26:09,965 | INFO | Profile Details tab is ready
+2026-06-17 18:26:09,965 | INFO | Clicking Passport/ID-Card Edit
+2026-06-17 18:26:09,966 | INFO | Waiting for field: Passport/ID-Card section
+2026-06-17 18:26:10,002 | INFO | Found #passport-details in context: top > frame[0]
+2026-06-17 18:26:10,018 | INFO | Waiting 3 seconds for passport dialog
+2026-06-17 18:26:13,019 | INFO | Waiting for field: Passport dialog form
+2026-06-17 18:26:13,080 | INFO | Found #update-user-passport-dialog-form in context: top > frame[0]
+2026-06-17 18:26:13,085 | INFO | Waiting for field: Passport Document No
+2026-06-17 18:26:13,127 | INFO | Found #UserPassport_document_no in context: top > frame[0]
+2026-06-17 18:26:13,133 | INFO | Passport dialog is ready
+2026-06-17 18:26:13,133 | INFO | Waiting for field: UserPassport_document_no
+2026-06-17 18:26:13,173 | INFO | Found #UserPassport_document_no in context: top > frame[0]
+2026-06-17 18:26:13,257 | INFO | Filled UserPassport_document_no = V4191346
+2026-06-17 18:26:13,258 | INFO | Waiting for field: UserPassport_country_of_issue_id
+2026-06-17 18:26:13,297 | INFO | Found #UserPassport_country_of_issue_id in context: top > frame[0]
+2026-06-17 18:26:13,402 | INFO | Selected UserPassport_country_of_issue_id = India
+2026-06-17 18:26:13,402 | INFO | Waiting for field: date_of_issue
+2026-06-17 18:26:13,444 | INFO | Found #date_of_issue in context: top > frame[0]
+2026-06-17 18:26:13,595 | INFO | Filled date_of_issue = 16/02/2023
+2026-06-17 18:26:13,595 | INFO | Waiting for field: date_of_expiry
+2026-06-17 18:26:13,646 | INFO | Found #date_of_expiry in context: top > frame[0]
+2026-06-17 18:26:13,805 | INFO | Filled date_of_expiry = 15/02/2033
+2026-06-17 18:26:13,805 | INFO | Waiting for field: update-user-passport-dialog-form
+2026-06-17 18:26:13,849 | INFO | Found #update-user-passport-dialog-form in context: top > frame[0]
+2026-06-17 18:26:13,870 | INFO | Clicked submit: Create
+2026-06-17 18:26:13,871 | INFO | Waiting for passport save confirmation
+2026-06-17 18:26:14,404 | INFO | Passport/ID-Card details saved successfully
+2026-06-17 18:26:14,408 | INFO | Adding emergency contact for profile: https://hd.parim.co/admin/user/view?id=5856 | annu annu
+2026-06-17 18:26:14,408 | INFO | Opening created profile for extra details: https://hd.parim.co/admin/user/view?id=5856
+2026-06-17 18:26:14,814 | INFO | Waiting 5 seconds for profile page to load
+2026-06-17 18:26:19,814 | INFO | Waiting for field: profile tabs
+2026-06-17 18:26:19,882 | INFO | Found #yw1 in context: top > frame[0]
+2026-06-17 18:26:19,887 | INFO | Waiting for field: Passport/ID-Card section
+2026-06-17 18:26:19,962 | INFO | Found #passport-details in context: top > frame[0]
+2026-06-17 18:26:19,968 | INFO | Profile Details tab is ready
+2026-06-17 18:26:19,968 | INFO | Clicking Emergency Contacts Add
+2026-06-17 18:26:19,980 | INFO | Waiting for Emergency Contact dialog
+2026-06-17 18:26:21,981 | INFO | Waiting for field: Emergency Contact dialog form
+2026-06-17 18:26:22,047 | INFO | Found #add-user-emergency-contact-dialog-form in context: top > frame[0]
+2026-06-17 18:26:22,053 | INFO | Waiting for field: Emergency First Name
+2026-06-17 18:26:22,101 | INFO | Found #UserEmergencyContact_first_name in context: top > frame[0]
+2026-06-17 18:26:22,106 | INFO | Waiting for field: Emergency Last Name
+2026-06-17 18:26:22,154 | INFO | Found #UserEmergencyContact_last_name in context: top > frame[0]
+2026-06-17 18:26:22,158 | INFO | Waiting for field: Emergency Phone
+2026-06-17 18:26:22,201 | INFO | Found #UserEmergencyContact_phone in context: top > frame[0]
+2026-06-17 18:26:22,205 | INFO | Waiting for field: Emergency Relation To User
+2026-06-17 18:26:22,247 | INFO | Found #UserEmergencyContact_relation_to_user in context: top > frame[0]
+2026-06-17 18:26:22,251 | INFO | Emergency Contact dialog is ready
+2026-06-17 18:26:22,252 | INFO | Waiting for field: UserEmergencyContact_first_name
+2026-06-17 18:26:22,291 | INFO | Found #UserEmergencyContact_first_name in context: top > frame[0]
+2026-06-17 18:26:22,378 | INFO | Filled UserEmergencyContact_first_name = annu
+2026-06-17 18:26:22,378 | INFO | Waiting for field: UserEmergencyContact_last_name
+2026-06-17 18:26:22,415 | INFO | Found #UserEmergencyContact_last_name in context: top > frame[0]
+2026-06-17 18:26:22,505 | INFO | Filled UserEmergencyContact_last_name = annu
+2026-06-17 18:26:22,505 | INFO | Waiting for field: UserEmergencyContact_phone
+2026-06-17 18:26:22,543 | INFO | Found #UserEmergencyContact_phone in context: top > frame[0]
+2026-06-17 18:26:22,642 | INFO | Filled UserEmergencyContact_phone = 07733872517
+2026-06-17 18:26:22,643 | INFO | Waiting for field: UserEmergencyContact_relation_to_user
+2026-06-17 18:26:22,678 | INFO | Found #UserEmergencyContact_relation_to_user in context: top > frame[0]
+2026-06-17 18:26:22,766 | INFO | Filled UserEmergencyContact_relation_to_user = friend
+2026-06-17 18:26:23,778 | INFO | Verified Emergency Contact before Save
+2026-06-17 18:26:23,779 | INFO | Waiting for field: add-user-emergency-contact-dialog-form
+2026-06-17 18:26:23,836 | INFO | Found #add-user-emergency-contact-dialog-form in context: top > frame[0]
+2026-06-17 18:26:23,855 | INFO | Clicked submit: Save
+2026-06-17 18:26:23,855 | INFO | Waiting for emergency contact save confirmation
+2026-06-17 18:26:24,385 | INFO | Emergency contact saved successfully
+2026-06-17 18:26:24,388 | INFO | Adding bank details for profile: https://hd.parim.co/admin/user/view?id=5856
+2026-06-17 18:26:24,388 | INFO | Opening created profile for extra details: https://hd.parim.co/admin/user/view?id=5856
+2026-06-17 18:26:24,738 | INFO | Waiting 5 seconds for profile page to load
+2026-06-17 18:26:29,739 | INFO | Waiting for field: profile tabs
+2026-06-17 18:26:29,809 | INFO | Found #yw1 in context: top > frame[0]
+2026-06-17 18:26:29,813 | INFO | Waiting for field: Passport/ID-Card section
+2026-06-17 18:26:29,882 | INFO | Found #passport-details in context: top > frame[0]
+2026-06-17 18:26:29,887 | INFO | Profile Details tab is ready
+2026-06-17 18:26:29,888 | INFO | Clicking Bank Account Edit
+2026-06-17 18:26:29,888 | INFO | Waiting for field: Bank Account section
+2026-06-17 18:26:29,929 | INFO | Found #bank-details in context: top > frame[0]
+2026-06-17 18:26:29,957 | INFO | Waiting 3 seconds for bank details dialog
+2026-06-17 18:26:32,958 | INFO | Waiting for bank details dialog fields
+2026-06-17 18:26:32,983 | INFO | Bank details dialog is ready
+2026-06-17 18:26:33,007 | INFO | Selected Bank Country via #UserBankDetails_country_id = United Kingdom
+2026-06-17 18:26:33,539 | INFO | Filled Account Number via #UserBankDetails_account_number = 61568132
+2026-06-17 18:26:33,560 | INFO | Filled Sort Code = 40-16-65 | hidden=401665
+2026-06-17 18:26:33,576 | INFO | Clicked Bank Account Confirm
+2026-06-17 18:26:33,576 | INFO | Waiting for bank details save confirmation
+2026-06-17 18:26:34,110 | INFO | Bank details saved successfully
+2026-06-17 18:26:34,113 | INFO | SIA Badge is not marked Yes or has no badge data. Skipping qualification step.
+2026-06-17 18:26:34,114 | INFO | Drivers Licence is empty or negative. Skipping Drivers license qualification step.
+2026-06-17 18:26:34,116 | WARNING | NOTE: Documents: downloading directly from Zoho WorkDrive using API.
+2026-06-17 18:26:35,935 | WARNING | NOTE: Documents: temporary downloaded/extracted files deleted from PC.
+2026-06-17 18:26:35,936 | WARNING | NOTE: Documents: browser download folder cleaned.
+2026-06-17 18:26:36,107 | WARNING | NOTE: Documents Upload skipped/failed: RuntimeError: Zoho folder listing error 401: {"errors":[{"id":"R008","title":"Unauthorized access"}]}
+2026-06-17 18:26:36,108 | ERROR | Optional step failed: Documents Upload
+Traceback (most recent call last):
+  File "c:\Users\Afraz\HDProjects\Parim Automate with Zoho\zoho_parim_external_sheet_package\zoho_parim_external_sheet_package\Parim Automation with Zoho\parim_zoho_workdrive_docs_package\parim_zoho_workdrive_docs_package\parim_user_creator_zoho_workdrive_docs.py", line 994, in run_optional_step
+    func(*args, **kwargs)
+    ~~~~^^^^^^^^^^^^^^^^^
+  File "c:\Users\Afraz\HDProjects\Parim Automate with Zoho\zoho_parim_external_sheet_package\zoho_parim_external_sheet_package\Parim Automation with Zoho\parim_zoho_workdrive_docs_package\parim_zoho_workdrive_docs_package\parim_user_creator_zoho_workdrive_docs.py", line 4674, in upload_documents_from_onedrive_folder
+    files, workdrive_notes = download_zoho_workdrive_folder_documents(folder_link, temp_root)
+                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Afraz\HDProjects\Parim Automate with Zoho\zoho_parim_external_sheet_package\zoho_parim_external_sheet_package\Parim Automation with Zoho\parim_zoho_workdrive_docs_package\parim_zoho_workdrive_docs_package\parim_user_creator_zoho_workdrive_docs.py", line 864, in download_zoho_workdrive_folder_documents
+    walk_folder(folder_id)
+    ~~~~~~~~~~~^^^^^^^^^^^
+  File "c:\Users\Afraz\HDProjects\Parim Automate with Zoho\zoho_parim_external_sheet_package\zoho_parim_external_sheet_package\Parim Automation with Zoho\parim_zoho_workdrive_docs_package\parim_zoho_workdrive_docs_package\parim_user_creator_zoho_workdrive_docs.py", line 838, in walk_folder
+    children = list_zoho_workdrive_children(current_folder_id, access_token)
+  File "c:\Users\Afraz\HDProjects\Parim Automate with Zoho\zoho_parim_external_sheet_package\zoho_parim_external_sheet_package\Parim Automation with Zoho\parim_zoho_workdrive_docs_package\parim_zoho_workdrive_docs_package\parim_user_creator_zoho_workdrive_docs.py", line 702, in list_zoho_workdrive_children
+    raise RuntimeError(f"Zoho folder listing error {response.status_code}: {response.text}")
+RuntimeError: Zoho folder listing error 401: {"errors":[{"id":"R008","title":"Unauthorized access"}]}
+2026-06-17 18:26:40,836 | INFO | Updated Google Sheet row 5 as Done
+2026-06-17 18:26:40,841 | INFO | Result for testshavan415@gmail.com: created Created successfully. Notes: Documents: downloading directly from Zoho WorkDrive using API. | Documents: temporary downloaded/extracted files deleted from PC. | Documents: browser download folder cleaned. | Documents Upload skipped/failed: RuntimeError: Zoho folder listing error 401: {"errors":[{"id":"R008","title":"Unauthorized access"}]}
+2026-06-17 18:26:40,844 | INFO | Finished. Created: 1 | Failed: 0 | Local Results: output\results.csv
+2026-06-17 18:29:55,252 | INFO | Fetching pending rows from Google Sheet
+2026-06-17 18:29:58,583 | INFO | Loaded 1 pending row(s) from Google Sheet
+2026-06-17 18:29:59,455 | INFO | Opening login page
+2026-06-17 18:30:06,373 | INFO | Login successful. Current URL: https://hd.parim.co/dashboard
+2026-06-17 18:30:06,374 | INFO | Creating pending row 1/1 | Sheet row 6 | testshavan515@gmail.com
+2026-06-17 18:30:06,374 | INFO | Opening create user URL
+2026-06-17 18:30:06,374 | INFO | Trying create URL: https://hd.parim.co/admin/user/create
+2026-06-17 18:30:06,778 | INFO | Waiting 7 seconds for create form to appear
+2026-06-17 18:30:13,837 | INFO | After opening URL page summary: current_url=https://hd.parim.co/admin/user/create | title='Admin portal - Parim' | frames=2 | body_start='Dashboard\nSchedule\nTime Clock\nLocations\nAbsences\nPeople\nPay & Charge\nReports\nDocuments\n1\n99+\nSA'
+2026-06-17 18:30:13,893 | INFO | Found #UserDetails_first_name in context: top > frame[0]
+2026-06-17 18:30:13,907 | INFO | Create user form found at: https://hd.parim.co/admin/user/create
+2026-06-17 18:30:13,908 | INFO | Waiting for field: First Name
+2026-06-17 18:30:13,948 | INFO | Found #UserDetails_first_name in context: top > frame[0]
+2026-06-17 18:30:13,953 | INFO | Waiting for field: Last Name
+2026-06-17 18:30:13,995 | INFO | Found #UserDetails_last_name in context: top > frame[0]
+2026-06-17 18:30:14,000 | INFO | Waiting for field: Email
+2026-06-17 18:30:14,041 | INFO | Found #User_email in context: top > frame[0]
+2026-06-17 18:30:14,046 | INFO | Waiting for field: Employment Type
+2026-06-17 18:30:14,096 | INFO | Found #UserContract_contract_type_id in context: top > frame[0]
+2026-06-17 18:30:14,101 | INFO | Create user form is ready. Starting fill.
+2026-06-17 18:30:14,101 | INFO | Filling Person's Details
+2026-06-17 18:30:14,102 | INFO | Waiting for field: UserDetails_first_name
+2026-06-17 18:30:14,167 | INFO | Found #UserDetails_first_name in context: top > frame[0]
+2026-06-17 18:30:14,243 | INFO | Filled UserDetails_first_name = shavandeep
+2026-06-17 18:30:14,244 | INFO | Waiting for field: UserDetails_last_name
+2026-06-17 18:30:14,280 | INFO | Found #UserDetails_last_name in context: top > frame[0]
+2026-06-17 18:30:14,356 | INFO | Filled UserDetails_last_name = singh
+2026-06-17 18:30:14,356 | INFO | Waiting for field: User_email
+2026-06-17 18:30:14,393 | INFO | Found #User_email in context: top > frame[0]
+2026-06-17 18:30:14,502 | INFO | Filled User_email = testshavan515@gmail.com
+2026-06-17 18:30:14,503 | INFO | Waiting for field: UserContract_contract_type_id
+2026-06-17 18:30:14,538 | INFO | Found #UserContract_contract_type_id in context: top > frame[0]
+2026-06-17 18:30:14,607 | INFO | Selected UserContract_contract_type_id = Standard
+2026-06-17 18:30:14,609 | INFO | Skipped empty field: UserContract_contract_no
+2026-06-17 18:30:14,609 | INFO | Skipped empty field: user_edit_start_date
+2026-06-17 18:30:14,610 | INFO | Skipped empty field: user_edit_end_date
+2026-06-17 18:30:14,616 | INFO | Selected department: Completed Event Stewards (No PIN)
+2026-06-17 18:30:14,623 | INFO | Staff Portal access set to: False
+2026-06-17 18:30:14,625 | INFO | Waiting for field: user-create-form
+2026-06-17 18:30:14,674 | INFO | Found #user-create-form in context: top > frame[0]
+2026-06-17 18:30:14,693 | INFO | Clicked submit: Save & Next
+2026-06-17 18:30:14,693 | INFO | Waiting 5 seconds for Contacts form to appear
+2026-06-17 18:30:19,694 | INFO | Waiting for next step: Contacts form
+2026-06-17 18:30:19,763 | INFO | Found #UserDetails_phone in context: top > frame[0]
+2026-06-17 18:30:19,768 | INFO | Contacts form field is present and Selenium is in the correct frame
+2026-06-17 18:30:19,768 | INFO | Waiting for field: Contacts form
+2026-06-17 18:30:19,811 | INFO | Found #user-contacts-form in context: top > frame[0]
+2026-06-17 18:30:19,816 | INFO | Waiting for field: Mobile
+2026-06-17 18:30:19,853 | INFO | Found #UserDetails_phone in context: top > frame[0]
+2026-06-17 18:30:19,857 | INFO | Contacts form is ready and active
+2026-06-17 18:30:19,858 | INFO | Filling Contacts
+2026-06-17 18:30:19,858 | INFO | Waiting for field: Contacts form
+2026-06-17 18:30:19,897 | INFO | Found #user-contacts-form in context: top > frame[0]
+2026-06-17 18:30:19,901 | INFO | Waiting for field: Mobile
+2026-06-17 18:30:19,936 | INFO | Found #UserDetails_phone in context: top > frame[0]
+2026-06-17 18:30:19,940 | INFO | Waiting for field: UserDetails_phone
+2026-06-17 18:30:19,975 | INFO | Found #UserDetails_phone in context: top > frame[0]
+2026-06-17 18:30:20,075 | INFO | Filled UserDetails_phone = 07466079892
+2026-06-17 18:30:20,076 | INFO | Waiting for field: UserAddress_address_line
+2026-06-17 18:30:20,117 | INFO | Found #UserAddress_address_line in context: top > frame[0]
+2026-06-17 18:30:20,215 | INFO | Filled UserAddress_address_line = 18 lampton avenue
+2026-06-17 18:30:20,216 | INFO | Skipped empty field: UserAddress_apartment_number
+2026-06-17 18:30:20,216 | INFO | Skipped empty field: UserAddress_house_number
+2026-06-17 18:30:20,217 | INFO | Waiting for field: UserAddress_postcode
+2026-06-17 18:30:20,259 | INFO | Found #UserAddress_postcode in context: top > frame[0]
+2026-06-17 18:30:20,339 | INFO | Filled UserAddress_postcode = tw34en
+2026-06-17 18:30:20,339 | INFO | Waiting for field: UserAddress_city
+2026-06-17 18:30:20,380 | INFO | Found #UserAddress_city in context: top > frame[0]
+2026-06-17 18:30:20,462 | INFO | Filled UserAddress_city = hounslow
+2026-06-17 18:30:20,463 | INFO | Waiting for field: UserAddress_country_id
+2026-06-17 18:30:20,504 | INFO | Found #UserAddress_country_id in context: top > frame[0]
+2026-06-17 18:30:20,555 | INFO | Selected UserAddress_country_id = United Kingdom
+2026-06-17 18:30:20,555 | INFO | Waiting for field: user-contacts-form
+2026-06-17 18:30:20,592 | INFO | Found #user-contacts-form in context: top > frame[0]
+2026-06-17 18:30:20,635 | INFO | Clicked submit: Save & Next
+2026-06-17 18:30:20,635 | INFO | Waiting for next step: Personal Details form
+2026-06-17 18:30:20,684 | INFO | Found #UserDetails_date_of_birth in context: top > frame[0]
+2026-06-17 18:30:20,689 | INFO | Personal Details form field is present and Selenium is in the correct frame
+2026-06-17 18:30:20,689 | INFO | Filling Personal Details in smart mode. Missing optional fields will be noted, not fatal.
+2026-06-17 18:30:20,690 | INFO | Waiting for field: Personal Details form
+2026-06-17 18:30:20,743 | INFO | Found #user-details-form in context: top > frame[0]
+2026-06-17 18:30:20,750 | INFO | Core values from sheet | Gender=Male | Nationality=Indian | NI=RZ834655D
+2026-06-17 18:30:20,760 | INFO | Selected Gender = Male via id=UserDetails_gender_0 value=0
+2026-06-17 18:30:20,766 | INFO | Waiting for field: UserDetails_date_of_birth
+2026-06-17 18:30:20,869 | INFO | Found #UserDetails_date_of_birth in context: top > frame[0]
+2026-06-17 18:30:20,918 | INFO | Filled UserDetails_date_of_birth = 23/05/2005
+2026-06-17 18:30:20,923 | INFO | Filled Nationality via #UserDetails_nationality = Indian
+2026-06-17 18:30:20,923 | INFO | Waiting for field: UserDetails_birth_country_id
+2026-06-17 18:30:20,965 | INFO | Found #UserDetails_birth_country_id in context: top > frame[0]
+2026-06-17 18:30:21,010 | INFO | Selected UserDetails_birth_country_id = United Kingdom
+2026-06-17 18:30:21,017 | INFO | Filled NI / Social Security number via #UserDetails_nin = RZ834655D
+2026-06-17 18:30:21,018 | INFO | Waiting 3.0 seconds after core Personal Details fields. Gender=Male | Nationality=Indian | NI=RZ834655D
+2026-06-17 18:30:21,026 | INFO | Core field values before wait | genderChecked=True | nationality=Indian | NI=RZ834655D | DOB=23/05/2005
+2026-06-17 18:30:24,035 | INFO | Verified Personal Details before submit: Gender, Nationality and NI Number
+2026-06-17 18:30:24,036 | INFO | Waiting for field: UserDetails_visa_needed
+2026-06-17 18:30:24,082 | INFO | Found #UserDetails_visa_needed in context: top > frame[0]
+2026-06-17 18:30:24,119 | INFO | Selected UserDetails_visa_needed = No
+2026-06-17 18:30:24,125 | INFO | Verified Personal Details before submit: Gender, Nationality and NI Number
+2026-06-17 18:30:24,125 | INFO | Waiting for field: Personal Details form
+2026-06-17 18:30:24,163 | INFO | Found #user-details-form in context: top > frame[0]
+2026-06-17 18:30:24,183 | INFO | Clicked real Personal Details button: Save & Finish | blocked: none | visible buttons: Save & Finish
+2026-06-17 18:30:26,198 | INFO | Waiting for final profile link
+2026-06-17 18:30:26,218 | INFO | Created successfully. Profile URL: https://hd.parim.co/admin/user/view?id=5857
+2026-06-17 18:30:26,220 | INFO | No UTR or Tax Code found in sheet row. Skipping Work Details update.
+2026-06-17 18:30:26,224 | INFO | Adding passport details for profile: https://hd.parim.co/admin/user/view?id=5857
+2026-06-17 18:30:26,224 | INFO | Opening created profile for extra details: https://hd.parim.co/admin/user/view?id=5857
+2026-06-17 18:30:26,569 | INFO | Waiting 5 seconds for profile page to load
+2026-06-17 18:30:31,570 | INFO | Waiting for field: profile tabs
+2026-06-17 18:30:31,660 | INFO | Found #yw1 in context: top > frame[0]
+2026-06-17 18:30:31,671 | INFO | Waiting for field: Passport/ID-Card section
+2026-06-17 18:30:31,723 | INFO | Found #passport-details in context: top > frame[0]
+2026-06-17 18:30:31,727 | INFO | Profile Details tab is ready
+2026-06-17 18:30:31,727 | INFO | Clicking Passport/ID-Card Edit
+2026-06-17 18:30:31,728 | INFO | Waiting for field: Passport/ID-Card section
+2026-06-17 18:30:31,765 | INFO | Found #passport-details in context: top > frame[0]
+2026-06-17 18:30:31,781 | INFO | Waiting 3 seconds for passport dialog
+2026-06-17 18:30:34,782 | INFO | Waiting for field: Passport dialog form
+2026-06-17 18:30:34,827 | INFO | Found #update-user-passport-dialog-form in context: top > frame[0]
+2026-06-17 18:30:34,832 | INFO | Waiting for field: Passport Document No
+2026-06-17 18:30:34,875 | INFO | Found #UserPassport_document_no in context: top > frame[0]
+2026-06-17 18:30:34,880 | INFO | Passport dialog is ready
+2026-06-17 18:30:34,880 | INFO | Waiting for field: UserPassport_document_no
+2026-06-17 18:30:34,922 | INFO | Found #UserPassport_document_no in context: top > frame[0]
+2026-06-17 18:30:35,004 | INFO | Filled UserPassport_document_no = V4191345
+2026-06-17 18:30:35,004 | INFO | Waiting for field: UserPassport_country_of_issue_id
+2026-06-17 18:30:35,043 | INFO | Found #UserPassport_country_of_issue_id in context: top > frame[0]
+2026-06-17 18:30:35,134 | INFO | Selected UserPassport_country_of_issue_id = India
+2026-06-17 18:30:35,134 | INFO | Waiting for field: date_of_issue
+2026-06-17 18:30:35,193 | INFO | Found #date_of_issue in context: top > frame[0]
+2026-06-17 18:30:35,344 | INFO | Filled date_of_issue = 16/02/2022
+2026-06-17 18:30:35,344 | INFO | Waiting for field: date_of_expiry
+2026-06-17 18:30:35,397 | INFO | Found #date_of_expiry in context: top > frame[0]
+2026-06-17 18:30:35,560 | INFO | Filled date_of_expiry = 15/02/2032
+2026-06-17 18:30:35,560 | INFO | Waiting for field: update-user-passport-dialog-form
+2026-06-17 18:30:35,606 | INFO | Found #update-user-passport-dialog-form in context: top > frame[0]
+2026-06-17 18:30:35,622 | INFO | Clicked submit: Create
+2026-06-17 18:30:35,624 | INFO | Waiting for passport save confirmation
+2026-06-17 18:30:36,670 | INFO | Passport/ID-Card details saved successfully
+2026-06-17 18:30:36,673 | INFO | Adding emergency contact for profile: https://hd.parim.co/admin/user/view?id=5857 | annu annu
+2026-06-17 18:30:36,673 | INFO | Opening created profile for extra details: https://hd.parim.co/admin/user/view?id=5857
+2026-06-17 18:30:37,023 | INFO | Waiting 5 seconds for profile page to load
+2026-06-17 18:30:42,024 | INFO | Waiting for field: profile tabs
+2026-06-17 18:30:42,090 | INFO | Found #yw1 in context: top > frame[0]
+2026-06-17 18:30:42,096 | INFO | Waiting for field: Passport/ID-Card section
+2026-06-17 18:30:42,137 | INFO | Found #passport-details in context: top > frame[0]
+2026-06-17 18:30:42,141 | INFO | Profile Details tab is ready
+2026-06-17 18:30:42,141 | INFO | Clicking Emergency Contacts Add
+2026-06-17 18:30:42,153 | INFO | Waiting for Emergency Contact dialog
+2026-06-17 18:30:44,154 | INFO | Waiting for field: Emergency Contact dialog form
+2026-06-17 18:30:44,200 | INFO | Found #add-user-emergency-contact-dialog-form in context: top > frame[0]
+2026-06-17 18:30:44,204 | INFO | Waiting for field: Emergency First Name
+2026-06-17 18:30:44,245 | INFO | Found #UserEmergencyContact_first_name in context: top > frame[0]
+2026-06-17 18:30:44,250 | INFO | Waiting for field: Emergency Last Name
+2026-06-17 18:30:44,294 | INFO | Found #UserEmergencyContact_last_name in context: top > frame[0]
+2026-06-17 18:30:44,299 | INFO | Waiting for field: Emergency Phone
+2026-06-17 18:30:44,342 | INFO | Found #UserEmergencyContact_phone in context: top > frame[0]
+2026-06-17 18:30:44,348 | INFO | Waiting for field: Emergency Relation To User
+2026-06-17 18:30:44,393 | INFO | Found #UserEmergencyContact_relation_to_user in context: top > frame[0]
+2026-06-17 18:30:44,399 | INFO | Emergency Contact dialog is ready
+2026-06-17 18:30:44,399 | INFO | Waiting for field: UserEmergencyContact_first_name
+2026-06-17 18:30:44,439 | INFO | Found #UserEmergencyContact_first_name in context: top > frame[0]
+2026-06-17 18:30:44,553 | INFO | Filled UserEmergencyContact_first_name = annu
+2026-06-17 18:30:44,554 | INFO | Waiting for field: UserEmergencyContact_last_name
+2026-06-17 18:30:44,614 | INFO | Found #UserEmergencyContact_last_name in context: top > frame[0]
+2026-06-17 18:30:44,700 | INFO | Filled UserEmergencyContact_last_name = annu
+2026-06-17 18:30:44,700 | INFO | Waiting for field: UserEmergencyContact_phone
+2026-06-17 18:30:44,741 | INFO | Found #UserEmergencyContact_phone in context: top > frame[0]
+2026-06-17 18:30:44,837 | INFO | Filled UserEmergencyContact_phone = 07733872516
+2026-06-17 18:30:44,837 | INFO | Waiting for field: UserEmergencyContact_relation_to_user
+2026-06-17 18:30:44,872 | INFO | Found #UserEmergencyContact_relation_to_user in context: top > frame[0]
+2026-06-17 18:30:44,965 | INFO | Filled UserEmergencyContact_relation_to_user = friend
+2026-06-17 18:30:45,972 | INFO | Verified Emergency Contact before Save
+2026-06-17 18:30:45,972 | INFO | Waiting for field: add-user-emergency-contact-dialog-form
+2026-06-17 18:30:46,013 | INFO | Found #add-user-emergency-contact-dialog-form in context: top > frame[0]
+2026-06-17 18:30:46,026 | INFO | Clicked submit: Save
+2026-06-17 18:30:46,026 | INFO | Waiting for emergency contact save confirmation
+2026-06-17 18:30:47,599 | INFO | Emergency contact saved successfully
+2026-06-17 18:30:47,601 | INFO | Adding bank details for profile: https://hd.parim.co/admin/user/view?id=5857
+2026-06-17 18:30:47,602 | INFO | Opening created profile for extra details: https://hd.parim.co/admin/user/view?id=5857
+2026-06-17 18:30:47,962 | INFO | Waiting 5 seconds for profile page to load
+2026-06-17 18:30:52,964 | INFO | Waiting for field: profile tabs
+2026-06-17 18:30:53,277 | INFO | Found #yw1 in context: top > frame[0]
+2026-06-17 18:30:53,282 | INFO | Waiting for field: Passport/ID-Card section
+2026-06-17 18:30:53,317 | INFO | Found #passport-details in context: top > frame[0]
+2026-06-17 18:30:53,321 | INFO | Profile Details tab is ready
+2026-06-17 18:30:53,321 | INFO | Clicking Bank Account Edit
+2026-06-17 18:30:53,322 | INFO | Waiting for field: Bank Account section
+2026-06-17 18:30:53,362 | INFO | Found #bank-details in context: top > frame[0]
+2026-06-17 18:30:53,391 | INFO | Waiting 3 seconds for bank details dialog
+2026-06-17 18:30:56,391 | INFO | Waiting for bank details dialog fields
+2026-06-17 18:30:56,402 | INFO | Bank details dialog is ready
+2026-06-17 18:30:56,419 | INFO | Selected Bank Country via #UserBankDetails_country_id = United Kingdom
+2026-06-17 18:30:56,935 | INFO | Filled Account Number via #UserBankDetails_account_number = 61568132
+2026-06-17 18:30:56,954 | INFO | Filled Sort Code = 40-16-64 | hidden=401664
+2026-06-17 18:30:56,970 | INFO | Clicked Bank Account Confirm
+2026-06-17 18:30:56,970 | INFO | Waiting for bank details save confirmation
+2026-06-17 18:30:57,493 | INFO | Bank details saved successfully
+2026-06-17 18:30:57,494 | INFO | SIA Badge is not marked Yes or has no badge data. Skipping qualification step.
+2026-06-17 18:30:57,495 | INFO | Drivers Licence is empty or negative. Skipping Drivers license qualification step.
+2026-06-17 18:30:57,497 | WARNING | NOTE: Documents: downloading directly from Zoho WorkDrive using API.
+2026-06-17 18:31:06,360 | WARNING | NOTE: Documents: Zoho WorkDrive: found 4 item(s) in folder 3e4ia766e7db47dd54488bba7a0bd0e798198
+2026-06-17 18:31:06,360 | WARNING | NOTE: Documents: Zoho WorkDrive: downloaded 4 file(s), valid for PARiM upload 4
+2026-06-17 18:31:06,360 | INFO | Prepared 4 document(s) for Parim upload: NILetter-Test_2-Recruitment.jpg, Picture-Test_2-Recruitment.jpg, Registration Form - Test 2 Recruitment.pdf, Resume-Test_2-Recruitment.png
+2026-06-17 18:31:06,361 | WARNING | NOTE: Documents: prepared 4 file(s) for upload with original names: NILetter-Test_2-Recruitment.jpg, Picture-Test_2-Recruitment.jpg, Registration Form - Test 2 Recruitment.pdf, Resume-Test_2-Recruitment.png
+2026-06-17 18:31:06,363 | INFO | Uploading profile photo from: Picture-Test_2-Recruitment.jpg
+2026-06-17 18:31:06,364 | INFO | Opening profile for profile photo upload: https://hd.parim.co/admin/user/view?id=5857
+2026-06-17 18:31:06,729 | INFO | Waiting 5 seconds for profile page to load
+2026-06-17 18:31:11,730 | INFO | Waiting for field: profile tabs
+2026-06-17 18:31:11,789 | INFO | Found #yw1 in context: top > frame[0]
+2026-06-17 18:31:11,818 | INFO | Waiting for profile photo dialog
+2026-06-17 18:31:13,819 | INFO | Waiting for field: Profile photo dialog
+2026-06-17 18:31:13,884 | INFO | Found #parimDialog0 in context: top > frame[0]
+2026-06-17 18:31:13,888 | INFO | Profile photo dialog is open
+2026-06-17 18:31:14,917 | INFO | Waiting for field: Profile photo file input
+2026-06-17 18:31:15,012 | INFO | Found #file_input_before_1_1781703073892 in context: top > frame[0]
+2026-06-17 18:31:15,085 | INFO | Waiting for profile photo upload processing: Picture-Test_2-Recruitment.jpg
+2026-06-17 18:31:15,174 | INFO | Clicked profile photo Done: Done
+2026-06-17 18:31:17,691 | INFO | Profile photo upload flow completed: Picture-Test_2-Recruitment.jpg
+2026-06-17 18:31:17,692 | WARNING | NOTE: Profile photo uploaded from: Picture-Test_2-Recruitment.jpg
+2026-06-17 18:31:17,692 | INFO | Opening profile Docs tab: https://hd.parim.co/admin/user/view?id=5857
+2026-06-17 18:31:18,039 | INFO | Waiting 5 seconds for profile page to load
+2026-06-17 18:31:23,039 | INFO | Waiting for field: profile tabs
+2026-06-17 18:31:23,099 | INFO | Found #yw1 in context: top > frame[0]
+2026-06-17 18:31:23,118 | INFO | Waiting for field: Document upload header
+2026-06-17 18:31:23,169 | INFO | Found #document-upload-header in context: top > frame[0]
+2026-06-17 18:31:23,174 | INFO | Waiting for field: Documents list
+2026-06-17 18:31:23,244 | INFO | Found #documents-list in context: top > frame[0]
+2026-06-17 18:31:23,248 | INFO | Docs tab is ready
+2026-06-17 18:31:23,249 | INFO | Uploading document: NILetter-Test_2-Recruitment.jpg
+2026-06-17 18:31:23,264 | INFO | Waiting for field: Document file input
+2026-06-17 18:31:23,306 | INFO | Found #parim_document_upload_input_runtime in context: top > frame[0]
+2026-06-17 18:31:23,334 | INFO | Waiting for document to be queued: NILetter-Test_2-Recruitment.jpg
+2026-06-17 18:31:23,513 | INFO | Clicked Start upload for: NILetter-Test_2-Recruitment.jpg
+2026-06-17 18:31:23,520 | INFO | Document upload completed or queued finished: NILetter-Test_2-Recruitment.jpg | state=queue_finished
+2026-06-17 18:31:23,520 | WARNING | NOTE: Document NILetter-Test_2-Recruitment.jpg upload queue finished. Parim grid may refresh later.
+2026-06-17 18:31:24,120 | WARNING | NOTE: Document uploaded/attempted: NILetter-Test_2-Recruitment.jpg (queue_finished)
+2026-06-17 18:31:24,522 | INFO | Uploading document: Picture-Test_2-Recruitment.jpg
+2026-06-17 18:31:24,551 | INFO | Waiting for field: Document file input
+2026-06-17 18:31:24,605 | INFO | Found #parim_document_upload_input_runtime in context: top > frame[0]
+2026-06-17 18:31:24,633 | INFO | Waiting for document to be queued: Picture-Test_2-Recruitment.jpg
+2026-06-17 18:31:24,665 | INFO | Clicked Start upload for: Picture-Test_2-Recruitment.jpg
+2026-06-17 18:31:24,671 | INFO | Document upload completed or queued finished: Picture-Test_2-Recruitment.jpg | state=queue_finished
+2026-06-17 18:31:24,671 | WARNING | NOTE: Document Picture-Test_2-Recruitment.jpg upload queue finished. Parim grid may refresh later.
+2026-06-17 18:31:25,272 | WARNING | NOTE: Document uploaded/attempted: Picture-Test_2-Recruitment.jpg (queue_finished)
+2026-06-17 18:31:25,674 | INFO | Uploading document: Registration Form - Test 2 Recruitment.pdf
+2026-06-17 18:31:25,707 | INFO | Waiting for field: Document file input
+2026-06-17 18:31:25,839 | INFO | Found #parim_document_upload_input_runtime in context: top > frame[0]
+2026-06-17 18:31:25,867 | INFO | Waiting for document to be queued: Registration Form - Test 2 Recruitment.pdf
+2026-06-17 18:31:25,880 | INFO | Clicked Start upload for: Registration Form - Test 2 Recruitment.pdf
+2026-06-17 18:31:25,887 | INFO | Document upload completed or queued finished: Registration Form - Test 2 Recruitment.pdf | state=list_changed
+2026-06-17 18:31:26,488 | WARNING | NOTE: Document uploaded/attempted: Registration Form - Test 2 Recruitment.pdf (list_changed)
+2026-06-17 18:31:26,890 | INFO | Uploading document: Resume-Test_2-Recruitment.png
+2026-06-17 18:31:26,908 | INFO | Waiting for field: Document file input
+2026-06-17 18:31:26,956 | INFO | Found #parim_document_upload_input_runtime in context: top > frame[0]
+2026-06-17 18:31:26,983 | INFO | Waiting for document to be queued: Resume-Test_2-Recruitment.png
+2026-06-17 18:31:27,072 | INFO | Clicked Start upload for: Resume-Test_2-Recruitment.png
+2026-06-17 18:31:27,080 | INFO | Document upload completed or queued finished: Resume-Test_2-Recruitment.png | state=list_changed
+2026-06-17 18:31:27,681 | WARNING | NOTE: Document uploaded/attempted: Resume-Test_2-Recruitment.png (list_changed)
+2026-06-17 18:31:28,082 | WARNING | NOTE: Documents upload summary: attempted 4, uploaded/attempted 4, failed 0, total valid 4
+2026-06-17 18:31:28,085 | WARNING | NOTE: Documents: temporary downloaded/extracted files deleted from PC.
+2026-06-17 18:31:28,086 | WARNING | NOTE: Documents: browser download folder cleaned.
+2026-06-17 18:31:33,078 | INFO | Updated Google Sheet row 6 as Done
+2026-06-17 18:31:33,084 | INFO | Result for testshavan515@gmail.com: created Created successfully. Notes: Documents: downloading directly from Zoho WorkDrive using API. | Documents: Zoho WorkDrive: found 4 item(s) in folder 3e4ia766e7db47dd54488bba7a0bd0e798198 | Documents: Zoho WorkDrive: downloaded 4 file(s), valid for PARiM upload 4 | Documents: prepared 4 file(s) for upload with original names: NILetter-Test_2-Recruitment.jpg, Picture-Test_2-Recruitment.jpg, Registration Form - Test 2 Recruitment.pdf, Resume-Test_2-Recruitment.png | Profile photo uploaded from: Picture-Test_2-Recruitment.jpg | Document NILetter-Test_2-Recruitment.jpg upload queue finished. Parim grid may refresh later. | Document uploaded/attempted: NILetter-Test_2-Recruitment.jpg (queue_finished) | Document Picture-Test_2-Recruitment.jpg upload queue finished. Parim grid may refresh later. | Document uploaded/attempted: Picture-Test_2-Recruitment.jpg (queue_finished) | Document uploaded/attempted: Registration Form - Test 2 Recruitment.pdf (list_changed) | Document uploaded/attempted: Resume-Test_2-Recruitment.png (list_changed) | Documents upload summary: attempted 4, uploaded/attempted 4, failed 0, total valid 4 | Documents: temporary downloaded/extracted files deleted from PC. | Documents: browser download folder cleaned.
+2026-06-17 18:31:33,086 | INFO | Finished. Created: 1 | Failed: 0 | Local Results: output\results.csv

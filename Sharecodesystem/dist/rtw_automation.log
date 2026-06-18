@@ -1,0 +1,13 @@
+2026-06-15 18:45:26,607 | INFO | Processing row 34, share code W7L J9G 7BY
+2026-06-15 18:45:59,420 | ERROR | Failed row 34
+Traceback (most recent call last):
+  File "rtw_automation_day_month_year.py", line 598, in process_single_record
+  File "rtw_automation_day_month_year.py", line 547, in fill_company_name
+  File "selenium\webdriver\support\wait.py", line 112, in until
+    value = method(self._driver)
+  File "selenium\webdriver\support\expected_conditions.py", line 184, in _predicate
+    return _element_if_visible(driver.find_element(*locator))
+  File "selenium\webdriver\support\expected_conditions.py", line 223, in _element_if_visible
+    return element if element.is_displayed() == visibility else False
+                      ^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'is_displayed'
