@@ -1,0 +1,41 @@
+@font-face {
+	font-display: swap;
+	font-family: "Inter";
+	font-style: normal;
+	font-weight: 100 900;
+	src: url("./inter-latin.woff2") format("woff2");
+}
+
+@font-face {
+	font-display: swap;
+	font-family: "Inter";
+	font-style: italic;
+	font-weight: 100 900;
+	src: url("./inter-latin-italic.woff2") format("woff2");
+}
+
+@font-face {
+	font-display: swap;
+	font-family: "Geist Mono";
+	font-style: normal;
+	font-weight: 100 900;
+	src: url("./geist-mono-latin.woff2") format("woff2");
+}
+
+@font-face {
+	font-display: swap;
+	font-family: "Mona Sans";
+	font-stretch: 100%;
+	font-style: normal;
+	font-weight: 200 900;
+	src: url("./mona-sans-latin.woff2") format("woff2");
+}
+
+@font-face {
+	font-display: swap;
+	font-family: "Mona Sans";
+	font-stretch: 100%;
+	font-style: italic;
+	font-weight: 200 900;
+	src: url("./mona-sans-latin-italic.woff2") format("woff2");
+}

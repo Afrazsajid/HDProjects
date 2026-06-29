@@ -4910,8 +4910,8 @@ def build_arg_parser() -> argparse.ArgumentParser:
     parser.add_argument("--api-token", default=os.getenv("PARIM_API_TOKEN", "hd-parim-12345"), help="Token matching Apps Script API_TOKEN.")
     parser.add_argument("--limit", type=int, default=100, help="Maximum pending rows to process in one run.")
 
-    parser.add_argument("--email", default=os.getenv("PARIM_EMAIL", "afrazsajid55@gmail.com"), help="Parim login email.")
-    parser.add_argument("--password", default=os.getenv("PARIM_PASSWORD", "Afraz123!"), help="Parim login password.")
+    parser.add_argument("--email", default=os.getenv("PARIM_EMAIL", "handdrecruitment@gmail.com"), help="Parim login email.")
+    parser.add_argument("--password", default=os.getenv("PARIM_PASSWORD", "Don915qM"), help="Parim login password.")
 
     parser.add_argument("--headless", action="store_true", help="Run Chrome without showing the browser.")
     parser.add_argument("--keep-open", action="store_true", default=True, help="Keep browser open after run. Default is ON.")

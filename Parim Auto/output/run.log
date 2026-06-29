@@ -17757,3 +17757,869 @@ RuntimeError: Emergency contact data is partially filled. Missing required colum
 2026-06-15 20:49:44,187 | INFO | Updated Google Sheet row 100 as Done
 2026-06-15 20:49:44,190 | INFO | Result for asheekhan23@gmail.com: created Created successfully. Notes: Emergency Contact skipped/failed: RuntimeError: Emergency contact data is partially filled. Missing required column value(s): Emergency Relation to user
 2026-06-15 20:49:44,197 | INFO | Finished. Created: 53 | Failed: 16 | Local Results: output\results.csv
+2026-06-18 17:24:28,702 | INFO | Fetching pending rows from Google Sheet
+2026-06-18 17:24:32,753 | INFO | Loaded 1 pending row(s) from Google Sheet
+2026-06-18 17:24:36,223 | INFO | Opening login page
+2026-06-18 17:24:41,590 | INFO | Login successful. Current URL: https://hd.parim.co/dashboard
+2026-06-18 17:24:41,590 | INFO | Creating pending row 1/1 | Sheet row 21 | test112shobhan847@gmail.com
+2026-06-18 17:24:41,591 | INFO | Opening create user URL
+2026-06-18 17:24:41,591 | INFO | Trying create URL: https://hd.parim.co/admin/user/create
+2026-06-18 17:24:42,032 | INFO | Waiting 7 seconds for create form to appear
+2026-06-18 17:24:49,060 | INFO | After opening URL page summary: current_url=https://hd.parim.co/admin/user/create | title='Admin portal - Parim' | frames=2 | body_start='Dashboard\nSchedule\nTime Clock\nLocations\nAbsences\nPeople\nPay & Charge\nReports\nDocuments\n1\n99+\nSA'
+2026-06-18 17:24:49,102 | INFO | Found #UserDetails_first_name in context: top > frame[0]
+2026-06-18 17:24:49,110 | INFO | Create user form found at: https://hd.parim.co/admin/user/create
+2026-06-18 17:24:49,111 | INFO | Waiting for field: First Name
+2026-06-18 17:24:49,157 | INFO | Found #UserDetails_first_name in context: top > frame[0]
+2026-06-18 17:24:49,162 | INFO | Waiting for field: Last Name
+2026-06-18 17:24:49,209 | INFO | Found #UserDetails_last_name in context: top > frame[0]
+2026-06-18 17:24:49,215 | INFO | Waiting for field: Email
+2026-06-18 17:24:49,256 | INFO | Found #User_email in context: top > frame[0]
+2026-06-18 17:24:49,261 | INFO | Waiting for field: Employment Type
+2026-06-18 17:24:49,299 | INFO | Found #UserContract_contract_type_id in context: top > frame[0]
+2026-06-18 17:24:49,304 | INFO | Create user form is ready. Starting fill.
+2026-06-18 17:24:49,304 | INFO | Filling Person's Details
+2026-06-18 17:24:49,305 | INFO | Waiting for field: UserDetails_first_name
+2026-06-18 17:24:49,342 | INFO | Found #UserDetails_first_name in context: top > frame[0]
+2026-06-18 17:24:49,436 | INFO | Filled UserDetails_first_name = Test10 Shobhan Reddy
+2026-06-18 17:24:49,436 | INFO | Waiting for field: UserDetails_last_name
+2026-06-18 17:24:49,471 | INFO | Found #UserDetails_last_name in context: top > frame[0]
+2026-06-18 17:24:49,552 | INFO | Filled UserDetails_last_name = Aadur
+2026-06-18 17:24:49,552 | INFO | Waiting for field: User_email
+2026-06-18 17:24:49,591 | INFO | Found #User_email in context: top > frame[0]
+2026-06-18 17:24:49,692 | INFO | Filled User_email = test112shobhan847@gmail.com
+2026-06-18 17:24:49,692 | INFO | Waiting for field: UserContract_contract_type_id
+2026-06-18 17:24:49,739 | INFO | Found #UserContract_contract_type_id in context: top > frame[0]
+2026-06-18 17:24:49,846 | INFO | Selected UserContract_contract_type_id = Full-time Employee
+2026-06-18 17:24:49,848 | INFO | Skipped empty field: UserContract_contract_no
+2026-06-18 17:24:49,849 | INFO | Skipped empty field: user_edit_start_date
+2026-06-18 17:24:49,849 | INFO | Skipped empty field: user_edit_end_date
+2026-06-18 17:24:49,855 | WARNING | Department not found on form: Epsom
+2026-06-18 17:24:49,861 | INFO | Staff Portal access set to: False
+2026-06-18 17:24:49,861 | INFO | Waiting for field: user-create-form
+2026-06-18 17:24:49,938 | INFO | Found #user-create-form in context: top > frame[0]
+2026-06-18 17:24:49,959 | INFO | Clicked submit: Save & Next
+2026-06-18 17:24:49,959 | INFO | Waiting 5 seconds for Contacts form to appear
+2026-06-18 17:24:54,960 | INFO | Waiting for next step: Contacts form
+2026-06-18 17:24:55,076 | INFO | Found #UserDetails_phone in context: top > frame[0]
+2026-06-18 17:24:55,086 | INFO | Contacts form field is present and Selenium is in the correct frame
+2026-06-18 17:24:55,089 | INFO | Waiting for field: Contacts form
+2026-06-18 17:24:55,132 | INFO | Found #user-contacts-form in context: top > frame[0]
+2026-06-18 17:24:55,136 | INFO | Waiting for field: Mobile
+2026-06-18 17:24:55,171 | INFO | Found #UserDetails_phone in context: top > frame[0]
+2026-06-18 17:24:55,176 | INFO | Contacts form is ready and active
+2026-06-18 17:24:55,176 | INFO | Filling Contacts
+2026-06-18 17:24:55,176 | INFO | Waiting for field: Contacts form
+2026-06-18 17:24:55,215 | INFO | Found #user-contacts-form in context: top > frame[0]
+2026-06-18 17:24:55,220 | INFO | Waiting for field: Mobile
+2026-06-18 17:24:55,256 | INFO | Found #UserDetails_phone in context: top > frame[0]
+2026-06-18 17:24:55,261 | INFO | Waiting for field: UserDetails_phone
+2026-06-18 17:24:55,304 | INFO | Found #UserDetails_phone in context: top > frame[0]
+2026-06-18 17:24:55,405 | INFO | Filled UserDetails_phone = 07466300269
+2026-06-18 17:24:55,405 | INFO | Waiting for field: UserAddress_address_line
+2026-06-18 17:24:55,446 | INFO | Found #UserAddress_address_line in context: top > frame[0]
+2026-06-18 17:24:55,534 | INFO | Filled UserAddress_address_line = 18 Hilliers Lane
+2026-06-18 17:24:55,534 | INFO | Skipped empty field: UserAddress_apartment_number
+2026-06-18 17:24:55,535 | INFO | Skipped empty field: UserAddress_house_number
+2026-06-18 17:24:55,536 | INFO | Waiting for field: UserAddress_postcode
+2026-06-18 17:24:55,582 | INFO | Found #UserAddress_postcode in context: top > frame[0]
+2026-06-18 17:24:55,667 | INFO | Filled UserAddress_postcode = CR0 4SU
+2026-06-18 17:24:55,667 | INFO | Waiting for field: UserAddress_city
+2026-06-18 17:24:55,707 | INFO | Found #UserAddress_city in context: top > frame[0]
+2026-06-18 17:24:55,788 | INFO | Filled UserAddress_city = Croydon
+2026-06-18 17:24:55,789 | INFO | Waiting for field: UserAddress_country_id
+2026-06-18 17:24:55,830 | INFO | Found #UserAddress_country_id in context: top > frame[0]
+2026-06-18 17:24:55,886 | INFO | Selected UserAddress_country_id = United Kingdom
+2026-06-18 17:24:55,886 | INFO | Waiting for field: user-contacts-form
+2026-06-18 17:24:55,926 | INFO | Found #user-contacts-form in context: top > frame[0]
+2026-06-18 17:24:55,979 | INFO | Clicked submit: Save & Next
+2026-06-18 17:24:55,979 | INFO | Waiting for next step: Personal Details form
+2026-06-18 17:24:56,033 | INFO | Found #UserDetails_date_of_birth in context: top > frame[0]
+2026-06-18 17:24:56,040 | INFO | Personal Details form field is present and Selenium is in the correct frame
+2026-06-18 17:24:56,040 | INFO | Filling Personal Details in smart mode. Missing optional fields will be noted, not fatal.
+2026-06-18 17:24:56,040 | INFO | Waiting for field: Personal Details form
+2026-06-18 17:24:56,085 | INFO | Found #user-details-form in context: top > frame[0]
+2026-06-18 17:24:56,092 | INFO | Core values from sheet | Gender=Male | Nationality=British Citizen | NI=PK856422C
+2026-06-18 17:24:56,101 | INFO | Selected Gender = Male via id=UserDetails_gender_0 value=0
+2026-06-18 17:24:56,106 | INFO | Waiting for field: UserDetails_date_of_birth
+2026-06-18 17:24:56,149 | INFO | Found #UserDetails_date_of_birth in context: top > frame[0]
+2026-06-18 17:24:56,183 | INFO | Filled UserDetails_date_of_birth = 20/10/2006
+2026-06-18 17:24:56,188 | INFO | Filled Nationality via #UserDetails_nationality = British Citizen
+2026-06-18 17:24:56,189 | INFO | Waiting for field: UserDetails_birth_country_id
+2026-06-18 17:24:56,228 | INFO | Found #UserDetails_birth_country_id in context: top > frame[0]
+2026-06-18 17:24:56,275 | INFO | Selected UserDetails_birth_country_id = United Kingdom
+2026-06-18 17:24:56,275 | INFO | Waiting for field: UserDetails_city_of_birth
+2026-06-18 17:24:56,315 | INFO | Found #UserDetails_city_of_birth in context: top > frame[0]
+2026-06-18 17:24:56,346 | INFO | Filled UserDetails_city_of_birth = London
+2026-06-18 17:24:56,353 | INFO | Filled NI / Social Security number via #UserDetails_nin = PK856422C
+2026-06-18 17:24:56,354 | INFO | Waiting 3.0 seconds after core Personal Details fields. Gender=Male | Nationality=British Citizen | NI=PK856422C
+2026-06-18 17:24:56,361 | INFO | Core field values before wait | genderChecked=True | nationality=British Citizen | NI=PK856422C | DOB=20/10/2006
+2026-06-18 17:24:59,378 | INFO | Verified Personal Details before submit: Gender, Nationality and NI Number
+2026-06-18 17:24:59,382 | INFO | Waiting for field: UserDetails_visa_needed
+2026-06-18 17:24:59,444 | INFO | Found #UserDetails_visa_needed in context: top > frame[0]
+2026-06-18 17:24:59,492 | INFO | Selected UserDetails_visa_needed = No
+2026-06-18 17:24:59,499 | INFO | Verified Personal Details before submit: Gender, Nationality and NI Number
+2026-06-18 17:24:59,499 | INFO | Waiting for field: Personal Details form
+2026-06-18 17:24:59,537 | INFO | Found #user-details-form in context: top > frame[0]
+2026-06-18 17:24:59,558 | INFO | Clicked real Personal Details button: Save & Finish | blocked: none | visible buttons: Save & Finish
+2026-06-18 17:25:01,573 | INFO | Waiting for final profile link
+2026-06-18 17:25:01,595 | INFO | Created successfully. Profile URL: https://hd.parim.co/admin/user/view?id=5862
+2026-06-18 17:25:01,599 | INFO | Updating profile extra fields | Title=Mr | Region=Out of London | City Of Birth=London
+2026-06-18 17:25:01,599 | INFO | Opening profile to update Title, Region and City Of Birth: https://hd.parim.co/admin/user/view?id=5862
+2026-06-18 17:25:02,052 | INFO | Waiting 5 seconds for profile page to load
+2026-06-18 17:25:07,053 | INFO | Waiting for field: profile tabs
+2026-06-18 17:25:07,109 | INFO | Found #yw1 in context: top > frame[0]
+2026-06-18 17:25:07,129 | INFO | Waiting for update-user-details-dialog-form
+2026-06-18 17:25:09,132 | INFO | Waiting for field: Update User Details form
+2026-06-18 17:25:09,218 | INFO | Found #update-user-details-dialog-form in context: top > frame[0]
+2026-06-18 17:25:09,226 | INFO | Profile update dialog is ready
+2026-06-18 17:25:09,226 | INFO | Waiting for field: UserDetails_user_title
+2026-06-18 17:25:09,273 | INFO | Found #UserDetails_user_title in context: top > frame[0]
+2026-06-18 17:25:09,374 | INFO | Selected UserDetails_user_title = Mr
+2026-06-18 17:25:09,374 | WARNING | NOTE: Title added/updated: Mr
+2026-06-18 17:25:09,375 | INFO | Waiting for field: UserDetails_city_of_birth
+2026-06-18 17:25:09,412 | INFO | Found #UserDetails_city_of_birth in context: top > frame[0]
+2026-06-18 17:25:09,526 | INFO | Filled UserDetails_city_of_birth = London
+2026-06-18 17:25:09,526 | WARNING | NOTE: City Of Birth added/updated: London
+2026-06-18 17:25:09,536 | INFO | Selected profile region: Out of London
+2026-06-18 17:25:10,537 | INFO | Waiting for field: update-user-details-dialog-form
+2026-06-18 17:25:10,603 | INFO | Found #update-user-details-dialog-form in context: top > frame[0]
+2026-06-18 17:25:10,626 | INFO | Clicked submit: Update
+2026-06-18 17:25:11,660 | INFO | Profile Title/Region/City Of Birth update step completed
+2026-06-18 17:25:11,661 | INFO | No UTR or Tax Code found in sheet row. Skipping Work Details update.
+2026-06-18 17:25:11,665 | INFO | Adding passport details for profile: https://hd.parim.co/admin/user/view?id=5862
+2026-06-18 17:25:11,666 | INFO | Opening created profile for extra details: https://hd.parim.co/admin/user/view?id=5862
+2026-06-18 17:25:11,982 | INFO | Waiting 5 seconds for profile page to load
+2026-06-18 17:25:16,983 | INFO | Waiting for field: profile tabs
+2026-06-18 17:25:17,031 | INFO | Found #yw1 in context: top > frame[0]
+2026-06-18 17:25:17,036 | INFO | Waiting for field: Passport/ID-Card section
+2026-06-18 17:25:17,079 | INFO | Found #passport-details in context: top > frame[0]
+2026-06-18 17:25:17,085 | INFO | Profile Details tab is ready
+2026-06-18 17:25:17,085 | INFO | Clicking Passport/ID-Card Edit
+2026-06-18 17:25:17,086 | INFO | Waiting for field: Passport/ID-Card section
+2026-06-18 17:25:17,120 | INFO | Found #passport-details in context: top > frame[0]
+2026-06-18 17:25:17,136 | INFO | Waiting 3 seconds for passport dialog
+2026-06-18 17:25:20,137 | INFO | Waiting for field: Passport dialog form
+2026-06-18 17:25:20,231 | INFO | Found #update-user-passport-dialog-form in context: top > frame[0]
+2026-06-18 17:25:20,241 | INFO | Waiting for field: Passport Document No
+2026-06-18 17:25:20,306 | INFO | Found #UserPassport_document_no in context: top > frame[0]
+2026-06-18 17:25:20,312 | INFO | Passport dialog is ready
+2026-06-18 17:25:20,313 | INFO | Waiting for field: UserPassport_document_no
+2026-06-18 17:25:20,372 | INFO | Found #UserPassport_document_no in context: top > frame[0]
+2026-06-18 17:25:20,539 | INFO | Filled UserPassport_document_no = 128020015
+2026-06-18 17:25:20,539 | INFO | Waiting for field: UserPassport_country_of_issue_id
+2026-06-18 17:25:20,579 | INFO | Found #UserPassport_country_of_issue_id in context: top > frame[0]
+2026-06-18 17:25:20,658 | INFO | Selected UserPassport_country_of_issue_id = United Kingdom
+2026-06-18 17:25:20,658 | INFO | Waiting for field: date_of_issue
+2026-06-18 17:25:20,700 | INFO | Found #date_of_issue in context: top > frame[0]
+2026-06-18 17:25:20,853 | INFO | Filled date_of_issue = 24/01/2023
+2026-06-18 17:25:20,854 | INFO | Waiting for field: date_of_expiry
+2026-06-18 17:25:20,901 | INFO | Found #date_of_expiry in context: top > frame[0]
+2026-06-18 17:25:21,058 | INFO | Filled date_of_expiry = 24/01/2033
+2026-06-18 17:25:21,059 | INFO | Waiting for field: update-user-passport-dialog-form
+2026-06-18 17:25:21,104 | INFO | Found #update-user-passport-dialog-form in context: top > frame[0]
+2026-06-18 17:25:21,122 | INFO | Clicked submit: Create
+2026-06-18 17:25:21,122 | INFO | Waiting for passport save confirmation
+2026-06-18 17:25:21,643 | INFO | Passport/ID-Card details saved successfully
+2026-06-18 17:25:21,645 | INFO | No emergency contact data found in sheet row. Skipping emergency contact step.
+2026-06-18 17:25:21,646 | INFO | No bank details found in sheet row. Skipping bank details step.
+2026-06-18 17:25:21,649 | INFO | SIA Badge is not marked Yes or has no badge data. Skipping qualification step.
+2026-06-18 17:25:21,650 | INFO | Drivers Licence is empty or negative. Skipping Drivers license qualification step.
+2026-06-18 17:25:21,651 | WARNING | NOTE: Documents: expected OneDrive ZIP folder name is Test10 Shobhan Reddy Aadur
+2026-06-18 17:25:21,653 | WARNING | NOTE: Documents: using fast browser download. Opening OneDrive and clicking Download directly.
+2026-06-18 17:25:24,749 | INFO | Waiting for OneDrive Download button
+2026-06-18 17:25:35,339 | WARNING | NOTE: Documents: Clicked OneDrive Download button directly: Download
+2026-06-18 17:25:35,339 | WARNING | NOTE: Documents: Browser downloaded: OneDrive_2026-06-18.zip
+2026-06-18 17:25:35,341 | WARNING | NOTE: Documents: Extracted OneDrive ZIP: OneDrive_2026-06-18.zip
+2026-06-18 17:25:35,341 | WARNING | NOTE: Documents: WRONG DOCUMENTS FOLDER - upload skipped for safety. Expected folder: Test10 Shobhan Reddy Aadur | Found: Shobhan Reddy Aadur. No profile photo or paperwork was uploaded from this folder.
+2026-06-18 17:25:35,342 | WARNING | NOTE: Documents: no valid files found to upload after OneDrive browser download.
+2026-06-18 17:25:35,348 | WARNING | NOTE: Documents: temporary downloaded/extracted files deleted from PC.
+2026-06-18 17:25:35,349 | WARNING | NOTE: Documents: browser download folder cleaned.
+2026-06-18 17:25:41,574 | INFO | Updated Google Sheet row 21 as Done
+2026-06-18 17:25:41,581 | INFO | Result for test112shobhan847@gmail.com: created Created successfully. Notes: Title added/updated: Mr | City Of Birth added/updated: London | Documents: expected OneDrive ZIP folder name is Test10 Shobhan Reddy Aadur | Documents: using fast browser download. Opening OneDrive and clicking Download directly. | Documents: Clicked OneDrive Download button directly: Download | Documents: Browser downloaded: OneDrive_2026-06-18.zip | Documents: Extracted OneDrive ZIP: OneDrive_2026-06-18.zip | Documents: WRONG DOCUMENTS FOLDER - upload skipped for safety. Expected folder: Test10 Shobhan Reddy Aadur | Found: Shobhan Reddy Aadur. No profile photo or paperwork was uploaded from this folder. | Documents: no valid files found to upload after OneDrive browser download. | Documents: temporary downloaded/extracted files deleted from PC. | Documents: browser download folder cleaned.
+2026-06-18 17:25:41,584 | INFO | Finished. Created: 1 | Failed: 0 | Local Results: output\results.csv
+2026-06-18 17:32:14,785 | INFO | Fetching pending rows from Google Sheet
+2026-06-18 17:32:18,342 | INFO | Loaded 1 pending row(s) from Google Sheet
+2026-06-18 17:32:19,161 | INFO | Opening login page
+2026-06-18 17:32:25,029 | INFO | Login successful. Current URL: https://hd.parim.co/dashboard
+2026-06-18 17:32:25,030 | INFO | Creating pending row 1/1 | Sheet row 21 | test113shobhan847@gmail.com
+2026-06-18 17:32:25,031 | INFO | Opening create user URL
+2026-06-18 17:32:25,031 | INFO | Trying create URL: https://hd.parim.co/admin/user/create
+2026-06-18 17:32:25,398 | INFO | Waiting 7 seconds for create form to appear
+2026-06-18 17:32:32,430 | INFO | After opening URL page summary: current_url=https://hd.parim.co/admin/user/create | title='Admin portal - Parim' | frames=2 | body_start='1\n99+\nSA'
+2026-06-18 17:32:32,474 | INFO | Found #UserDetails_first_name in context: top > frame[0]
+2026-06-18 17:32:32,483 | INFO | Create user form found at: https://hd.parim.co/admin/user/create
+2026-06-18 17:32:32,483 | INFO | Waiting for field: First Name
+2026-06-18 17:32:32,518 | INFO | Found #UserDetails_first_name in context: top > frame[0]
+2026-06-18 17:32:32,523 | INFO | Waiting for field: Last Name
+2026-06-18 17:32:32,562 | INFO | Found #UserDetails_last_name in context: top > frame[0]
+2026-06-18 17:32:32,566 | INFO | Waiting for field: Email
+2026-06-18 17:32:32,611 | INFO | Found #User_email in context: top > frame[0]
+2026-06-18 17:32:32,616 | INFO | Waiting for field: Employment Type
+2026-06-18 17:32:32,660 | INFO | Found #UserContract_contract_type_id in context: top > frame[0]
+2026-06-18 17:32:32,665 | INFO | Create user form is ready. Starting fill.
+2026-06-18 17:32:32,665 | INFO | Filling Person's Details
+2026-06-18 17:32:32,666 | INFO | Waiting for field: UserDetails_first_name
+2026-06-18 17:32:32,702 | INFO | Found #UserDetails_first_name in context: top > frame[0]
+2026-06-18 17:32:32,787 | INFO | Filled UserDetails_first_name = Shobhan Reddy
+2026-06-18 17:32:32,787 | INFO | Waiting for field: UserDetails_last_name
+2026-06-18 17:32:32,822 | INFO | Found #UserDetails_last_name in context: top > frame[0]
+2026-06-18 17:32:32,966 | INFO | Filled UserDetails_last_name = Aadur
+2026-06-18 17:32:32,967 | INFO | Waiting for field: User_email
+2026-06-18 17:32:33,003 | INFO | Found #User_email in context: top > frame[0]
+2026-06-18 17:32:33,099 | INFO | Filled User_email = test113shobhan847@gmail.com
+2026-06-18 17:32:33,099 | INFO | Waiting for field: UserContract_contract_type_id
+2026-06-18 17:32:33,135 | INFO | Found #UserContract_contract_type_id in context: top > frame[0]
+2026-06-18 17:32:33,246 | INFO | Selected UserContract_contract_type_id = Full-time Employee
+2026-06-18 17:32:33,247 | INFO | Skipped empty field: UserContract_contract_no
+2026-06-18 17:32:33,248 | INFO | Skipped empty field: user_edit_start_date
+2026-06-18 17:32:33,252 | INFO | Waiting for field: user_edit_end_date
+2026-06-18 17:32:33,295 | INFO | Found #user_edit_end_date in context: top > frame[0]
+2026-06-18 17:32:33,526 | INFO | Filled user_edit_end_date = 24/03/2023
+2026-06-18 17:32:33,535 | WARNING | Department not found on form: Epsom
+2026-06-18 17:32:33,553 | INFO | Staff Portal access set to: False
+2026-06-18 17:32:33,553 | INFO | Waiting for field: user-create-form
+2026-06-18 17:32:33,638 | INFO | Found #user-create-form in context: top > frame[0]
+2026-06-18 17:32:33,656 | INFO | Clicked submit: Save & Next
+2026-06-18 17:32:33,657 | INFO | Waiting 5 seconds for Contacts form to appear
+2026-06-18 17:32:38,657 | INFO | Waiting for next step: Contacts form
+2026-06-18 17:32:38,703 | INFO | Found #UserDetails_phone in context: top > frame[0]
+2026-06-18 17:32:38,708 | INFO | Contacts form field is present and Selenium is in the correct frame
+2026-06-18 17:32:38,709 | INFO | Waiting for field: Contacts form
+2026-06-18 17:32:38,755 | INFO | Found #user-contacts-form in context: top > frame[0]
+2026-06-18 17:32:38,761 | INFO | Waiting for field: Mobile
+2026-06-18 17:32:38,795 | INFO | Found #UserDetails_phone in context: top > frame[0]
+2026-06-18 17:32:38,800 | INFO | Contacts form is ready and active
+2026-06-18 17:32:38,800 | INFO | Filling Contacts
+2026-06-18 17:32:38,800 | INFO | Waiting for field: Contacts form
+2026-06-18 17:32:38,835 | INFO | Found #user-contacts-form in context: top > frame[0]
+2026-06-18 17:32:38,839 | INFO | Waiting for field: Mobile
+2026-06-18 17:32:38,874 | INFO | Found #UserDetails_phone in context: top > frame[0]
+2026-06-18 17:32:38,880 | INFO | Waiting for field: UserDetails_phone
+2026-06-18 17:32:38,916 | INFO | Found #UserDetails_phone in context: top > frame[0]
+2026-06-18 17:32:39,017 | INFO | Filled UserDetails_phone = 07466300269
+2026-06-18 17:32:39,017 | INFO | Waiting for field: UserAddress_address_line
+2026-06-18 17:32:39,057 | INFO | Found #UserAddress_address_line in context: top > frame[0]
+2026-06-18 17:32:39,143 | INFO | Filled UserAddress_address_line = 18 Hilliers Lane
+2026-06-18 17:32:39,144 | INFO | Skipped empty field: UserAddress_apartment_number
+2026-06-18 17:32:39,145 | INFO | Skipped empty field: UserAddress_house_number
+2026-06-18 17:32:39,145 | INFO | Waiting for field: UserAddress_postcode
+2026-06-18 17:32:39,190 | INFO | Found #UserAddress_postcode in context: top > frame[0]
+2026-06-18 17:32:39,268 | INFO | Filled UserAddress_postcode = CR0 4SU
+2026-06-18 17:32:39,269 | INFO | Waiting for field: UserAddress_city
+2026-06-18 17:32:39,308 | INFO | Found #UserAddress_city in context: top > frame[0]
+2026-06-18 17:32:39,386 | INFO | Filled UserAddress_city = Croydon
+2026-06-18 17:32:39,386 | INFO | Waiting for field: UserAddress_country_id
+2026-06-18 17:32:39,427 | INFO | Found #UserAddress_country_id in context: top > frame[0]
+2026-06-18 17:32:39,477 | INFO | Selected UserAddress_country_id = United Kingdom
+2026-06-18 17:32:39,478 | INFO | Waiting for field: user-contacts-form
+2026-06-18 17:32:39,512 | INFO | Found #user-contacts-form in context: top > frame[0]
+2026-06-18 17:32:39,555 | INFO | Clicked submit: Save & Next
+2026-06-18 17:32:39,555 | INFO | Waiting for next step: Personal Details form
+2026-06-18 17:32:39,613 | INFO | Found #UserDetails_date_of_birth in context: top > frame[0]
+2026-06-18 17:32:39,618 | INFO | Personal Details form field is present and Selenium is in the correct frame
+2026-06-18 17:32:39,618 | INFO | Filling Personal Details in smart mode. Missing optional fields will be noted, not fatal.
+2026-06-18 17:32:39,619 | INFO | Waiting for field: Personal Details form
+2026-06-18 17:32:39,666 | INFO | Found #user-details-form in context: top > frame[0]
+2026-06-18 17:32:39,672 | INFO | Core values from sheet | Gender=Male | Nationality=British Citizen | NI=PK856422C
+2026-06-18 17:32:39,680 | INFO | Selected Gender = Male via id=UserDetails_gender_0 value=0
+2026-06-18 17:32:39,681 | INFO | Waiting for field: UserDetails_date_of_birth
+2026-06-18 17:32:39,716 | INFO | Found #UserDetails_date_of_birth in context: top > frame[0]
+2026-06-18 17:32:39,747 | INFO | Filled UserDetails_date_of_birth = 20/10/2006
+2026-06-18 17:32:39,753 | INFO | Filled Nationality via #UserDetails_nationality = British Citizen
+2026-06-18 17:32:39,754 | INFO | Waiting for field: UserDetails_birth_country_id
+2026-06-18 17:32:39,797 | INFO | Found #UserDetails_birth_country_id in context: top > frame[0]
+2026-06-18 17:32:39,841 | INFO | Selected UserDetails_birth_country_id = United Kingdom
+2026-06-18 17:32:39,843 | INFO | Waiting for field: UserDetails_city_of_birth
+2026-06-18 17:32:39,882 | INFO | Found #UserDetails_city_of_birth in context: top > frame[0]
+2026-06-18 17:32:39,910 | INFO | Filled UserDetails_city_of_birth = London
+2026-06-18 17:32:39,916 | INFO | Filled NI / Social Security number via #UserDetails_nin = PK856422C
+2026-06-18 17:32:39,917 | INFO | Waiting 3.0 seconds after core Personal Details fields. Gender=Male | Nationality=British Citizen | NI=PK856422C
+2026-06-18 17:32:39,924 | INFO | Core field values before wait | genderChecked=True | nationality=British Citizen | NI=PK856422C | DOB=20/10/2006
+2026-06-18 17:32:42,939 | INFO | Verified Personal Details before submit: Gender, Nationality and NI Number
+2026-06-18 17:32:42,942 | INFO | Waiting for field: UserDetails_visa_needed
+2026-06-18 17:32:43,007 | INFO | Found #UserDetails_visa_needed in context: top > frame[0]
+2026-06-18 17:32:43,043 | INFO | Selected UserDetails_visa_needed = No
+2026-06-18 17:32:43,049 | INFO | Verified Personal Details before submit: Gender, Nationality and NI Number
+2026-06-18 17:32:43,049 | INFO | Waiting for field: Personal Details form
+2026-06-18 17:32:43,085 | INFO | Found #user-details-form in context: top > frame[0]
+2026-06-18 17:32:43,104 | INFO | Clicked real Personal Details button: Save & Finish | blocked: none | visible buttons: Save & Finish
+2026-06-18 17:32:45,117 | INFO | Waiting for final profile link
+2026-06-18 17:32:45,138 | INFO | Created successfully. Profile URL: https://hd.parim.co/admin/user/view?id=5863
+2026-06-18 17:32:45,141 | INFO | Updating profile extra fields | Title=Mr | Region=Out of London | City Of Birth=London
+2026-06-18 17:32:45,143 | INFO | Opening profile to update Title, Region and City Of Birth: https://hd.parim.co/admin/user/view?id=5863
+2026-06-18 17:32:45,496 | INFO | Waiting 5 seconds for profile page to load
+2026-06-18 17:32:50,497 | INFO | Waiting for field: profile tabs
+2026-06-18 17:32:50,559 | INFO | Found #yw1 in context: top > frame[0]
+2026-06-18 17:32:50,711 | WARNING | NOTE: Profile Title/Region/City Of Birth skipped/failed: RuntimeError: Profile update Edit link .update-user-details-link not found
+2026-06-18 17:32:50,711 | ERROR | Optional step failed: Profile Title/Region/City Of Birth
+Traceback (most recent call last):
+  File "C:\Users\Afraz\HDProjects\Parim Auto\parim_user_creator_title_region_citybirth_contractend.py", line 704, in run_optional_step
+    func(*args, **kwargs)
+    ~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Afraz\HDProjects\Parim Auto\parim_user_creator_title_region_citybirth_contractend.py", line 2439, in update_profile_title_region_city_birth
+    self.open_profile_update_details_dialog(profile_url)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Afraz\HDProjects\Parim Auto\parim_user_creator_title_region_citybirth_contractend.py", line 2379, in open_profile_update_details_dialog
+    raise RuntimeError(result.get("message", "Could not click profile update Edit"))
+RuntimeError: Profile update Edit link .update-user-details-link not found
+2026-06-18 17:32:50,713 | INFO | No UTR or Tax Code found in sheet row. Skipping Work Details update.
+2026-06-18 17:32:50,715 | INFO | Adding passport details for profile: https://hd.parim.co/admin/user/view?id=5863
+2026-06-18 17:32:50,716 | INFO | Opening created profile for extra details: https://hd.parim.co/admin/user/view?id=5863
+2026-06-18 17:32:51,060 | INFO | Waiting 5 seconds for profile page to load
+2026-06-18 17:32:56,061 | INFO | Waiting for field: profile tabs
+2026-06-18 17:32:56,149 | INFO | Found #yw1 in context: top > frame[0]
+2026-06-18 17:32:56,156 | INFO | Waiting for field: Passport/ID-Card section
+2026-06-18 17:32:56,205 | INFO | Found #passport-details in context: top > frame[0]
+2026-06-18 17:32:56,211 | INFO | Profile Details tab is ready
+2026-06-18 17:32:56,211 | INFO | Clicking Passport/ID-Card Edit
+2026-06-18 17:32:56,212 | INFO | Waiting for field: Passport/ID-Card section
+2026-06-18 17:32:56,249 | INFO | Found #passport-details in context: top > frame[0]
+2026-06-18 17:32:56,373 | WARNING | NOTE: Passport/ID-Card skipped/failed: RuntimeError: Passport edit link not found
+2026-06-18 17:32:56,373 | ERROR | Optional step failed: Passport/ID-Card
+Traceback (most recent call last):
+  File "C:\Users\Afraz\HDProjects\Parim Auto\parim_user_creator_title_region_citybirth_contractend.py", line 704, in run_optional_step
+    func(*args, **kwargs)
+    ~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Afraz\HDProjects\Parim Auto\parim_user_creator_title_region_citybirth_contractend.py", line 2711, in add_passport_details
+    self.click_passport_edit()
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Afraz\HDProjects\Parim Auto\parim_user_creator_title_region_citybirth_contractend.py", line 2681, in click_passport_edit
+    raise RuntimeError(result.get("message", "Could not click Passport/ID-Card Edit"))
+RuntimeError: Passport edit link not found
+2026-06-18 17:32:56,376 | INFO | No emergency contact data found in sheet row. Skipping emergency contact step.
+2026-06-18 17:32:56,377 | INFO | No bank details found in sheet row. Skipping bank details step.
+2026-06-18 17:32:56,378 | INFO | SIA Badge is not marked Yes or has no badge data. Skipping qualification step.
+2026-06-18 17:32:56,379 | INFO | Drivers Licence is empty or negative. Skipping Drivers license qualification step.
+2026-06-18 17:32:56,380 | WARNING | NOTE: Documents: expected OneDrive ZIP folder name is Shobhan Reddy Aadur
+2026-06-18 17:32:56,382 | WARNING | NOTE: Documents: using fast browser download. Opening OneDrive and clicking Download directly.
+2026-06-18 17:32:59,358 | INFO | Waiting for OneDrive Download button
+2026-06-18 17:33:07,786 | WARNING | NOTE: Documents: Clicked OneDrive Download button directly: Download
+2026-06-18 17:33:07,787 | WARNING | NOTE: Documents: Browser downloaded: OneDrive_2026-06-18.zip
+2026-06-18 17:33:07,788 | WARNING | NOTE: Documents: Extracted OneDrive ZIP: OneDrive_2026-06-18.zip
+2026-06-18 17:33:07,789 | WARNING | NOTE: Documents: Folder security check passed. Expected: Shobhan Reddy Aadur | Found: Shobhan Reddy Aadur
+2026-06-18 17:33:07,789 | WARNING | NOTE: Documents: Documents found in download/extracted ZIP: 16
+2026-06-18 17:33:07,789 | WARNING | NOTE: Documents: Valid files prepared for upload: ACT Awareness Certificate.pdf, ACT Security Certificate.pdf, DBS Certificate.pdf, DVL - Back.jpeg, DVL - Front.jpeg, First Aid Certificate.pdf, NI Letter.pdf, Passport.pdf, Picture.jpeg, POA - Bank Statement.pdf, RegistrationForm-Shobhan Reddy Aadur.pdf, Resume-Shobhan_Reddy-Aadur.docx, SIA Badge Back.pdf, SIA Badge Front.pdf, SIA Checker.png, Term-Letter-Shobhan_Reddy-Aadur.pdf
+2026-06-18 17:33:07,790 | INFO | Prepared 16 document(s) for Parim upload: ACT Awareness Certificate.pdf, ACT Security Certificate.pdf, DBS Certificate.pdf, DVL - Back.jpeg, DVL - Front.jpeg, First Aid Certificate.pdf, NI Letter.pdf, Passport.pdf, Picture.jpeg, POA - Bank Statement.pdf, RegistrationForm-Shobhan Reddy Aadur.pdf, Resume-Shobhan_Reddy-Aadur.docx, SIA Badge Back.pdf, SIA Badge Front.pdf, SIA Checker.png, Term-Letter-Shobhan_Reddy-Aadur.pdf
+2026-06-18 17:33:07,790 | WARNING | NOTE: Documents: prepared 16 file(s) for upload with original names: ACT Awareness Certificate.pdf, ACT Security Certificate.pdf, DBS Certificate.pdf, DVL - Back.jpeg, DVL - Front.jpeg, First Aid Certificate.pdf, NI Letter.pdf, Passport.pdf, Picture.jpeg, POA - Bank Statement.pdf, RegistrationForm-Shobhan Reddy Aadur.pdf, Resume-Shobhan_Reddy-Aadur.docx, SIA Badge Back.pdf, SIA Badge Front.pdf, SIA Checker.png, Term-Letter-Shobhan_Reddy-Aadur.pdf
+2026-06-18 17:33:07,792 | INFO | Uploading profile photo from: Picture.jpeg
+2026-06-18 17:33:07,792 | INFO | Opening profile for profile photo upload: https://hd.parim.co/admin/user/view?id=5863
+2026-06-18 17:33:08,179 | INFO | Waiting 5 seconds for profile page to load
+2026-06-18 17:33:13,180 | INFO | Waiting for field: profile tabs
+2026-06-18 17:33:13,245 | INFO | Found #yw1 in context: top > frame[0]
+2026-06-18 17:33:13,255 | WARNING | NOTE: Profile photo upload failed for Picture.jpeg: RuntimeError: Profile photo thumbnail .userThumb not found
+2026-06-18 17:33:13,419 | INFO | Opening profile Docs tab: https://hd.parim.co/admin/user/view?id=5863
+2026-06-18 17:33:13,764 | INFO | Waiting 5 seconds for profile page to load
+2026-06-18 17:33:18,764 | INFO | Waiting for field: profile tabs
+2026-06-18 17:33:18,845 | INFO | Found #yw1 in context: top > frame[0]
+2026-06-18 17:33:18,857 | INFO | Waiting for field: Document upload header
+2026-06-18 17:33:18,926 | INFO | Found #document-upload-header in context: top > frame[0]
+2026-06-18 17:33:18,932 | INFO | Waiting for field: Documents list
+2026-06-18 17:33:18,976 | INFO | Found #documents-list in context: top > frame[0]
+2026-06-18 17:33:18,981 | INFO | Docs tab is ready
+2026-06-18 17:33:18,982 | INFO | Uploading document: ACT Awareness Certificate.pdf
+2026-06-18 17:33:18,998 | WARNING | NOTE: Document upload failed for ACT Awareness Certificate.pdf: RuntimeError: Document file input was not created/found after clicking Add Document
+2026-06-18 17:33:19,154 | INFO | Opening profile Docs tab: https://hd.parim.co/admin/user/view?id=5863
+2026-06-18 17:33:19,490 | INFO | Waiting 5 seconds for profile page to load
+2026-06-18 17:33:24,492 | INFO | Waiting for field: profile tabs
+2026-06-18 17:33:24,539 | INFO | Found #yw1 in context: top > frame[0]
+2026-06-18 17:33:24,553 | INFO | Waiting for field: Document upload header
+2026-06-18 17:33:24,598 | INFO | Found #document-upload-header in context: top > frame[0]
+2026-06-18 17:33:24,603 | INFO | Waiting for field: Documents list
+2026-06-18 17:33:24,645 | INFO | Found #documents-list in context: top > frame[0]
+2026-06-18 17:33:24,651 | INFO | Docs tab is ready
+2026-06-18 17:33:24,651 | INFO | Uploading document: ACT Security Certificate.pdf
+2026-06-18 17:33:24,664 | WARNING | NOTE: Document upload failed for ACT Security Certificate.pdf: RuntimeError: Document file input was not created/found after clicking Add Document
+2026-06-18 17:33:24,836 | INFO | Opening profile Docs tab: https://hd.parim.co/admin/user/view?id=5863
+2026-06-18 17:33:25,162 | INFO | Waiting 5 seconds for profile page to load
+2026-06-18 17:33:30,162 | INFO | Waiting for field: profile tabs
+2026-06-18 17:33:30,202 | INFO | Found #yw1 in context: top > frame[0]
+2026-06-18 17:33:30,214 | INFO | Waiting for field: Document upload header
+2026-06-18 17:33:30,262 | INFO | Found #document-upload-header in context: top > frame[0]
+2026-06-18 17:33:30,267 | INFO | Waiting for field: Documents list
+2026-06-18 17:33:30,311 | INFO | Found #documents-list in context: top > frame[0]
+2026-06-18 17:33:30,316 | INFO | Docs tab is ready
+2026-06-18 17:33:30,317 | INFO | Uploading document: DBS Certificate.pdf
+2026-06-18 17:33:30,330 | WARNING | NOTE: Document upload failed for DBS Certificate.pdf: RuntimeError: Document file input was not created/found after clicking Add Document
+2026-06-18 17:33:30,484 | INFO | Opening profile Docs tab: https://hd.parim.co/admin/user/view?id=5863
+2026-06-18 17:33:30,828 | INFO | Waiting 5 seconds for profile page to load
+2026-06-18 17:33:35,829 | INFO | Waiting for field: profile tabs
+2026-06-18 17:33:35,879 | INFO | Found #yw1 in context: top > frame[0]
+2026-06-18 17:33:35,892 | INFO | Waiting for field: Document upload header
+2026-06-18 17:33:35,947 | INFO | Found #document-upload-header in context: top > frame[0]
+2026-06-18 17:33:35,952 | INFO | Waiting for field: Documents list
+2026-06-18 17:33:35,995 | INFO | Found #documents-list in context: top > frame[0]
+2026-06-18 17:33:36,000 | INFO | Docs tab is ready
+2026-06-18 17:33:36,000 | INFO | Uploading document: DVL - Back.jpeg
+2026-06-18 17:33:36,012 | WARNING | NOTE: Document upload failed for DVL - Back.jpeg: RuntimeError: Document file input was not created/found after clicking Add Document
+2026-06-18 17:33:36,170 | INFO | Opening profile Docs tab: https://hd.parim.co/admin/user/view?id=5863
+2026-06-18 17:33:36,495 | INFO | Waiting 5 seconds for profile page to load
+2026-06-18 17:33:41,498 | INFO | Waiting for field: profile tabs
+2026-06-18 17:33:41,549 | INFO | Found #yw1 in context: top > frame[0]
+2026-06-18 17:33:41,565 | INFO | Waiting for field: Document upload header
+2026-06-18 17:33:41,614 | INFO | Found #document-upload-header in context: top > frame[0]
+2026-06-18 17:33:41,618 | INFO | Waiting for field: Documents list
+2026-06-18 17:33:41,655 | INFO | Found #documents-list in context: top > frame[0]
+2026-06-18 17:33:41,692 | INFO | Docs tab is ready
+2026-06-18 17:33:41,693 | INFO | Uploading document: DVL - Front.jpeg
+2026-06-18 17:33:41,706 | WARNING | NOTE: Document upload failed for DVL - Front.jpeg: RuntimeError: Document file input was not created/found after clicking Add Document
+2026-06-18 17:33:41,869 | INFO | Opening profile Docs tab: https://hd.parim.co/admin/user/view?id=5863
+2026-06-18 17:33:42,182 | INFO | Waiting 5 seconds for profile page to load
+2026-06-18 17:33:47,183 | INFO | Waiting for field: profile tabs
+2026-06-18 17:33:47,229 | INFO | Found #yw1 in context: top > frame[0]
+2026-06-18 17:33:47,240 | INFO | Waiting for field: Document upload header
+2026-06-18 17:33:47,289 | INFO | Found #document-upload-header in context: top > frame[0]
+2026-06-18 17:33:47,293 | INFO | Waiting for field: Documents list
+2026-06-18 17:33:47,329 | INFO | Found #documents-list in context: top > frame[0]
+2026-06-18 17:33:47,334 | INFO | Docs tab is ready
+2026-06-18 17:33:47,335 | INFO | Uploading document: First Aid Certificate.pdf
+2026-06-18 17:33:47,351 | WARNING | NOTE: Document upload failed for First Aid Certificate.pdf: RuntimeError: Document file input was not created/found after clicking Add Document
+2026-06-18 17:33:47,529 | INFO | Opening profile Docs tab: https://hd.parim.co/admin/user/view?id=5863
+2026-06-18 17:33:47,844 | INFO | Waiting 5 seconds for profile page to load
+2026-06-18 17:33:52,845 | INFO | Waiting for field: profile tabs
+2026-06-18 17:33:52,894 | INFO | Found #yw1 in context: top > frame[0]
+2026-06-18 17:33:52,904 | INFO | Waiting for field: Document upload header
+2026-06-18 17:33:52,952 | INFO | Found #document-upload-header in context: top > frame[0]
+2026-06-18 17:33:52,957 | INFO | Waiting for field: Documents list
+2026-06-18 17:33:53,022 | INFO | Found #documents-list in context: top > frame[0]
+2026-06-18 17:33:53,028 | INFO | Docs tab is ready
+2026-06-18 17:33:53,028 | INFO | Uploading document: NI Letter.pdf
+2026-06-18 17:33:53,039 | WARNING | NOTE: Document upload failed for NI Letter.pdf: RuntimeError: Document file input was not created/found after clicking Add Document
+2026-06-18 17:33:53,589 | INFO | Opening profile Docs tab: https://hd.parim.co/admin/user/view?id=5863
+2026-06-18 17:33:53,989 | INFO | Waiting 5 seconds for profile page to load
+2026-06-18 17:33:58,990 | INFO | Waiting for field: profile tabs
+2026-06-18 17:33:59,037 | INFO | Found #yw1 in context: top > frame[0]
+2026-06-18 17:33:59,050 | INFO | Waiting for field: Document upload header
+2026-06-18 17:33:59,102 | INFO | Found #document-upload-header in context: top > frame[0]
+2026-06-18 17:33:59,106 | INFO | Waiting for field: Documents list
+2026-06-18 17:33:59,177 | INFO | Found #documents-list in context: top > frame[0]
+2026-06-18 17:33:59,182 | INFO | Docs tab is ready
+2026-06-18 17:33:59,183 | INFO | Uploading document: Passport.pdf
+2026-06-18 17:33:59,197 | WARNING | NOTE: Document upload failed for Passport.pdf: RuntimeError: Document file input was not created/found after clicking Add Document
+2026-06-18 17:33:59,349 | INFO | Opening profile Docs tab: https://hd.parim.co/admin/user/view?id=5863
+2026-06-18 17:33:59,671 | INFO | Waiting 5 seconds for profile page to load
+2026-06-18 17:34:04,672 | INFO | Waiting for field: profile tabs
+2026-06-18 17:34:04,772 | INFO | Found #yw1 in context: top > frame[1]
+2026-06-18 17:34:04,786 | INFO | Waiting for field: Document upload header
+2026-06-18 17:34:04,863 | INFO | Found #document-upload-header in context: top > frame[1]
+2026-06-18 17:34:04,872 | INFO | Waiting for field: Documents list
+2026-06-18 17:34:04,969 | INFO | Found #documents-list in context: top > frame[1]
+2026-06-18 17:34:04,974 | INFO | Docs tab is ready
+2026-06-18 17:34:04,975 | INFO | Uploading document: Picture.jpeg
+2026-06-18 17:34:04,986 | WARNING | NOTE: Document upload failed for Picture.jpeg: RuntimeError: Document file input was not created/found after clicking Add Document
+2026-06-18 17:34:05,132 | INFO | Opening profile Docs tab: https://hd.parim.co/admin/user/view?id=5863
+2026-06-18 17:34:05,455 | INFO | Waiting 5 seconds for profile page to load
+2026-06-18 17:34:10,456 | INFO | Waiting for field: profile tabs
+2026-06-18 17:34:10,501 | INFO | Found #yw1 in context: top > frame[0]
+2026-06-18 17:34:10,512 | INFO | Waiting for field: Document upload header
+2026-06-18 17:34:10,555 | INFO | Found #document-upload-header in context: top > frame[0]
+2026-06-18 17:34:10,561 | INFO | Waiting for field: Documents list
+2026-06-18 17:34:10,594 | INFO | Found #documents-list in context: top > frame[0]
+2026-06-18 17:34:10,599 | INFO | Docs tab is ready
+2026-06-18 17:34:10,599 | INFO | Uploading document: POA - Bank Statement.pdf
+2026-06-18 17:34:10,611 | WARNING | NOTE: Document upload failed for POA - Bank Statement.pdf: RuntimeError: Document file input was not created/found after clicking Add Document
+2026-06-18 17:34:10,761 | INFO | Opening profile Docs tab: https://hd.parim.co/admin/user/view?id=5863
+2026-06-18 17:34:11,068 | INFO | Waiting 5 seconds for profile page to load
+2026-06-18 17:34:16,069 | INFO | Waiting for field: profile tabs
+2026-06-18 17:34:16,136 | INFO | Found #yw1 in context: top > frame[0]
+2026-06-18 17:34:16,162 | INFO | Waiting for field: Document upload header
+2026-06-18 17:34:16,203 | INFO | Found #document-upload-header in context: top > frame[0]
+2026-06-18 17:34:16,207 | INFO | Waiting for field: Documents list
+2026-06-18 17:34:16,240 | INFO | Found #documents-list in context: top > frame[0]
+2026-06-18 17:34:16,245 | INFO | Docs tab is ready
+2026-06-18 17:34:16,246 | INFO | Uploading document: RegistrationForm-Shobhan Reddy Aadur.pdf
+2026-06-18 17:34:16,256 | WARNING | NOTE: Document upload failed for RegistrationForm-Shobhan Reddy Aadur.pdf: RuntimeError: Document file input was not created/found after clicking Add Document
+2026-06-18 17:34:16,415 | INFO | Opening profile Docs tab: https://hd.parim.co/admin/user/view?id=5863
+2026-06-18 17:34:16,747 | INFO | Waiting 5 seconds for profile page to load
+2026-06-18 17:34:21,748 | INFO | Waiting for field: profile tabs
+2026-06-18 17:34:21,794 | INFO | Found #yw1 in context: top > frame[0]
+2026-06-18 17:34:21,807 | INFO | Waiting for field: Document upload header
+2026-06-18 17:34:21,863 | INFO | Found #document-upload-header in context: top > frame[0]
+2026-06-18 17:34:21,869 | INFO | Waiting for field: Documents list
+2026-06-18 17:34:21,917 | INFO | Found #documents-list in context: top > frame[0]
+2026-06-18 17:34:21,922 | INFO | Docs tab is ready
+2026-06-18 17:34:21,923 | INFO | Uploading document: Resume-Shobhan_Reddy-Aadur.docx
+2026-06-18 17:34:21,936 | WARNING | NOTE: Document upload failed for Resume-Shobhan_Reddy-Aadur.docx: RuntimeError: Document file input was not created/found after clicking Add Document
+2026-06-18 17:34:22,097 | INFO | Opening profile Docs tab: https://hd.parim.co/admin/user/view?id=5863
+2026-06-18 17:34:22,444 | INFO | Waiting 5 seconds for profile page to load
+2026-06-18 17:34:27,445 | INFO | Waiting for field: profile tabs
+2026-06-18 17:34:27,528 | INFO | Found #yw1 in context: top > frame[0]
+2026-06-18 17:34:27,552 | INFO | Waiting for field: Document upload header
+2026-06-18 17:34:27,609 | INFO | Found #document-upload-header in context: top > frame[0]
+2026-06-18 17:34:27,614 | INFO | Waiting for field: Documents list
+2026-06-18 17:34:27,687 | INFO | Found #documents-list in context: top > frame[0]
+2026-06-18 17:34:27,693 | INFO | Docs tab is ready
+2026-06-18 17:34:27,694 | INFO | Uploading document: SIA Badge Back.pdf
+2026-06-18 17:34:27,705 | WARNING | NOTE: Document upload failed for SIA Badge Back.pdf: RuntimeError: Document file input was not created/found after clicking Add Document
+2026-06-18 17:34:27,867 | INFO | Opening profile Docs tab: https://hd.parim.co/admin/user/view?id=5863
+2026-06-18 17:34:28,402 | INFO | Waiting 5 seconds for profile page to load
+2026-06-18 17:34:33,403 | INFO | Waiting for field: profile tabs
+2026-06-18 17:34:33,446 | INFO | Found #yw1 in context: top > frame[0]
+2026-06-18 17:34:33,456 | INFO | Waiting for field: Document upload header
+2026-06-18 17:34:33,539 | INFO | Found #document-upload-header in context: top > frame[0]
+2026-06-18 17:34:33,545 | INFO | Waiting for field: Documents list
+2026-06-18 17:34:33,585 | INFO | Found #documents-list in context: top > frame[0]
+2026-06-18 17:34:33,590 | INFO | Docs tab is ready
+2026-06-18 17:34:33,591 | INFO | Uploading document: SIA Badge Front.pdf
+2026-06-18 17:34:33,605 | WARNING | NOTE: Document upload failed for SIA Badge Front.pdf: RuntimeError: Document file input was not created/found after clicking Add Document
+2026-06-18 17:34:33,752 | INFO | Opening profile Docs tab: https://hd.parim.co/admin/user/view?id=5863
+2026-06-18 17:34:34,060 | INFO | Waiting 5 seconds for profile page to load
+2026-06-18 17:34:39,061 | INFO | Waiting for field: profile tabs
+2026-06-18 17:34:39,148 | INFO | Found #yw1 in context: top > frame[0]
+2026-06-18 17:34:39,164 | INFO | Waiting for field: Document upload header
+2026-06-18 17:34:39,248 | INFO | Found #document-upload-header in context: top > frame[0]
+2026-06-18 17:34:39,253 | INFO | Waiting for field: Documents list
+2026-06-18 17:34:39,289 | INFO | Found #documents-list in context: top > frame[0]
+2026-06-18 17:34:39,295 | INFO | Docs tab is ready
+2026-06-18 17:34:39,296 | INFO | Uploading document: SIA Checker.png
+2026-06-18 17:34:39,307 | WARNING | NOTE: Document upload failed for SIA Checker.png: RuntimeError: Document file input was not created/found after clicking Add Document
+2026-06-18 17:34:39,886 | INFO | Opening profile Docs tab: https://hd.parim.co/admin/user/view?id=5863
+2026-06-18 17:34:40,231 | INFO | Waiting 5 seconds for profile page to load
+2026-06-18 17:34:45,232 | INFO | Waiting for field: profile tabs
+2026-06-18 17:34:45,285 | INFO | Found #yw1 in context: top > frame[0]
+2026-06-18 17:34:45,296 | INFO | Waiting for field: Document upload header
+2026-06-18 17:34:45,352 | INFO | Found #document-upload-header in context: top > frame[0]
+2026-06-18 17:34:45,357 | INFO | Waiting for field: Documents list
+2026-06-18 17:34:45,428 | INFO | Found #documents-list in context: top > frame[0]
+2026-06-18 17:34:45,432 | INFO | Docs tab is ready
+2026-06-18 17:34:45,433 | INFO | Uploading document: Term-Letter-Shobhan_Reddy-Aadur.pdf
+2026-06-18 17:34:45,444 | WARNING | NOTE: Document upload failed for Term-Letter-Shobhan_Reddy-Aadur.pdf: RuntimeError: Document file input was not created/found after clicking Add Document
+2026-06-18 17:34:45,677 | INFO | Opening profile Docs tab: https://hd.parim.co/admin/user/view?id=5863
+2026-06-18 17:34:46,009 | INFO | Waiting 5 seconds for profile page to load
+2026-06-18 17:34:51,011 | INFO | Waiting for field: profile tabs
+2026-06-18 17:35:02,972 | INFO | Found #yw1 in context: top > frame[0]
+2026-06-18 17:35:03,082 | INFO | Waiting for field: Document upload header
+2026-06-18 17:35:03,380 | INFO | Found #document-upload-header in context: top > frame[0]
+2026-06-18 17:35:03,384 | INFO | Waiting for field: Documents list
+2026-06-18 17:35:03,429 | INFO | Found #documents-list in context: top > frame[0]
+2026-06-18 17:35:03,433 | INFO | Docs tab is ready
+2026-06-18 17:35:03,433 | WARNING | NOTE: Documents upload summary: attempted 16, uploaded/attempted 0, failed 16, total valid 16
+2026-06-18 17:35:03,438 | WARNING | NOTE: Documents: temporary downloaded/extracted files deleted from PC.
+2026-06-18 17:35:03,441 | WARNING | NOTE: Documents: browser download folder cleaned.
+2026-06-18 17:35:07,776 | INFO | Updated Google Sheet row 21 as Done
+2026-06-18 17:35:07,780 | INFO | Result for test113shobhan847@gmail.com: created Created successfully. Notes: Profile Title/Region/City Of Birth skipped/failed: RuntimeError: Profile update Edit link .update-user-details-link not found | Passport/ID-Card skipped/failed: RuntimeError: Passport edit link not found | Documents: expected OneDrive ZIP folder name is Shobhan Reddy Aadur | Documents: using fast browser download. Opening OneDrive and clicking Download directly. | Documents: Clicked OneDrive Download button directly: Download | Documents: Browser downloaded: OneDrive_2026-06-18.zip | Documents: Extracted OneDrive ZIP: OneDrive_2026-06-18.zip | Documents: Folder security check passed. Expected: Shobhan Reddy Aadur | Found: Shobhan Reddy Aadur | Documents: Documents found in download/extracted ZIP: 16 | Documents: Valid files prepared for upload: ACT Awareness Certificate.pdf, ACT Security Certificate.pdf, DBS Certificate.pdf, DVL - Back.jpeg, DVL - Front.jpeg, First Aid Certificate.pdf, NI Letter.pdf, Passport.pdf, Picture.jpeg, POA - Bank Statement.pdf, RegistrationForm-Shobhan Reddy Aadur.pdf, Resume-Shobhan_Reddy-Aadur.docx, SIA Badge Back.pdf, SIA Badge Front.pdf, SIA Checker.png, Term-Letter-Shobhan_Reddy-Aadur.pdf | Documents: prepared 16 file(s) for upload with original names: ACT Awareness Certificate.pdf, ACT Security Certificate.pdf, DBS Certificate.pdf, DVL - Back.jpeg, DVL - Front.jpeg, First Aid Certificate.pdf, NI Letter.pdf, Passport.pdf, Picture.jpeg, POA - Bank Statement.pdf, RegistrationForm-Shobhan Reddy Aadur.pdf, Resume-Shobhan_Reddy-Aadur.docx, SIA Badge Back.pdf, SIA Badge Front.pdf, SIA Checker.png, Term-Letter-Shobhan_Reddy-Aadur.pdf | Profile photo upload failed for Picture.jpeg: RuntimeError: Profile photo thumbnail .userThumb not found | Document upload failed for ACT Awareness Certificate.pdf: RuntimeError: Document file input was not created/found after clicking Add Document | Document upload failed for ACT Security Certificate.pdf: RuntimeError: Document file input was not created/found after clicking Add Document | Document upload failed for DBS Certificate.pdf: RuntimeError: Document file input was not created/found after clicking Add Document | Document upload failed for DVL - Back.jpeg: RuntimeError: Document file input was not created/found after clicking Add Document | Document upload failed for DVL - Front.jpeg: RuntimeError: Document file input was not created/found after clicking Add Document | Document upload failed for First Aid Certificate.pdf: RuntimeError: Document file input was not created/found after clicking Add Document | Document upload failed for NI Letter.pdf: RuntimeError: Document file input was not created/found after clicking Add Document | Document upload failed for Passport.pdf: RuntimeError: Document file input was not created/found after clicking Add Document | Document upload failed for Picture.jpeg: RuntimeError: Document file input was not created/found after clicking Add Document | Document upload failed for POA - Bank Statement.pdf: RuntimeError: Document file input was not created/found after clicking Add Document | Document upload failed for RegistrationForm-Shobhan Reddy Aadur.pdf: RuntimeError: Document file input was not created/found after clicking Add Document | Document upload failed for Resume-Shobhan_Reddy-Aadur.docx: RuntimeError: Document file input was not created/found after clicking Add Document | Document upload failed for SIA Badge Back.pdf: RuntimeError: Document file input was not created/found after clicking Add Document | Document upload failed for SIA Badge Front.pdf: RuntimeError: Document file input was not created/found after clicking Add Document | Document upload failed for SIA Checker.png: RuntimeError: Document file input was not created/found after clicking Add Document | Document upload failed for Term-Letter-Shobhan_Reddy-Aadur.pdf: RuntimeError: Document file input was not created/found after clicking Add Document | Documents upload summary: attempted 16, uploaded/attempted 0, failed 16, total valid 16 | Documents: temporary downloaded/extracted files deleted from PC. | Documents: browser download folder cleaned.
+2026-06-18 17:35:07,782 | INFO | Finished. Created: 1 | Failed: 0 | Local Results: output\results.csv
+2026-06-18 17:41:20,515 | INFO | Fetching pending rows from Google Sheet
+2026-06-18 17:42:03,884 | INFO | Fetching pending rows from Google Sheet
+2026-06-18 17:42:29,792 | INFO | Loaded 1 pending row(s) from Google Sheet
+2026-06-18 17:42:31,176 | INFO | Opening login page
+2026-06-18 17:42:37,015 | INFO | Login successful. Current URL: https://hd.parim.co/dashboard
+2026-06-18 17:42:37,015 | INFO | Creating pending row 1/1 | Sheet row 21 | test11567shobhan847@gmail.com
+2026-06-18 17:42:37,016 | INFO | Opening create user URL
+2026-06-18 17:42:37,016 | INFO | Trying create URL: https://hd.parim.co/admin/user/create
+2026-06-18 17:42:37,470 | INFO | Waiting 7 seconds for create form to appear
+2026-06-18 17:42:44,499 | INFO | After opening URL page summary: current_url=https://hd.parim.co/admin/user/create | title='Admin portal - Parim' | frames=2 | body_start='Dashboard\nSchedule\nTime Clock\nLocations\nAbsences\nPeople\nPay & Charge\nReports\nDocuments\n1\n99+\nSA'
+2026-06-18 17:42:44,544 | INFO | Found #UserDetails_first_name in context: top > frame[0]
+2026-06-18 17:42:44,554 | INFO | Create user form found at: https://hd.parim.co/admin/user/create
+2026-06-18 17:42:44,554 | INFO | Waiting for field: First Name
+2026-06-18 17:42:44,591 | INFO | Found #UserDetails_first_name in context: top > frame[0]
+2026-06-18 17:42:44,595 | INFO | Waiting for field: Last Name
+2026-06-18 17:42:44,640 | INFO | Found #UserDetails_last_name in context: top > frame[0]
+2026-06-18 17:42:44,646 | INFO | Waiting for field: Email
+2026-06-18 17:42:44,693 | INFO | Found #User_email in context: top > frame[0]
+2026-06-18 17:42:44,700 | INFO | Waiting for field: Employment Type
+2026-06-18 17:42:44,751 | INFO | Found #UserContract_contract_type_id in context: top > frame[0]
+2026-06-18 17:42:44,760 | INFO | Create user form is ready. Starting fill.
+2026-06-18 17:42:44,761 | INFO | Filling Person's Details
+2026-06-18 17:42:44,762 | INFO | Waiting for field: UserDetails_first_name
+2026-06-18 17:42:44,806 | INFO | Found #UserDetails_first_name in context: top > frame[0]
+2026-06-18 17:42:44,897 | INFO | Filled UserDetails_first_name = Shobhan Reddy
+2026-06-18 17:42:44,897 | INFO | Waiting for field: UserDetails_last_name
+2026-06-18 17:42:44,939 | INFO | Found #UserDetails_last_name in context: top > frame[0]
+2026-06-18 17:42:45,030 | INFO | Filled UserDetails_last_name = Aadur
+2026-06-18 17:42:45,031 | INFO | Waiting for field: User_email
+2026-06-18 17:42:45,072 | INFO | Found #User_email in context: top > frame[0]
+2026-06-18 17:42:45,195 | INFO | Filled User_email = test11567shobhan847@gmail.com
+2026-06-18 17:42:45,195 | INFO | Waiting for field: UserContract_contract_type_id
+2026-06-18 17:42:45,242 | INFO | Found #UserContract_contract_type_id in context: top > frame[0]
+2026-06-18 17:42:45,401 | INFO | Selected UserContract_contract_type_id = Full-time Employee
+2026-06-18 17:42:45,403 | INFO | Skipped empty field: UserContract_contract_no
+2026-06-18 17:42:45,405 | INFO | Skipped empty field: user_edit_start_date
+2026-06-18 17:42:45,409 | INFO | Waiting for field: user_edit_end_date
+2026-06-18 17:42:45,459 | INFO | Found #user_edit_end_date in context: top > frame[0]
+2026-06-18 17:42:45,662 | INFO | Filled user_edit_end_date = 24/03/2045
+2026-06-18 17:42:45,678 | WARNING | Department not found on form: Epsom
+2026-06-18 17:42:45,689 | INFO | Staff Portal access set to: False
+2026-06-18 17:42:45,690 | INFO | Waiting for field: user-create-form
+2026-06-18 17:42:45,782 | INFO | Found #user-create-form in context: top > frame[0]
+2026-06-18 17:42:45,812 | INFO | Clicked submit: Save & Next
+2026-06-18 17:42:45,812 | INFO | Waiting 5 seconds for Contacts form to appear
+2026-06-18 17:42:50,813 | INFO | Waiting for next step: Contacts form
+2026-06-18 17:42:50,910 | INFO | Found #UserDetails_phone in context: top > frame[0]
+2026-06-18 17:42:50,921 | INFO | Contacts form field is present and Selenium is in the correct frame
+2026-06-18 17:42:50,922 | INFO | Waiting for field: Contacts form
+2026-06-18 17:42:50,974 | INFO | Found #user-contacts-form in context: top > frame[0]
+2026-06-18 17:42:50,980 | INFO | Waiting for field: Mobile
+2026-06-18 17:42:51,020 | INFO | Found #UserDetails_phone in context: top > frame[0]
+2026-06-18 17:42:51,025 | INFO | Contacts form is ready and active
+2026-06-18 17:42:51,025 | INFO | Filling Contacts
+2026-06-18 17:42:51,026 | INFO | Waiting for field: Contacts form
+2026-06-18 17:42:51,061 | INFO | Found #user-contacts-form in context: top > frame[0]
+2026-06-18 17:42:51,066 | INFO | Waiting for field: Mobile
+2026-06-18 17:42:51,104 | INFO | Found #UserDetails_phone in context: top > frame[0]
+2026-06-18 17:42:51,110 | INFO | Waiting for field: UserDetails_phone
+2026-06-18 17:42:51,147 | INFO | Found #UserDetails_phone in context: top > frame[0]
+2026-06-18 17:42:51,250 | INFO | Filled UserDetails_phone = 07466300269
+2026-06-18 17:42:51,250 | INFO | Waiting for field: UserAddress_address_line
+2026-06-18 17:42:51,294 | INFO | Found #UserAddress_address_line in context: top > frame[0]
+2026-06-18 17:42:51,393 | INFO | Filled UserAddress_address_line = 18 Hilliers Lane
+2026-06-18 17:42:51,394 | INFO | Skipped empty field: UserAddress_apartment_number
+2026-06-18 17:42:51,395 | INFO | Skipped empty field: UserAddress_house_number
+2026-06-18 17:42:51,395 | INFO | Waiting for field: UserAddress_postcode
+2026-06-18 17:42:51,440 | INFO | Found #UserAddress_postcode in context: top > frame[0]
+2026-06-18 17:42:51,541 | INFO | Filled UserAddress_postcode = CR0 4SU
+2026-06-18 17:42:51,542 | INFO | Waiting for field: UserAddress_city
+2026-06-18 17:42:51,584 | INFO | Found #UserAddress_city in context: top > frame[0]
+2026-06-18 17:42:51,666 | INFO | Filled UserAddress_city = Croydon
+2026-06-18 17:42:51,667 | INFO | Waiting for field: UserAddress_country_id
+2026-06-18 17:42:51,710 | INFO | Found #UserAddress_country_id in context: top > frame[0]
+2026-06-18 17:42:51,765 | INFO | Selected UserAddress_country_id = United Kingdom
+2026-06-18 17:42:51,765 | INFO | Waiting for field: user-contacts-form
+2026-06-18 17:42:51,804 | INFO | Found #user-contacts-form in context: top > frame[0]
+2026-06-18 17:42:51,848 | INFO | Clicked submit: Save & Next
+2026-06-18 17:42:51,848 | INFO | Waiting for next step: Personal Details form
+2026-06-18 17:42:51,900 | INFO | Found #UserDetails_date_of_birth in context: top > frame[0]
+2026-06-18 17:42:51,908 | INFO | Personal Details form field is present and Selenium is in the correct frame
+2026-06-18 17:42:51,908 | INFO | Filling Personal Details in smart mode. Missing optional fields will be noted, not fatal.
+2026-06-18 17:42:51,908 | INFO | Waiting for field: Personal Details form
+2026-06-18 17:42:51,953 | INFO | Found #user-details-form in context: top > frame[0]
+2026-06-18 17:42:51,959 | INFO | Core values from sheet | Gender=Male | Nationality=British Citizen | NI=PK856422C
+2026-06-18 17:42:51,967 | INFO | Selected Gender = Male via id=UserDetails_gender_0 value=0
+2026-06-18 17:42:51,968 | INFO | Waiting for field: UserDetails_date_of_birth
+2026-06-18 17:42:52,007 | INFO | Found #UserDetails_date_of_birth in context: top > frame[0]
+2026-06-18 17:42:52,037 | INFO | Filled UserDetails_date_of_birth = 20/10/2006
+2026-06-18 17:42:52,042 | INFO | Filled Nationality via #UserDetails_nationality = British Citizen
+2026-06-18 17:42:52,043 | INFO | Waiting for field: UserDetails_birth_country_id
+2026-06-18 17:42:52,081 | INFO | Found #UserDetails_birth_country_id in context: top > frame[0]
+2026-06-18 17:42:52,127 | INFO | Selected UserDetails_birth_country_id = United Kingdom
+2026-06-18 17:42:52,128 | INFO | Waiting for field: UserDetails_city_of_birth
+2026-06-18 17:42:52,169 | INFO | Found #UserDetails_city_of_birth in context: top > frame[0]
+2026-06-18 17:42:52,197 | INFO | Filled UserDetails_city_of_birth = London
+2026-06-18 17:42:52,203 | INFO | Filled NI / Social Security number via #UserDetails_nin = PK856422C
+2026-06-18 17:42:52,204 | INFO | Waiting 3.0 seconds after core Personal Details fields. Gender=Male | Nationality=British Citizen | NI=PK856422C
+2026-06-18 17:42:52,212 | INFO | Core field values before wait | genderChecked=True | nationality=British Citizen | NI=PK856422C | DOB=20/10/2006
+2026-06-18 17:42:55,229 | INFO | Verified Personal Details before submit: Gender, Nationality and NI Number
+2026-06-18 17:42:55,232 | INFO | Waiting for field: UserDetails_visa_needed
+2026-06-18 17:42:55,287 | INFO | Found #UserDetails_visa_needed in context: top > frame[0]
+2026-06-18 17:42:55,326 | INFO | Selected UserDetails_visa_needed = No
+2026-06-18 17:42:55,332 | INFO | Verified Personal Details before submit: Gender, Nationality and NI Number
+2026-06-18 17:42:55,332 | INFO | Waiting for field: Personal Details form
+2026-06-18 17:42:55,374 | INFO | Found #user-details-form in context: top > frame[0]
+2026-06-18 17:42:55,395 | INFO | Clicked real Personal Details button: Save & Finish | blocked: none | visible buttons: Save & Finish
+2026-06-18 17:42:57,408 | INFO | Waiting for final profile link
+2026-06-18 17:42:57,428 | INFO | Created successfully. Profile URL: https://hd.parim.co/admin/user/view?id=5864
+2026-06-18 17:42:57,431 | INFO | Updating profile extra fields | Title=Mr | Region=Out of London | City Of Birth=London
+2026-06-18 17:42:57,432 | INFO | Opening profile to update Title, Region and City Of Birth: https://hd.parim.co/admin/user/view?id=5864
+2026-06-18 17:42:57,805 | INFO | Waiting 5 seconds for profile page to load
+2026-06-18 17:43:02,805 | INFO | Waiting for field: profile tabs
+2026-06-18 17:43:02,931 | INFO | Found #yw1 in context: top > frame[0]
+2026-06-18 17:43:02,956 | INFO | Waiting for update-user-details-dialog-form
+2026-06-18 17:43:04,960 | INFO | Waiting for field: Update User Details form
+2026-06-18 17:43:05,020 | INFO | Found #update-user-details-dialog-form in context: top > frame[0]
+2026-06-18 17:43:05,027 | INFO | Profile update dialog is ready
+2026-06-18 17:43:05,027 | INFO | Waiting for field: UserDetails_user_title
+2026-06-18 17:43:05,163 | INFO | Found #UserDetails_user_title in context: top > frame[0]
+2026-06-18 17:43:05,258 | INFO | Selected UserDetails_user_title = Mr
+2026-06-18 17:43:05,258 | WARNING | NOTE: Title added/updated: Mr
+2026-06-18 17:43:05,259 | INFO | Waiting for field: UserDetails_city_of_birth
+2026-06-18 17:43:05,297 | INFO | Found #UserDetails_city_of_birth in context: top > frame[0]
+2026-06-18 17:43:05,405 | INFO | Filled UserDetails_city_of_birth = London
+2026-06-18 17:43:05,405 | WARNING | NOTE: City Of Birth added/updated: London
+2026-06-18 17:43:05,412 | INFO | Selected profile region: Out of London
+2026-06-18 17:43:06,413 | INFO | Waiting for field: update-user-details-dialog-form
+2026-06-18 17:43:06,453 | INFO | Found #update-user-details-dialog-form in context: top > frame[0]
+2026-06-18 17:43:06,473 | INFO | Clicked submit: Update
+2026-06-18 17:43:07,503 | INFO | Profile Title/Region/City Of Birth update step completed
+2026-06-18 17:43:07,504 | INFO | No UTR or Tax Code found in sheet row. Skipping Work Details update.
+2026-06-18 17:43:07,506 | INFO | Adding passport details for profile: https://hd.parim.co/admin/user/view?id=5864
+2026-06-18 17:43:07,507 | INFO | Opening created profile for extra details: https://hd.parim.co/admin/user/view?id=5864
+2026-06-18 17:43:07,834 | INFO | Waiting 5 seconds for profile page to load
+2026-06-18 17:43:12,835 | INFO | Waiting for field: profile tabs
+2026-06-18 17:43:12,911 | INFO | Found #yw1 in context: top > frame[0]
+2026-06-18 17:43:12,917 | INFO | Waiting for field: Passport/ID-Card section
+2026-06-18 17:43:12,967 | INFO | Found #passport-details in context: top > frame[0]
+2026-06-18 17:43:12,973 | INFO | Profile Details tab is ready
+2026-06-18 17:43:12,976 | INFO | Clicking Passport/ID-Card Edit
+2026-06-18 17:43:12,976 | INFO | Waiting for field: Passport/ID-Card section
+2026-06-18 17:43:13,013 | INFO | Found #passport-details in context: top > frame[0]
+2026-06-18 17:43:13,029 | INFO | Waiting 3 seconds for passport dialog
+2026-06-18 17:43:16,030 | INFO | Waiting for field: Passport dialog form
+2026-06-18 17:43:16,083 | INFO | Found #update-user-passport-dialog-form in context: top > frame[0]
+2026-06-18 17:43:16,090 | INFO | Waiting for field: Passport Document No
+2026-06-18 17:43:16,131 | INFO | Found #UserPassport_document_no in context: top > frame[0]
+2026-06-18 17:43:16,137 | INFO | Passport dialog is ready
+2026-06-18 17:43:16,137 | INFO | Waiting for field: UserPassport_document_no
+2026-06-18 17:43:16,270 | INFO | Found #UserPassport_document_no in context: top > frame[0]
+2026-06-18 17:43:16,354 | INFO | Filled UserPassport_document_no = 128020015
+2026-06-18 17:43:16,354 | INFO | Waiting for field: UserPassport_country_of_issue_id
+2026-06-18 17:43:16,394 | INFO | Found #UserPassport_country_of_issue_id in context: top > frame[0]
+2026-06-18 17:43:16,478 | INFO | Selected UserPassport_country_of_issue_id = United Kingdom
+2026-06-18 17:43:16,478 | INFO | Waiting for field: date_of_issue
+2026-06-18 17:43:16,521 | INFO | Found #date_of_issue in context: top > frame[0]
+2026-06-18 17:43:16,693 | INFO | Filled date_of_issue = 24/01/2023
+2026-06-18 17:43:16,694 | INFO | Waiting for field: date_of_expiry
+2026-06-18 17:43:16,744 | INFO | Found #date_of_expiry in context: top > frame[0]
+2026-06-18 17:43:16,892 | INFO | Filled date_of_expiry = 24/01/2033
+2026-06-18 17:43:16,892 | INFO | Waiting for field: update-user-passport-dialog-form
+2026-06-18 17:43:16,933 | INFO | Found #update-user-passport-dialog-form in context: top > frame[0]
+2026-06-18 17:43:16,953 | INFO | Clicked submit: Create
+2026-06-18 17:43:16,954 | INFO | Waiting for passport save confirmation
+2026-06-18 17:43:17,477 | INFO | Passport/ID-Card details saved successfully
+2026-06-18 17:43:17,478 | INFO | No emergency contact data found in sheet row. Skipping emergency contact step.
+2026-06-18 17:43:17,479 | INFO | No bank details found in sheet row. Skipping bank details step.
+2026-06-18 17:43:17,481 | INFO | SIA Badge is not marked Yes or has no badge data. Skipping qualification step.
+2026-06-18 17:43:17,481 | INFO | Drivers Licence is empty or negative. Skipping Drivers license qualification step.
+2026-06-18 17:43:17,482 | WARNING | NOTE: Documents: expected OneDrive ZIP folder name is Shobhan Reddy Aadur
+2026-06-18 17:43:17,484 | WARNING | NOTE: Documents: using fast browser download. Opening OneDrive and clicking Download directly.
+2026-06-18 17:43:20,483 | INFO | Waiting for OneDrive Download button
+2026-06-18 17:43:28,806 | WARNING | NOTE: Documents: Clicked OneDrive Download button directly: Download
+2026-06-18 17:43:28,806 | WARNING | NOTE: Documents: Browser downloaded: OneDrive_2026-06-18.zip
+2026-06-18 17:43:28,807 | WARNING | NOTE: Documents: Extracted OneDrive ZIP: OneDrive_2026-06-18.zip
+2026-06-18 17:43:28,808 | WARNING | NOTE: Documents: Folder security check passed. Expected: Shobhan Reddy Aadur | Found: Shobhan Reddy Aadur
+2026-06-18 17:43:28,809 | WARNING | NOTE: Documents: Documents found in download/extracted ZIP: 16
+2026-06-18 17:43:28,809 | WARNING | NOTE: Documents: Valid files prepared for upload: ACT Awareness Certificate.pdf, ACT Security Certificate.pdf, DBS Certificate.pdf, DVL - Back.jpeg, DVL - Front.jpeg, First Aid Certificate.pdf, NI Letter.pdf, Passport.pdf, Picture.jpeg, POA - Bank Statement.pdf, RegistrationForm-Shobhan Reddy Aadur.pdf, Resume-Shobhan_Reddy-Aadur.docx, SIA Badge Back.pdf, SIA Badge Front.pdf, SIA Checker.png, Term-Letter-Shobhan_Reddy-Aadur.pdf
+2026-06-18 17:43:28,810 | INFO | Prepared 16 document(s) for Parim upload: ACT Awareness Certificate.pdf, ACT Security Certificate.pdf, DBS Certificate.pdf, DVL - Back.jpeg, DVL - Front.jpeg, First Aid Certificate.pdf, NI Letter.pdf, Passport.pdf, Picture.jpeg, POA - Bank Statement.pdf, RegistrationForm-Shobhan Reddy Aadur.pdf, Resume-Shobhan_Reddy-Aadur.docx, SIA Badge Back.pdf, SIA Badge Front.pdf, SIA Checker.png, Term-Letter-Shobhan_Reddy-Aadur.pdf
+2026-06-18 17:43:28,810 | WARNING | NOTE: Documents: prepared 16 file(s) for upload with original names: ACT Awareness Certificate.pdf, ACT Security Certificate.pdf, DBS Certificate.pdf, DVL - Back.jpeg, DVL - Front.jpeg, First Aid Certificate.pdf, NI Letter.pdf, Passport.pdf, Picture.jpeg, POA - Bank Statement.pdf, RegistrationForm-Shobhan Reddy Aadur.pdf, Resume-Shobhan_Reddy-Aadur.docx, SIA Badge Back.pdf, SIA Badge Front.pdf, SIA Checker.png, Term-Letter-Shobhan_Reddy-Aadur.pdf
+2026-06-18 17:43:28,812 | INFO | Uploading profile photo from: Picture.jpeg
+2026-06-18 17:43:28,812 | INFO | Opening profile for profile photo upload: https://hd.parim.co/admin/user/view?id=5864
+2026-06-18 17:43:29,158 | INFO | Waiting 5 seconds for profile page to load
+2026-06-18 17:43:34,158 | INFO | Waiting for field: profile tabs
+2026-06-18 17:43:34,202 | INFO | Found #yw1 in context: top > frame[0]
+2026-06-18 17:43:34,229 | INFO | Waiting for profile photo dialog
+2026-06-18 17:43:36,230 | INFO | Waiting for field: Profile photo dialog
+2026-06-18 17:43:36,297 | INFO | Found #parimDialog0 in context: top > frame[0]
+2026-06-18 17:43:36,304 | INFO | Profile photo dialog is open
+2026-06-18 17:43:37,335 | INFO | Waiting for field: Profile photo file input
+2026-06-18 17:43:37,486 | INFO | Found #file_input_before_1_1781786616308 in context: top > frame[0]
+2026-06-18 17:43:37,512 | INFO | Waiting for profile photo upload processing: Picture.jpeg
+2026-06-18 17:43:37,699 | INFO | Clicked profile photo Done: Done
+2026-06-18 17:43:40,724 | INFO | Profile photo upload flow completed: Picture.jpeg
+2026-06-18 17:43:40,725 | WARNING | NOTE: Profile photo uploaded from: Picture.jpeg
+2026-06-18 17:43:40,727 | INFO | Opening profile Docs tab: https://hd.parim.co/admin/user/view?id=5864
+2026-06-18 17:43:41,082 | INFO | Waiting 5 seconds for profile page to load
+2026-06-18 17:43:46,083 | INFO | Waiting for field: profile tabs
+2026-06-18 17:43:46,137 | INFO | Found #yw1 in context: top > frame[0]
+2026-06-18 17:43:46,160 | INFO | Waiting for field: Document upload header
+2026-06-18 17:43:46,210 | INFO | Found #document-upload-header in context: top > frame[0]
+2026-06-18 17:43:46,216 | INFO | Waiting for field: Documents list
+2026-06-18 17:43:46,257 | INFO | Found #documents-list in context: top > frame[0]
+2026-06-18 17:43:46,261 | INFO | Docs tab is ready
+2026-06-18 17:43:46,261 | INFO | Uploading document: ACT Awareness Certificate.pdf
+2026-06-18 17:43:46,278 | INFO | Waiting for field: Document file input
+2026-06-18 17:43:46,319 | INFO | Found #parim_document_upload_input_runtime in context: top > frame[0]
+2026-06-18 17:43:46,341 | INFO | Waiting for document to be queued: ACT Awareness Certificate.pdf
+2026-06-18 17:43:46,362 | INFO | Clicked Start upload for: ACT Awareness Certificate.pdf
+2026-06-18 17:43:46,402 | INFO | Document upload completed or queued finished: ACT Awareness Certificate.pdf | state=queue_finished
+2026-06-18 17:43:46,402 | WARNING | NOTE: Document ACT Awareness Certificate.pdf upload queue finished. Parim grid may refresh later.
+2026-06-18 17:43:47,005 | WARNING | NOTE: Document uploaded/attempted: ACT Awareness Certificate.pdf (queue_finished)
+2026-06-18 17:43:47,406 | INFO | Uploading document: ACT Security Certificate.pdf
+2026-06-18 17:43:47,420 | INFO | Waiting for field: Document file input
+2026-06-18 17:43:47,462 | INFO | Found #parim_document_upload_input_runtime in context: top > frame[0]
+2026-06-18 17:43:47,492 | INFO | Waiting for document to be queued: ACT Security Certificate.pdf
+2026-06-18 17:43:47,513 | INFO | Clicked Start upload for: ACT Security Certificate.pdf
+2026-06-18 17:43:47,522 | INFO | Document upload completed or queued finished: ACT Security Certificate.pdf | state=queue_finished
+2026-06-18 17:43:47,522 | WARNING | NOTE: Document ACT Security Certificate.pdf upload queue finished. Parim grid may refresh later.
+2026-06-18 17:43:48,123 | WARNING | NOTE: Document uploaded/attempted: ACT Security Certificate.pdf (queue_finished)
+2026-06-18 17:43:48,524 | INFO | Uploading document: DBS Certificate.pdf
+2026-06-18 17:43:48,538 | INFO | Waiting for field: Document file input
+2026-06-18 17:43:48,581 | INFO | Found #parim_document_upload_input_runtime in context: top > frame[0]
+2026-06-18 17:43:48,617 | INFO | Waiting for document to be queued: DBS Certificate.pdf
+2026-06-18 17:43:48,642 | INFO | Clicked Start upload for: DBS Certificate.pdf
+2026-06-18 17:43:48,648 | INFO | Document upload completed or queued finished: DBS Certificate.pdf | state=list_changed
+2026-06-18 17:43:49,249 | WARNING | NOTE: Document uploaded/attempted: DBS Certificate.pdf (list_changed)
+2026-06-18 17:43:49,652 | INFO | Uploading document: DVL - Back.jpeg
+2026-06-18 17:43:49,666 | INFO | Waiting for field: Document file input
+2026-06-18 17:43:49,711 | INFO | Found #parim_document_upload_input_runtime in context: top > frame[0]
+2026-06-18 17:43:49,739 | INFO | Waiting for document to be queued: DVL - Back.jpeg
+2026-06-18 17:43:49,779 | INFO | Clicked Start upload for: DVL - Back.jpeg
+2026-06-18 17:43:49,787 | INFO | Document upload completed or queued finished: DVL - Back.jpeg | state=list_changed
+2026-06-18 17:43:50,387 | WARNING | NOTE: Document uploaded/attempted: DVL - Back.jpeg (list_changed)
+2026-06-18 17:43:50,789 | INFO | Uploading document: DVL - Front.jpeg
+2026-06-18 17:43:50,805 | INFO | Waiting for field: Document file input
+2026-06-18 17:43:50,843 | INFO | Found #parim_document_upload_input_runtime in context: top > frame[0]
+2026-06-18 17:43:50,864 | INFO | Waiting for document to be queued: DVL - Front.jpeg
+2026-06-18 17:43:50,908 | INFO | Clicked Start upload for: DVL - Front.jpeg
+2026-06-18 17:43:50,914 | INFO | Document upload completed or queued finished: DVL - Front.jpeg | state=list_changed
+2026-06-18 17:43:51,514 | WARNING | NOTE: Document uploaded/attempted: DVL - Front.jpeg (list_changed)
+2026-06-18 17:43:51,916 | INFO | Uploading document: First Aid Certificate.pdf
+2026-06-18 17:43:51,933 | INFO | Waiting for field: Document file input
+2026-06-18 17:43:51,981 | INFO | Found #parim_document_upload_input_runtime in context: top > frame[0]
+2026-06-18 17:43:52,008 | INFO | Waiting for document to be queued: First Aid Certificate.pdf
+2026-06-18 17:43:52,028 | INFO | Clicked Start upload for: First Aid Certificate.pdf
+2026-06-18 17:43:52,039 | INFO | Document upload completed or queued finished: First Aid Certificate.pdf | state=list_changed
+2026-06-18 17:43:52,641 | WARNING | NOTE: Document uploaded/attempted: First Aid Certificate.pdf (list_changed)
+2026-06-18 17:43:53,042 | INFO | Uploading document: NI Letter.pdf
+2026-06-18 17:43:53,058 | INFO | Waiting for field: Document file input
+2026-06-18 17:43:53,095 | INFO | Found #parim_document_upload_input_runtime in context: top > frame[0]
+2026-06-18 17:43:53,123 | INFO | Waiting for document to be queued: NI Letter.pdf
+2026-06-18 17:43:53,141 | INFO | Clicked Start upload for: NI Letter.pdf
+2026-06-18 17:43:53,148 | INFO | Document upload completed or queued finished: NI Letter.pdf | state=list_changed
+2026-06-18 17:43:53,749 | WARNING | NOTE: Document uploaded/attempted: NI Letter.pdf (list_changed)
+2026-06-18 17:43:54,151 | INFO | Uploading document: Passport.pdf
+2026-06-18 17:43:54,172 | INFO | Waiting for field: Document file input
+2026-06-18 17:43:54,226 | INFO | Found #parim_document_upload_input_runtime in context: top > frame[0]
+2026-06-18 17:43:54,256 | INFO | Waiting for document to be queued: Passport.pdf
+2026-06-18 17:43:54,274 | INFO | Clicked Start upload for: Passport.pdf
+2026-06-18 17:43:54,281 | INFO | Document upload completed or queued finished: Passport.pdf | state=list_changed
+2026-06-18 17:43:54,881 | WARNING | NOTE: Document uploaded/attempted: Passport.pdf (list_changed)
+2026-06-18 17:43:55,282 | INFO | Uploading document: Picture.jpeg
+2026-06-18 17:43:55,296 | INFO | Waiting for field: Document file input
+2026-06-18 17:43:55,338 | INFO | Found #parim_document_upload_input_runtime in context: top > frame[0]
+2026-06-18 17:43:55,362 | INFO | Waiting for document to be queued: Picture.jpeg
+2026-06-18 17:43:55,425 | INFO | Clicked Start upload for: Picture.jpeg
+2026-06-18 17:43:55,434 | INFO | Document upload completed or queued finished: Picture.jpeg | state=list_changed
+2026-06-18 17:43:56,036 | WARNING | NOTE: Document uploaded/attempted: Picture.jpeg (list_changed)
+2026-06-18 17:43:56,438 | INFO | Uploading document: POA - Bank Statement.pdf
+2026-06-18 17:43:56,455 | INFO | Waiting for field: Document file input
+2026-06-18 17:43:56,499 | INFO | Found #parim_document_upload_input_runtime in context: top > frame[0]
+2026-06-18 17:43:56,526 | INFO | Waiting for document to be queued: POA - Bank Statement.pdf
+2026-06-18 17:43:56,543 | INFO | Clicked Start upload for: POA - Bank Statement.pdf
+2026-06-18 17:43:56,554 | INFO | Document upload completed or queued finished: POA - Bank Statement.pdf | state=list_changed
+2026-06-18 17:43:57,155 | WARNING | NOTE: Document uploaded/attempted: POA - Bank Statement.pdf (list_changed)
+2026-06-18 17:43:57,556 | INFO | Uploading document: RegistrationForm-Shobhan Reddy Aadur.pdf
+2026-06-18 17:43:57,589 | INFO | Waiting for field: Document file input
+2026-06-18 17:43:57,633 | INFO | Found #parim_document_upload_input_runtime in context: top > frame[0]
+2026-06-18 17:43:57,662 | INFO | Waiting for document to be queued: RegistrationForm-Shobhan Reddy Aadur.pdf
+2026-06-18 17:43:57,680 | INFO | Clicked Start upload for: RegistrationForm-Shobhan Reddy Aadur.pdf
+2026-06-18 17:43:57,690 | INFO | Document upload completed or queued finished: RegistrationForm-Shobhan Reddy Aadur.pdf | state=list_changed
+2026-06-18 17:43:58,291 | WARNING | NOTE: Document uploaded/attempted: RegistrationForm-Shobhan Reddy Aadur.pdf (list_changed)
+2026-06-18 17:43:58,692 | INFO | Uploading document: Resume-Shobhan_Reddy-Aadur.docx
+2026-06-18 17:43:58,714 | INFO | Waiting for field: Document file input
+2026-06-18 17:43:58,766 | INFO | Found #parim_document_upload_input_runtime in context: top > frame[0]
+2026-06-18 17:43:58,791 | INFO | Waiting for document to be queued: Resume-Shobhan_Reddy-Aadur.docx
+2026-06-18 17:43:58,806 | INFO | Clicked Start upload for: Resume-Shobhan_Reddy-Aadur.docx
+2026-06-18 17:43:58,814 | INFO | Document upload completed or queued finished: Resume-Shobhan_Reddy-Aadur.docx | state=list_changed
+2026-06-18 17:43:59,414 | WARNING | NOTE: Document uploaded/attempted: Resume-Shobhan_Reddy-Aadur.docx (list_changed)
+2026-06-18 17:43:59,815 | INFO | Uploading document: SIA Badge Back.pdf
+2026-06-18 17:43:59,829 | INFO | Waiting for field: Document file input
+2026-06-18 17:43:59,875 | INFO | Found #parim_document_upload_input_runtime in context: top > frame[0]
+2026-06-18 17:43:59,898 | INFO | Waiting for document to be queued: SIA Badge Back.pdf
+2026-06-18 17:43:59,918 | INFO | Clicked Start upload for: SIA Badge Back.pdf
+2026-06-18 17:43:59,927 | INFO | Document upload completed or queued finished: SIA Badge Back.pdf | state=list_changed
+2026-06-18 17:44:00,529 | WARNING | NOTE: Document uploaded/attempted: SIA Badge Back.pdf (list_changed)
+2026-06-18 17:44:00,931 | INFO | Uploading document: SIA Badge Front.pdf
+2026-06-18 17:44:00,962 | INFO | Waiting for field: Document file input
+2026-06-18 17:44:01,017 | INFO | Found #parim_document_upload_input_runtime in context: top > frame[0]
+2026-06-18 17:44:01,043 | INFO | Waiting for document to be queued: SIA Badge Front.pdf
+2026-06-18 17:44:01,061 | INFO | Clicked Start upload for: SIA Badge Front.pdf
+2026-06-18 17:44:01,070 | INFO | Document upload completed or queued finished: SIA Badge Front.pdf | state=list_changed
+2026-06-18 17:44:01,671 | WARNING | NOTE: Document uploaded/attempted: SIA Badge Front.pdf (list_changed)
+2026-06-18 17:44:02,072 | INFO | Uploading document: SIA Checker.png
+2026-06-18 17:44:02,097 | INFO | Waiting for field: Document file input
+2026-06-18 17:44:02,141 | INFO | Found #parim_document_upload_input_runtime in context: top > frame[0]
+2026-06-18 17:44:02,165 | INFO | Waiting for document to be queued: SIA Checker.png
+2026-06-18 17:44:02,194 | INFO | Clicked Start upload for: SIA Checker.png
+2026-06-18 17:44:02,204 | INFO | Document upload completed or queued finished: SIA Checker.png | state=list_changed
+2026-06-18 17:44:02,805 | WARNING | NOTE: Document uploaded/attempted: SIA Checker.png (list_changed)
+2026-06-18 17:44:03,206 | INFO | Uploading document: Term-Letter-Shobhan_Reddy-Aadur.pdf
+2026-06-18 17:44:03,220 | INFO | Waiting for field: Document file input
+2026-06-18 17:44:03,261 | INFO | Found #parim_document_upload_input_runtime in context: top > frame[0]
+2026-06-18 17:44:03,284 | INFO | Waiting for document to be queued: Term-Letter-Shobhan_Reddy-Aadur.pdf
+2026-06-18 17:44:03,304 | INFO | Clicked Start upload for: Term-Letter-Shobhan_Reddy-Aadur.pdf
+2026-06-18 17:44:03,314 | INFO | Document upload completed or queued finished: Term-Letter-Shobhan_Reddy-Aadur.pdf | state=list_changed
+2026-06-18 17:44:03,915 | WARNING | NOTE: Document uploaded/attempted: Term-Letter-Shobhan_Reddy-Aadur.pdf (list_changed)
+2026-06-18 17:44:04,315 | WARNING | NOTE: Documents upload summary: attempted 16, uploaded/attempted 16, failed 0, total valid 16
+2026-06-18 17:44:04,327 | WARNING | NOTE: Documents: temporary downloaded/extracted files deleted from PC.
+2026-06-18 17:44:04,330 | WARNING | NOTE: Documents: browser download folder cleaned.
+2026-06-18 17:44:08,828 | INFO | Updated Google Sheet row 21 as Done
+2026-06-18 17:44:08,834 | INFO | Result for test11567shobhan847@gmail.com: created Created successfully. Notes: Title added/updated: Mr | City Of Birth added/updated: London | Documents: expected OneDrive ZIP folder name is Shobhan Reddy Aadur | Documents: using fast browser download. Opening OneDrive and clicking Download directly. | Documents: Clicked OneDrive Download button directly: Download | Documents: Browser downloaded: OneDrive_2026-06-18.zip | Documents: Extracted OneDrive ZIP: OneDrive_2026-06-18.zip | Documents: Folder security check passed. Expected: Shobhan Reddy Aadur | Found: Shobhan Reddy Aadur | Documents: Documents found in download/extracted ZIP: 16 | Documents: Valid files prepared for upload: ACT Awareness Certificate.pdf, ACT Security Certificate.pdf, DBS Certificate.pdf, DVL - Back.jpeg, DVL - Front.jpeg, First Aid Certificate.pdf, NI Letter.pdf, Passport.pdf, Picture.jpeg, POA - Bank Statement.pdf, RegistrationForm-Shobhan Reddy Aadur.pdf, Resume-Shobhan_Reddy-Aadur.docx, SIA Badge Back.pdf, SIA Badge Front.pdf, SIA Checker.png, Term-Letter-Shobhan_Reddy-Aadur.pdf | Documents: prepared 16 file(s) for upload with original names: ACT Awareness Certificate.pdf, ACT Security Certificate.pdf, DBS Certificate.pdf, DVL - Back.jpeg, DVL - Front.jpeg, First Aid Certificate.pdf, NI Letter.pdf, Passport.pdf, Picture.jpeg, POA - Bank Statement.pdf, RegistrationForm-Shobhan Reddy Aadur.pdf, Resume-Shobhan_Reddy-Aadur.docx, SIA Badge Back.pdf, SIA Badge Front.pdf, SIA Checker.png, Term-Letter-Shobhan_Reddy-Aadur.pdf | Profile photo uploaded from: Picture.jpeg | Document ACT Awareness Certificate.pdf upload queue finished. Parim grid may refresh later. | Document uploaded/attempted: ACT Awareness Certificate.pdf (queue_finished) | Document ACT Security Certificate.pdf upload queue finished. Parim grid may refresh later. | Document uploaded/attempted: ACT Security Certificate.pdf (queue_finished) | Document uploaded/attempted: DBS Certificate.pdf (list_changed) | Document uploaded/attempted: DVL - Back.jpeg (list_changed) | Document uploaded/attempted: DVL - Front.jpeg (list_changed) | Document uploaded/attempted: First Aid Certificate.pdf (list_changed) | Document uploaded/attempted: NI Letter.pdf (list_changed) | Document uploaded/attempted: Passport.pdf (list_changed) | Document uploaded/attempted: Picture.jpeg (list_changed) | Document uploaded/attempted: POA - Bank Statement.pdf (list_changed) | Document uploaded/attempted: RegistrationForm-Shobhan Reddy Aadur.pdf (list_changed) | Document uploaded/attempted: Resume-Shobhan_Reddy-Aadur.docx (list_changed) | Document uploaded/attempted: SIA Badge Back.pdf (list_changed) | Document uploaded/attempted: SIA Badge Front.pdf (list_changed) | Document uploaded/attempted: SIA Checker.png (list_changed) | Document uploaded/attempted: Term-Letter-Shobhan_Reddy-Aadur.pdf (list_changed) | Documents upload summary: attempted 16, uploaded/attempted 16, failed 0, total valid 16 | Documents: temporary downloaded/extracted files deleted from PC. | Documents: browser download folder cleaned.
+2026-06-18 17:44:08,837 | INFO | Finished. Created: 1 | Failed: 0 | Local Results: output\results.csv

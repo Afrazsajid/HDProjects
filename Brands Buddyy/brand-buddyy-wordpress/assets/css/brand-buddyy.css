@@ -1,0 +1,43 @@
+.bb-logo {
+  display: inline-flex;
+  flex-direction: column;
+  color: #111;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 19px;
+  font-weight: 500;
+  letter-spacing: -1px;
+  line-height: .72;
+  white-space: nowrap;
+}
+.bb-logo strong { font-size: 27px; font-weight: 800; }
+.as-header-1-logo .bb-logo { color: #fff; transform: rotate(-14deg); }
+.as-footer-1-logo .bb-logo { color: #fff; font-size: 35px; }
+.as-footer-1-logo .bb-logo strong { font-size: 49px; }
+.bb-replaced-title { opacity: 1 !important; transform: none !important; }
+.bb-hide-pricing { display: none !important; }
+.bb-conceal { display: none !important; }
+.bb-video-message {
+  background: #fd3f00;
+  min-height: 260px;
+  position: relative;
+}
+.bb-video-message::after {
+  content: "Clear strategy. Clean execution. Measurable next steps.";
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(24px, 3vw, 46px);
+  font-weight: 800;
+  letter-spacing: -.04em;
+  line-height: 1;
+  padding: 35px;
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+}
+.as-header-1-main-navigation .nav { gap: 28px; }
+.as-header-1-main-navigation .nav > li > a { white-space: nowrap; }
+@media (max-width: 767px) {
+  .bb-logo { font-size: 15px; }
+  .bb-logo strong { font-size: 22px; }
+}

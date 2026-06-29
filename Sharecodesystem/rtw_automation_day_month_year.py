@@ -24,7 +24,7 @@ WEB_APP_URL = "https://script.google.com/macros/s/AKfycbw1goxZyT4n6bemiK1bjGEVL5
 # Must match the token inside your Apps Script
 API_TOKEN = "xyx4321765"
 
-COMPANY_NAME = "HandDRecruitment"
+COMPANY_NAME = "HandDSecurity"
 
 # Official GOV.UK start page
 GOV_START_URL = "https://www.gov.uk/view-right-to-work"

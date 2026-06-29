@@ -1,0 +1,12 @@
+2026-06-25 17:14:08,757 | INFO | Processing row 65, share code W4J EXG 7W5
+2026-06-25 17:14:24,214 | INFO | Extracted person name: MOHIT ARORA
+2026-06-25 17:14:30,960 | INFO | Row 65 completed.
+2026-06-25 17:14:30,960 | INFO | Person name: MOHIT ARORA
+2026-06-25 17:14:30,960 | INFO | PDF: C:\Users\Afraz\HDProjects\Sharecodesystem\rtw_downloads\Mohit_Arora-W4JEXG7W5.pdf
+2026-06-25 17:14:30,960 | INFO | Sheet update response: {'success': True, 'row': 65, 'status': 'Done', 'message': 'Row marked as Done'}
+2026-06-25 17:24:08,854 | INFO | Processing row 66, share code W4X N7F 7Z3
+2026-06-25 17:24:22,965 | INFO | Extracted person name: IRFAN ARIF
+2026-06-25 17:24:28,594 | INFO | Row 66 completed.
+2026-06-25 17:24:28,594 | INFO | Person name: IRFAN ARIF
+2026-06-25 17:24:28,594 | INFO | PDF: C:\Users\Afraz\HDProjects\Sharecodesystem\rtw_downloads\Irfan_Arif-W4XN7F7Z3.pdf
+2026-06-25 17:24:28,594 | INFO | Sheet update response: {'success': True, 'row': 66, 'status': 'Done', 'message': 'Row marked as Done'}
