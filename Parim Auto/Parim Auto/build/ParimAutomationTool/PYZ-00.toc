@@ -1,5 +1,5 @@
-('C:\\Users\\Afraz\\HDProjects\\Parim '
- 'Auto\\build\\ParimTitleRegionCityBirth\\PYZ-00.pyz',
+('C:\\Users\\Afraz\\HDProjects\\Parim Auto\\Parim '
+ 'Auto\\build\\ParimAutomationTool\\PYZ-00.pyz',
  [('__future__',
    'C:\\Users\\Afraz\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\__future__.py',
    'PYMODULE'),
@@ -284,9 +284,6 @@
    'PYMODULE'),
   ('certifi',
    'C:\\Users\\Afraz\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\certifi\\__init__.py',
-   'PYMODULE'),
-  ('certifi.__main__',
-   'C:\\Users\\Afraz\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\certifi\\__main__.py',
    'PYMODULE'),
   ('certifi.core',
    'C:\\Users\\Afraz\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\certifi\\core.py',
@@ -923,6 +920,9 @@
    'PYMODULE'),
   ('requests.exceptions',
    'C:\\Users\\Afraz\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\requests\\exceptions.py',
+   'PYMODULE'),
+  ('requests.help',
+   'C:\\Users\\Afraz\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\requests\\help.py',
    'PYMODULE'),
   ('requests.hooks',
    'C:\\Users\\Afraz\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\requests\\hooks.py',

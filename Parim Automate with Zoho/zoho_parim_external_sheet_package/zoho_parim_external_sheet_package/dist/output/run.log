@@ -1252,3 +1252,32 @@ Stacktrace:
 	KERNEL32!BaseThreadInitThunk [0x7ff942f97374+14]
 	ntdll!RtlUserThreadStart [0x7ff944b3cc91+21]
 
+2026-06-29 17:32:59,974 | INFO | Fetching pending rows from Google Sheet
+2026-06-29 17:33:02,918 | INFO | Loaded 1 pending row(s) from Google Sheet
+2026-06-29 17:33:18,278 | INFO | Opening login page
+2026-06-29 17:33:25,934 | INFO | Login successful. Current URL: https://hd.parim.co/dashboard
+2026-06-29 17:33:25,935 | INFO | Creating pending row 1/1 | Sheet row 6 | rafasr2019@gmail.com
+2026-06-29 17:33:25,937 | INFO | Opening create user URL
+2026-06-29 17:33:25,937 | INFO | Trying create URL: https://hd.parim.co/admin/user/create
+2026-06-29 17:33:26,338 | INFO | Waiting 7 seconds for create form to appear
+2026-06-29 17:33:33,366 | INFO | After opening URL page summary: current_url=https://hd.parim.co/admin/user/create | title='Admin portal - Parim' | frames=0 | body_start='Logout\nTo Continue you must accept Parim Privacy Policy and Terms & Conditions.\nBy accepting, you agree to Parim’s Privacy Policyand\xa0Terms & Conditions.\n\nPlease take a few minutes to read and understand them.\nI accept'
+2026-06-29 17:33:41,729 | WARNING | Create form not found at https://hd.parim.co/admin/user/create
+2026-06-29 17:33:42,643 | INFO | Trying create URL: https://hd.parim.co/a/admin/user/create
+2026-06-29 17:33:44,395 | INFO | Waiting 7 seconds for create form to appear
+2026-06-29 17:33:53,150 | INFO | After opening URL page summary: current_url=https://hd.parim.co/admin/site/index | title='Admin portal - Parim' | frames=0 | body_start=''
+2026-06-29 17:34:01,661 | WARNING | Create form not found at https://hd.parim.co/a/admin/user/create
+2026-06-29 17:34:01,981 | ERROR | Failed row: rafasr2019@gmail.com
+Traceback (most recent call last):
+  File "C:\Users\Afraz\HDProjects\Parim Automate with Zoho\zoho_parim_external_sheet_package\zoho_parim_external_sheet_package\dist\Parim Automation with Zoho\parim_user_creator_zoho_workdrive_docs.py", line 4751, in create_one_user
+    self.open_create_page()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Afraz\HDProjects\Parim Automate with Zoho\zoho_parim_external_sheet_package\zoho_parim_external_sheet_package\dist\Parim Automation with Zoho\parim_user_creator_zoho_workdrive_docs.py", line 1469, in open_create_page
+    raise TimeoutException(
+    ...<3 lines>...
+    )
+selenium.common.exceptions.TimeoutException: Message: Could not find the create-user form in /admin/user/create or /a/admin/user/create. Last page summary: current_url=https://hd.parim.co/admin/site/index | title='Admin portal - Parim' | frames=0 | body_start=''. Open output/debug HTML or screenshot to see what Parim actually loaded.
+
+2026-06-29 17:34:27,432 | INFO | Updated Google Sheet row 6 as Error
+2026-06-29 17:34:27,437 | INFO | Result for rafasr2019@gmail.com: failed TimeoutException: Message: Could not find the create-user form in /admin/user/create or /a/admin/user/create. Last page summary: current_url=https://hd.parim.co/admin/site/index | title='Admin portal - Parim' | frames=0 | body_start=''. Open output/debug HTML or screenshot to see what Parim actually loaded.
+ | screenshot: output\screenshots\failed_rafasr2019_gmail.com_20260629_173401.png
+2026-06-29 17:34:27,440 | INFO | Finished. Created: 0 | Failed: 1 | Local Results: output\results.csv
