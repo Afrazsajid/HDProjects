@@ -1,0 +1,279 @@
+generator client {
+  provider     = "prisma-client"
+  output       = "../src/generated/prisma"
+  moduleFormat = "esm"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+model AppSetting {
+  id        String   @id @default(cuid())
+  key       String   @unique
+  value     String
+  valueType String   @default("STRING")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model AdminUser {
+  id           String    @id @default(cuid())
+  email        String    @unique
+  passwordHash String
+  active       Boolean   @default(true)
+  lastLoginAt  DateTime?
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+}
+
+model Worker {
+  id             String   @id @default(cuid())
+  externalId     String?
+  firstName      String
+  lastName       String
+  fullName       String
+  rawPhone       String
+  phoneE164      String
+  whatsappChatId String
+  department     String?
+  position       String?
+  active         Boolean  @default(true)
+  whatsappOptIn  Boolean  @default(true)
+  doNotContact   Boolean  @default(false)
+  notes          String?
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  shifts              Shift[]
+  scheduledMessages   ScheduledMessage[]
+  attendanceResponses AttendanceResponse[]
+
+  @@index([phoneE164])
+  @@index([whatsappChatId])
+  @@index([active])
+}
+
+model Location {
+  id             String   @id @default(cuid())
+  externalId     String?
+  name           String
+  normalisedName String   @unique
+  address        String?
+  postcode       String?
+  timezone       String   @default("Europe/London")
+  active         Boolean  @default(true)
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  shifts Shift[]
+
+  @@index([normalisedName])
+  @@index([active])
+}
+
+model Shift {
+  id                String    @id @default(cuid())
+  externalId        String?
+  source            String
+  sourceFingerprint String    @unique
+  workerId          String
+  locationId        String
+  shiftDateLocal    DateTime
+  startAtUtc        DateTime
+  endAtUtc          DateTime
+  startTimeLocal    String
+  endTimeLocal      String
+  position          String
+  department        String?
+  status            String    @default("SCHEDULED")
+  checkedInAt       DateTime?
+  checkedInSource   String?
+  cancelledAt       DateTime?
+  importedAt        DateTime  @default(now())
+  metadataJson      String?
+  createdAt         DateTime  @default(now())
+  updatedAt         DateTime  @updatedAt
+
+  worker              Worker               @relation(fields: [workerId], references: [id])
+  location            Location             @relation(fields: [locationId], references: [id])
+  scheduledMessages   ScheduledMessage[]
+  messageEvents       MessageEvent[]
+  attendanceResponses AttendanceResponse[]
+
+  @@index([startAtUtc])
+  @@index([endAtUtc])
+  @@index([status])
+  @@index([workerId])
+  @@index([locationId])
+}
+
+model MessageTemplate {
+  id             String   @id @default(cuid())
+  name           String
+  description    String?
+  content        String
+  active         Boolean  @default(true)
+  systemTemplate Boolean  @default(false)
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  triggerRules      TriggerRule[]
+  scheduledMessages ScheduledMessage[]
+}
+
+model TriggerRule {
+  id                         String   @id @default(cuid())
+  name                       String
+  description                String?
+  enabled                    Boolean  @default(false)
+  anchor                     String
+  offsetMinutes              Int
+  recurrenceIntervalMinutes  Int?
+  maximumOccurrences         Int?
+  recurrenceStop             String   @default("MANUAL")
+  priority                   Int      @default(100)
+  templateId                 String
+  conditionsJson             String   @default("{}")
+  createdAt                  DateTime @default(now())
+  updatedAt                  DateTime @updatedAt
+
+  template          MessageTemplate    @relation(fields: [templateId], references: [id])
+  scheduledMessages ScheduledMessage[]
+
+  @@index([enabled])
+  @@index([anchor])
+  @@index([priority])
+}
+
+model ScheduledMessage {
+  id                  String    @id @default(cuid())
+  shiftId             String
+  workerId            String
+  triggerRuleId        String
+  templateId           String
+  occurrenceNumber     Int
+  dueAtUtc             DateTime
+  idempotencyKey       String    @unique
+  status              String    @default("PENDING")
+  renderedText         String?
+  openwaMessageId      String?
+  attempts             Int       @default(0)
+  maximumAttempts      Int       @default(3)
+  processingStartedAt  DateTime?
+  claimedBy            String?
+  sentAt               DateTime?
+  failedAt             DateTime?
+  cancelledAt          DateTime?
+  lastError            String?
+  createdAt            DateTime  @default(now())
+  updatedAt            DateTime  @updatedAt
+
+  shift       Shift           @relation(fields: [shiftId], references: [id])
+  worker      Worker          @relation(fields: [workerId], references: [id])
+  triggerRule TriggerRule     @relation(fields: [triggerRuleId], references: [id])
+  template    MessageTemplate @relation(fields: [templateId], references: [id])
+  events      MessageEvent[]
+
+  @@index([status, dueAtUtc])
+  @@index([shiftId])
+  @@index([workerId])
+}
+
+model MessageEvent {
+  id                 String   @id @default(cuid())
+  scheduledMessageId String?
+  shiftId            String?
+  direction          String
+  eventType          String
+  whatsappChatId     String
+  openwaMessageId    String?
+  text               String?
+  payloadJson        String
+  occurredAt         DateTime
+  createdAt          DateTime @default(now())
+
+  scheduledMessage ScheduledMessage? @relation(fields: [scheduledMessageId], references: [id])
+  shift            Shift?            @relation(fields: [shiftId], references: [id])
+
+  @@index([whatsappChatId])
+  @@index([eventType])
+  @@index([occurredAt])
+}
+
+model AttendanceResponse {
+  id               String   @id @default(cuid())
+  shiftId          String
+  workerId         String
+  tokenHash        String   @unique
+  response         String
+  estimatedArrival String?
+  issueType        String?
+  notes            String?
+  submittedAt      DateTime
+  createdAt        DateTime @default(now())
+
+  shift  Shift  @relation(fields: [shiftId], references: [id])
+  worker Worker @relation(fields: [workerId], references: [id])
+
+  @@index([shiftId])
+  @@index([workerId])
+}
+
+model CheckInToken {
+  id        String    @id @default(cuid())
+  shiftId   String
+  workerId  String
+  tokenHash String    @unique
+  expiresAt DateTime
+  usedAt    DateTime?
+  createdAt DateTime  @default(now())
+
+  @@index([shiftId])
+  @@index([workerId])
+  @@index([expiresAt])
+}
+
+model ImportBatch {
+  id             String    @id @default(cuid())
+  source         String
+  filename       String?
+  sheetId        String?
+  rowCount       Int       @default(0)
+  importedCount  Int       @default(0)
+  updatedCount   Int       @default(0)
+  skippedCount   Int       @default(0)
+  errorCount     Int       @default(0)
+  errorsJson     String?
+  startedAt      DateTime
+  completedAt    DateTime?
+  createdAt      DateTime  @default(now())
+
+  @@index([source])
+  @@index([startedAt])
+}
+
+model WorkerLease {
+  name        String   @id
+  ownerId     String
+  acquiredAt  DateTime
+  heartbeatAt DateTime
+  expiresAt   DateTime
+}
+
+model AuditLog {
+  id           String   @id @default(cuid())
+  actorType    String
+  actorId      String?
+  action       String
+  entityType   String
+  entityId     String?
+  beforeJson   String?
+  afterJson    String?
+  metadataJson String?
+  createdAt    DateTime @default(now())
+
+  @@index([entityType, entityId])
+  @@index([action])
+  @@index([createdAt])
+}

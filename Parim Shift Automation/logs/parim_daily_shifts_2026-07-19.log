@@ -1,0 +1,75 @@
+2026-07-19 16:50:27,539 | INFO | Starting Chrome with fresh isolated Chrome profile
+2026-07-19 16:50:28,514 | INFO | Opening PARiM login page
+2026-07-19 16:50:33,723 | INFO | PARiM login completed
+2026-07-19 16:50:33,723 | INFO | Opening Shifts List
+2026-07-19 16:50:39,769 | INFO | Shifts List filter bar detected
+2026-07-19 16:50:39,771 | INFO | Selecting Today
+2026-07-19 16:50:40,275 | INFO | Opening export dialog
+2026-07-19 16:50:41,661 | INFO | Clearing all PARiM export columns
+2026-07-19 16:50:42,181 | INFO | Export column cleared: choose-column-type
+2026-07-19 16:50:43,983 | INFO | Export column cleared: choose-column-hours
+2026-07-19 16:50:44,596 | INFO | Export column cleared: choose-column-break
+2026-07-19 16:50:45,214 | INFO | Export column cleared: choose-column-company
+2026-07-19 16:50:45,829 | INFO | Export column cleared: Location
+2026-07-19 16:50:46,593 | INFO | Export column cleared: choose-column-rate
+2026-07-19 16:50:47,266 | INFO | Export column cleared: choose-column-totalPay
+2026-07-19 16:50:47,916 | INFO | Export column cleared: choose-column-charge
+2026-07-19 16:50:48,462 | INFO | Export column cleared: choose-column-totalCharge
+2026-07-19 16:50:48,994 | INFO | Export column cleared: choose-column-expenses
+2026-07-19 16:50:49,600 | INFO | Export column cleared: choose-column-partOfAPattern
+2026-07-19 16:50:50,156 | INFO | Export column cleared: choose-column-tags
+2026-07-19 16:50:50,696 | INFO | Export column cleared: Person
+2026-07-19 16:50:51,239 | INFO | Export column cleared: choose-column-userExternalId
+2026-07-19 16:50:51,910 | INFO | Export column cleared: Position
+2026-07-19 16:50:55,849 | INFO | Selecting Start time, End time, Person, Phone, Position and Location
+2026-07-19 16:50:56,212 | INFO | Export column selected: Start time
+2026-07-19 16:50:56,879 | INFO | Export column selected: End time
+2026-07-19 16:50:57,636 | INFO | Export column selected: Person
+2026-07-19 16:50:58,377 | INFO | Export column selected: Phone
+2026-07-19 16:50:59,041 | INFO | Export column selected: Position
+2026-07-19 16:50:59,693 | INFO | Export column selected: Location
+2026-07-19 16:51:05,999 | INFO | Export columns verified: Start time, End time, Person, Phone, Position and Location
+2026-07-19 16:51:06,028 | INFO | Downloading PARiM CSV
+2026-07-19 16:51:07,982 | INFO | CSV downloaded: C:\Users\Afraz\HDProjects\Parim Shift Automation\downloads\shifts-list_2026-07-19.csv
+2026-07-19 16:51:08,012 | INFO | Parsed 85 shift rows with 24-hour start/end times
+2026-07-19 16:51:08,012 | INFO | Sending shifts to Google Apps Script
+2026-07-19 16:51:19,337 | WARNING | Upload attempt 1 failed. Retrying...
+2026-07-19 16:51:30,708 | WARNING | Upload attempt 2 failed. Retrying...
+2026-07-19 16:51:46,788 | ERROR | Could not update Google Sheet: Apps Script rejected the upload: Sorry, you can't freeze columns which contain only part of a merged cell. Try to break apart merged cells or freeze more columns to include the complete merged cells.
+2026-07-19 16:54:18,554 | INFO | Starting Chrome with fresh isolated Chrome profile
+2026-07-19 16:54:20,159 | INFO | Opening PARiM login page
+2026-07-19 16:54:25,429 | INFO | PARiM login completed
+2026-07-19 16:54:25,462 | INFO | Opening Shifts List
+2026-07-19 16:54:31,586 | INFO | Shifts List filter bar detected
+2026-07-19 16:54:31,586 | INFO | Selecting Today
+2026-07-19 16:54:32,246 | INFO | Opening export dialog
+2026-07-19 16:54:33,184 | INFO | Clearing all PARiM export columns
+2026-07-19 16:54:33,637 | INFO | Export column cleared: choose-column-type
+2026-07-19 16:54:34,386 | INFO | Export column cleared: choose-column-hours
+2026-07-19 16:54:35,407 | INFO | Export column cleared: choose-column-break
+2026-07-19 16:54:36,060 | INFO | Export column cleared: choose-column-company
+2026-07-19 16:54:36,598 | INFO | Export column cleared: Location
+2026-07-19 16:54:37,329 | INFO | Export column cleared: choose-column-rate
+2026-07-19 16:54:37,884 | INFO | Export column cleared: choose-column-totalPay
+2026-07-19 16:54:38,504 | INFO | Export column cleared: choose-column-charge
+2026-07-19 16:54:39,017 | INFO | Export column cleared: choose-column-totalCharge
+2026-07-19 16:54:39,577 | INFO | Export column cleared: choose-column-expenses
+2026-07-19 16:54:40,142 | INFO | Export column cleared: choose-column-partOfAPattern
+2026-07-19 16:54:40,735 | INFO | Export column cleared: choose-column-tags
+2026-07-19 16:54:41,341 | INFO | Export column cleared: Person
+2026-07-19 16:54:41,901 | INFO | Export column cleared: choose-column-userExternalId
+2026-07-19 16:54:42,520 | INFO | Export column cleared: Position
+2026-07-19 16:54:47,141 | INFO | Selecting Start time, End time, Person, Phone, Position and Location
+2026-07-19 16:54:47,486 | INFO | Export column selected: Start time
+2026-07-19 16:54:48,129 | INFO | Export column selected: End time
+2026-07-19 16:54:48,781 | INFO | Export column selected: Person
+2026-07-19 16:54:49,421 | INFO | Export column selected: Phone
+2026-07-19 16:54:50,110 | INFO | Export column selected: Position
+2026-07-19 16:54:50,959 | INFO | Export column selected: Location
+2026-07-19 16:54:56,375 | INFO | Export columns verified: Start time, End time, Person, Phone, Position and Location
+2026-07-19 16:54:56,405 | INFO | Downloading PARiM CSV
+2026-07-19 16:54:58,071 | INFO | CSV downloaded: C:\Users\Afraz\HDProjects\Parim Shift Automation\downloads\shifts-list_2026-07-19.csv
+2026-07-19 16:54:58,119 | INFO | Parsed 85 shift rows with 24-hour start/end times
+2026-07-19 16:54:58,120 | INFO | Sending shifts to Google Apps Script
+2026-07-19 16:55:15,754 | INFO | Google Sheet updated with 85 rows
+2026-07-19 16:55:15,760 | INFO | Completed successfully. Date: 2026-07-19 | Rows: 85 | Sheet: https://docs.google.com/spreadsheets/d/1XCOoff_249zSZknMvG5nrsiuUzHV_yij2KyLRiKPsT4/edit
