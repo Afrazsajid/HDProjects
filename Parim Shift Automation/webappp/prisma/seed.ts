@@ -29,6 +29,33 @@ const defaultTemplates = [
   },
 ];
 
+function conditionsForRule(name: string) {
+  const base = {
+    workerActive: true,
+    whatsappOptIn: true,
+    requirePhone: true,
+  };
+  if (name !== "Attendance form reminder") {
+    return { ...base, reminderType: "STANDARD", reminderPattern: "FIXED" };
+  }
+
+  return {
+    ...base,
+    reminderType: "FORM_REMINDER",
+    reminderPattern: "EVENLY_SPREAD",
+    maxRemindersPerWorker: 12,
+    minIntervalMinutes: 15,
+    maxIntervalMinutes: 20,
+    firstReminderDelayMinutes: 0,
+    stopAtShiftEnd: true,
+    stopAfterFormCompletion: false,
+    staggerSameSite: true,
+    minWorkerGapSeconds: 60,
+    staggeringWindowMinutes: 10,
+    customIntervalSequence: [],
+  };
+}
+
 async function main() {
   await prisma.appSetting.upsert({
     where: { key: "timezone" },
@@ -72,10 +99,11 @@ async function main() {
     ["ETA reminder", "SHIFT_START", -120, null, null, "MANUAL", 10],
     ["Policy reminder", "SHIFT_START", -15, null, null, "MANUAL", 20],
     ["On-site confirmation", "SHIFT_START", 0, null, null, "CHECKED_IN", 30],
-    ["Attendance form reminder", "SHIFT_START", 30, 30, 8, "CHECKED_IN", 40],
+    ["Attendance form reminder", "SHIFT_START", 0, null, 12, "SHIFT_END", 40],
   ] as const;
 
   for (const [name, anchor, offsetMinutes, recurrenceIntervalMinutes, maximumOccurrences, recurrenceStop, priority] of rules) {
+    const conditionsJson = JSON.stringify(conditionsForRule(name));
     await prisma.triggerRule.upsert({
       where: { id: `seed-rule-${name.toLowerCase().replaceAll(" ", "-")}` },
       update: {
@@ -85,6 +113,8 @@ async function main() {
         maximumOccurrences,
         recurrenceStop,
         priority,
+        templateId: templateByName.get(name)!,
+        conditionsJson,
       },
       create: {
         id: `seed-rule-${name.toLowerCase().replaceAll(" ", "-")}`,
@@ -97,12 +127,7 @@ async function main() {
         recurrenceStop,
         priority,
         templateId: templateByName.get(name)!,
-        conditionsJson: JSON.stringify({
-          workerActive: true,
-          whatsappOptIn: true,
-          requirePhone: true,
-          shiftStatuses: ["SCHEDULED", "CONFIRMED"],
-        }),
+        conditionsJson,
       },
     });
   }

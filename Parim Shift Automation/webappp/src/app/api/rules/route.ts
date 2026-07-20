@@ -1,5 +1,7 @@
 import { prisma } from "@/src/lib/prisma";
 import { rebuildFutureForAllUpcoming } from "@/src/lib/scheduler/generator";
+import { buildReminderPlan, humaniseLocationSummary } from "@/src/lib/scheduler/reminder-plan";
+import { ruleMatchesShift } from "@/src/lib/scheduler/evaluator";
 
 function asString(value: unknown) {
   return typeof value === "string" ? value.trim() : "";
@@ -27,17 +29,33 @@ function buildConditions(body: Record<string, unknown>) {
     requirePhone: true,
   };
   const includeLocations = asStringArray(body.includeLocations);
+  const excludeLocations = asStringArray(body.excludeLocations);
   const includePositions = asStringArray(body.includePositions);
   const includeDepartments = asStringArray(body.includeDepartments);
+  const weekdays = Array.isArray(body.weekdays) ? body.weekdays.map((value) => Number(value)).filter((value) => Number.isInteger(value) && value >= 0 && value <= 6) : [];
   const shiftStatuses = asStringArray(body.shiftStatuses);
   if (includeLocations.length) conditions.includeLocations = includeLocations;
+  if (excludeLocations.length) conditions.excludeLocations = excludeLocations;
   if (includePositions.length) conditions.includePositions = includePositions;
   if (includeDepartments.length) conditions.includeDepartments = includeDepartments;
+  if (weekdays.length) conditions.weekdays = weekdays;
   if (shiftStatuses.length) conditions.shiftStatuses = shiftStatuses;
   if (asString(body.startTimeFrom) && asString(body.startTimeTo)) conditions.startTimeRange = { from: asString(body.startTimeFrom), to: asString(body.startTimeTo) };
   if (asString(body.endTimeFrom) && asString(body.endTimeTo)) conditions.endTimeRange = { from: asString(body.endTimeFrom), to: asString(body.endTimeTo) };
   if (asString(body.dateFrom) || asString(body.dateTo)) conditions.dateRange = { from: asString(body.dateFrom) || undefined, to: asString(body.dateTo) || undefined };
   if (asString(body.customDateTimeUtc)) conditions.customDateTimeUtc = asString(body.customDateTimeUtc);
+  if (asString(body.reminderType)) conditions.reminderType = asString(body.reminderType);
+  if (asString(body.reminderPattern)) conditions.reminderPattern = asString(body.reminderPattern);
+  if (asOptionalNumber(body.maxRemindersPerWorker)) conditions.maxRemindersPerWorker = asOptionalNumber(body.maxRemindersPerWorker);
+  if (asOptionalNumber(body.minIntervalMinutes)) conditions.minIntervalMinutes = asOptionalNumber(body.minIntervalMinutes);
+  if (asOptionalNumber(body.maxIntervalMinutes)) conditions.maxIntervalMinutes = asOptionalNumber(body.maxIntervalMinutes);
+  if (asOptionalNumber(body.firstReminderDelayMinutes)) conditions.firstReminderDelayMinutes = asOptionalNumber(body.firstReminderDelayMinutes);
+  if (asOptionalNumber(body.staggeringWindowMinutes)) conditions.staggeringWindowMinutes = asOptionalNumber(body.staggeringWindowMinutes);
+  if (asOptionalNumber(body.minWorkerGapSeconds)) conditions.minWorkerGapSeconds = asOptionalNumber(body.minWorkerGapSeconds);
+  if (Array.isArray(body.customIntervalSequence)) conditions.customIntervalSequence = body.customIntervalSequence.map((value) => Number(value)).filter((value) => Number.isFinite(value) && value > 0);
+  if (body.stopAtShiftEnd !== undefined) conditions.stopAtShiftEnd = Boolean(body.stopAtShiftEnd);
+  if (body.stopAfterFormCompletion !== undefined) conditions.stopAfterFormCompletion = Boolean(body.stopAfterFormCompletion);
+  if (body.staggerSameSite !== undefined) conditions.staggerSameSite = Boolean(body.staggerSameSite);
   return JSON.stringify(conditions);
 }
 
@@ -59,6 +77,10 @@ export async function GET() {
 export async function POST(request: Request) {
   const body = (await request.json().catch(() => null)) as Record<string, unknown> | null;
   if (!body) return Response.json({ error: "Invalid JSON body" }, { status: 400 });
+
+  if (body.action === "preview") {
+    return previewRule(body);
+  }
 
   if (body.action === "duplicate") {
     const id = asString(body.id);
@@ -104,6 +126,64 @@ export async function POST(request: Request) {
   });
   await rebuildAfterRuleChange(rule.id, rule.enabled);
   return Response.json({ rule });
+}
+
+async function previewRule(body: Record<string, unknown>) {
+  const conditionsJson = buildConditions(body);
+  const locations = await prisma.location.findMany({ orderBy: { name: "asc" } });
+  const shifts = await prisma.shift.findMany({
+    where: {
+      endAtUtc: { gt: new Date() },
+      status: { not: "CANCELLED" },
+    },
+    include: { worker: true, location: true },
+    orderBy: [{ locationId: "asc" }, { startAtUtc: "asc" }],
+    take: 500,
+  });
+  const matching = shifts.filter((shift) => ruleMatchesShift(conditionsJson, shift));
+  const locationCounts = new Map<string, number>();
+  let potentialMessages = 0;
+  let removedAfterShiftEnd = 0;
+  const exampleWorkers = [];
+  const maxExamples = 3;
+  for (const shift of matching) {
+    locationCounts.set(shift.location.normalisedName, (locationCounts.get(shift.location.normalisedName) ?? 0) + 1);
+    const sameSiteIndex = matching
+      .filter((item) => item.locationId === shift.locationId && item.startAtUtc < shift.endAtUtc && item.endAtUtc > shift.startAtUtc)
+      .sort((a, b) => a.worker.fullName.localeCompare(b.worker.fullName) || a.workerId.localeCompare(b.workerId))
+      .findIndex((item) => item.id === shift.id);
+    const { plan, removedAfterShiftEnd: removed } = buildReminderPlan({
+      ruleId: asString(body.id) || "preview-rule",
+      conditionsJson,
+      anchor: shift.startAtUtc,
+      shift,
+      sameSiteWorkerIndex: Math.max(0, sameSiteIndex),
+    });
+    potentialMessages += plan.length + removed.length;
+    removedAfterShiftEnd += removed.length;
+    if (exampleWorkers.length < maxExamples) {
+      exampleWorkers.push({
+        shiftId: shift.id,
+        workerName: shift.worker.fullName,
+        locationName: shift.location.name,
+        reminderTimes: plan.slice(0, 6).map((item) => item.dueAtUtc.toISOString()),
+        staggerOffsetSeconds: plan[0]?.staggerOffsetSeconds ?? 0,
+      });
+    }
+  }
+  const conditions = JSON.parse(conditionsJson) as { includeLocations?: string[]; excludeLocations?: string[]; maxRemindersPerWorker?: number; staggerSameSite?: boolean };
+  return Response.json({
+    locationSummary: humaniseLocationSummary(locations, conditions.includeLocations, conditions.excludeLocations),
+    matchingLocations: [...locationCounts.keys()].map((normalisedName) => ({ normalisedName, name: locations.find((location) => location.normalisedName === normalisedName)?.name ?? normalisedName, workers: locationCounts.get(normalisedName) ?? 0 })),
+    excludedLocations: conditions.excludeLocations?.map((normalisedName) => locations.find((location) => location.normalisedName === normalisedName)?.name ?? normalisedName) ?? [],
+    matchingWorkers: matching.length,
+    maxRemindersPerWorker: conditions.maxRemindersPerWorker ?? 12,
+    potentialMessages,
+    removedAfterShiftEnd,
+    finalScheduledMessages: potentialMessages - removedAfterShiftEnd,
+    siteStaggeringEnabled: conditions.staggerSameSite === true,
+    exampleWorkers,
+  });
 }
 
 export async function PATCH(request: Request) {

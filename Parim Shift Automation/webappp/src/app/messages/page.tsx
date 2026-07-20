@@ -11,8 +11,9 @@ export default async function MessagesPage() {
   await connection();
   const [messages, events, templatesRaw, workersRaw, locationsRaw, shiftsRaw] = await Promise.all([
     prisma.scheduledMessage.findMany({
+      where: { status: { in: ["PENDING", "PROCESSING"] } },
       include: { worker: true, triggerRule: true, template: true, shift: { include: { location: true } } },
-      orderBy: { dueAtUtc: "desc" },
+      orderBy: { dueAtUtc: "asc" },
       take: 150,
     }),
     prisma.messageEvent.findMany({
@@ -28,7 +29,7 @@ export default async function MessagesPage() {
   ]);
   const templates = templatesRaw.map((template) => ({ id: template.id, name: template.name, content: template.content, active: template.active }));
   const workers = workersRaw.map((worker) => ({ id: worker.id, fullName: worker.fullName, phoneE164: worker.phoneE164, active: worker.active }));
-  const locations = locationsRaw.map((location) => ({ id: location.id, name: location.name }));
+  const locations = locationsRaw.map((location) => ({ id: location.id, name: location.name, normalisedName: location.normalisedName }));
   const shifts = shiftsRaw.map((shift) => ({
     id: shift.id,
     startAtUtc: shift.startAtUtc.toISOString(),
@@ -52,14 +53,16 @@ export default async function MessagesPage() {
         <CardContent>
           {messages.length ? (
             <DataTable
-              headers={["Due", "Worker", "Rule", "Location", "Status", "Last Error"]}
+              headers={["Due", "Worker", "Rule", "Location", "Interval", "Stagger", "Status", "Last Error / Cancellation"]}
               rows={messages.map((message) => [
                 formatDisplayDateTime(message.dueAtUtc),
                 message.worker.fullName,
                 message.triggerRule.name,
                 message.shift.location.name,
+                message.plannedIntervalMinutes ? `${message.plannedIntervalMinutes} min` : "Not set",
+                message.staggerOffsetSeconds ? `${message.staggerOffsetSeconds}s` : "None",
                 <Badge key={message.id}>{message.status}</Badge>,
-                message.lastError ?? "None",
+                message.cancellationReason ?? message.lastError ?? "None",
               ])}
             />
           ) : <EmptyState title="No scheduled messages" body="Enable trigger rules and rebuild future messages." />}

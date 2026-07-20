@@ -223,6 +223,7 @@ export type LocationWhereInput = {
   createdAt?: Prisma.DateTimeFilter<"Location"> | Date | string
   updatedAt?: Prisma.DateTimeFilter<"Location"> | Date | string
   shifts?: Prisma.ShiftListRelationFilter
+  scheduledMessages?: Prisma.ScheduledMessageListRelationFilter
 }
 
 export type LocationOrderByWithRelationInput = {
@@ -237,6 +238,7 @@ export type LocationOrderByWithRelationInput = {
   createdAt?: Prisma.SortOrder
   updatedAt?: Prisma.SortOrder
   shifts?: Prisma.ShiftOrderByRelationAggregateInput
+  scheduledMessages?: Prisma.ScheduledMessageOrderByRelationAggregateInput
 }
 
 export type LocationWhereUniqueInput = Prisma.AtLeast<{
@@ -254,6 +256,7 @@ export type LocationWhereUniqueInput = Prisma.AtLeast<{
   createdAt?: Prisma.DateTimeFilter<"Location"> | Date | string
   updatedAt?: Prisma.DateTimeFilter<"Location"> | Date | string
   shifts?: Prisma.ShiftListRelationFilter
+  scheduledMessages?: Prisma.ScheduledMessageListRelationFilter
 }, "id" | "normalisedName">
 
 export type LocationOrderByWithAggregationInput = {
@@ -300,6 +303,7 @@ export type LocationCreateInput = {
   createdAt?: Date | string
   updatedAt?: Date | string
   shifts?: Prisma.ShiftCreateNestedManyWithoutLocationInput
+  scheduledMessages?: Prisma.ScheduledMessageCreateNestedManyWithoutLocationInput
 }
 
 export type LocationUncheckedCreateInput = {
@@ -314,6 +318,7 @@ export type LocationUncheckedCreateInput = {
   createdAt?: Date | string
   updatedAt?: Date | string
   shifts?: Prisma.ShiftUncheckedCreateNestedManyWithoutLocationInput
+  scheduledMessages?: Prisma.ScheduledMessageUncheckedCreateNestedManyWithoutLocationInput
 }
 
 export type LocationUpdateInput = {
@@ -328,6 +333,7 @@ export type LocationUpdateInput = {
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   shifts?: Prisma.ShiftUpdateManyWithoutLocationNestedInput
+  scheduledMessages?: Prisma.ScheduledMessageUpdateManyWithoutLocationNestedInput
 }
 
 export type LocationUncheckedUpdateInput = {
@@ -342,6 +348,7 @@ export type LocationUncheckedUpdateInput = {
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   shifts?: Prisma.ShiftUncheckedUpdateManyWithoutLocationNestedInput
+  scheduledMessages?: Prisma.ScheduledMessageUncheckedUpdateManyWithoutLocationNestedInput
 }
 
 export type LocationCreateManyInput = {
@@ -427,6 +434,11 @@ export type LocationScalarRelationFilter = {
   isNot?: Prisma.LocationWhereInput
 }
 
+export type LocationNullableScalarRelationFilter = {
+  is?: Prisma.LocationWhereInput | null
+  isNot?: Prisma.LocationWhereInput | null
+}
+
 export type LocationCreateNestedOneWithoutShiftsInput = {
   create?: Prisma.XOR<Prisma.LocationCreateWithoutShiftsInput, Prisma.LocationUncheckedCreateWithoutShiftsInput>
   connectOrCreate?: Prisma.LocationCreateOrConnectWithoutShiftsInput
@@ -441,6 +453,22 @@ export type LocationUpdateOneRequiredWithoutShiftsNestedInput = {
   update?: Prisma.XOR<Prisma.XOR<Prisma.LocationUpdateToOneWithWhereWithoutShiftsInput, Prisma.LocationUpdateWithoutShiftsInput>, Prisma.LocationUncheckedUpdateWithoutShiftsInput>
 }
 
+export type LocationCreateNestedOneWithoutScheduledMessagesInput = {
+  create?: Prisma.XOR<Prisma.LocationCreateWithoutScheduledMessagesInput, Prisma.LocationUncheckedCreateWithoutScheduledMessagesInput>
+  connectOrCreate?: Prisma.LocationCreateOrConnectWithoutScheduledMessagesInput
+  connect?: Prisma.LocationWhereUniqueInput
+}
+
+export type LocationUpdateOneWithoutScheduledMessagesNestedInput = {
+  create?: Prisma.XOR<Prisma.LocationCreateWithoutScheduledMessagesInput, Prisma.LocationUncheckedCreateWithoutScheduledMessagesInput>
+  connectOrCreate?: Prisma.LocationCreateOrConnectWithoutScheduledMessagesInput
+  upsert?: Prisma.LocationUpsertWithoutScheduledMessagesInput
+  disconnect?: Prisma.LocationWhereInput | boolean
+  delete?: Prisma.LocationWhereInput | boolean
+  connect?: Prisma.LocationWhereUniqueInput
+  update?: Prisma.XOR<Prisma.XOR<Prisma.LocationUpdateToOneWithWhereWithoutScheduledMessagesInput, Prisma.LocationUpdateWithoutScheduledMessagesInput>, Prisma.LocationUncheckedUpdateWithoutScheduledMessagesInput>
+}
+
 export type LocationCreateWithoutShiftsInput = {
   id?: string
   externalId?: string | null
@@ -452,6 +480,7 @@ export type LocationCreateWithoutShiftsInput = {
   active?: boolean
   createdAt?: Date | string
   updatedAt?: Date | string
+  scheduledMessages?: Prisma.ScheduledMessageCreateNestedManyWithoutLocationInput
 }
 
 export type LocationUncheckedCreateWithoutShiftsInput = {
@@ -465,6 +494,7 @@ export type LocationUncheckedCreateWithoutShiftsInput = {
   active?: boolean
   createdAt?: Date | string
   updatedAt?: Date | string
+  scheduledMessages?: Prisma.ScheduledMessageUncheckedCreateNestedManyWithoutLocationInput
 }
 
 export type LocationCreateOrConnectWithoutShiftsInput = {
@@ -494,6 +524,7 @@ export type LocationUpdateWithoutShiftsInput = {
   active?: Prisma.BoolFieldUpdateOperationsInput | boolean
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  scheduledMessages?: Prisma.ScheduledMessageUpdateManyWithoutLocationNestedInput
 }
 
 export type LocationUncheckedUpdateWithoutShiftsInput = {
@@ -507,6 +538,79 @@ export type LocationUncheckedUpdateWithoutShiftsInput = {
   active?: Prisma.BoolFieldUpdateOperationsInput | boolean
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  scheduledMessages?: Prisma.ScheduledMessageUncheckedUpdateManyWithoutLocationNestedInput
+}
+
+export type LocationCreateWithoutScheduledMessagesInput = {
+  id?: string
+  externalId?: string | null
+  name: string
+  normalisedName: string
+  address?: string | null
+  postcode?: string | null
+  timezone?: string
+  active?: boolean
+  createdAt?: Date | string
+  updatedAt?: Date | string
+  shifts?: Prisma.ShiftCreateNestedManyWithoutLocationInput
+}
+
+export type LocationUncheckedCreateWithoutScheduledMessagesInput = {
+  id?: string
+  externalId?: string | null
+  name: string
+  normalisedName: string
+  address?: string | null
+  postcode?: string | null
+  timezone?: string
+  active?: boolean
+  createdAt?: Date | string
+  updatedAt?: Date | string
+  shifts?: Prisma.ShiftUncheckedCreateNestedManyWithoutLocationInput
+}
+
+export type LocationCreateOrConnectWithoutScheduledMessagesInput = {
+  where: Prisma.LocationWhereUniqueInput
+  create: Prisma.XOR<Prisma.LocationCreateWithoutScheduledMessagesInput, Prisma.LocationUncheckedCreateWithoutScheduledMessagesInput>
+}
+
+export type LocationUpsertWithoutScheduledMessagesInput = {
+  update: Prisma.XOR<Prisma.LocationUpdateWithoutScheduledMessagesInput, Prisma.LocationUncheckedUpdateWithoutScheduledMessagesInput>
+  create: Prisma.XOR<Prisma.LocationCreateWithoutScheduledMessagesInput, Prisma.LocationUncheckedCreateWithoutScheduledMessagesInput>
+  where?: Prisma.LocationWhereInput
+}
+
+export type LocationUpdateToOneWithWhereWithoutScheduledMessagesInput = {
+  where?: Prisma.LocationWhereInput
+  data: Prisma.XOR<Prisma.LocationUpdateWithoutScheduledMessagesInput, Prisma.LocationUncheckedUpdateWithoutScheduledMessagesInput>
+}
+
+export type LocationUpdateWithoutScheduledMessagesInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  externalId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  name?: Prisma.StringFieldUpdateOperationsInput | string
+  normalisedName?: Prisma.StringFieldUpdateOperationsInput | string
+  address?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  postcode?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  timezone?: Prisma.StringFieldUpdateOperationsInput | string
+  active?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  shifts?: Prisma.ShiftUpdateManyWithoutLocationNestedInput
+}
+
+export type LocationUncheckedUpdateWithoutScheduledMessagesInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  externalId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  name?: Prisma.StringFieldUpdateOperationsInput | string
+  normalisedName?: Prisma.StringFieldUpdateOperationsInput | string
+  address?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  postcode?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  timezone?: Prisma.StringFieldUpdateOperationsInput | string
+  active?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  shifts?: Prisma.ShiftUncheckedUpdateManyWithoutLocationNestedInput
 }
 
 
@@ -516,10 +620,12 @@ export type LocationUncheckedUpdateWithoutShiftsInput = {
 
 export type LocationCountOutputType = {
   shifts: number
+  scheduledMessages: number
 }
 
 export type LocationCountOutputTypeSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   shifts?: boolean | LocationCountOutputTypeCountShiftsArgs
+  scheduledMessages?: boolean | LocationCountOutputTypeCountScheduledMessagesArgs
 }
 
 /**
@@ -539,6 +645,13 @@ export type LocationCountOutputTypeCountShiftsArgs<ExtArgs extends runtime.Types
   where?: Prisma.ShiftWhereInput
 }
 
+/**
+ * LocationCountOutputType without action
+ */
+export type LocationCountOutputTypeCountScheduledMessagesArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  where?: Prisma.ScheduledMessageWhereInput
+}
+
 
 export type LocationSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
   id?: boolean
@@ -552,6 +665,7 @@ export type LocationSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs
   createdAt?: boolean
   updatedAt?: boolean
   shifts?: boolean | Prisma.Location$shiftsArgs<ExtArgs>
+  scheduledMessages?: boolean | Prisma.Location$scheduledMessagesArgs<ExtArgs>
   _count?: boolean | Prisma.LocationCountOutputTypeDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["location"]>
 
@@ -597,6 +711,7 @@ export type LocationSelectScalar = {
 export type LocationOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "externalId" | "name" | "normalisedName" | "address" | "postcode" | "timezone" | "active" | "createdAt" | "updatedAt", ExtArgs["result"]["location"]>
 export type LocationInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   shifts?: boolean | Prisma.Location$shiftsArgs<ExtArgs>
+  scheduledMessages?: boolean | Prisma.Location$scheduledMessagesArgs<ExtArgs>
   _count?: boolean | Prisma.LocationCountOutputTypeDefaultArgs<ExtArgs>
 }
 export type LocationIncludeCreateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {}
@@ -606,6 +721,7 @@ export type $LocationPayload<ExtArgs extends runtime.Types.Extensions.InternalAr
   name: "Location"
   objects: {
     shifts: Prisma.$ShiftPayload<ExtArgs>[]
+    scheduledMessages: Prisma.$ScheduledMessagePayload<ExtArgs>[]
   }
   scalars: runtime.Types.Extensions.GetPayloadResult<{
     id: string
@@ -1013,6 +1129,7 @@ readonly fields: LocationFieldRefs;
 export interface Prisma__LocationClient<T, Null = never, ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
   readonly [Symbol.toStringTag]: "PrismaPromise"
   shifts<T extends Prisma.Location$shiftsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Location$shiftsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$ShiftPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+  scheduledMessages<T extends Prisma.Location$scheduledMessagesArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Location$scheduledMessagesArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$ScheduledMessagePayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   /**
    * Attaches callbacks for the resolution and/or rejection of the Promise.
    * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -1464,6 +1581,30 @@ export type Location$shiftsArgs<ExtArgs extends runtime.Types.Extensions.Interna
   take?: number
   skip?: number
   distinct?: Prisma.ShiftScalarFieldEnum | Prisma.ShiftScalarFieldEnum[]
+}
+
+/**
+ * Location.scheduledMessages
+ */
+export type Location$scheduledMessagesArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  /**
+   * Select specific fields to fetch from the ScheduledMessage
+   */
+  select?: Prisma.ScheduledMessageSelect<ExtArgs> | null
+  /**
+   * Omit specific fields from the ScheduledMessage
+   */
+  omit?: Prisma.ScheduledMessageOmit<ExtArgs> | null
+  /**
+   * Choose, which related nodes to fetch as well
+   */
+  include?: Prisma.ScheduledMessageInclude<ExtArgs> | null
+  where?: Prisma.ScheduledMessageWhereInput
+  orderBy?: Prisma.ScheduledMessageOrderByWithRelationInput | Prisma.ScheduledMessageOrderByWithRelationInput[]
+  cursor?: Prisma.ScheduledMessageWhereUniqueInput
+  take?: number
+  skip?: number
+  distinct?: Prisma.ScheduledMessageScalarFieldEnum | Prisma.ScheduledMessageScalarFieldEnum[]
 }
 
 /**

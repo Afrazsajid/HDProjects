@@ -25,6 +25,8 @@ async function findMatchingShifts(body: Record<string, unknown>) {
   const now = new Date();
   const mode = asString(body.mode);
   const workerIds = asStringArray(body.workerIds);
+  const includeLocationIds = asStringArray(body.includeLocationIds);
+  const excludeLocationIds = asStringArray(body.excludeLocationIds);
   const status = asString(body.shiftStatus);
   const timingWhere =
     status === "ACTIVE"
@@ -37,6 +39,8 @@ async function findMatchingShifts(body: Record<string, unknown>) {
   const baseWhere = {
     ...(workerIds.length ? { workerId: { in: workerIds } } : {}),
     ...(asString(body.locationId) ? { locationId: asString(body.locationId) } : {}),
+    ...(includeLocationIds.length ? { locationId: { in: includeLocationIds } } : {}),
+    ...(excludeLocationIds.length ? { NOT: { locationId: { in: excludeLocationIds } } } : {}),
     ...(status && !["ACTIVE", "UPCOMING", "ENDED", "COMPLETED"].includes(status) ? { status } : {}),
   };
 

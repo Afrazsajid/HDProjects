@@ -1030,6 +1030,79 @@ def clean_text(value: Any) -> str:
     return re.sub(r"\s+", " ", str(value).replace("\ufeff", " ")).strip()
 
 
+def normalise_uk_whatsapp_number(value: Any) -> str:
+    """
+    Convert common UK phone-number formats to +44XXXXXXXXXX.
+
+    Examples:
+    07468335174       -> +447468335174
+    7468335174        -> +447468335174
+    447468335174      -> +447468335174
+    +44 7468 335174   -> +447468335174
+    00447468335174    -> +447468335174
+    +44 (0) 7468...   -> +447468335174
+    """
+
+    original = clean_text(value)
+
+    if not original:
+        return ""
+
+    text = original
+
+    # Remove an Excel decimal ending such as 7468335174.0
+    text = re.sub(r"\.0$", "", text)
+
+    # Remove an existing WhatsApp chat suffix.
+    text = re.sub(
+        r"@(c\.us|s\.whatsapp\.net)$",
+        "",
+        text,
+        flags=re.IGNORECASE,
+    )
+
+    # Keep digits only.
+    digits = re.sub(r"\D", "", text)
+
+    if digits.startswith("0044"):
+        # 00447468335174 -> 7468335174
+        digits = digits[4:]
+
+    elif digits.startswith("44"):
+        # 447468335174 -> 7468335174
+        digits = digits[2:]
+
+    elif digits.startswith("0"):
+        # 07468335174 -> 7468335174
+        digits = digits[1:]
+
+    elif len(digits) == 10:
+        # 7468335174 is already the national number without zero.
+        pass
+
+    else:
+        LOGGER.warning(
+            "Could not convert phone number to UK format: %r",
+            original,
+        )
+        return ""
+
+    # Supports +44 (0) 7468 335174.
+    if digits.startswith("0"):
+        digits = digits[1:]
+
+    # Standard UK number after +44 normally contains ten digits.
+    if not re.fullmatch(r"\d{10}", digits):
+        LOGGER.warning(
+            "Invalid UK phone number after formatting: %r -> %r",
+            original,
+            digits,
+        )
+        return ""
+
+    return "+44" + digits
+
+
 def _extract_datetime(value: str) -> datetime | None:
     """Parse the date/time formats normally produced by PARiM exports."""
     text = clean_text(value)
@@ -1106,10 +1179,14 @@ def parse_shift_csv(path: Path) -> list[dict[str, str]]:
                 "ShiftTime": f"{start_time} - {end_time}",
                 "ShiftDate": start_datetime.date().isoformat() if start_datetime else "",
                 "Person": csv_value("Person"),
-                "Phone": csv_value("Phone"),
+                "Phone": normalise_uk_whatsapp_number(
+    csv_value("Phone")
+),
                 "Position": csv_value("Position"),
                 "Location": csv_value("Location"),
             }
+            
+            
             if any(record[column] for column in ("Person", "Phone", "Position", "Location")):
                 rows.append(record)
     finally:

@@ -41,6 +41,7 @@ export async function cancelFutureAttendanceMessages(shiftId: string, reason: st
     data: {
       status: "CANCELLED",
       cancelledAt: now,
+      cancellationReason: reason,
       lastError: reason,
     },
   });

@@ -66,6 +66,7 @@ export async function skipOverdueMessages() {
     data: {
       status: "SKIPPED",
       lastError: `Skipped because due time exceeded ${env.SCHEDULER_OVERDUE_GRACE_MINUTES} minute grace period`,
+      cancellationReason: `Due time exceeded ${env.SCHEDULER_OVERDUE_GRACE_MINUTES} minute grace period`,
     },
   });
 }

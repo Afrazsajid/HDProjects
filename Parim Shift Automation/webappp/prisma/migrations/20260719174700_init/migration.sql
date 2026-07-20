@@ -116,10 +116,13 @@ CREATE TABLE "ScheduledMessage" (
     "id" TEXT NOT NULL PRIMARY KEY,
     "shiftId" TEXT NOT NULL,
     "workerId" TEXT NOT NULL,
+    "locationId" TEXT,
     "triggerRuleId" TEXT NOT NULL,
     "templateId" TEXT NOT NULL,
     "occurrenceNumber" INTEGER NOT NULL,
+    "plannedIntervalMinutes" INTEGER,
     "dueAtUtc" DATETIME NOT NULL,
+    "staggerOffsetSeconds" INTEGER NOT NULL DEFAULT 0,
     "idempotencyKey" TEXT NOT NULL,
     "status" TEXT NOT NULL DEFAULT 'PENDING',
     "renderedText" TEXT,
@@ -131,11 +134,13 @@ CREATE TABLE "ScheduledMessage" (
     "sentAt" DATETIME,
     "failedAt" DATETIME,
     "cancelledAt" DATETIME,
+    "cancellationReason" TEXT,
     "lastError" TEXT,
     "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "updatedAt" DATETIME NOT NULL,
     CONSTRAINT "ScheduledMessage_shiftId_fkey" FOREIGN KEY ("shiftId") REFERENCES "Shift" ("id") ON DELETE RESTRICT ON UPDATE CASCADE,
     CONSTRAINT "ScheduledMessage_workerId_fkey" FOREIGN KEY ("workerId") REFERENCES "Worker" ("id") ON DELETE RESTRICT ON UPDATE CASCADE,
+    CONSTRAINT "ScheduledMessage_locationId_fkey" FOREIGN KEY ("locationId") REFERENCES "Location" ("id") ON DELETE SET NULL ON UPDATE CASCADE,
     CONSTRAINT "ScheduledMessage_triggerRuleId_fkey" FOREIGN KEY ("triggerRuleId") REFERENCES "TriggerRule" ("id") ON DELETE RESTRICT ON UPDATE CASCADE,
     CONSTRAINT "ScheduledMessage_templateId_fkey" FOREIGN KEY ("templateId") REFERENCES "MessageTemplate" ("id") ON DELETE RESTRICT ON UPDATE CASCADE
 );
@@ -286,6 +291,9 @@ CREATE INDEX "ScheduledMessage_shiftId_idx" ON "ScheduledMessage"("shiftId");
 
 -- CreateIndex
 CREATE INDEX "ScheduledMessage_workerId_idx" ON "ScheduledMessage"("workerId");
+
+-- CreateIndex
+CREATE INDEX "ScheduledMessage_locationId_idx" ON "ScheduledMessage"("locationId");
 
 -- CreateIndex
 CREATE INDEX "MessageEvent_whatsappChatId_idx" ON "MessageEvent"("whatsappChatId");

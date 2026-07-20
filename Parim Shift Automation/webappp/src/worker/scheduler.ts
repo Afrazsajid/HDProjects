@@ -6,6 +6,7 @@ import { checkHealth, getSessionStatus, isTemporaryOpenWAError, sendText } from 
 import { claimDueMessages, releaseStuckMessages, skipOverdueMessages } from "../lib/scheduler/claims";
 import { renderTemplate } from "../lib/scheduler/renderer";
 import { updateShiftStatuses } from "../lib/shifts/status";
+import { parseAdvancedConditions } from "../lib/scheduler/reminder-plan";
 import { log } from "../lib/logger";
 import { acquireOrRenewLease } from "./lease";
 
@@ -54,8 +55,13 @@ export async function processSchedulerTick(ownerId: string) {
       if (!message.worker.whatsappOptIn || message.worker.doNotContact) throw new PermanentSkip("Worker is not contactable");
       if (!message.worker.whatsappChatId) throw new PermanentSkip("Worker has no WhatsApp chat ID");
       if (!message.triggerRule.enabled) throw new PermanentSkip("Trigger rule is disabled");
-      if (message.triggerRule.recurrenceStop === "CHECKED_IN" && message.shift.checkedInAt) {
-        throw new PermanentSkip("Worker is already checked in");
+      const advancedConditions = parseAdvancedConditions(message.triggerRule.conditionsJson);
+      if ((message.triggerRule.recurrenceStop === "CHECKED_IN" || advancedConditions.stopAfterFormCompletion) && message.shift.checkedInAt) {
+        throw new PermanentSkip("Worker is already checked in or form is complete");
+      }
+      if (advancedConditions.stopAfterFormCompletion) {
+        const completedForms = await prisma.attendanceResponse.count({ where: { shiftId: message.shiftId, workerId: message.workerId } });
+        if (completedForms > 0) throw new PermanentSkip("Worker form is already complete");
       }
 
       const checkInToken = message.template.content.includes("{{checkInUrl}}")
@@ -104,7 +110,7 @@ export async function processSchedulerTick(ownerId: string) {
       if (error instanceof PermanentSkip) {
         await prisma.scheduledMessage.update({
           where: { id: message.id },
-          data: { status: "SKIPPED", lastError: errorMessage, processingStartedAt: null, claimedBy: null },
+          data: { status: "SKIPPED", lastError: errorMessage, cancellationReason: errorMessage, processingStartedAt: null, claimedBy: null },
         });
         continue;
       }

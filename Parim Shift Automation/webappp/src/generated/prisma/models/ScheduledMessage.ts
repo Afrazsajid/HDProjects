@@ -28,12 +28,16 @@ export type AggregateScheduledMessage = {
 
 export type ScheduledMessageAvgAggregateOutputType = {
   occurrenceNumber: number | null
+  plannedIntervalMinutes: number | null
+  staggerOffsetSeconds: number | null
   attempts: number | null
   maximumAttempts: number | null
 }
 
 export type ScheduledMessageSumAggregateOutputType = {
   occurrenceNumber: number | null
+  plannedIntervalMinutes: number | null
+  staggerOffsetSeconds: number | null
   attempts: number | null
   maximumAttempts: number | null
 }
@@ -42,10 +46,13 @@ export type ScheduledMessageMinAggregateOutputType = {
   id: string | null
   shiftId: string | null
   workerId: string | null
+  locationId: string | null
   triggerRuleId: string | null
   templateId: string | null
   occurrenceNumber: number | null
+  plannedIntervalMinutes: number | null
   dueAtUtc: Date | null
+  staggerOffsetSeconds: number | null
   idempotencyKey: string | null
   status: string | null
   renderedText: string | null
@@ -57,6 +64,7 @@ export type ScheduledMessageMinAggregateOutputType = {
   sentAt: Date | null
   failedAt: Date | null
   cancelledAt: Date | null
+  cancellationReason: string | null
   lastError: string | null
   createdAt: Date | null
   updatedAt: Date | null
@@ -66,10 +74,13 @@ export type ScheduledMessageMaxAggregateOutputType = {
   id: string | null
   shiftId: string | null
   workerId: string | null
+  locationId: string | null
   triggerRuleId: string | null
   templateId: string | null
   occurrenceNumber: number | null
+  plannedIntervalMinutes: number | null
   dueAtUtc: Date | null
+  staggerOffsetSeconds: number | null
   idempotencyKey: string | null
   status: string | null
   renderedText: string | null
@@ -81,6 +92,7 @@ export type ScheduledMessageMaxAggregateOutputType = {
   sentAt: Date | null
   failedAt: Date | null
   cancelledAt: Date | null
+  cancellationReason: string | null
   lastError: string | null
   createdAt: Date | null
   updatedAt: Date | null
@@ -90,10 +102,13 @@ export type ScheduledMessageCountAggregateOutputType = {
   id: number
   shiftId: number
   workerId: number
+  locationId: number
   triggerRuleId: number
   templateId: number
   occurrenceNumber: number
+  plannedIntervalMinutes: number
   dueAtUtc: number
+  staggerOffsetSeconds: number
   idempotencyKey: number
   status: number
   renderedText: number
@@ -105,6 +120,7 @@ export type ScheduledMessageCountAggregateOutputType = {
   sentAt: number
   failedAt: number
   cancelledAt: number
+  cancellationReason: number
   lastError: number
   createdAt: number
   updatedAt: number
@@ -114,12 +130,16 @@ export type ScheduledMessageCountAggregateOutputType = {
 
 export type ScheduledMessageAvgAggregateInputType = {
   occurrenceNumber?: true
+  plannedIntervalMinutes?: true
+  staggerOffsetSeconds?: true
   attempts?: true
   maximumAttempts?: true
 }
 
 export type ScheduledMessageSumAggregateInputType = {
   occurrenceNumber?: true
+  plannedIntervalMinutes?: true
+  staggerOffsetSeconds?: true
   attempts?: true
   maximumAttempts?: true
 }
@@ -128,10 +148,13 @@ export type ScheduledMessageMinAggregateInputType = {
   id?: true
   shiftId?: true
   workerId?: true
+  locationId?: true
   triggerRuleId?: true
   templateId?: true
   occurrenceNumber?: true
+  plannedIntervalMinutes?: true
   dueAtUtc?: true
+  staggerOffsetSeconds?: true
   idempotencyKey?: true
   status?: true
   renderedText?: true
@@ -143,6 +166,7 @@ export type ScheduledMessageMinAggregateInputType = {
   sentAt?: true
   failedAt?: true
   cancelledAt?: true
+  cancellationReason?: true
   lastError?: true
   createdAt?: true
   updatedAt?: true
@@ -152,10 +176,13 @@ export type ScheduledMessageMaxAggregateInputType = {
   id?: true
   shiftId?: true
   workerId?: true
+  locationId?: true
   triggerRuleId?: true
   templateId?: true
   occurrenceNumber?: true
+  plannedIntervalMinutes?: true
   dueAtUtc?: true
+  staggerOffsetSeconds?: true
   idempotencyKey?: true
   status?: true
   renderedText?: true
@@ -167,6 +194,7 @@ export type ScheduledMessageMaxAggregateInputType = {
   sentAt?: true
   failedAt?: true
   cancelledAt?: true
+  cancellationReason?: true
   lastError?: true
   createdAt?: true
   updatedAt?: true
@@ -176,10 +204,13 @@ export type ScheduledMessageCountAggregateInputType = {
   id?: true
   shiftId?: true
   workerId?: true
+  locationId?: true
   triggerRuleId?: true
   templateId?: true
   occurrenceNumber?: true
+  plannedIntervalMinutes?: true
   dueAtUtc?: true
+  staggerOffsetSeconds?: true
   idempotencyKey?: true
   status?: true
   renderedText?: true
@@ -191,6 +222,7 @@ export type ScheduledMessageCountAggregateInputType = {
   sentAt?: true
   failedAt?: true
   cancelledAt?: true
+  cancellationReason?: true
   lastError?: true
   createdAt?: true
   updatedAt?: true
@@ -287,10 +319,13 @@ export type ScheduledMessageGroupByOutputType = {
   id: string
   shiftId: string
   workerId: string
+  locationId: string | null
   triggerRuleId: string
   templateId: string
   occurrenceNumber: number
+  plannedIntervalMinutes: number | null
   dueAtUtc: Date
+  staggerOffsetSeconds: number
   idempotencyKey: string
   status: string
   renderedText: string | null
@@ -302,6 +337,7 @@ export type ScheduledMessageGroupByOutputType = {
   sentAt: Date | null
   failedAt: Date | null
   cancelledAt: Date | null
+  cancellationReason: string | null
   lastError: string | null
   createdAt: Date
   updatedAt: Date
@@ -334,10 +370,13 @@ export type ScheduledMessageWhereInput = {
   id?: Prisma.StringFilter<"ScheduledMessage"> | string
   shiftId?: Prisma.StringFilter<"ScheduledMessage"> | string
   workerId?: Prisma.StringFilter<"ScheduledMessage"> | string
+  locationId?: Prisma.StringNullableFilter<"ScheduledMessage"> | string | null
   triggerRuleId?: Prisma.StringFilter<"ScheduledMessage"> | string
   templateId?: Prisma.StringFilter<"ScheduledMessage"> | string
   occurrenceNumber?: Prisma.IntFilter<"ScheduledMessage"> | number
+  plannedIntervalMinutes?: Prisma.IntNullableFilter<"ScheduledMessage"> | number | null
   dueAtUtc?: Prisma.DateTimeFilter<"ScheduledMessage"> | Date | string
+  staggerOffsetSeconds?: Prisma.IntFilter<"ScheduledMessage"> | number
   idempotencyKey?: Prisma.StringFilter<"ScheduledMessage"> | string
   status?: Prisma.StringFilter<"ScheduledMessage"> | string
   renderedText?: Prisma.StringNullableFilter<"ScheduledMessage"> | string | null
@@ -349,11 +388,13 @@ export type ScheduledMessageWhereInput = {
   sentAt?: Prisma.DateTimeNullableFilter<"ScheduledMessage"> | Date | string | null
   failedAt?: Prisma.DateTimeNullableFilter<"ScheduledMessage"> | Date | string | null
   cancelledAt?: Prisma.DateTimeNullableFilter<"ScheduledMessage"> | Date | string | null
+  cancellationReason?: Prisma.StringNullableFilter<"ScheduledMessage"> | string | null
   lastError?: Prisma.StringNullableFilter<"ScheduledMessage"> | string | null
   createdAt?: Prisma.DateTimeFilter<"ScheduledMessage"> | Date | string
   updatedAt?: Prisma.DateTimeFilter<"ScheduledMessage"> | Date | string
   shift?: Prisma.XOR<Prisma.ShiftScalarRelationFilter, Prisma.ShiftWhereInput>
   worker?: Prisma.XOR<Prisma.WorkerScalarRelationFilter, Prisma.WorkerWhereInput>
+  location?: Prisma.XOR<Prisma.LocationNullableScalarRelationFilter, Prisma.LocationWhereInput> | null
   triggerRule?: Prisma.XOR<Prisma.TriggerRuleScalarRelationFilter, Prisma.TriggerRuleWhereInput>
   template?: Prisma.XOR<Prisma.MessageTemplateScalarRelationFilter, Prisma.MessageTemplateWhereInput>
   events?: Prisma.MessageEventListRelationFilter
@@ -363,10 +404,13 @@ export type ScheduledMessageOrderByWithRelationInput = {
   id?: Prisma.SortOrder
   shiftId?: Prisma.SortOrder
   workerId?: Prisma.SortOrder
+  locationId?: Prisma.SortOrderInput | Prisma.SortOrder
   triggerRuleId?: Prisma.SortOrder
   templateId?: Prisma.SortOrder
   occurrenceNumber?: Prisma.SortOrder
+  plannedIntervalMinutes?: Prisma.SortOrderInput | Prisma.SortOrder
   dueAtUtc?: Prisma.SortOrder
+  staggerOffsetSeconds?: Prisma.SortOrder
   idempotencyKey?: Prisma.SortOrder
   status?: Prisma.SortOrder
   renderedText?: Prisma.SortOrderInput | Prisma.SortOrder
@@ -378,11 +422,13 @@ export type ScheduledMessageOrderByWithRelationInput = {
   sentAt?: Prisma.SortOrderInput | Prisma.SortOrder
   failedAt?: Prisma.SortOrderInput | Prisma.SortOrder
   cancelledAt?: Prisma.SortOrderInput | Prisma.SortOrder
+  cancellationReason?: Prisma.SortOrderInput | Prisma.SortOrder
   lastError?: Prisma.SortOrderInput | Prisma.SortOrder
   createdAt?: Prisma.SortOrder
   updatedAt?: Prisma.SortOrder
   shift?: Prisma.ShiftOrderByWithRelationInput
   worker?: Prisma.WorkerOrderByWithRelationInput
+  location?: Prisma.LocationOrderByWithRelationInput
   triggerRule?: Prisma.TriggerRuleOrderByWithRelationInput
   template?: Prisma.MessageTemplateOrderByWithRelationInput
   events?: Prisma.MessageEventOrderByRelationAggregateInput
@@ -396,10 +442,13 @@ export type ScheduledMessageWhereUniqueInput = Prisma.AtLeast<{
   NOT?: Prisma.ScheduledMessageWhereInput | Prisma.ScheduledMessageWhereInput[]
   shiftId?: Prisma.StringFilter<"ScheduledMessage"> | string
   workerId?: Prisma.StringFilter<"ScheduledMessage"> | string
+  locationId?: Prisma.StringNullableFilter<"ScheduledMessage"> | string | null
   triggerRuleId?: Prisma.StringFilter<"ScheduledMessage"> | string
   templateId?: Prisma.StringFilter<"ScheduledMessage"> | string
   occurrenceNumber?: Prisma.IntFilter<"ScheduledMessage"> | number
+  plannedIntervalMinutes?: Prisma.IntNullableFilter<"ScheduledMessage"> | number | null
   dueAtUtc?: Prisma.DateTimeFilter<"ScheduledMessage"> | Date | string
+  staggerOffsetSeconds?: Prisma.IntFilter<"ScheduledMessage"> | number
   status?: Prisma.StringFilter<"ScheduledMessage"> | string
   renderedText?: Prisma.StringNullableFilter<"ScheduledMessage"> | string | null
   openwaMessageId?: Prisma.StringNullableFilter<"ScheduledMessage"> | string | null
@@ -410,11 +459,13 @@ export type ScheduledMessageWhereUniqueInput = Prisma.AtLeast<{
   sentAt?: Prisma.DateTimeNullableFilter<"ScheduledMessage"> | Date | string | null
   failedAt?: Prisma.DateTimeNullableFilter<"ScheduledMessage"> | Date | string | null
   cancelledAt?: Prisma.DateTimeNullableFilter<"ScheduledMessage"> | Date | string | null
+  cancellationReason?: Prisma.StringNullableFilter<"ScheduledMessage"> | string | null
   lastError?: Prisma.StringNullableFilter<"ScheduledMessage"> | string | null
   createdAt?: Prisma.DateTimeFilter<"ScheduledMessage"> | Date | string
   updatedAt?: Prisma.DateTimeFilter<"ScheduledMessage"> | Date | string
   shift?: Prisma.XOR<Prisma.ShiftScalarRelationFilter, Prisma.ShiftWhereInput>
   worker?: Prisma.XOR<Prisma.WorkerScalarRelationFilter, Prisma.WorkerWhereInput>
+  location?: Prisma.XOR<Prisma.LocationNullableScalarRelationFilter, Prisma.LocationWhereInput> | null
   triggerRule?: Prisma.XOR<Prisma.TriggerRuleScalarRelationFilter, Prisma.TriggerRuleWhereInput>
   template?: Prisma.XOR<Prisma.MessageTemplateScalarRelationFilter, Prisma.MessageTemplateWhereInput>
   events?: Prisma.MessageEventListRelationFilter
@@ -424,10 +475,13 @@ export type ScheduledMessageOrderByWithAggregationInput = {
   id?: Prisma.SortOrder
   shiftId?: Prisma.SortOrder
   workerId?: Prisma.SortOrder
+  locationId?: Prisma.SortOrderInput | Prisma.SortOrder
   triggerRuleId?: Prisma.SortOrder
   templateId?: Prisma.SortOrder
   occurrenceNumber?: Prisma.SortOrder
+  plannedIntervalMinutes?: Prisma.SortOrderInput | Prisma.SortOrder
   dueAtUtc?: Prisma.SortOrder
+  staggerOffsetSeconds?: Prisma.SortOrder
   idempotencyKey?: Prisma.SortOrder
   status?: Prisma.SortOrder
   renderedText?: Prisma.SortOrderInput | Prisma.SortOrder
@@ -439,6 +493,7 @@ export type ScheduledMessageOrderByWithAggregationInput = {
   sentAt?: Prisma.SortOrderInput | Prisma.SortOrder
   failedAt?: Prisma.SortOrderInput | Prisma.SortOrder
   cancelledAt?: Prisma.SortOrderInput | Prisma.SortOrder
+  cancellationReason?: Prisma.SortOrderInput | Prisma.SortOrder
   lastError?: Prisma.SortOrderInput | Prisma.SortOrder
   createdAt?: Prisma.SortOrder
   updatedAt?: Prisma.SortOrder
@@ -456,10 +511,13 @@ export type ScheduledMessageScalarWhereWithAggregatesInput = {
   id?: Prisma.StringWithAggregatesFilter<"ScheduledMessage"> | string
   shiftId?: Prisma.StringWithAggregatesFilter<"ScheduledMessage"> | string
   workerId?: Prisma.StringWithAggregatesFilter<"ScheduledMessage"> | string
+  locationId?: Prisma.StringNullableWithAggregatesFilter<"ScheduledMessage"> | string | null
   triggerRuleId?: Prisma.StringWithAggregatesFilter<"ScheduledMessage"> | string
   templateId?: Prisma.StringWithAggregatesFilter<"ScheduledMessage"> | string
   occurrenceNumber?: Prisma.IntWithAggregatesFilter<"ScheduledMessage"> | number
+  plannedIntervalMinutes?: Prisma.IntNullableWithAggregatesFilter<"ScheduledMessage"> | number | null
   dueAtUtc?: Prisma.DateTimeWithAggregatesFilter<"ScheduledMessage"> | Date | string
+  staggerOffsetSeconds?: Prisma.IntWithAggregatesFilter<"ScheduledMessage"> | number
   idempotencyKey?: Prisma.StringWithAggregatesFilter<"ScheduledMessage"> | string
   status?: Prisma.StringWithAggregatesFilter<"ScheduledMessage"> | string
   renderedText?: Prisma.StringNullableWithAggregatesFilter<"ScheduledMessage"> | string | null
@@ -471,6 +529,7 @@ export type ScheduledMessageScalarWhereWithAggregatesInput = {
   sentAt?: Prisma.DateTimeNullableWithAggregatesFilter<"ScheduledMessage"> | Date | string | null
   failedAt?: Prisma.DateTimeNullableWithAggregatesFilter<"ScheduledMessage"> | Date | string | null
   cancelledAt?: Prisma.DateTimeNullableWithAggregatesFilter<"ScheduledMessage"> | Date | string | null
+  cancellationReason?: Prisma.StringNullableWithAggregatesFilter<"ScheduledMessage"> | string | null
   lastError?: Prisma.StringNullableWithAggregatesFilter<"ScheduledMessage"> | string | null
   createdAt?: Prisma.DateTimeWithAggregatesFilter<"ScheduledMessage"> | Date | string
   updatedAt?: Prisma.DateTimeWithAggregatesFilter<"ScheduledMessage"> | Date | string
@@ -479,7 +538,9 @@ export type ScheduledMessageScalarWhereWithAggregatesInput = {
 export type ScheduledMessageCreateInput = {
   id?: string
   occurrenceNumber: number
+  plannedIntervalMinutes?: number | null
   dueAtUtc: Date | string
+  staggerOffsetSeconds?: number
   idempotencyKey: string
   status?: string
   renderedText?: string | null
@@ -491,11 +552,13 @@ export type ScheduledMessageCreateInput = {
   sentAt?: Date | string | null
   failedAt?: Date | string | null
   cancelledAt?: Date | string | null
+  cancellationReason?: string | null
   lastError?: string | null
   createdAt?: Date | string
   updatedAt?: Date | string
   shift: Prisma.ShiftCreateNestedOneWithoutScheduledMessagesInput
   worker: Prisma.WorkerCreateNestedOneWithoutScheduledMessagesInput
+  location?: Prisma.LocationCreateNestedOneWithoutScheduledMessagesInput
   triggerRule: Prisma.TriggerRuleCreateNestedOneWithoutScheduledMessagesInput
   template: Prisma.MessageTemplateCreateNestedOneWithoutScheduledMessagesInput
   events?: Prisma.MessageEventCreateNestedManyWithoutScheduledMessageInput
@@ -505,10 +568,13 @@ export type ScheduledMessageUncheckedCreateInput = {
   id?: string
   shiftId: string
   workerId: string
+  locationId?: string | null
   triggerRuleId: string
   templateId: string
   occurrenceNumber: number
+  plannedIntervalMinutes?: number | null
   dueAtUtc: Date | string
+  staggerOffsetSeconds?: number
   idempotencyKey: string
   status?: string
   renderedText?: string | null
@@ -520,6 +586,7 @@ export type ScheduledMessageUncheckedCreateInput = {
   sentAt?: Date | string | null
   failedAt?: Date | string | null
   cancelledAt?: Date | string | null
+  cancellationReason?: string | null
   lastError?: string | null
   createdAt?: Date | string
   updatedAt?: Date | string
@@ -529,7 +596,9 @@ export type ScheduledMessageUncheckedCreateInput = {
 export type ScheduledMessageUpdateInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   occurrenceNumber?: Prisma.IntFieldUpdateOperationsInput | number
+  plannedIntervalMinutes?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   dueAtUtc?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  staggerOffsetSeconds?: Prisma.IntFieldUpdateOperationsInput | number
   idempotencyKey?: Prisma.StringFieldUpdateOperationsInput | string
   status?: Prisma.StringFieldUpdateOperationsInput | string
   renderedText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -541,11 +610,13 @@ export type ScheduledMessageUpdateInput = {
   sentAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   failedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   cancelledAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  cancellationReason?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   lastError?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   shift?: Prisma.ShiftUpdateOneRequiredWithoutScheduledMessagesNestedInput
   worker?: Prisma.WorkerUpdateOneRequiredWithoutScheduledMessagesNestedInput
+  location?: Prisma.LocationUpdateOneWithoutScheduledMessagesNestedInput
   triggerRule?: Prisma.TriggerRuleUpdateOneRequiredWithoutScheduledMessagesNestedInput
   template?: Prisma.MessageTemplateUpdateOneRequiredWithoutScheduledMessagesNestedInput
   events?: Prisma.MessageEventUpdateManyWithoutScheduledMessageNestedInput
@@ -555,10 +626,13 @@ export type ScheduledMessageUncheckedUpdateInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   shiftId?: Prisma.StringFieldUpdateOperationsInput | string
   workerId?: Prisma.StringFieldUpdateOperationsInput | string
+  locationId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   triggerRuleId?: Prisma.StringFieldUpdateOperationsInput | string
   templateId?: Prisma.StringFieldUpdateOperationsInput | string
   occurrenceNumber?: Prisma.IntFieldUpdateOperationsInput | number
+  plannedIntervalMinutes?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   dueAtUtc?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  staggerOffsetSeconds?: Prisma.IntFieldUpdateOperationsInput | number
   idempotencyKey?: Prisma.StringFieldUpdateOperationsInput | string
   status?: Prisma.StringFieldUpdateOperationsInput | string
   renderedText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -570,6 +644,7 @@ export type ScheduledMessageUncheckedUpdateInput = {
   sentAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   failedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   cancelledAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  cancellationReason?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   lastError?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -580,10 +655,13 @@ export type ScheduledMessageCreateManyInput = {
   id?: string
   shiftId: string
   workerId: string
+  locationId?: string | null
   triggerRuleId: string
   templateId: string
   occurrenceNumber: number
+  plannedIntervalMinutes?: number | null
   dueAtUtc: Date | string
+  staggerOffsetSeconds?: number
   idempotencyKey: string
   status?: string
   renderedText?: string | null
@@ -595,6 +673,7 @@ export type ScheduledMessageCreateManyInput = {
   sentAt?: Date | string | null
   failedAt?: Date | string | null
   cancelledAt?: Date | string | null
+  cancellationReason?: string | null
   lastError?: string | null
   createdAt?: Date | string
   updatedAt?: Date | string
@@ -603,7 +682,9 @@ export type ScheduledMessageCreateManyInput = {
 export type ScheduledMessageUpdateManyMutationInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   occurrenceNumber?: Prisma.IntFieldUpdateOperationsInput | number
+  plannedIntervalMinutes?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   dueAtUtc?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  staggerOffsetSeconds?: Prisma.IntFieldUpdateOperationsInput | number
   idempotencyKey?: Prisma.StringFieldUpdateOperationsInput | string
   status?: Prisma.StringFieldUpdateOperationsInput | string
   renderedText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -615,6 +696,7 @@ export type ScheduledMessageUpdateManyMutationInput = {
   sentAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   failedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   cancelledAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  cancellationReason?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   lastError?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -624,10 +706,13 @@ export type ScheduledMessageUncheckedUpdateManyInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   shiftId?: Prisma.StringFieldUpdateOperationsInput | string
   workerId?: Prisma.StringFieldUpdateOperationsInput | string
+  locationId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   triggerRuleId?: Prisma.StringFieldUpdateOperationsInput | string
   templateId?: Prisma.StringFieldUpdateOperationsInput | string
   occurrenceNumber?: Prisma.IntFieldUpdateOperationsInput | number
+  plannedIntervalMinutes?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   dueAtUtc?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  staggerOffsetSeconds?: Prisma.IntFieldUpdateOperationsInput | number
   idempotencyKey?: Prisma.StringFieldUpdateOperationsInput | string
   status?: Prisma.StringFieldUpdateOperationsInput | string
   renderedText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -639,6 +724,7 @@ export type ScheduledMessageUncheckedUpdateManyInput = {
   sentAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   failedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   cancelledAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  cancellationReason?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   lastError?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -658,10 +744,13 @@ export type ScheduledMessageCountOrderByAggregateInput = {
   id?: Prisma.SortOrder
   shiftId?: Prisma.SortOrder
   workerId?: Prisma.SortOrder
+  locationId?: Prisma.SortOrder
   triggerRuleId?: Prisma.SortOrder
   templateId?: Prisma.SortOrder
   occurrenceNumber?: Prisma.SortOrder
+  plannedIntervalMinutes?: Prisma.SortOrder
   dueAtUtc?: Prisma.SortOrder
+  staggerOffsetSeconds?: Prisma.SortOrder
   idempotencyKey?: Prisma.SortOrder
   status?: Prisma.SortOrder
   renderedText?: Prisma.SortOrder
@@ -673,6 +762,7 @@ export type ScheduledMessageCountOrderByAggregateInput = {
   sentAt?: Prisma.SortOrder
   failedAt?: Prisma.SortOrder
   cancelledAt?: Prisma.SortOrder
+  cancellationReason?: Prisma.SortOrder
   lastError?: Prisma.SortOrder
   createdAt?: Prisma.SortOrder
   updatedAt?: Prisma.SortOrder
@@ -680,6 +770,8 @@ export type ScheduledMessageCountOrderByAggregateInput = {
 
 export type ScheduledMessageAvgOrderByAggregateInput = {
   occurrenceNumber?: Prisma.SortOrder
+  plannedIntervalMinutes?: Prisma.SortOrder
+  staggerOffsetSeconds?: Prisma.SortOrder
   attempts?: Prisma.SortOrder
   maximumAttempts?: Prisma.SortOrder
 }
@@ -688,10 +780,13 @@ export type ScheduledMessageMaxOrderByAggregateInput = {
   id?: Prisma.SortOrder
   shiftId?: Prisma.SortOrder
   workerId?: Prisma.SortOrder
+  locationId?: Prisma.SortOrder
   triggerRuleId?: Prisma.SortOrder
   templateId?: Prisma.SortOrder
   occurrenceNumber?: Prisma.SortOrder
+  plannedIntervalMinutes?: Prisma.SortOrder
   dueAtUtc?: Prisma.SortOrder
+  staggerOffsetSeconds?: Prisma.SortOrder
   idempotencyKey?: Prisma.SortOrder
   status?: Prisma.SortOrder
   renderedText?: Prisma.SortOrder
@@ -703,6 +798,7 @@ export type ScheduledMessageMaxOrderByAggregateInput = {
   sentAt?: Prisma.SortOrder
   failedAt?: Prisma.SortOrder
   cancelledAt?: Prisma.SortOrder
+  cancellationReason?: Prisma.SortOrder
   lastError?: Prisma.SortOrder
   createdAt?: Prisma.SortOrder
   updatedAt?: Prisma.SortOrder
@@ -712,10 +808,13 @@ export type ScheduledMessageMinOrderByAggregateInput = {
   id?: Prisma.SortOrder
   shiftId?: Prisma.SortOrder
   workerId?: Prisma.SortOrder
+  locationId?: Prisma.SortOrder
   triggerRuleId?: Prisma.SortOrder
   templateId?: Prisma.SortOrder
   occurrenceNumber?: Prisma.SortOrder
+  plannedIntervalMinutes?: Prisma.SortOrder
   dueAtUtc?: Prisma.SortOrder
+  staggerOffsetSeconds?: Prisma.SortOrder
   idempotencyKey?: Prisma.SortOrder
   status?: Prisma.SortOrder
   renderedText?: Prisma.SortOrder
@@ -727,6 +826,7 @@ export type ScheduledMessageMinOrderByAggregateInput = {
   sentAt?: Prisma.SortOrder
   failedAt?: Prisma.SortOrder
   cancelledAt?: Prisma.SortOrder
+  cancellationReason?: Prisma.SortOrder
   lastError?: Prisma.SortOrder
   createdAt?: Prisma.SortOrder
   updatedAt?: Prisma.SortOrder
@@ -734,6 +834,8 @@ export type ScheduledMessageMinOrderByAggregateInput = {
 
 export type ScheduledMessageSumOrderByAggregateInput = {
   occurrenceNumber?: Prisma.SortOrder
+  plannedIntervalMinutes?: Prisma.SortOrder
+  staggerOffsetSeconds?: Prisma.SortOrder
   attempts?: Prisma.SortOrder
   maximumAttempts?: Prisma.SortOrder
 }
@@ -782,6 +884,48 @@ export type ScheduledMessageUncheckedUpdateManyWithoutWorkerNestedInput = {
   connect?: Prisma.ScheduledMessageWhereUniqueInput | Prisma.ScheduledMessageWhereUniqueInput[]
   update?: Prisma.ScheduledMessageUpdateWithWhereUniqueWithoutWorkerInput | Prisma.ScheduledMessageUpdateWithWhereUniqueWithoutWorkerInput[]
   updateMany?: Prisma.ScheduledMessageUpdateManyWithWhereWithoutWorkerInput | Prisma.ScheduledMessageUpdateManyWithWhereWithoutWorkerInput[]
+  deleteMany?: Prisma.ScheduledMessageScalarWhereInput | Prisma.ScheduledMessageScalarWhereInput[]
+}
+
+export type ScheduledMessageCreateNestedManyWithoutLocationInput = {
+  create?: Prisma.XOR<Prisma.ScheduledMessageCreateWithoutLocationInput, Prisma.ScheduledMessageUncheckedCreateWithoutLocationInput> | Prisma.ScheduledMessageCreateWithoutLocationInput[] | Prisma.ScheduledMessageUncheckedCreateWithoutLocationInput[]
+  connectOrCreate?: Prisma.ScheduledMessageCreateOrConnectWithoutLocationInput | Prisma.ScheduledMessageCreateOrConnectWithoutLocationInput[]
+  createMany?: Prisma.ScheduledMessageCreateManyLocationInputEnvelope
+  connect?: Prisma.ScheduledMessageWhereUniqueInput | Prisma.ScheduledMessageWhereUniqueInput[]
+}
+
+export type ScheduledMessageUncheckedCreateNestedManyWithoutLocationInput = {
+  create?: Prisma.XOR<Prisma.ScheduledMessageCreateWithoutLocationInput, Prisma.ScheduledMessageUncheckedCreateWithoutLocationInput> | Prisma.ScheduledMessageCreateWithoutLocationInput[] | Prisma.ScheduledMessageUncheckedCreateWithoutLocationInput[]
+  connectOrCreate?: Prisma.ScheduledMessageCreateOrConnectWithoutLocationInput | Prisma.ScheduledMessageCreateOrConnectWithoutLocationInput[]
+  createMany?: Prisma.ScheduledMessageCreateManyLocationInputEnvelope
+  connect?: Prisma.ScheduledMessageWhereUniqueInput | Prisma.ScheduledMessageWhereUniqueInput[]
+}
+
+export type ScheduledMessageUpdateManyWithoutLocationNestedInput = {
+  create?: Prisma.XOR<Prisma.ScheduledMessageCreateWithoutLocationInput, Prisma.ScheduledMessageUncheckedCreateWithoutLocationInput> | Prisma.ScheduledMessageCreateWithoutLocationInput[] | Prisma.ScheduledMessageUncheckedCreateWithoutLocationInput[]
+  connectOrCreate?: Prisma.ScheduledMessageCreateOrConnectWithoutLocationInput | Prisma.ScheduledMessageCreateOrConnectWithoutLocationInput[]
+  upsert?: Prisma.ScheduledMessageUpsertWithWhereUniqueWithoutLocationInput | Prisma.ScheduledMessageUpsertWithWhereUniqueWithoutLocationInput[]
+  createMany?: Prisma.ScheduledMessageCreateManyLocationInputEnvelope
+  set?: Prisma.ScheduledMessageWhereUniqueInput | Prisma.ScheduledMessageWhereUniqueInput[]
+  disconnect?: Prisma.ScheduledMessageWhereUniqueInput | Prisma.ScheduledMessageWhereUniqueInput[]
+  delete?: Prisma.ScheduledMessageWhereUniqueInput | Prisma.ScheduledMessageWhereUniqueInput[]
+  connect?: Prisma.ScheduledMessageWhereUniqueInput | Prisma.ScheduledMessageWhereUniqueInput[]
+  update?: Prisma.ScheduledMessageUpdateWithWhereUniqueWithoutLocationInput | Prisma.ScheduledMessageUpdateWithWhereUniqueWithoutLocationInput[]
+  updateMany?: Prisma.ScheduledMessageUpdateManyWithWhereWithoutLocationInput | Prisma.ScheduledMessageUpdateManyWithWhereWithoutLocationInput[]
+  deleteMany?: Prisma.ScheduledMessageScalarWhereInput | Prisma.ScheduledMessageScalarWhereInput[]
+}
+
+export type ScheduledMessageUncheckedUpdateManyWithoutLocationNestedInput = {
+  create?: Prisma.XOR<Prisma.ScheduledMessageCreateWithoutLocationInput, Prisma.ScheduledMessageUncheckedCreateWithoutLocationInput> | Prisma.ScheduledMessageCreateWithoutLocationInput[] | Prisma.ScheduledMessageUncheckedCreateWithoutLocationInput[]
+  connectOrCreate?: Prisma.ScheduledMessageCreateOrConnectWithoutLocationInput | Prisma.ScheduledMessageCreateOrConnectWithoutLocationInput[]
+  upsert?: Prisma.ScheduledMessageUpsertWithWhereUniqueWithoutLocationInput | Prisma.ScheduledMessageUpsertWithWhereUniqueWithoutLocationInput[]
+  createMany?: Prisma.ScheduledMessageCreateManyLocationInputEnvelope
+  set?: Prisma.ScheduledMessageWhereUniqueInput | Prisma.ScheduledMessageWhereUniqueInput[]
+  disconnect?: Prisma.ScheduledMessageWhereUniqueInput | Prisma.ScheduledMessageWhereUniqueInput[]
+  delete?: Prisma.ScheduledMessageWhereUniqueInput | Prisma.ScheduledMessageWhereUniqueInput[]
+  connect?: Prisma.ScheduledMessageWhereUniqueInput | Prisma.ScheduledMessageWhereUniqueInput[]
+  update?: Prisma.ScheduledMessageUpdateWithWhereUniqueWithoutLocationInput | Prisma.ScheduledMessageUpdateWithWhereUniqueWithoutLocationInput[]
+  updateMany?: Prisma.ScheduledMessageUpdateManyWithWhereWithoutLocationInput | Prisma.ScheduledMessageUpdateManyWithWhereWithoutLocationInput[]
   deleteMany?: Prisma.ScheduledMessageScalarWhereInput | Prisma.ScheduledMessageScalarWhereInput[]
 }
 
@@ -930,7 +1074,9 @@ export type ScheduledMessageUpdateOneWithoutEventsNestedInput = {
 export type ScheduledMessageCreateWithoutWorkerInput = {
   id?: string
   occurrenceNumber: number
+  plannedIntervalMinutes?: number | null
   dueAtUtc: Date | string
+  staggerOffsetSeconds?: number
   idempotencyKey: string
   status?: string
   renderedText?: string | null
@@ -942,10 +1088,12 @@ export type ScheduledMessageCreateWithoutWorkerInput = {
   sentAt?: Date | string | null
   failedAt?: Date | string | null
   cancelledAt?: Date | string | null
+  cancellationReason?: string | null
   lastError?: string | null
   createdAt?: Date | string
   updatedAt?: Date | string
   shift: Prisma.ShiftCreateNestedOneWithoutScheduledMessagesInput
+  location?: Prisma.LocationCreateNestedOneWithoutScheduledMessagesInput
   triggerRule: Prisma.TriggerRuleCreateNestedOneWithoutScheduledMessagesInput
   template: Prisma.MessageTemplateCreateNestedOneWithoutScheduledMessagesInput
   events?: Prisma.MessageEventCreateNestedManyWithoutScheduledMessageInput
@@ -954,10 +1102,13 @@ export type ScheduledMessageCreateWithoutWorkerInput = {
 export type ScheduledMessageUncheckedCreateWithoutWorkerInput = {
   id?: string
   shiftId: string
+  locationId?: string | null
   triggerRuleId: string
   templateId: string
   occurrenceNumber: number
+  plannedIntervalMinutes?: number | null
   dueAtUtc: Date | string
+  staggerOffsetSeconds?: number
   idempotencyKey: string
   status?: string
   renderedText?: string | null
@@ -969,6 +1120,7 @@ export type ScheduledMessageUncheckedCreateWithoutWorkerInput = {
   sentAt?: Date | string | null
   failedAt?: Date | string | null
   cancelledAt?: Date | string | null
+  cancellationReason?: string | null
   lastError?: string | null
   createdAt?: Date | string
   updatedAt?: Date | string
@@ -1007,10 +1159,13 @@ export type ScheduledMessageScalarWhereInput = {
   id?: Prisma.StringFilter<"ScheduledMessage"> | string
   shiftId?: Prisma.StringFilter<"ScheduledMessage"> | string
   workerId?: Prisma.StringFilter<"ScheduledMessage"> | string
+  locationId?: Prisma.StringNullableFilter<"ScheduledMessage"> | string | null
   triggerRuleId?: Prisma.StringFilter<"ScheduledMessage"> | string
   templateId?: Prisma.StringFilter<"ScheduledMessage"> | string
   occurrenceNumber?: Prisma.IntFilter<"ScheduledMessage"> | number
+  plannedIntervalMinutes?: Prisma.IntNullableFilter<"ScheduledMessage"> | number | null
   dueAtUtc?: Prisma.DateTimeFilter<"ScheduledMessage"> | Date | string
+  staggerOffsetSeconds?: Prisma.IntFilter<"ScheduledMessage"> | number
   idempotencyKey?: Prisma.StringFilter<"ScheduledMessage"> | string
   status?: Prisma.StringFilter<"ScheduledMessage"> | string
   renderedText?: Prisma.StringNullableFilter<"ScheduledMessage"> | string | null
@@ -1022,15 +1177,18 @@ export type ScheduledMessageScalarWhereInput = {
   sentAt?: Prisma.DateTimeNullableFilter<"ScheduledMessage"> | Date | string | null
   failedAt?: Prisma.DateTimeNullableFilter<"ScheduledMessage"> | Date | string | null
   cancelledAt?: Prisma.DateTimeNullableFilter<"ScheduledMessage"> | Date | string | null
+  cancellationReason?: Prisma.StringNullableFilter<"ScheduledMessage"> | string | null
   lastError?: Prisma.StringNullableFilter<"ScheduledMessage"> | string | null
   createdAt?: Prisma.DateTimeFilter<"ScheduledMessage"> | Date | string
   updatedAt?: Prisma.DateTimeFilter<"ScheduledMessage"> | Date | string
 }
 
-export type ScheduledMessageCreateWithoutShiftInput = {
+export type ScheduledMessageCreateWithoutLocationInput = {
   id?: string
   occurrenceNumber: number
+  plannedIntervalMinutes?: number | null
   dueAtUtc: Date | string
+  staggerOffsetSeconds?: number
   idempotencyKey: string
   status?: string
   renderedText?: string | null
@@ -1042,10 +1200,93 @@ export type ScheduledMessageCreateWithoutShiftInput = {
   sentAt?: Date | string | null
   failedAt?: Date | string | null
   cancelledAt?: Date | string | null
+  cancellationReason?: string | null
+  lastError?: string | null
+  createdAt?: Date | string
+  updatedAt?: Date | string
+  shift: Prisma.ShiftCreateNestedOneWithoutScheduledMessagesInput
+  worker: Prisma.WorkerCreateNestedOneWithoutScheduledMessagesInput
+  triggerRule: Prisma.TriggerRuleCreateNestedOneWithoutScheduledMessagesInput
+  template: Prisma.MessageTemplateCreateNestedOneWithoutScheduledMessagesInput
+  events?: Prisma.MessageEventCreateNestedManyWithoutScheduledMessageInput
+}
+
+export type ScheduledMessageUncheckedCreateWithoutLocationInput = {
+  id?: string
+  shiftId: string
+  workerId: string
+  triggerRuleId: string
+  templateId: string
+  occurrenceNumber: number
+  plannedIntervalMinutes?: number | null
+  dueAtUtc: Date | string
+  staggerOffsetSeconds?: number
+  idempotencyKey: string
+  status?: string
+  renderedText?: string | null
+  openwaMessageId?: string | null
+  attempts?: number
+  maximumAttempts?: number
+  processingStartedAt?: Date | string | null
+  claimedBy?: string | null
+  sentAt?: Date | string | null
+  failedAt?: Date | string | null
+  cancelledAt?: Date | string | null
+  cancellationReason?: string | null
+  lastError?: string | null
+  createdAt?: Date | string
+  updatedAt?: Date | string
+  events?: Prisma.MessageEventUncheckedCreateNestedManyWithoutScheduledMessageInput
+}
+
+export type ScheduledMessageCreateOrConnectWithoutLocationInput = {
+  where: Prisma.ScheduledMessageWhereUniqueInput
+  create: Prisma.XOR<Prisma.ScheduledMessageCreateWithoutLocationInput, Prisma.ScheduledMessageUncheckedCreateWithoutLocationInput>
+}
+
+export type ScheduledMessageCreateManyLocationInputEnvelope = {
+  data: Prisma.ScheduledMessageCreateManyLocationInput | Prisma.ScheduledMessageCreateManyLocationInput[]
+}
+
+export type ScheduledMessageUpsertWithWhereUniqueWithoutLocationInput = {
+  where: Prisma.ScheduledMessageWhereUniqueInput
+  update: Prisma.XOR<Prisma.ScheduledMessageUpdateWithoutLocationInput, Prisma.ScheduledMessageUncheckedUpdateWithoutLocationInput>
+  create: Prisma.XOR<Prisma.ScheduledMessageCreateWithoutLocationInput, Prisma.ScheduledMessageUncheckedCreateWithoutLocationInput>
+}
+
+export type ScheduledMessageUpdateWithWhereUniqueWithoutLocationInput = {
+  where: Prisma.ScheduledMessageWhereUniqueInput
+  data: Prisma.XOR<Prisma.ScheduledMessageUpdateWithoutLocationInput, Prisma.ScheduledMessageUncheckedUpdateWithoutLocationInput>
+}
+
+export type ScheduledMessageUpdateManyWithWhereWithoutLocationInput = {
+  where: Prisma.ScheduledMessageScalarWhereInput
+  data: Prisma.XOR<Prisma.ScheduledMessageUpdateManyMutationInput, Prisma.ScheduledMessageUncheckedUpdateManyWithoutLocationInput>
+}
+
+export type ScheduledMessageCreateWithoutShiftInput = {
+  id?: string
+  occurrenceNumber: number
+  plannedIntervalMinutes?: number | null
+  dueAtUtc: Date | string
+  staggerOffsetSeconds?: number
+  idempotencyKey: string
+  status?: string
+  renderedText?: string | null
+  openwaMessageId?: string | null
+  attempts?: number
+  maximumAttempts?: number
+  processingStartedAt?: Date | string | null
+  claimedBy?: string | null
+  sentAt?: Date | string | null
+  failedAt?: Date | string | null
+  cancelledAt?: Date | string | null
+  cancellationReason?: string | null
   lastError?: string | null
   createdAt?: Date | string
   updatedAt?: Date | string
   worker: Prisma.WorkerCreateNestedOneWithoutScheduledMessagesInput
+  location?: Prisma.LocationCreateNestedOneWithoutScheduledMessagesInput
   triggerRule: Prisma.TriggerRuleCreateNestedOneWithoutScheduledMessagesInput
   template: Prisma.MessageTemplateCreateNestedOneWithoutScheduledMessagesInput
   events?: Prisma.MessageEventCreateNestedManyWithoutScheduledMessageInput
@@ -1054,10 +1295,13 @@ export type ScheduledMessageCreateWithoutShiftInput = {
 export type ScheduledMessageUncheckedCreateWithoutShiftInput = {
   id?: string
   workerId: string
+  locationId?: string | null
   triggerRuleId: string
   templateId: string
   occurrenceNumber: number
+  plannedIntervalMinutes?: number | null
   dueAtUtc: Date | string
+  staggerOffsetSeconds?: number
   idempotencyKey: string
   status?: string
   renderedText?: string | null
@@ -1069,6 +1313,7 @@ export type ScheduledMessageUncheckedCreateWithoutShiftInput = {
   sentAt?: Date | string | null
   failedAt?: Date | string | null
   cancelledAt?: Date | string | null
+  cancellationReason?: string | null
   lastError?: string | null
   createdAt?: Date | string
   updatedAt?: Date | string
@@ -1103,7 +1348,9 @@ export type ScheduledMessageUpdateManyWithWhereWithoutShiftInput = {
 export type ScheduledMessageCreateWithoutTemplateInput = {
   id?: string
   occurrenceNumber: number
+  plannedIntervalMinutes?: number | null
   dueAtUtc: Date | string
+  staggerOffsetSeconds?: number
   idempotencyKey: string
   status?: string
   renderedText?: string | null
@@ -1115,11 +1362,13 @@ export type ScheduledMessageCreateWithoutTemplateInput = {
   sentAt?: Date | string | null
   failedAt?: Date | string | null
   cancelledAt?: Date | string | null
+  cancellationReason?: string | null
   lastError?: string | null
   createdAt?: Date | string
   updatedAt?: Date | string
   shift: Prisma.ShiftCreateNestedOneWithoutScheduledMessagesInput
   worker: Prisma.WorkerCreateNestedOneWithoutScheduledMessagesInput
+  location?: Prisma.LocationCreateNestedOneWithoutScheduledMessagesInput
   triggerRule: Prisma.TriggerRuleCreateNestedOneWithoutScheduledMessagesInput
   events?: Prisma.MessageEventCreateNestedManyWithoutScheduledMessageInput
 }
@@ -1128,9 +1377,12 @@ export type ScheduledMessageUncheckedCreateWithoutTemplateInput = {
   id?: string
   shiftId: string
   workerId: string
+  locationId?: string | null
   triggerRuleId: string
   occurrenceNumber: number
+  plannedIntervalMinutes?: number | null
   dueAtUtc: Date | string
+  staggerOffsetSeconds?: number
   idempotencyKey: string
   status?: string
   renderedText?: string | null
@@ -1142,6 +1394,7 @@ export type ScheduledMessageUncheckedCreateWithoutTemplateInput = {
   sentAt?: Date | string | null
   failedAt?: Date | string | null
   cancelledAt?: Date | string | null
+  cancellationReason?: string | null
   lastError?: string | null
   createdAt?: Date | string
   updatedAt?: Date | string
@@ -1176,7 +1429,9 @@ export type ScheduledMessageUpdateManyWithWhereWithoutTemplateInput = {
 export type ScheduledMessageCreateWithoutTriggerRuleInput = {
   id?: string
   occurrenceNumber: number
+  plannedIntervalMinutes?: number | null
   dueAtUtc: Date | string
+  staggerOffsetSeconds?: number
   idempotencyKey: string
   status?: string
   renderedText?: string | null
@@ -1188,11 +1443,13 @@ export type ScheduledMessageCreateWithoutTriggerRuleInput = {
   sentAt?: Date | string | null
   failedAt?: Date | string | null
   cancelledAt?: Date | string | null
+  cancellationReason?: string | null
   lastError?: string | null
   createdAt?: Date | string
   updatedAt?: Date | string
   shift: Prisma.ShiftCreateNestedOneWithoutScheduledMessagesInput
   worker: Prisma.WorkerCreateNestedOneWithoutScheduledMessagesInput
+  location?: Prisma.LocationCreateNestedOneWithoutScheduledMessagesInput
   template: Prisma.MessageTemplateCreateNestedOneWithoutScheduledMessagesInput
   events?: Prisma.MessageEventCreateNestedManyWithoutScheduledMessageInput
 }
@@ -1201,9 +1458,12 @@ export type ScheduledMessageUncheckedCreateWithoutTriggerRuleInput = {
   id?: string
   shiftId: string
   workerId: string
+  locationId?: string | null
   templateId: string
   occurrenceNumber: number
+  plannedIntervalMinutes?: number | null
   dueAtUtc: Date | string
+  staggerOffsetSeconds?: number
   idempotencyKey: string
   status?: string
   renderedText?: string | null
@@ -1215,6 +1475,7 @@ export type ScheduledMessageUncheckedCreateWithoutTriggerRuleInput = {
   sentAt?: Date | string | null
   failedAt?: Date | string | null
   cancelledAt?: Date | string | null
+  cancellationReason?: string | null
   lastError?: string | null
   createdAt?: Date | string
   updatedAt?: Date | string
@@ -1249,7 +1510,9 @@ export type ScheduledMessageUpdateManyWithWhereWithoutTriggerRuleInput = {
 export type ScheduledMessageCreateWithoutEventsInput = {
   id?: string
   occurrenceNumber: number
+  plannedIntervalMinutes?: number | null
   dueAtUtc: Date | string
+  staggerOffsetSeconds?: number
   idempotencyKey: string
   status?: string
   renderedText?: string | null
@@ -1261,11 +1524,13 @@ export type ScheduledMessageCreateWithoutEventsInput = {
   sentAt?: Date | string | null
   failedAt?: Date | string | null
   cancelledAt?: Date | string | null
+  cancellationReason?: string | null
   lastError?: string | null
   createdAt?: Date | string
   updatedAt?: Date | string
   shift: Prisma.ShiftCreateNestedOneWithoutScheduledMessagesInput
   worker: Prisma.WorkerCreateNestedOneWithoutScheduledMessagesInput
+  location?: Prisma.LocationCreateNestedOneWithoutScheduledMessagesInput
   triggerRule: Prisma.TriggerRuleCreateNestedOneWithoutScheduledMessagesInput
   template: Prisma.MessageTemplateCreateNestedOneWithoutScheduledMessagesInput
 }
@@ -1274,10 +1539,13 @@ export type ScheduledMessageUncheckedCreateWithoutEventsInput = {
   id?: string
   shiftId: string
   workerId: string
+  locationId?: string | null
   triggerRuleId: string
   templateId: string
   occurrenceNumber: number
+  plannedIntervalMinutes?: number | null
   dueAtUtc: Date | string
+  staggerOffsetSeconds?: number
   idempotencyKey: string
   status?: string
   renderedText?: string | null
@@ -1289,6 +1557,7 @@ export type ScheduledMessageUncheckedCreateWithoutEventsInput = {
   sentAt?: Date | string | null
   failedAt?: Date | string | null
   cancelledAt?: Date | string | null
+  cancellationReason?: string | null
   lastError?: string | null
   createdAt?: Date | string
   updatedAt?: Date | string
@@ -1313,7 +1582,9 @@ export type ScheduledMessageUpdateToOneWithWhereWithoutEventsInput = {
 export type ScheduledMessageUpdateWithoutEventsInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   occurrenceNumber?: Prisma.IntFieldUpdateOperationsInput | number
+  plannedIntervalMinutes?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   dueAtUtc?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  staggerOffsetSeconds?: Prisma.IntFieldUpdateOperationsInput | number
   idempotencyKey?: Prisma.StringFieldUpdateOperationsInput | string
   status?: Prisma.StringFieldUpdateOperationsInput | string
   renderedText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -1325,11 +1596,13 @@ export type ScheduledMessageUpdateWithoutEventsInput = {
   sentAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   failedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   cancelledAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  cancellationReason?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   lastError?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   shift?: Prisma.ShiftUpdateOneRequiredWithoutScheduledMessagesNestedInput
   worker?: Prisma.WorkerUpdateOneRequiredWithoutScheduledMessagesNestedInput
+  location?: Prisma.LocationUpdateOneWithoutScheduledMessagesNestedInput
   triggerRule?: Prisma.TriggerRuleUpdateOneRequiredWithoutScheduledMessagesNestedInput
   template?: Prisma.MessageTemplateUpdateOneRequiredWithoutScheduledMessagesNestedInput
 }
@@ -1338,10 +1611,13 @@ export type ScheduledMessageUncheckedUpdateWithoutEventsInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   shiftId?: Prisma.StringFieldUpdateOperationsInput | string
   workerId?: Prisma.StringFieldUpdateOperationsInput | string
+  locationId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   triggerRuleId?: Prisma.StringFieldUpdateOperationsInput | string
   templateId?: Prisma.StringFieldUpdateOperationsInput | string
   occurrenceNumber?: Prisma.IntFieldUpdateOperationsInput | number
+  plannedIntervalMinutes?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   dueAtUtc?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  staggerOffsetSeconds?: Prisma.IntFieldUpdateOperationsInput | number
   idempotencyKey?: Prisma.StringFieldUpdateOperationsInput | string
   status?: Prisma.StringFieldUpdateOperationsInput | string
   renderedText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -1353,6 +1629,7 @@ export type ScheduledMessageUncheckedUpdateWithoutEventsInput = {
   sentAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   failedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   cancelledAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  cancellationReason?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   lastError?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -1361,10 +1638,13 @@ export type ScheduledMessageUncheckedUpdateWithoutEventsInput = {
 export type ScheduledMessageCreateManyWorkerInput = {
   id?: string
   shiftId: string
+  locationId?: string | null
   triggerRuleId: string
   templateId: string
   occurrenceNumber: number
+  plannedIntervalMinutes?: number | null
   dueAtUtc: Date | string
+  staggerOffsetSeconds?: number
   idempotencyKey: string
   status?: string
   renderedText?: string | null
@@ -1376,6 +1656,7 @@ export type ScheduledMessageCreateManyWorkerInput = {
   sentAt?: Date | string | null
   failedAt?: Date | string | null
   cancelledAt?: Date | string | null
+  cancellationReason?: string | null
   lastError?: string | null
   createdAt?: Date | string
   updatedAt?: Date | string
@@ -1384,7 +1665,9 @@ export type ScheduledMessageCreateManyWorkerInput = {
 export type ScheduledMessageUpdateWithoutWorkerInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   occurrenceNumber?: Prisma.IntFieldUpdateOperationsInput | number
+  plannedIntervalMinutes?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   dueAtUtc?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  staggerOffsetSeconds?: Prisma.IntFieldUpdateOperationsInput | number
   idempotencyKey?: Prisma.StringFieldUpdateOperationsInput | string
   status?: Prisma.StringFieldUpdateOperationsInput | string
   renderedText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -1396,10 +1679,12 @@ export type ScheduledMessageUpdateWithoutWorkerInput = {
   sentAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   failedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   cancelledAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  cancellationReason?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   lastError?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   shift?: Prisma.ShiftUpdateOneRequiredWithoutScheduledMessagesNestedInput
+  location?: Prisma.LocationUpdateOneWithoutScheduledMessagesNestedInput
   triggerRule?: Prisma.TriggerRuleUpdateOneRequiredWithoutScheduledMessagesNestedInput
   template?: Prisma.MessageTemplateUpdateOneRequiredWithoutScheduledMessagesNestedInput
   events?: Prisma.MessageEventUpdateManyWithoutScheduledMessageNestedInput
@@ -1408,10 +1693,13 @@ export type ScheduledMessageUpdateWithoutWorkerInput = {
 export type ScheduledMessageUncheckedUpdateWithoutWorkerInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   shiftId?: Prisma.StringFieldUpdateOperationsInput | string
+  locationId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   triggerRuleId?: Prisma.StringFieldUpdateOperationsInput | string
   templateId?: Prisma.StringFieldUpdateOperationsInput | string
   occurrenceNumber?: Prisma.IntFieldUpdateOperationsInput | number
+  plannedIntervalMinutes?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   dueAtUtc?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  staggerOffsetSeconds?: Prisma.IntFieldUpdateOperationsInput | number
   idempotencyKey?: Prisma.StringFieldUpdateOperationsInput | string
   status?: Prisma.StringFieldUpdateOperationsInput | string
   renderedText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -1423,6 +1711,7 @@ export type ScheduledMessageUncheckedUpdateWithoutWorkerInput = {
   sentAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   failedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   cancelledAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  cancellationReason?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   lastError?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -1432,10 +1721,13 @@ export type ScheduledMessageUncheckedUpdateWithoutWorkerInput = {
 export type ScheduledMessageUncheckedUpdateManyWithoutWorkerInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   shiftId?: Prisma.StringFieldUpdateOperationsInput | string
+  locationId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   triggerRuleId?: Prisma.StringFieldUpdateOperationsInput | string
   templateId?: Prisma.StringFieldUpdateOperationsInput | string
   occurrenceNumber?: Prisma.IntFieldUpdateOperationsInput | number
+  plannedIntervalMinutes?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   dueAtUtc?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  staggerOffsetSeconds?: Prisma.IntFieldUpdateOperationsInput | number
   idempotencyKey?: Prisma.StringFieldUpdateOperationsInput | string
   status?: Prisma.StringFieldUpdateOperationsInput | string
   renderedText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -1447,18 +1739,22 @@ export type ScheduledMessageUncheckedUpdateManyWithoutWorkerInput = {
   sentAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   failedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   cancelledAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  cancellationReason?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   lastError?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
-export type ScheduledMessageCreateManyShiftInput = {
+export type ScheduledMessageCreateManyLocationInput = {
   id?: string
+  shiftId: string
   workerId: string
   triggerRuleId: string
   templateId: string
   occurrenceNumber: number
+  plannedIntervalMinutes?: number | null
   dueAtUtc: Date | string
+  staggerOffsetSeconds?: number
   idempotencyKey: string
   status?: string
   renderedText?: string | null
@@ -1470,6 +1766,117 @@ export type ScheduledMessageCreateManyShiftInput = {
   sentAt?: Date | string | null
   failedAt?: Date | string | null
   cancelledAt?: Date | string | null
+  cancellationReason?: string | null
+  lastError?: string | null
+  createdAt?: Date | string
+  updatedAt?: Date | string
+}
+
+export type ScheduledMessageUpdateWithoutLocationInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  occurrenceNumber?: Prisma.IntFieldUpdateOperationsInput | number
+  plannedIntervalMinutes?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  dueAtUtc?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  staggerOffsetSeconds?: Prisma.IntFieldUpdateOperationsInput | number
+  idempotencyKey?: Prisma.StringFieldUpdateOperationsInput | string
+  status?: Prisma.StringFieldUpdateOperationsInput | string
+  renderedText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  openwaMessageId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  attempts?: Prisma.IntFieldUpdateOperationsInput | number
+  maximumAttempts?: Prisma.IntFieldUpdateOperationsInput | number
+  processingStartedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  claimedBy?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  sentAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  failedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  cancelledAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  cancellationReason?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  lastError?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  shift?: Prisma.ShiftUpdateOneRequiredWithoutScheduledMessagesNestedInput
+  worker?: Prisma.WorkerUpdateOneRequiredWithoutScheduledMessagesNestedInput
+  triggerRule?: Prisma.TriggerRuleUpdateOneRequiredWithoutScheduledMessagesNestedInput
+  template?: Prisma.MessageTemplateUpdateOneRequiredWithoutScheduledMessagesNestedInput
+  events?: Prisma.MessageEventUpdateManyWithoutScheduledMessageNestedInput
+}
+
+export type ScheduledMessageUncheckedUpdateWithoutLocationInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  shiftId?: Prisma.StringFieldUpdateOperationsInput | string
+  workerId?: Prisma.StringFieldUpdateOperationsInput | string
+  triggerRuleId?: Prisma.StringFieldUpdateOperationsInput | string
+  templateId?: Prisma.StringFieldUpdateOperationsInput | string
+  occurrenceNumber?: Prisma.IntFieldUpdateOperationsInput | number
+  plannedIntervalMinutes?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  dueAtUtc?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  staggerOffsetSeconds?: Prisma.IntFieldUpdateOperationsInput | number
+  idempotencyKey?: Prisma.StringFieldUpdateOperationsInput | string
+  status?: Prisma.StringFieldUpdateOperationsInput | string
+  renderedText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  openwaMessageId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  attempts?: Prisma.IntFieldUpdateOperationsInput | number
+  maximumAttempts?: Prisma.IntFieldUpdateOperationsInput | number
+  processingStartedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  claimedBy?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  sentAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  failedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  cancelledAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  cancellationReason?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  lastError?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  events?: Prisma.MessageEventUncheckedUpdateManyWithoutScheduledMessageNestedInput
+}
+
+export type ScheduledMessageUncheckedUpdateManyWithoutLocationInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  shiftId?: Prisma.StringFieldUpdateOperationsInput | string
+  workerId?: Prisma.StringFieldUpdateOperationsInput | string
+  triggerRuleId?: Prisma.StringFieldUpdateOperationsInput | string
+  templateId?: Prisma.StringFieldUpdateOperationsInput | string
+  occurrenceNumber?: Prisma.IntFieldUpdateOperationsInput | number
+  plannedIntervalMinutes?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  dueAtUtc?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  staggerOffsetSeconds?: Prisma.IntFieldUpdateOperationsInput | number
+  idempotencyKey?: Prisma.StringFieldUpdateOperationsInput | string
+  status?: Prisma.StringFieldUpdateOperationsInput | string
+  renderedText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  openwaMessageId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  attempts?: Prisma.IntFieldUpdateOperationsInput | number
+  maximumAttempts?: Prisma.IntFieldUpdateOperationsInput | number
+  processingStartedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  claimedBy?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  sentAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  failedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  cancelledAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  cancellationReason?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  lastError?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+}
+
+export type ScheduledMessageCreateManyShiftInput = {
+  id?: string
+  workerId: string
+  locationId?: string | null
+  triggerRuleId: string
+  templateId: string
+  occurrenceNumber: number
+  plannedIntervalMinutes?: number | null
+  dueAtUtc: Date | string
+  staggerOffsetSeconds?: number
+  idempotencyKey: string
+  status?: string
+  renderedText?: string | null
+  openwaMessageId?: string | null
+  attempts?: number
+  maximumAttempts?: number
+  processingStartedAt?: Date | string | null
+  claimedBy?: string | null
+  sentAt?: Date | string | null
+  failedAt?: Date | string | null
+  cancelledAt?: Date | string | null
+  cancellationReason?: string | null
   lastError?: string | null
   createdAt?: Date | string
   updatedAt?: Date | string
@@ -1478,7 +1885,9 @@ export type ScheduledMessageCreateManyShiftInput = {
 export type ScheduledMessageUpdateWithoutShiftInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   occurrenceNumber?: Prisma.IntFieldUpdateOperationsInput | number
+  plannedIntervalMinutes?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   dueAtUtc?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  staggerOffsetSeconds?: Prisma.IntFieldUpdateOperationsInput | number
   idempotencyKey?: Prisma.StringFieldUpdateOperationsInput | string
   status?: Prisma.StringFieldUpdateOperationsInput | string
   renderedText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -1490,10 +1899,12 @@ export type ScheduledMessageUpdateWithoutShiftInput = {
   sentAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   failedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   cancelledAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  cancellationReason?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   lastError?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   worker?: Prisma.WorkerUpdateOneRequiredWithoutScheduledMessagesNestedInput
+  location?: Prisma.LocationUpdateOneWithoutScheduledMessagesNestedInput
   triggerRule?: Prisma.TriggerRuleUpdateOneRequiredWithoutScheduledMessagesNestedInput
   template?: Prisma.MessageTemplateUpdateOneRequiredWithoutScheduledMessagesNestedInput
   events?: Prisma.MessageEventUpdateManyWithoutScheduledMessageNestedInput
@@ -1502,10 +1913,13 @@ export type ScheduledMessageUpdateWithoutShiftInput = {
 export type ScheduledMessageUncheckedUpdateWithoutShiftInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   workerId?: Prisma.StringFieldUpdateOperationsInput | string
+  locationId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   triggerRuleId?: Prisma.StringFieldUpdateOperationsInput | string
   templateId?: Prisma.StringFieldUpdateOperationsInput | string
   occurrenceNumber?: Prisma.IntFieldUpdateOperationsInput | number
+  plannedIntervalMinutes?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   dueAtUtc?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  staggerOffsetSeconds?: Prisma.IntFieldUpdateOperationsInput | number
   idempotencyKey?: Prisma.StringFieldUpdateOperationsInput | string
   status?: Prisma.StringFieldUpdateOperationsInput | string
   renderedText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -1517,6 +1931,7 @@ export type ScheduledMessageUncheckedUpdateWithoutShiftInput = {
   sentAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   failedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   cancelledAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  cancellationReason?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   lastError?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -1526,10 +1941,13 @@ export type ScheduledMessageUncheckedUpdateWithoutShiftInput = {
 export type ScheduledMessageUncheckedUpdateManyWithoutShiftInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   workerId?: Prisma.StringFieldUpdateOperationsInput | string
+  locationId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   triggerRuleId?: Prisma.StringFieldUpdateOperationsInput | string
   templateId?: Prisma.StringFieldUpdateOperationsInput | string
   occurrenceNumber?: Prisma.IntFieldUpdateOperationsInput | number
+  plannedIntervalMinutes?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   dueAtUtc?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  staggerOffsetSeconds?: Prisma.IntFieldUpdateOperationsInput | number
   idempotencyKey?: Prisma.StringFieldUpdateOperationsInput | string
   status?: Prisma.StringFieldUpdateOperationsInput | string
   renderedText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -1541,6 +1959,7 @@ export type ScheduledMessageUncheckedUpdateManyWithoutShiftInput = {
   sentAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   failedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   cancelledAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  cancellationReason?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   lastError?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -1550,9 +1969,12 @@ export type ScheduledMessageCreateManyTemplateInput = {
   id?: string
   shiftId: string
   workerId: string
+  locationId?: string | null
   triggerRuleId: string
   occurrenceNumber: number
+  plannedIntervalMinutes?: number | null
   dueAtUtc: Date | string
+  staggerOffsetSeconds?: number
   idempotencyKey: string
   status?: string
   renderedText?: string | null
@@ -1564,6 +1986,7 @@ export type ScheduledMessageCreateManyTemplateInput = {
   sentAt?: Date | string | null
   failedAt?: Date | string | null
   cancelledAt?: Date | string | null
+  cancellationReason?: string | null
   lastError?: string | null
   createdAt?: Date | string
   updatedAt?: Date | string
@@ -1572,7 +1995,9 @@ export type ScheduledMessageCreateManyTemplateInput = {
 export type ScheduledMessageUpdateWithoutTemplateInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   occurrenceNumber?: Prisma.IntFieldUpdateOperationsInput | number
+  plannedIntervalMinutes?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   dueAtUtc?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  staggerOffsetSeconds?: Prisma.IntFieldUpdateOperationsInput | number
   idempotencyKey?: Prisma.StringFieldUpdateOperationsInput | string
   status?: Prisma.StringFieldUpdateOperationsInput | string
   renderedText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -1584,11 +2009,13 @@ export type ScheduledMessageUpdateWithoutTemplateInput = {
   sentAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   failedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   cancelledAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  cancellationReason?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   lastError?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   shift?: Prisma.ShiftUpdateOneRequiredWithoutScheduledMessagesNestedInput
   worker?: Prisma.WorkerUpdateOneRequiredWithoutScheduledMessagesNestedInput
+  location?: Prisma.LocationUpdateOneWithoutScheduledMessagesNestedInput
   triggerRule?: Prisma.TriggerRuleUpdateOneRequiredWithoutScheduledMessagesNestedInput
   events?: Prisma.MessageEventUpdateManyWithoutScheduledMessageNestedInput
 }
@@ -1597,9 +2024,12 @@ export type ScheduledMessageUncheckedUpdateWithoutTemplateInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   shiftId?: Prisma.StringFieldUpdateOperationsInput | string
   workerId?: Prisma.StringFieldUpdateOperationsInput | string
+  locationId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   triggerRuleId?: Prisma.StringFieldUpdateOperationsInput | string
   occurrenceNumber?: Prisma.IntFieldUpdateOperationsInput | number
+  plannedIntervalMinutes?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   dueAtUtc?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  staggerOffsetSeconds?: Prisma.IntFieldUpdateOperationsInput | number
   idempotencyKey?: Prisma.StringFieldUpdateOperationsInput | string
   status?: Prisma.StringFieldUpdateOperationsInput | string
   renderedText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -1611,6 +2041,7 @@ export type ScheduledMessageUncheckedUpdateWithoutTemplateInput = {
   sentAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   failedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   cancelledAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  cancellationReason?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   lastError?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -1621,9 +2052,12 @@ export type ScheduledMessageUncheckedUpdateManyWithoutTemplateInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   shiftId?: Prisma.StringFieldUpdateOperationsInput | string
   workerId?: Prisma.StringFieldUpdateOperationsInput | string
+  locationId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   triggerRuleId?: Prisma.StringFieldUpdateOperationsInput | string
   occurrenceNumber?: Prisma.IntFieldUpdateOperationsInput | number
+  plannedIntervalMinutes?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   dueAtUtc?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  staggerOffsetSeconds?: Prisma.IntFieldUpdateOperationsInput | number
   idempotencyKey?: Prisma.StringFieldUpdateOperationsInput | string
   status?: Prisma.StringFieldUpdateOperationsInput | string
   renderedText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -1635,6 +2069,7 @@ export type ScheduledMessageUncheckedUpdateManyWithoutTemplateInput = {
   sentAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   failedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   cancelledAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  cancellationReason?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   lastError?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -1644,9 +2079,12 @@ export type ScheduledMessageCreateManyTriggerRuleInput = {
   id?: string
   shiftId: string
   workerId: string
+  locationId?: string | null
   templateId: string
   occurrenceNumber: number
+  plannedIntervalMinutes?: number | null
   dueAtUtc: Date | string
+  staggerOffsetSeconds?: number
   idempotencyKey: string
   status?: string
   renderedText?: string | null
@@ -1658,6 +2096,7 @@ export type ScheduledMessageCreateManyTriggerRuleInput = {
   sentAt?: Date | string | null
   failedAt?: Date | string | null
   cancelledAt?: Date | string | null
+  cancellationReason?: string | null
   lastError?: string | null
   createdAt?: Date | string
   updatedAt?: Date | string
@@ -1666,7 +2105,9 @@ export type ScheduledMessageCreateManyTriggerRuleInput = {
 export type ScheduledMessageUpdateWithoutTriggerRuleInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   occurrenceNumber?: Prisma.IntFieldUpdateOperationsInput | number
+  plannedIntervalMinutes?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   dueAtUtc?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  staggerOffsetSeconds?: Prisma.IntFieldUpdateOperationsInput | number
   idempotencyKey?: Prisma.StringFieldUpdateOperationsInput | string
   status?: Prisma.StringFieldUpdateOperationsInput | string
   renderedText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -1678,11 +2119,13 @@ export type ScheduledMessageUpdateWithoutTriggerRuleInput = {
   sentAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   failedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   cancelledAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  cancellationReason?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   lastError?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   shift?: Prisma.ShiftUpdateOneRequiredWithoutScheduledMessagesNestedInput
   worker?: Prisma.WorkerUpdateOneRequiredWithoutScheduledMessagesNestedInput
+  location?: Prisma.LocationUpdateOneWithoutScheduledMessagesNestedInput
   template?: Prisma.MessageTemplateUpdateOneRequiredWithoutScheduledMessagesNestedInput
   events?: Prisma.MessageEventUpdateManyWithoutScheduledMessageNestedInput
 }
@@ -1691,9 +2134,12 @@ export type ScheduledMessageUncheckedUpdateWithoutTriggerRuleInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   shiftId?: Prisma.StringFieldUpdateOperationsInput | string
   workerId?: Prisma.StringFieldUpdateOperationsInput | string
+  locationId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   templateId?: Prisma.StringFieldUpdateOperationsInput | string
   occurrenceNumber?: Prisma.IntFieldUpdateOperationsInput | number
+  plannedIntervalMinutes?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   dueAtUtc?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  staggerOffsetSeconds?: Prisma.IntFieldUpdateOperationsInput | number
   idempotencyKey?: Prisma.StringFieldUpdateOperationsInput | string
   status?: Prisma.StringFieldUpdateOperationsInput | string
   renderedText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -1705,6 +2151,7 @@ export type ScheduledMessageUncheckedUpdateWithoutTriggerRuleInput = {
   sentAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   failedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   cancelledAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  cancellationReason?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   lastError?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -1715,9 +2162,12 @@ export type ScheduledMessageUncheckedUpdateManyWithoutTriggerRuleInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   shiftId?: Prisma.StringFieldUpdateOperationsInput | string
   workerId?: Prisma.StringFieldUpdateOperationsInput | string
+  locationId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   templateId?: Prisma.StringFieldUpdateOperationsInput | string
   occurrenceNumber?: Prisma.IntFieldUpdateOperationsInput | number
+  plannedIntervalMinutes?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   dueAtUtc?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  staggerOffsetSeconds?: Prisma.IntFieldUpdateOperationsInput | number
   idempotencyKey?: Prisma.StringFieldUpdateOperationsInput | string
   status?: Prisma.StringFieldUpdateOperationsInput | string
   renderedText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -1729,6 +2179,7 @@ export type ScheduledMessageUncheckedUpdateManyWithoutTriggerRuleInput = {
   sentAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   failedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   cancelledAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  cancellationReason?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   lastError?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -1769,10 +2220,13 @@ export type ScheduledMessageSelect<ExtArgs extends runtime.Types.Extensions.Inte
   id?: boolean
   shiftId?: boolean
   workerId?: boolean
+  locationId?: boolean
   triggerRuleId?: boolean
   templateId?: boolean
   occurrenceNumber?: boolean
+  plannedIntervalMinutes?: boolean
   dueAtUtc?: boolean
+  staggerOffsetSeconds?: boolean
   idempotencyKey?: boolean
   status?: boolean
   renderedText?: boolean
@@ -1784,11 +2238,13 @@ export type ScheduledMessageSelect<ExtArgs extends runtime.Types.Extensions.Inte
   sentAt?: boolean
   failedAt?: boolean
   cancelledAt?: boolean
+  cancellationReason?: boolean
   lastError?: boolean
   createdAt?: boolean
   updatedAt?: boolean
   shift?: boolean | Prisma.ShiftDefaultArgs<ExtArgs>
   worker?: boolean | Prisma.WorkerDefaultArgs<ExtArgs>
+  location?: boolean | Prisma.ScheduledMessage$locationArgs<ExtArgs>
   triggerRule?: boolean | Prisma.TriggerRuleDefaultArgs<ExtArgs>
   template?: boolean | Prisma.MessageTemplateDefaultArgs<ExtArgs>
   events?: boolean | Prisma.ScheduledMessage$eventsArgs<ExtArgs>
@@ -1799,10 +2255,13 @@ export type ScheduledMessageSelectCreateManyAndReturn<ExtArgs extends runtime.Ty
   id?: boolean
   shiftId?: boolean
   workerId?: boolean
+  locationId?: boolean
   triggerRuleId?: boolean
   templateId?: boolean
   occurrenceNumber?: boolean
+  plannedIntervalMinutes?: boolean
   dueAtUtc?: boolean
+  staggerOffsetSeconds?: boolean
   idempotencyKey?: boolean
   status?: boolean
   renderedText?: boolean
@@ -1814,11 +2273,13 @@ export type ScheduledMessageSelectCreateManyAndReturn<ExtArgs extends runtime.Ty
   sentAt?: boolean
   failedAt?: boolean
   cancelledAt?: boolean
+  cancellationReason?: boolean
   lastError?: boolean
   createdAt?: boolean
   updatedAt?: boolean
   shift?: boolean | Prisma.ShiftDefaultArgs<ExtArgs>
   worker?: boolean | Prisma.WorkerDefaultArgs<ExtArgs>
+  location?: boolean | Prisma.ScheduledMessage$locationArgs<ExtArgs>
   triggerRule?: boolean | Prisma.TriggerRuleDefaultArgs<ExtArgs>
   template?: boolean | Prisma.MessageTemplateDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["scheduledMessage"]>
@@ -1827,10 +2288,13 @@ export type ScheduledMessageSelectUpdateManyAndReturn<ExtArgs extends runtime.Ty
   id?: boolean
   shiftId?: boolean
   workerId?: boolean
+  locationId?: boolean
   triggerRuleId?: boolean
   templateId?: boolean
   occurrenceNumber?: boolean
+  plannedIntervalMinutes?: boolean
   dueAtUtc?: boolean
+  staggerOffsetSeconds?: boolean
   idempotencyKey?: boolean
   status?: boolean
   renderedText?: boolean
@@ -1842,11 +2306,13 @@ export type ScheduledMessageSelectUpdateManyAndReturn<ExtArgs extends runtime.Ty
   sentAt?: boolean
   failedAt?: boolean
   cancelledAt?: boolean
+  cancellationReason?: boolean
   lastError?: boolean
   createdAt?: boolean
   updatedAt?: boolean
   shift?: boolean | Prisma.ShiftDefaultArgs<ExtArgs>
   worker?: boolean | Prisma.WorkerDefaultArgs<ExtArgs>
+  location?: boolean | Prisma.ScheduledMessage$locationArgs<ExtArgs>
   triggerRule?: boolean | Prisma.TriggerRuleDefaultArgs<ExtArgs>
   template?: boolean | Prisma.MessageTemplateDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["scheduledMessage"]>
@@ -1855,10 +2321,13 @@ export type ScheduledMessageSelectScalar = {
   id?: boolean
   shiftId?: boolean
   workerId?: boolean
+  locationId?: boolean
   triggerRuleId?: boolean
   templateId?: boolean
   occurrenceNumber?: boolean
+  plannedIntervalMinutes?: boolean
   dueAtUtc?: boolean
+  staggerOffsetSeconds?: boolean
   idempotencyKey?: boolean
   status?: boolean
   renderedText?: boolean
@@ -1870,15 +2339,17 @@ export type ScheduledMessageSelectScalar = {
   sentAt?: boolean
   failedAt?: boolean
   cancelledAt?: boolean
+  cancellationReason?: boolean
   lastError?: boolean
   createdAt?: boolean
   updatedAt?: boolean
 }
 
-export type ScheduledMessageOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "shiftId" | "workerId" | "triggerRuleId" | "templateId" | "occurrenceNumber" | "dueAtUtc" | "idempotencyKey" | "status" | "renderedText" | "openwaMessageId" | "attempts" | "maximumAttempts" | "processingStartedAt" | "claimedBy" | "sentAt" | "failedAt" | "cancelledAt" | "lastError" | "createdAt" | "updatedAt", ExtArgs["result"]["scheduledMessage"]>
+export type ScheduledMessageOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "shiftId" | "workerId" | "locationId" | "triggerRuleId" | "templateId" | "occurrenceNumber" | "plannedIntervalMinutes" | "dueAtUtc" | "staggerOffsetSeconds" | "idempotencyKey" | "status" | "renderedText" | "openwaMessageId" | "attempts" | "maximumAttempts" | "processingStartedAt" | "claimedBy" | "sentAt" | "failedAt" | "cancelledAt" | "cancellationReason" | "lastError" | "createdAt" | "updatedAt", ExtArgs["result"]["scheduledMessage"]>
 export type ScheduledMessageInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   shift?: boolean | Prisma.ShiftDefaultArgs<ExtArgs>
   worker?: boolean | Prisma.WorkerDefaultArgs<ExtArgs>
+  location?: boolean | Prisma.ScheduledMessage$locationArgs<ExtArgs>
   triggerRule?: boolean | Prisma.TriggerRuleDefaultArgs<ExtArgs>
   template?: boolean | Prisma.MessageTemplateDefaultArgs<ExtArgs>
   events?: boolean | Prisma.ScheduledMessage$eventsArgs<ExtArgs>
@@ -1887,12 +2358,14 @@ export type ScheduledMessageInclude<ExtArgs extends runtime.Types.Extensions.Int
 export type ScheduledMessageIncludeCreateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   shift?: boolean | Prisma.ShiftDefaultArgs<ExtArgs>
   worker?: boolean | Prisma.WorkerDefaultArgs<ExtArgs>
+  location?: boolean | Prisma.ScheduledMessage$locationArgs<ExtArgs>
   triggerRule?: boolean | Prisma.TriggerRuleDefaultArgs<ExtArgs>
   template?: boolean | Prisma.MessageTemplateDefaultArgs<ExtArgs>
 }
 export type ScheduledMessageIncludeUpdateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   shift?: boolean | Prisma.ShiftDefaultArgs<ExtArgs>
   worker?: boolean | Prisma.WorkerDefaultArgs<ExtArgs>
+  location?: boolean | Prisma.ScheduledMessage$locationArgs<ExtArgs>
   triggerRule?: boolean | Prisma.TriggerRuleDefaultArgs<ExtArgs>
   template?: boolean | Prisma.MessageTemplateDefaultArgs<ExtArgs>
 }
@@ -1902,6 +2375,7 @@ export type $ScheduledMessagePayload<ExtArgs extends runtime.Types.Extensions.In
   objects: {
     shift: Prisma.$ShiftPayload<ExtArgs>
     worker: Prisma.$WorkerPayload<ExtArgs>
+    location: Prisma.$LocationPayload<ExtArgs> | null
     triggerRule: Prisma.$TriggerRulePayload<ExtArgs>
     template: Prisma.$MessageTemplatePayload<ExtArgs>
     events: Prisma.$MessageEventPayload<ExtArgs>[]
@@ -1910,10 +2384,13 @@ export type $ScheduledMessagePayload<ExtArgs extends runtime.Types.Extensions.In
     id: string
     shiftId: string
     workerId: string
+    locationId: string | null
     triggerRuleId: string
     templateId: string
     occurrenceNumber: number
+    plannedIntervalMinutes: number | null
     dueAtUtc: Date
+    staggerOffsetSeconds: number
     idempotencyKey: string
     status: string
     renderedText: string | null
@@ -1925,6 +2402,7 @@ export type $ScheduledMessagePayload<ExtArgs extends runtime.Types.Extensions.In
     sentAt: Date | null
     failedAt: Date | null
     cancelledAt: Date | null
+    cancellationReason: string | null
     lastError: string | null
     createdAt: Date
     updatedAt: Date
@@ -2324,6 +2802,7 @@ export interface Prisma__ScheduledMessageClient<T, Null = never, ExtArgs extends
   readonly [Symbol.toStringTag]: "PrismaPromise"
   shift<T extends Prisma.ShiftDefaultArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.ShiftDefaultArgs<ExtArgs>>): Prisma.Prisma__ShiftClient<runtime.Types.Result.GetResult<Prisma.$ShiftPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
   worker<T extends Prisma.WorkerDefaultArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.WorkerDefaultArgs<ExtArgs>>): Prisma.Prisma__WorkerClient<runtime.Types.Result.GetResult<Prisma.$WorkerPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+  location<T extends Prisma.ScheduledMessage$locationArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.ScheduledMessage$locationArgs<ExtArgs>>): Prisma.Prisma__LocationClient<runtime.Types.Result.GetResult<Prisma.$LocationPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
   triggerRule<T extends Prisma.TriggerRuleDefaultArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.TriggerRuleDefaultArgs<ExtArgs>>): Prisma.Prisma__TriggerRuleClient<runtime.Types.Result.GetResult<Prisma.$TriggerRulePayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
   template<T extends Prisma.MessageTemplateDefaultArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.MessageTemplateDefaultArgs<ExtArgs>>): Prisma.Prisma__MessageTemplateClient<runtime.Types.Result.GetResult<Prisma.$MessageTemplatePayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
   events<T extends Prisma.ScheduledMessage$eventsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.ScheduledMessage$eventsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$MessageEventPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
@@ -2359,10 +2838,13 @@ export interface ScheduledMessageFieldRefs {
   readonly id: Prisma.FieldRef<"ScheduledMessage", 'String'>
   readonly shiftId: Prisma.FieldRef<"ScheduledMessage", 'String'>
   readonly workerId: Prisma.FieldRef<"ScheduledMessage", 'String'>
+  readonly locationId: Prisma.FieldRef<"ScheduledMessage", 'String'>
   readonly triggerRuleId: Prisma.FieldRef<"ScheduledMessage", 'String'>
   readonly templateId: Prisma.FieldRef<"ScheduledMessage", 'String'>
   readonly occurrenceNumber: Prisma.FieldRef<"ScheduledMessage", 'Int'>
+  readonly plannedIntervalMinutes: Prisma.FieldRef<"ScheduledMessage", 'Int'>
   readonly dueAtUtc: Prisma.FieldRef<"ScheduledMessage", 'DateTime'>
+  readonly staggerOffsetSeconds: Prisma.FieldRef<"ScheduledMessage", 'Int'>
   readonly idempotencyKey: Prisma.FieldRef<"ScheduledMessage", 'String'>
   readonly status: Prisma.FieldRef<"ScheduledMessage", 'String'>
   readonly renderedText: Prisma.FieldRef<"ScheduledMessage", 'String'>
@@ -2374,6 +2856,7 @@ export interface ScheduledMessageFieldRefs {
   readonly sentAt: Prisma.FieldRef<"ScheduledMessage", 'DateTime'>
   readonly failedAt: Prisma.FieldRef<"ScheduledMessage", 'DateTime'>
   readonly cancelledAt: Prisma.FieldRef<"ScheduledMessage", 'DateTime'>
+  readonly cancellationReason: Prisma.FieldRef<"ScheduledMessage", 'String'>
   readonly lastError: Prisma.FieldRef<"ScheduledMessage", 'String'>
   readonly createdAt: Prisma.FieldRef<"ScheduledMessage", 'DateTime'>
   readonly updatedAt: Prisma.FieldRef<"ScheduledMessage", 'DateTime'>
@@ -2773,6 +3256,25 @@ export type ScheduledMessageDeleteManyArgs<ExtArgs extends runtime.Types.Extensi
    * Limit how many ScheduledMessages to delete.
    */
   limit?: number
+}
+
+/**
+ * ScheduledMessage.location
+ */
+export type ScheduledMessage$locationArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  /**
+   * Select specific fields to fetch from the Location
+   */
+  select?: Prisma.LocationSelect<ExtArgs> | null
+  /**
+   * Omit specific fields from the Location
+   */
+  omit?: Prisma.LocationOmit<ExtArgs> | null
+  /**
+   * Choose, which related nodes to fetch as well
+   */
+  include?: Prisma.LocationInclude<ExtArgs> | null
+  where?: Prisma.LocationWhereInput
 }
 
 /**

@@ -6,7 +6,7 @@ import { Badge, Button, Card, CardContent, CardHeader, CardTitle, EmptyState, In
 
 type Template = { id: string; name: string; content: string; active: boolean };
 type Worker = { id: string; fullName: string; phoneE164: string; active: boolean };
-type Location = { id: string; name: string };
+type Location = { id: string; name: string; normalisedName?: string };
 type Shift = { id: string; startAtUtc: string | Date; endAtUtc: string | Date; worker: Worker; location: Location; status: string };
 type PreviewResult = { workerId: string; workerName: string; phone?: string; shiftId?: string; status: string; text?: string; error?: string };
 
@@ -25,6 +25,8 @@ export function SendNowManager({ templates, workers, locations, shifts }: { temp
   const [mode, setMode] = useState("workers");
   const [workerIds, setWorkerIds] = useState<string[]>([]);
   const [locationId, setLocationId] = useState("");
+  const [includeLocationIds, setIncludeLocationIds] = useState<string[]>([]);
+  const [excludeLocationIds, setExcludeLocationIds] = useState<string[]>([]);
   const [shiftId, setShiftId] = useState("");
   const [minutes, setMinutes] = useState("120");
   const [shiftStatus, setShiftStatus] = useState("");
@@ -44,7 +46,7 @@ export function SendNowManager({ templates, workers, locations, shifts }: { temp
       const response = await fetch("/api/messages/send-now", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ templateId, mode, workerIds, locationId, shiftId, minutes, shiftStatus, dryRun }),
+        body: JSON.stringify({ templateId, mode, workerIds, locationId, includeLocationIds, excludeLocationIds, shiftId, minutes, shiftStatus, dryRun }),
       });
       const data = (await response.json().catch(() => ({}))) as { error?: string; recipientCount?: number; results?: PreviewResult[] };
       if (!response.ok) {
@@ -56,6 +58,11 @@ export function SendNowManager({ templates, workers, locations, shifts }: { temp
     } finally {
       setLoading(false);
     }
+  }
+
+  function toggleLocation(field: "include" | "exclude", id: string) {
+    if (field === "include") setIncludeLocationIds((current) => current.includes(id) ? current.filter((item) => item !== id) : [...current, id]);
+    else setExcludeLocationIds((current) => current.includes(id) ? current.filter((item) => item !== id) : [...current, id]);
   }
 
   return (
@@ -120,6 +127,30 @@ export function SendNowManager({ templates, workers, locations, shifts }: { temp
             )) : <EmptyState title="No workers" body="Create or import workers before sending direct messages." />}
           </div>
         ) : null}
+        <div className="grid gap-4 lg:grid-cols-2">
+          <div className="space-y-2">
+            <p className="text-sm font-medium text-zinc-200">Include locations</p>
+            <div className="max-h-44 overflow-y-auto rounded-md border border-[#333] bg-[#080808] p-3">
+              {locations.map((location) => (
+                <label key={`include-${location.id}`} className="flex min-h-11 items-center gap-3 border-b border-[#181818] py-2 text-sm text-zinc-200 last:border-b-0">
+                  <input type="checkbox" checked={includeLocationIds.includes(location.id)} onChange={() => toggleLocation("include", location.id)} />
+                  <span>{location.name}</span>
+                </label>
+              ))}
+            </div>
+          </div>
+          <div className="space-y-2">
+            <p className="text-sm font-medium text-zinc-200">Exclude locations</p>
+            <div className="max-h-44 overflow-y-auto rounded-md border border-[#333] bg-[#080808] p-3">
+              {locations.map((location) => (
+                <label key={`exclude-${location.id}`} className="flex min-h-11 items-center gap-3 border-b border-[#181818] py-2 text-sm text-zinc-200 last:border-b-0">
+                  <input type="checkbox" checked={excludeLocationIds.includes(location.id)} onChange={() => toggleLocation("exclude", location.id)} />
+                  <span>{location.name}</span>
+                </label>
+              ))}
+            </div>
+          </div>
+        </div>
         <div className="rounded-md border border-[#333] bg-[#080808] p-4 text-sm text-zinc-300">
           <p className="font-medium text-white">Selected template</p>
           <p className="mt-1">{template?.content ?? "Choose a template."}</p>
