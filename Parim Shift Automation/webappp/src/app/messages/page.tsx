@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle, Badge, EmptyState, Button, In
 import { DataTable } from "@/src/components/data-table";
 import { SendNowManager } from "@/src/components/send-now-manager";
 import { prisma } from "@/src/lib/prisma";
+import { formatDisplayDateTime } from "@/src/lib/date-time";
 import { getShiftDisplayStatus } from "@/src/lib/shifts/status";
 
 export default async function MessagesPage() {
@@ -53,7 +54,7 @@ export default async function MessagesPage() {
             <DataTable
               headers={["Due", "Worker", "Rule", "Location", "Status", "Last Error"]}
               rows={messages.map((message) => [
-                message.dueAtUtc.toLocaleString("en-GB"),
+                formatDisplayDateTime(message.dueAtUtc),
                 message.worker.fullName,
                 message.triggerRule.name,
                 message.shift.location.name,
@@ -71,7 +72,7 @@ export default async function MessagesPage() {
             <DataTable
               headers={["Actual send time", "Recipient", "Phone / Chat", "Template", "Rule", "Shift and location", "Status"]}
               rows={events.map((event) => [
-                event.occurredAt.toLocaleString("en-GB"),
+                formatDisplayDateTime(event.occurredAt),
                 event.scheduledMessage?.worker.fullName ?? event.shift?.worker.fullName ?? "Direct message",
                 event.whatsappChatId,
                 event.scheduledMessage?.template.name ?? "Send now",

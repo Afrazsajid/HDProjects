@@ -52,6 +52,10 @@ export function formatDisplayDate(value: Date, timezone = env.DEFAULT_TIMEZONE) 
   return format(toZonedTime(value, timezone), "dd MMM yyyy", { timeZone: timezone });
 }
 
+export function formatDisplayDateTime(value: Date, timezone = env.DEFAULT_TIMEZONE) {
+  return format(toZonedTime(value, timezone), "dd/MM/yyyy, HH:mm:ss", { timeZone: timezone });
+}
+
 export function minutesUntil(value: Date, now = new Date()) {
   return differenceInMinutes(value, now);
 }
