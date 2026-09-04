@@ -92,4 +92,3 @@ missing module named collections.Set - imported by collections (optional), sorte
 missing module named collections.MutableSet - imported by collections (optional), sortedcontainers.sortedset (optional)
 missing module named collections.MutableSequence - imported by collections (optional), sortedcontainers.sortedlist (optional)
 missing module named _suggestions - imported by traceback (delayed, optional)
-missing module named PIL - imported by C:\Users\Afraz\HDProjects\sia_exe_build_package\sia_exe_build_package\sia_sheet_checker_error_status.py (delayed, optional)
